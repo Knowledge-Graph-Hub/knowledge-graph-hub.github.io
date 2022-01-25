@@ -13,6 +13,10 @@ import botocore.exceptions
 import botocore.errorfactory
 import click
 
+#LinkML class
+import datasets
+from datasets import DataPackage
+
 @click.command()
 @click.option("--bucket",
                required=True,
@@ -22,6 +26,7 @@ def run(bucket: str):
     try:
         keys = list_bucket_contents(bucket)
         graph_file_keys = get_graph_file_keys(keys)
+        dataset_objects = create_dataset_objects(graph_file_keys)
     except botocore.exceptions.NoCredentialsError:
         print("Can't find AWS credentials.")
 
@@ -46,7 +51,7 @@ def list_bucket_contents(bucket: str):
 
     return all_object_keys
 
-def get_graph_file_keys(keys: list):
+def get_graph_file_keys(keys: dict):
     """Given a list of keys, returns a list of those
     resembling graphs.
     :param keys: list of object keys, as strings
@@ -54,17 +59,35 @@ def get_graph_file_keys(keys: list):
             with keys denoting `compressed` or `uncompressed`.
             Values are lists of strings."""
     
-    graph_file_keys = {"Compressed":[],"Uncompressed":[]}
+    graph_file_keys = {"compressed":[],"uncompressed":[]}
 
     for keyname in keys:
         if keyname[-7:] == ".tar.gz":
-            graph_file_keys["Compressed"].append(keyname)
+            graph_file_keys["compressed"].append(keyname)
         if keyname[-9:] in ["edges.tsv", "nodes.tsv"]:
-            graph_file_keys["Uncompressed"].append(keyname)
+            graph_file_keys["uncompressed"].append(keyname)
 
-    print(graph_file_keys)
+    for object_type in graph_file_keys:
+        print(f"Found {len(graph_file_keys[object_type])} {object_type} graph files.")
 
     return graph_file_keys
+
+def create_dataset_objects(objects: list):
+    """Given a list of object keys, returns a list of
+    LinkML-defined DataPackage objects.
+    See datasets.py for class definitions.
+    :param objects: list of object keys
+    :return: list of DataPackage objects with their values"""
+
+    all_packages = []
+
+    for object_type in objects:
+        for object in objects[object_type]:
+            package = DataPackage(id=object)
+            print(package)
+            all_packages.append(package)
+
+    return all_packages
 
 if __name__ == '__main__':
   run()

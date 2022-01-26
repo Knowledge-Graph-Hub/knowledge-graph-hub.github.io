@@ -18,7 +18,7 @@ from linkml_runtime.dumpers import yaml_dumper
 
 #LinkML class
 import datasets
-from datasets import DataPackage
+from datasets import DataPackage, DataResource
 
 @click.command()
 @click.option("--bucket",
@@ -85,44 +85,46 @@ def create_dataset_objects(objects: list):
     LinkML-defined DataPackage objects.
     See datasets.py for class definitions.
     :param objects: list of object keys
-    :return: list of DataPackage objects with their values"""
+    :return: list of DataPackage and DataResource objects with their values"""
 
     #TODO: assign description and was_derived_from to objects
     #       This may need to be extracted on a per-project basis
     #TODO: get version for projects other than KG-OBO
     #TODO: consider using other LinkML class for uncompressed files
 
-    all_packages = []
+    all_data_objects = []
 
     for object_type in objects:
         for object in objects[object_type]:
             url = "https://kg-hub.berkeleybop.io/" + object
             title = (object.split("/"))[-1]
       
-            package = DataPackage(id=url,
-                                    title=title)
-
             if object_type == "compressed":
-                package.compression = "tar.gz"
+                data_object = DataPackage(id=url,
+                                    title=title,
+                                    compression="tar.gz")
+            else:
+                data_object = DataResource(id=url,
+                                    title=title,
+                                    compression="tar.gz")
 
             if (object.split("/"))[0] == "kg-obo":
-                package.version = (object.split("/"))[-2]
+                data_object.version = (object.split("/"))[-2]
 
             try:
                 if (object.split("/"))[-3] == "transformed":
-                    package.was_derived_from = (object.split("/"))[-2]
+                    data_object.was_derived_from = (object.split("/"))[-2]
             except IndexError:
                 pass
 
-            all_packages.append(package)
+            all_data_objects.append(data_object)
 
-    return all_packages
+    return all_data_objects
 
 def write_manifest(data_objects: list, outpath: str) -> None:
     """Given a list of LinkML-defined DataPackage objects,
     dumps them to a YAML file.
-    :param data_objects: list of DataPackage objects
-    :return
+    :param data_objects: list of DataPackage and DataResource objects
     """
     
     with open(outpath, 'w') as outfile:

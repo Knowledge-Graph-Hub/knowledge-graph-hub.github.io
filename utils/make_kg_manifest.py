@@ -49,13 +49,13 @@ def list_bucket_contents(bucket: str):
 
     pager = client.get_paginator("list_objects_v2")
 
-    print(f"Searching {bucket}...")
+    print(f"Searching \x1b[32m{bucket}\x1b[0m...")
     for page in pager.paginate(Bucket=bucket):
         remote_contents = page['Contents']
         for key in remote_contents:
             all_object_keys.append(key['Key'])
 
-    print(f"Bucket {bucket} contains {len(all_object_keys)} objects.")
+    print(f"Bucket \x1b[32m{bucket}\x1b[0m contains {len(all_object_keys)} objects.")
 
     return all_object_keys
 
@@ -100,12 +100,20 @@ def create_dataset_objects(objects: list):
             title = (object.split("/"))[-1]
       
             package = DataPackage(id=url,
-                                    title=title,
-                                    language="EN")
+                                    title=title)
+
             if object_type == "compressed":
-                DataPackage.compression = "tar.gz"
+                package.compression = "tar.gz"
+
             if (object.split("/"))[0] == "kg-obo":
-                DataPackage.version = (object.split("/"))[-2]
+                package.version = (object.split("/"))[-2]
+
+            try:
+                if (object.split("/"))[-3] == "transformed":
+                    package.was_derived_from = (object.split("/"))[-2]
+            except IndexError:
+                pass
+
             all_packages.append(package)
 
     return all_packages

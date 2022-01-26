@@ -13,6 +13,9 @@ import boto3
 import botocore.exceptions
 import botocore.errorfactory
 import click
+import tarfile
+import os
+import difflib
 
 from linkml_runtime.dumpers import yaml_dumper
 
@@ -30,6 +33,12 @@ from datasets import DataPackage, DataResource
                nargs=1,
                help="""Name or path to the manifest file to be written.""")
 def run(bucket: str, outpath: str):
+
+    #TODO: download any existing manifest with the same name
+    #       as outpath from the bucket.
+    #       We will overwrite it locally but read it first
+    #       To retain all existing records and update if needed
+
     try:
         keys = list_bucket_contents(bucket)
         graph_file_keys = get_graph_file_keys(keys)
@@ -105,8 +114,7 @@ def create_dataset_objects(objects: list):
                                     compression="tar.gz")
             else:
                 data_object = DataResource(id=url,
-                                    title=title,
-                                    compression="tar.gz")
+                                    title=title)
 
             if (object.split("/"))[0] == "kg-obo":
                 data_object.version = (object.split("/"))[-2]
@@ -124,11 +132,14 @@ def create_dataset_objects(objects: list):
 def write_manifest(data_objects: list, outpath: str) -> None:
     """Given a list of LinkML-defined DataPackage objects,
     dumps them to a YAML file.
+    If this file already exists, it is overwritten.
     :param data_objects: list of DataPackage and DataResource objects
     """
     
+    header = "# Manifest for KG-Hub graphs\n"
+
     with open(outpath, 'w') as outfile:
-        outfile.write("# Manifest for KG-Hub graphs\n")
+        outfile.write(header)
         outfile.write(yaml_dumper.dumps(data_objects))
 
     print(f"Wrote to {outpath}.")

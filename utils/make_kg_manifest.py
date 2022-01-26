@@ -25,12 +25,16 @@ from datasets import DataPackage
                required=True,
                nargs=1,
                help="""The name of an AWS S3 bucket to generate Manifest for.""")
-def run(bucket: str):
+@click.option("--outpath",
+               required=True,
+               nargs=1,
+               help="""Name or path to the manifest file to be written.""")
+def run(bucket: str, outpath: str):
     try:
         keys = list_bucket_contents(bucket)
         graph_file_keys = get_graph_file_keys(keys)
         dataset_objects = create_dataset_objects(graph_file_keys)
-        write_manifest(dataset_objects)
+        write_manifest(dataset_objects, outpath)
     except botocore.exceptions.NoCredentialsError:
         print("Can't find AWS credentials.")
 
@@ -106,14 +110,13 @@ def create_dataset_objects(objects: list):
 
     return all_packages
 
-def write_manifest(data_objects: list) -> None:
+def write_manifest(data_objects: list, outpath: str) -> None:
     """Given a list of LinkML-defined DataPackage objects,
     dumps them to a YAML file.
     :param data_objects: list of DataPackage objects
     :return
     """
-    outpath = "MANIFEST.yaml"
-
+    
     with open(outpath, 'w') as outfile:
         outfile.write("# Manifest for KG-Hub graphs\n")
         outfile.write(yaml_dumper.dumps(data_objects))

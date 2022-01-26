@@ -6,12 +6,15 @@ containing a list of all graphs and subgraphs
 for all KG-Hub projects.
 The Manifest file follows the LinkML Datasets
 schema as defined here:
-https://github.com/linkml/linkml-model/blob/main/linkml_model/model/schema/datasets.yaml"""
+https://github.com/linkml/linkml-model/blob/main/linkml_model/model/schema/datasets.yaml
+Objects have unique IDs that are URLs."""
 
 import boto3
 import botocore.exceptions
 import botocore.errorfactory
 import click
+
+from linkml_runtime.dumpers import yaml_dumper
 
 #LinkML class
 import datasets
@@ -27,6 +30,7 @@ def run(bucket: str):
         keys = list_bucket_contents(bucket)
         graph_file_keys = get_graph_file_keys(keys)
         dataset_objects = create_dataset_objects(graph_file_keys)
+        write_manifest(dataset_objects)
     except botocore.exceptions.NoCredentialsError:
         print("Can't find AWS credentials.")
 
@@ -79,15 +83,42 @@ def create_dataset_objects(objects: list):
     :param objects: list of object keys
     :return: list of DataPackage objects with their values"""
 
+    #TODO: assign description and was_derived_from to objects
+    #       This may need to be extracted on a per-project basis
+    #TODO: get version for projects other than KG-OBO
+    #TODO: consider using other LinkML class for uncompressed files
+
     all_packages = []
 
     for object_type in objects:
         for object in objects[object_type]:
-            package = DataPackage(id=object)
-            print(package)
+            url = "https://kg-hub.berkeleybop.io/" + object
+            title = (object.split("/"))[-1]
+      
+            package = DataPackage(id=url,
+                                    title=title,
+                                    language="EN")
+            if object_type == "compressed":
+                DataPackage.compression = "tar.gz"
+            if (object.split("/"))[0] == "kg-obo":
+                DataPackage.version = (object.split("/"))[-2]
             all_packages.append(package)
 
     return all_packages
+
+def write_manifest(data_objects: list) -> None:
+    """Given a list of LinkML-defined DataPackage objects,
+    dumps them to a YAML file.
+    :param data_objects: list of DataPackage objects
+    :return
+    """
+    outpath = "MANIFEST.yaml"
+
+    with open(outpath, 'w') as outfile:
+        outfile.write("# Manifest for KG-Hub graphs\n")
+        outfile.write(yaml_dumper.dumps(data_objects))
+
+    print(f"Wrote to {outpath}.")
 
 if __name__ == '__main__':
   run()

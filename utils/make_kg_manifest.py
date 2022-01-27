@@ -13,15 +13,33 @@ import boto3
 import botocore.exceptions
 import botocore.errorfactory
 import click
-import tarfile
-import os
-import difflib
 
 from linkml_runtime.dumpers import yaml_dumper
 
-#LinkML class
+# LinkML classes
 import datasets
 from datasets import DataPackage, DataResource
+
+# List of all current, fully defined projects on KG-Hub
+# Other projects will still be indexed,
+# but won't have versions assigned in the manifest
+# unless they are here.
+PROJECTS = ["kg-obo",
+            "kg-idg",
+            "kg-covid-19",
+            "kg-microbe",
+            "eco-kg"]
+
+# List of component types used to build larger KGs
+SUBGRAPH_TYPES = ["raw",
+                "transformed"]
+
+# List of Directories to ignore, as we can't verify their 
+# contents are all in the expected format
+IGNORE_DIRS = ["attic",
+                "frozen_incoming_data",
+                "embeddings",
+                "test"]
 
 @click.command()
 @click.option("--bucket",
@@ -79,6 +97,11 @@ def get_graph_file_keys(keys: dict):
     graph_file_keys = {"compressed":[],"uncompressed":[]}
 
     for keyname in keys:
+        try:
+            if (keyname.split("/"))[0] in IGNORE_DIRS:
+                continue
+        except IndexError:
+            pass
         if keyname[-7:] == ".tar.gz":
             graph_file_keys["compressed"].append(keyname)
         if keyname[-9:] in ["edges.tsv", "nodes.tsv"]:
@@ -99,7 +122,6 @@ def create_dataset_objects(objects: list):
     #TODO: assign description and was_derived_from to objects
     #       This may need to be extracted on a per-project basis
     #TODO: get version for projects other than KG-OBO
-    #TODO: consider using other LinkML class for uncompressed files
 
     all_data_objects = []
 
@@ -112,12 +134,12 @@ def create_dataset_objects(objects: list):
                 data_object = DataPackage(id=url,
                                     title=title,
                                     compression="tar.gz")
+                if (object.split("/"))[0] in PROJECTS and \
+                    (object.split("/"))[-2] not in SUBGRAPH_TYPES:
+                    data_object.version = (object.split("/"))[-2]
             else:
                 data_object = DataResource(id=url,
                                     title=title)
-
-            if (object.split("/"))[0] == "kg-obo":
-                data_object.version = (object.split("/"))[-2]
 
             try:
                 if (object.split("/"))[-3] == "transformed":

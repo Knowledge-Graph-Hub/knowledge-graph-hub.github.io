@@ -13,6 +13,8 @@ import boto3
 import botocore.exceptions
 import botocore.errorfactory
 import click
+import requests
+import yaml
 
 from linkml_runtime.dumpers import yaml_dumper
 
@@ -57,10 +59,15 @@ def run(bucket: str, outpath: str):
     #       We will overwrite it locally but read it first
     #       To retain all existing records and update if needed
 
+    # Get the OBO Foundry YAML so we can cross-reference KG-OBO
+    obo_metadata = retrieve_obofoundry_yaml()
+
+    project_metadata = {"kg-obo":obo_metadata}
+
     try:
         keys = list_bucket_contents(bucket)
         graph_file_keys = get_graph_file_keys(keys)
-        dataset_objects = create_dataset_objects(graph_file_keys)
+        dataset_objects = create_dataset_objects(graph_file_keys, project_metadata)
         write_manifest(dataset_objects, outpath)
     except botocore.exceptions.NoCredentialsError:
         print("Can't find AWS credentials.")
@@ -112,16 +119,17 @@ def get_graph_file_keys(keys: dict):
 
     return graph_file_keys
 
-def create_dataset_objects(objects: list):
+def create_dataset_objects(objects: list, project_metadata: dict):
     """Given a list of object keys, returns a list of
     LinkML-defined DataPackage objects.
     See datasets.py for class definitions.
     :param objects: list of object keys
+    :param project_metadata: dict of parsed metadata for specific projects,
+                            with project names as keys
     :return: list of DataPackage and DataResource objects with their values"""
 
     #TODO: assign description and was_derived_from to objects
     #       This may need to be extracted on a per-project basis
-    #TODO: get version for projects other than KG-OBO
 
     all_data_objects = []
 
@@ -137,6 +145,16 @@ def create_dataset_objects(objects: list):
                 if (object.split("/"))[0] in PROJECTS and \
                     (object.split("/"))[-2] not in SUBGRAPH_TYPES:
                     data_object.version = (object.split("/"))[-2]
+                if (object.split("/"))[0] == "kg-obo":
+                    for ontology in project_metadata["kg-obo"]:
+                        if ontology['id'] == (object.split("/"))[1]:
+                            data_object.description = f"{ontology['id'].upper()}. {ontology['description']}"
+                            data_object.was_derived_from = ontology['ontology_purl']
+                            try:
+                                data_object.license = ontology['license']['url']
+                                data_object.publisher = f"{ontology['contact']['label']} ({ontology['contact']['email']})"
+                            except KeyError:
+                                pass
             else:
                 data_object = DataResource(id=url,
                                     title=title)
@@ -156,6 +174,7 @@ def write_manifest(data_objects: list, outpath: str) -> None:
     dumps them to a YAML file.
     If this file already exists, it is overwritten.
     :param data_objects: list of DataPackage and DataResource objects
+    :param outpath: str, filename or path to write to
     """
     
     header = "# Manifest for KG-Hub graphs\n"
@@ -165,6 +184,44 @@ def write_manifest(data_objects: list, outpath: str) -> None:
         outfile.write(yaml_dumper.dumps(data_objects))
 
     print(f"Wrote to {outpath}.")
+
+def retrieve_obofoundry_yaml(
+        yaml_url: str = 'https://raw.githubusercontent.com/OBOFoundry/OBOFoundry.github.io/master/registry/ontologies.yml',
+        skip: list = [],
+        get_only: list = []) -> list:
+    """ Retrieve YAML containing list of all ontologies in OBO Foundry
+    :param yaml_url: a stable URL containing a YAML file that describes all the OBO ontologies
+    :param skip: which ontologies should we skip
+    :return: parsed yaml describing ontologies
+    """
+
+    print(f"Retrieving OBO metadata from {yaml_url}...")
+
+    yaml_req = requests.get(yaml_url)
+    yaml_content = yaml_req.content.decode('utf-8')
+    yaml_parsed = yaml.safe_load(yaml_content)
+    if not yaml_parsed or 'ontologies' not in yaml_parsed:
+        raise RuntimeError(f"Can't retrieve ontology info from YAML at this url {yaml_url}")
+    else:
+        yaml_onto_list: list = yaml_parsed['ontologies']
+
+    if len(skip) > 0:
+        yaml_onto_list_filtered = \
+            [ontology for ontology in yaml_onto_list if ontology['id'] not in skip \
+            if ("is_obsolete" not in ontology) or (ontology['is_obsolete'] == False)
+            ]
+    elif len(get_only) > 0:
+        yaml_onto_list_filtered = \
+            [ontology for ontology in yaml_onto_list if ontology['id'] in get_only \
+            if ("is_obsolete" not in ontology) or (ontology['is_obsolete'] == False)
+            ]
+    else:
+        yaml_onto_list_filtered = \
+            [ontology for ontology in yaml_onto_list \
+            if ("is_obsolete" not in ontology) or (ontology['is_obsolete'] == False)
+            ]
+
+    return yaml_onto_list_filtered
 
 if __name__ == '__main__':
   run()

@@ -151,7 +151,7 @@ def create_dataset_objects(objects: list, project_metadata: dict):
                             data_object.description = f"{ontology['id'].upper()}. {ontology['description']}"
                             data_object.was_derived_from = ontology['ontology_purl']
                             try:
-                                data_object.license = ontology['license']['url']
+                                data_object.license = ontology['license']['label']
                                 data_object.publisher = f"{ontology['contact']['label']} ({ontology['contact']['email']})"
                             except KeyError:
                                 pass

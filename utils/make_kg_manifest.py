@@ -19,7 +19,9 @@ import botocore.errorfactory
 import click
 import requests
 import yaml
+
 import os
+from datetime import datetime
 
 from linkml_runtime.dumpers import yaml_dumper
 
@@ -102,6 +104,19 @@ def list_bucket_contents(bucket: str):
 
     return all_object_keys
 
+def validate_build_name(build_name: str):
+    """Given a string, ensures it matches an expected
+    date format.
+    Returns True if matched, False if not.
+    :param build_name: str, the name of the build
+    """
+
+    try:
+        datetime.strptime(build_name, '%Y%m%d')
+        return True
+    except ValueError:
+        return False
+
 def validate_projects(keys: list) -> None:
     """Given a list of keys, verifies the following:
         * Projects follow the expected file structure of 
@@ -119,10 +134,16 @@ def validate_projects(keys: list) -> None:
 
     project_contents = {}
 
+    # Iterate through all keys for each project,
+    # then go back and iterate through individual builds only
+    # to validate
     for project_name in PROJECTS:
+        if project_name == "kg-obo": 
+            continue # Don't validate KG-OBO, it has its own validators
         project_contents[project_name] = {"objects":[],
                                             "builds": [],
-                                            "valid builds":[]}
+                                            "valid builds":[],
+                                            "invalid builds":[]}
         print(f"Validating {project_name}...")
         for keyname in keys:
             try:
@@ -130,19 +151,29 @@ def validate_projects(keys: list) -> None:
                 if project_dirname == project_name: # This is the target project
                     project_contents[project_name]["objects"].append(keyname)
 
-                    # Now iterate through builds, validating in the process
+                    # Now collect all builds
                     build_name = (keyname.split("/"))[1]
                     if build_name not in project_contents[project_name]["builds"] and \
-                        build_name not in ["index.html", "current"]:
+                        build_name not in ["index.html", "current","README"]:
                         project_contents[project_name]["builds"].append(build_name)
 
             except IndexError:
                 pass
+        
+        # Iterate through builds now to validate
+        for build_name in project_contents[project_name]["builds"]:
+            if validate_build_name(build_name):
+                project_contents[project_name]["valid builds"].append(build_name)
+            else:
+                project_contents[project_name]["invalid builds"].append(build_name)
 
         print(f"The project {project_name} contains:")
         for object_type in project_contents[project_name]:
             object_count = len(project_contents[project_name][object_type])
             print(f"\t{object_count} {object_type}")
+            if object_type == "invalid builds":
+                invalid_builds = project_contents[project_name]["invalid builds"]
+                print(f"\t\t{invalid_builds}")
 
 def get_graph_file_keys(keys: list):
     """Given a list of keys, returns a list of those

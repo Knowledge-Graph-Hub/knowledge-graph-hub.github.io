@@ -7,7 +7,11 @@ for all KG-Hub projects.
 The Manifest file follows the LinkML Datasets
 schema as defined here:
 https://github.com/linkml/linkml-model/blob/main/linkml_model/model/schema/datasets.yaml
-Objects have unique IDs that are URLs."""
+Objects have unique IDs that are URLs.
+
+This script also performs some validations on 
+file and directory structure, format, and content.
+"""
 
 import boto3
 import botocore.exceptions
@@ -30,7 +34,8 @@ PROJECTS = {"kg-obo": "KG-OBO: OBO ontologies into KGX TSV format.",
             "kg-idg": "KG-IDG: a Knowledge Graph for Illuminating the Druggable Genome.",
             "kg-covid-19": "KG-COVID-19: a knowledge graph for COVID-19 and SARS-COV-2.",
             "kg-microbe": "KG-Microbe: a knowledge graph for microbial traits.",
-            "eco-kg": "eco-KG: a knowledge graph of plant traits starting with Planteome and EOL TraitBank."}
+            "eco-kg": "eco-KG: a knowledge graph of plant traits starting with Planteome and EOL TraitBank.",
+            "monarch": "Graph representation of the Monarch Initiative knowledge resource."}
 
 # List of component types used to build larger KGs
 SUBGRAPH_TYPES = ["raw",
@@ -41,6 +46,8 @@ SUBGRAPH_TYPES = ["raw",
 IGNORE_DIRS = ["attic",
                 "frozen_incoming_data",
                 "embeddings",
+                "kg-covid-19-sparql",
+                "ontoml",
                 "test"]
 
 @click.command()
@@ -66,6 +73,7 @@ def run(bucket: str, outpath: str):
 
     try:
         keys = list_bucket_contents(bucket)
+        validate_projects(keys)
         graph_file_keys = get_graph_file_keys(keys)
         dataset_objects = create_dataset_objects(graph_file_keys, project_metadata)
         write_manifest(dataset_objects, outpath)
@@ -93,7 +101,34 @@ def list_bucket_contents(bucket: str):
 
     return all_object_keys
 
-def get_graph_file_keys(keys: dict):
+def validate_projects(keys: list) -> None:
+    """Given a list of keys, verifies the following:
+        * Projects follow the expected file structure of 
+            dated builds, 
+            raw and transforms in their own dirs, 
+            and stats in their own dir
+        * Graph tar.gz files contain only node and edge list
+        * Files are, in fact, tsvs in KGX format.
+    All output is to STDOUT.
+    :param keys: list of object keys, as strings
+    """
+
+    project_keys = {}
+
+    for project_name in PROJECTS:
+        project_keys[project_name] = []
+        print(f"Validating {project_name}...")
+        for keyname in keys:
+            try:
+                project_dirname = (keyname.split("/"))[0]
+                if project_dirname == project_name:
+                    project_keys[project_name].append(keyname)
+            except IndexError:
+                pass
+        print(f"The project {project_name} contains:")
+        print(f"\t{len(project_keys[project_name])} objects")
+
+def get_graph_file_keys(keys: list):
     """Given a list of keys, returns a list of those
     resembling graphs.
     :param keys: list of object keys, as strings

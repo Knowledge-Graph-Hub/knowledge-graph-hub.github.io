@@ -162,7 +162,12 @@ def validate_projects(keys: list) -> None:
         
         # Iterate through builds now to validate
         for build_name in project_contents[project_name]["builds"]:
-            if validate_build_name(build_name):
+            valid = True
+            
+            if not validate_build_name(build_name):
+                valid = False
+
+            if valid:
                 project_contents[project_name]["valid builds"].append(build_name)
             else:
                 project_contents[project_name]["invalid builds"].append(build_name)

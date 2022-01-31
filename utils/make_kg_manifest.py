@@ -13,6 +13,7 @@ This script also performs some validations on
 file and directory structure, format, and content.
 """
 
+from distutils.command.build import build
 import boto3
 import botocore.exceptions
 import botocore.errorfactory
@@ -110,23 +111,38 @@ def validate_projects(keys: list) -> None:
         * Graph tar.gz files contain only node and edge list
         * Files are, in fact, tsvs in KGX format.
     All output is to STDOUT.
+    This assumes everything in the root of the project
+    directory is a build, but valid builds must
+    meet the above criteria.
     :param keys: list of object keys, as strings
     """
 
-    project_keys = {}
+    project_contents = {}
 
     for project_name in PROJECTS:
-        project_keys[project_name] = []
+        project_contents[project_name] = {"objects":[],
+                                            "builds": [],
+                                            "valid builds":[]}
         print(f"Validating {project_name}...")
         for keyname in keys:
             try:
                 project_dirname = (keyname.split("/"))[0]
-                if project_dirname == project_name:
-                    project_keys[project_name].append(keyname)
+                if project_dirname == project_name: # This is the target project
+                    project_contents[project_name]["objects"].append(keyname)
+
+                    # Now iterate through builds, validating in the process
+                    build_name = (keyname.split("/"))[1]
+                    if build_name not in project_contents[project_name]["builds"] and \
+                        build_name not in ["index.html", "current"]:
+                        project_contents[project_name]["builds"].append(build_name)
+
             except IndexError:
                 pass
+
         print(f"The project {project_name} contains:")
-        print(f"\t{len(project_keys[project_name])} objects")
+        for object_type in project_contents[project_name]:
+            object_count = len(project_contents[project_name][object_type])
+            print(f"\t{object_count} {object_type}")
 
 def get_graph_file_keys(keys: list):
     """Given a list of keys, returns a list of those

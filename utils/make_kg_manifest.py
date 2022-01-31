@@ -13,13 +13,13 @@ This script also performs some validations on
 file and directory structure, format, and content.
 """
 
-from distutils.command.build import build
 import boto3
 import botocore.exceptions
 import botocore.errorfactory
 import click
 import requests
 import yaml
+import os
 
 from linkml_runtime.dumpers import yaml_dumper
 
@@ -244,15 +244,28 @@ def retrieve_obofoundry_yaml(
     :return: parsed yaml describing ontologies
     """
 
-    print(f"Retrieving OBO metadata from {yaml_url}...")
+    onto_file_name = "ontologies.yaml"
 
-    yaml_req = requests.get(yaml_url)
-    yaml_content = yaml_req.content.decode('utf-8')
-    yaml_parsed = yaml.safe_load(yaml_content)
-    if not yaml_parsed or 'ontologies' not in yaml_parsed:
-        raise RuntimeError(f"Can't retrieve ontology info from YAML at this url {yaml_url}")
-    else:
-        yaml_onto_list: list = yaml_parsed['ontologies']
+    # Use cached yaml
+    if os.path.exists(onto_file_name):
+        print(f"Loading OBO metadata from cached {onto_file_name}...")
+        with open(onto_file_name) as infile:
+            yaml_parsed = yaml.safe_load(infile)
+            yaml_onto_list: list = yaml_parsed['ontologies']
+
+    else: # Retrieve and save
+        print(f"Retrieving OBO metadata from {yaml_url}...")
+
+        yaml_req = requests.get(yaml_url)
+        yaml_content = yaml_req.content.decode('utf-8')
+        yaml_parsed = yaml.safe_load(yaml_content)
+        if not yaml_parsed or 'ontologies' not in yaml_parsed:
+            raise RuntimeError(f"Can't retrieve ontology info from YAML at this url {yaml_url}")
+        else:
+            yaml_onto_list: list = yaml_parsed['ontologies']
+        
+        with open(onto_file_name, 'w') as outfile:
+            yaml.dump(yaml_parsed, outfile)
 
     if len(skip) > 0:
         yaml_onto_list_filtered = \

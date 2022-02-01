@@ -143,7 +143,8 @@ def validate_projects(keys: list) -> None:
         project_contents[project_name] = {"objects":[],
                                             "builds": [],
                                             "valid builds":[],
-                                            "invalid builds":[]}
+                                            "incorrectly named builds":[],
+                                            "incorrectly structured builds":[]}
         print(f"Validating {project_name}...")
         for keyname in keys:
             try:
@@ -163,21 +164,28 @@ def validate_projects(keys: list) -> None:
         # Iterate through builds now to validate
         for build_name in project_contents[project_name]["builds"]:
             valid = True
-            
+
             if not validate_build_name(build_name):
                 valid = False
+                project_contents[project_name]["incorrectly named builds"].append(build_name)
+
+            for dir_type in ["raw","stats","transformed"]:
+                dir_index = f"{project_name}/{build_name}/{dir_type}/index.html"
+                if not dir_index in keys:
+                    valid = False
+                    if build_name not in project_contents[project_name]["incorrectly structured builds"]:
+                        project_contents[project_name]["incorrectly structured builds"].append(build_name)
 
             if valid:
                 project_contents[project_name]["valid builds"].append(build_name)
-            else:
-                project_contents[project_name]["invalid builds"].append(build_name)
 
         print(f"The project {project_name} contains:")
         for object_type in project_contents[project_name]:
             object_count = len(project_contents[project_name][object_type])
             print(f"\t{object_count} {object_type}")
-            if object_type == "invalid builds":
-                invalid_builds = project_contents[project_name]["invalid builds"]
+            if object_type in ["incorrectly named builds",
+                                "incorrectly structured builds"]:
+                invalid_builds = project_contents[project_name][object_type]
                 print(f"\t\t{invalid_builds}")
 
 def get_graph_file_keys(keys: list):

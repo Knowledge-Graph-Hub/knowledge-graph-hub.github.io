@@ -76,9 +76,11 @@ def run(bucket: str, outpath: str):
 
     try:
         keys = list_bucket_contents(bucket)
-        validate_projects(keys)
+        project_contents = validate_projects(keys)
         graph_file_keys = get_graph_file_keys(keys)
-        dataset_objects = create_dataset_objects(graph_file_keys, project_metadata)
+        dataset_objects = create_dataset_objects(graph_file_keys, 
+                                                project_metadata,
+                                                project_contents)
         write_manifest(dataset_objects, outpath)
     except botocore.exceptions.NoCredentialsError:
         print("Can't find AWS credentials.")
@@ -130,6 +132,8 @@ def validate_projects(keys: list) -> None:
     directory is a build, but valid builds must
     meet the above criteria.
     :param keys: list of object keys, as strings
+    :return: dict, project_contents with keys as project names, 
+                values are dicts
     """
 
     project_contents = {}
@@ -197,7 +201,7 @@ def validate_projects(keys: list) -> None:
                     invalid_builds = project_contents[project_name][object_type]
                     print(f"\t\t{invalid_builds}")
         
-        #TODO: return project_contents so it can be written to the manifest
+    return project_contents
 
 def get_graph_file_keys(keys: list):
     """Given a list of keys, returns a list of those
@@ -225,13 +229,14 @@ def get_graph_file_keys(keys: list):
 
     return graph_file_keys
 
-def create_dataset_objects(objects: list, project_metadata: dict):
+def create_dataset_objects(objects: list, project_metadata: dict, project_contents: dict):
     """Given a list of object keys, returns a list of
     LinkML-defined DataPackage objects.
     See datasets.py for class definitions.
     :param objects: list of object keys
     :param project_metadata: dict of parsed metadata for specific projects,
                             with project names as keys
+    :param project_contents: dict with keys as project names values are dicts
     :return: list of DataPackage and DataResource objects with their values"""
 
     all_data_objects = []

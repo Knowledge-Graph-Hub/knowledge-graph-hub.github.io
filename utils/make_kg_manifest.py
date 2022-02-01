@@ -144,7 +144,9 @@ def validate_projects(keys: list) -> None:
                                             "builds": [],
                                             "valid builds":[],
                                             "incorrectly named builds":[],
-                                            "incorrectly structured builds":[]}
+                                            "incorrectly structured builds":[],
+                                            "builds with too many files in tar.gz":[],
+                                            "builds with KGX format problems":[]}
         print(f"Validating {project_name}...")
         for keyname in keys:
             try:
@@ -176,17 +178,26 @@ def validate_projects(keys: list) -> None:
                     if build_name not in project_contents[project_name]["incorrectly structured builds"]:
                         project_contents[project_name]["incorrectly structured builds"].append(build_name)
 
+            #TODO: download and open each graph tar.gz to verify:
+            #       1. only node and edge file within
+            #       2. files are tsvs with a header
+
             if valid:
                 project_contents[project_name]["valid builds"].append(build_name)
 
         print(f"The project {project_name} contains:")
         for object_type in project_contents[project_name]:
             object_count = len(project_contents[project_name][object_type])
-            print(f"\t{object_count} {object_type}")
-            if object_type in ["incorrectly named builds",
-                                "incorrectly structured builds"]:
-                invalid_builds = project_contents[project_name][object_type]
-                print(f"\t\t{invalid_builds}")
+            if object_count > 0:
+                print(f"\t{object_count} {object_type}")
+                if object_type in ["incorrectly named builds",
+                                    "incorrectly structured builds",
+                                    "builds with too many files in tar.gz",
+                                    "builds with KGX format problems"]:
+                    invalid_builds = project_contents[project_name][object_type]
+                    print(f"\t\t{invalid_builds}")
+        
+        #TODO: return project_contents so it can be written to the manifest
 
 def get_graph_file_keys(keys: list):
     """Given a list of keys, returns a list of those

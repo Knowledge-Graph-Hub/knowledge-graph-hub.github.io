@@ -185,6 +185,7 @@ def validate_projects(keys: list) -> None:
             #TODO: download and open each graph tar.gz to verify:
             #       1. only node and edge file within
             #       2. files are tsvs with a header
+            # Use kgx validate
 
             if valid:
                 project_contents[project_name]["valid builds"].append(build_name)
@@ -245,6 +246,8 @@ def create_dataset_objects(objects: list, project_metadata: dict, project_conten
         for object in objects[object_type]:
             url = "https://kg-hub.berkeleybop.io/" + object
             title = (object.split("/"))[-1]
+            project_name = (object.split("/"))[0]
+            build_name = (object.split("/"))[1]
       
             if object_type == "compressed":
                 data_object = DataPackage(id=url,
@@ -268,6 +271,14 @@ def create_dataset_objects(objects: list, project_metadata: dict, project_conten
                 data_object = DataResource(id=url,
                                     title=title)
 
+            # See if validation was passed for the corresponding build
+            try:
+                if build_name in project_contents[project_name]["valid builds"]:
+                    data_object.conforms_to = "KG-Hub"
+            except KeyError:
+                pass
+
+            # Identify original source name for transformed products
             try:
                 if (object.split("/"))[-3] == "transformed":
                     data_object.was_derived_from = (object.split("/"))[-2]

@@ -71,7 +71,9 @@ def run(bucket: str, outpath: str):
     #TODO: download any existing manifest with the same name
     #       as outpath from the bucket.
     #       We will overwrite it locally but read it first
-    #       To retain all existing records and update if needed
+    #       To retain all existing records and update if needed.
+    #       Most importantly, ignore graphs we already have builds for in the MANIFEST
+    #       so we don't spend a lot of time validating them again
 
     # Get the OBO Foundry YAML so we can cross-reference KG-OBO
     obo_metadata = retrieve_obofoundry_yaml()
@@ -168,7 +170,7 @@ def validate_merged_graph(bucket, graph_key):
                         output=log_path,
                         stream=False)
         
-        if len(errors["Error"]) > 0:
+        if "Error" in errors: # i.e. there are any real errors
             print(f"KGX found errors in graph files. See {log_path}")
         else:
             results["file format correct"] = True

@@ -3,3 +3,4 @@ click
 requests
 yaml
 linkml
+kgx

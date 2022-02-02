@@ -19,9 +19,13 @@ import botocore.errorfactory
 import click
 import requests
 import yaml
+import tarfile
 
 import os
+import shutil
 from datetime import datetime
+
+import kgx.cli  # type: ignore
 
 from linkml_runtime.dumpers import yaml_dumper
 
@@ -76,8 +80,8 @@ def run(bucket: str, outpath: str):
 
     try:
         keys = list_bucket_contents(bucket)
-        project_contents = validate_projects(keys)
         graph_file_keys = get_graph_file_keys(keys)
+        project_contents = validate_projects(bucket, keys, graph_file_keys)
         dataset_objects = create_dataset_objects(graph_file_keys, 
                                                 project_metadata,
                                                 project_contents)
@@ -119,7 +123,62 @@ def validate_build_name(build_name: str):
     except ValueError:
         return False
 
-def validate_projects(keys: list) -> None:
+def validate_merged_graph(bucket, graph_key):
+    """Given a string for a remote key to a tar.gz
+    graph file expected to contain one node list
+    and one edge list, both in KGX format,
+    validates accordingly.
+    :param bucket: name of S3 bucket, needed to retrieve graph files
+    :param graph_key: str, the remote key for the graph file
+    :return: dict of bools
+    """
+
+    results = {"file count correct": False,
+                "file format correct": False}
+
+    temp_dir = 'data'
+    log_dir = 'logs'
+    project_name = (graph_key.split("/"))[0]
+    build_name = (graph_key.split("/"))[1]
+    temp_path = os.path.join(temp_dir,'temp_graph.tar.gz')
+    log_path = os.path.join(log_dir,f'kgx_validate_{project_name}_{build_name}.log')
+
+    client = boto3.client('s3')
+
+    if not os.path.exists(temp_dir):
+        os.mkdir(temp_dir)
+    if not os.path.exists(log_dir):
+        os.mkdir(log_dir)
+
+    print(f"Retrieving {graph_key}...")
+    client.download_file(bucket, graph_key, temp_path)
+    with tarfile.open(temp_path) as graph_file:
+        contents = graph_file.getnames()
+        if len(contents) > 2:
+            print(f"Found >2 files in graph from {graph_key}.")
+            shutil.rmtree(temp_dir)
+            return results
+        else:
+            results["file count correct"] = True
+
+        print("Validating graph files with KGX...")
+        errors = kgx.cli.validate(inputs=[temp_path],
+                        input_format="tsv",
+                        input_compression="tar.gz",
+                        output=log_path,
+                        stream=False)
+        
+        if len(errors["Error"]) > 0:
+            print(f"KGX found errors in graph files. See {log_path}")
+        else:
+            results["file format correct"] = True
+
+    # Clean up
+    shutil.rmtree(temp_dir)
+
+    return results
+
+def validate_projects(bucket: str, keys: list, graph_file_keys: dict) -> None:
     """Given a list of keys, verifies the following:
         * Projects follow the expected file structure of 
             dated builds, 
@@ -131,7 +190,12 @@ def validate_projects(keys: list) -> None:
     This assumes everything in the root of the project
     directory is a build, but valid builds must
     meet the above criteria.
+    :param bucket: name of S3 bucket, needed to retrieve graph files
     :param keys: list of object keys, as strings
+    :param graph_file_keys: dict of keys appearing to be graph files,
+                            with two lists with the keys
+                            "compressed" and "uncompressed",
+                            respectively
     :return: dict, project_contents with keys as project names, 
                 values are dicts
     """
@@ -182,10 +246,18 @@ def validate_projects(keys: list) -> None:
                     if build_name not in project_contents[project_name]["incorrectly structured builds"]:
                         project_contents[project_name]["incorrectly structured builds"].append(build_name)
 
-            #TODO: download and open each graph tar.gz to verify:
-            #       1. only node and edge file within
-            #       2. files are tsvs with a header
-            # Use kgx validate
+            # Find the corresponding merged KG
+            for graph_key in graph_file_keys["compressed"]:
+                if (graph_key.split("/"))[1] == build_name:
+                    merged_graph_key = graph_key
+                    break
+            graph_validation_results = validate_merged_graph(bucket, merged_graph_key)
+            if not graph_validation_results["file count correct"]:
+                valid = False
+                project_contents[project_name]["builds with too many files in tar.gz"].append(build_name)
+            if not graph_validation_results["file format correct"]:
+                valid = False
+                project_contents[project_name]["builds with KGX format problems"].append(build_name)
 
             if valid:
                 project_contents[project_name]["valid builds"].append(build_name)

@@ -1,6 +1,5 @@
 boto3
 click
 requests
-yaml
 linkml
 kgx

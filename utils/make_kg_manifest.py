@@ -38,11 +38,11 @@ from datasets import DataPackage, DataResource
 # but won't have versions or descriptions 
 # assigned in the manifest unless they are here.
 PROJECTS = {"kg-obo": "KG-OBO: OBO ontologies into KGX TSV format.",
-            "kg-idg": "KG-IDG: a Knowledge Graph for Illuminating the Druggable Genome.",
-            "kg-covid-19": "KG-COVID-19: a knowledge graph for COVID-19 and SARS-COV-2.",
-            "kg-microbe": "KG-Microbe: a knowledge graph for microbial traits.",
-            "eco-kg": "eco-KG: a knowledge graph of plant traits starting with Planteome and EOL TraitBank.",
-            "monarch": "Graph representation of the Monarch Initiative knowledge resource."}
+             "kg-idg": "KG-IDG: a Knowledge Graph for Illuminating the Druggable Genome.",
+             "kg-covid-19": "KG-COVID-19: a knowledge graph for COVID-19 and SARS-COV-2.",
+             "kg-microbe": "KG-Microbe: a knowledge graph for microbial traits.",
+             "eco-kg": "eco-KG: a knowledge graph of plant traits starting with Planteome and EOL TraitBank.",
+             "monarch": "Graph representation of the Monarch Initiative knowledge resource."}
 
 # List of component types used to build larger KGs
 SUBGRAPH_TYPES = ["raw",
@@ -164,16 +164,19 @@ def validate_merged_graph(bucket, graph_key):
             results["file count correct"] = True
 
         print("Validating graph files with KGX...")
-        errors = kgx.cli.validate(inputs=[temp_path],
+        
+        try:
+            errors = kgx.cli.validate(inputs=[temp_path],
                         input_format="tsv",
                         input_compression="tar.gz",
                         output=log_path,
                         stream=False)
-        
-        if "Error" in errors: # i.e. there are any real errors
-            print(f"KGX found errors in graph files. See {log_path}")
-        else:
-            results["file format correct"] = True
+            if "Error" in errors: # i.e. there are any real errors
+                print(f"KGX found errors in graph files. See {log_path}")
+            else:
+                results["file format correct"] = True
+        except TypeError as e:
+            print(f"Error while validating: {e}")
 
     # Clean up
     shutil.rmtree(temp_dir)
@@ -249,17 +252,21 @@ def validate_projects(bucket: str, keys: list, graph_file_keys: dict) -> None:
                         project_contents[project_name]["incorrectly structured builds"].append(build_name)
 
             # Find the corresponding merged KG
+            merged_graph_key = ""
             for graph_key in graph_file_keys["compressed"]:
-                if (graph_key.split("/"))[1] == build_name:
+                if (graph_key.split("/"))[0] == project_name and (graph_key.split("/"))[1] == build_name:
                     merged_graph_key = graph_key
                     break
-            graph_validation_results = validate_merged_graph(bucket, merged_graph_key)
-            if not graph_validation_results["file count correct"]:
+            if merged_graph_key == "": # We don't even have a graph file for this build
                 valid = False
-                project_contents[project_name]["builds with too many files in tar.gz"].append(build_name)
-            if not graph_validation_results["file format correct"]:
-                valid = False
-                project_contents[project_name]["builds with KGX format problems"].append(build_name)
+            else:
+                graph_validation_results = validate_merged_graph(bucket, merged_graph_key)
+                if not graph_validation_results["file count correct"]:
+                    valid = False
+                    project_contents[project_name]["builds with too many files in tar.gz"].append(build_name)
+                if not graph_validation_results["file format correct"]:
+                    valid = False
+                    project_contents[project_name]["builds with KGX format problems"].append(build_name)
 
             if valid:
                 project_contents[project_name]["valid builds"].append(build_name)

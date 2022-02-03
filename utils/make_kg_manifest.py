@@ -43,6 +43,7 @@ PROJECTS = {"kg-obo": "KG-OBO: OBO ontologies into KGX TSV format.",
              "kg-microbe": "KG-Microbe: a knowledge graph for microbial traits.",
              "eco-kg": "eco-KG: a knowledge graph of plant traits starting with Planteome and EOL TraitBank.",
              "monarch": "Graph representation of the Monarch Initiative knowledge resource."}
+PROJECTS = {"kg-microbe": "KG-Microbe: a knowledge graph for microbial traits."}
 
 # List of component types used to build larger KGs
 SUBGRAPH_TYPES = ["raw",
@@ -136,6 +137,7 @@ def validate_merged_graph(bucket, graph_key):
     """
 
     results = {"file count correct": False,
+                "file names correct": False,
                 "file format correct": False}
 
     temp_dir = 'data'
@@ -162,6 +164,11 @@ def validate_merged_graph(bucket, graph_key):
             return results
         else:
             results["file count correct"] = True
+        if not 'merged-kg_edges.tsv' in contents \
+            and 'merged-kg_nodes.tsv' in contents:
+            print(f"Unexpected node/edge file names: {contents}")
+        else:
+            results["file names correct"] = True
 
         print("Validating graph files with KGX...")
         
@@ -218,7 +225,7 @@ def validate_projects(bucket: str, keys: list, graph_file_keys: dict) -> None:
                                             "valid builds":[],
                                             "incorrectly named builds":[],
                                             "incorrectly structured builds":[],
-                                            "builds with too many files in tar.gz":[],
+                                            "builds with issues in tar.gz":[],
                                             "builds with KGX format problems":[]}
         print(f"Validating {project_name}...")
         for keyname in keys:
@@ -261,9 +268,10 @@ def validate_projects(bucket: str, keys: list, graph_file_keys: dict) -> None:
                 valid = False
             else:
                 graph_validation_results = validate_merged_graph(bucket, merged_graph_key)
-                if not graph_validation_results["file count correct"]:
+                if not graph_validation_results["file count correct"] or \
+                    not graph_validation_results["file names correct"]:
                     valid = False
-                    project_contents[project_name]["builds with too many files in tar.gz"].append(build_name)
+                    project_contents[project_name]["builds with issues in tar.gz"].append(build_name)
                 if not graph_validation_results["file format correct"]:
                     valid = False
                     project_contents[project_name]["builds with KGX format problems"].append(build_name)
@@ -278,7 +286,7 @@ def validate_projects(bucket: str, keys: list, graph_file_keys: dict) -> None:
                 print(f"\t{object_count} {object_type}")
                 if object_type in ["incorrectly named builds",
                                     "incorrectly structured builds",
-                                    "builds with too many files in tar.gz",
+                                    "builds with issues in tar.gz",
                                     "builds with KGX format problems"]:
                     invalid_builds = project_contents[project_name][object_type]
                     print(f"\t\t{invalid_builds}")
@@ -333,7 +341,8 @@ def create_dataset_objects(objects: list, project_metadata: dict, project_conten
             if object_type == "compressed":
                 data_object = DataPackage(id=url,
                                     title=title,
-                                    compression="tar.gz")
+                                    compression="tar.gz",
+                                    resources=['merged-kg_edges.tsv', 'merged-kg_nodes.tsv'])
                 if (object.split("/"))[0] in PROJECTS and \
                     (object.split("/"))[-2] not in SUBGRAPH_TYPES:
                     data_object.version = (object.split("/"))[-2]

@@ -28,6 +28,7 @@ from datetime import datetime
 import kgx.cli  # type: ignore
 
 from linkml_runtime.dumpers import yaml_dumper
+from linkml_runtime.utils import strictness
 
 # LinkML classes
 import datasets
@@ -138,13 +139,23 @@ def load_previous_manifest(bucket: str, manifest_name: str):
 
     previous_objects = []
 
+    # Set LinkML global strict to False
+    # as we can't ensure everything is a valid CURIE
+    strictness.lax()
+
     # Parse the yaml
     with open(old_manifest_name) as infile:
         yaml_parsed = yaml.safe_load(infile)
 
     # Now load entries as objects
     for entry in yaml_parsed:
-        print(entry)
+        if "compression" in entry:
+            data_object = DataPackage(**entry)
+        else:
+            data_object = DataResource(**entry)
+        previous_objects.append(data_object)
+
+    print(f"Loaded {len(previous_objects)} entries.")
 
     return previous_objects
 

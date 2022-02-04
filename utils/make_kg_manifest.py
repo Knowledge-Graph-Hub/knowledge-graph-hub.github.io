@@ -43,7 +43,8 @@ PROJECTS = {"kg-obo": "KG-OBO: OBO ontologies into KGX TSV format.",
              "kg-microbe": "KG-Microbe: a knowledge graph for microbial traits.",
              "eco-kg": "eco-KG: a knowledge graph of plant traits starting with Planteome and EOL TraitBank.",
              "monarch": "Graph representation of the Monarch Initiative knowledge resource."}
-PROJECTS = {"kg-microbe": "KG-Microbe: a knowledge graph for microbial traits."}
+
+PROJECTS = {"monarch": "test"}
 
 # List of component types used to build larger KGs
 SUBGRAPH_TYPES = ["raw",
@@ -78,12 +79,18 @@ def run(bucket: str, outpath: str):
 
     # Get the OBO Foundry YAML so we can cross-reference KG-OBO
     obo_metadata = retrieve_obofoundry_yaml()
-
     project_metadata = {"kg-obo":obo_metadata}
+
+    manifest_name = os.path.basename(outpath)
 
     try:
         keys = list_bucket_contents(bucket)
-        graph_file_keys = get_graph_file_keys(keys)
+        if os.path.basename(manifest_name) in keys: # Check if we have MANIFEST already
+            print("Found existing manifest. Will load and update.")
+            previous_manifest = load_previous_manifest(bucket, manifest_name)
+        else:
+            previous_manifest = []
+        graph_file_keys = get_graph_file_keys(keys, previous_manifest)
         project_contents = validate_projects(bucket, keys, graph_file_keys)
         dataset_objects = create_dataset_objects(graph_file_keys, 
                                                 project_metadata,
@@ -112,6 +119,34 @@ def list_bucket_contents(bucket: str):
     print(f"Bucket \x1b[32m{bucket}\x1b[0m contains {len(all_object_keys)} objects.")
 
     return all_object_keys
+
+def load_previous_manifest(bucket: str, manifest_name: str):
+    """Loads a manifest yaml from the bucket.
+    This has two main purposes:
+    1. To avoid validating old builds
+    2. To keep previous records, even if they don't exist
+        on the bucket anymore
+    :param bucket: name of the bucket
+    :param manifest_name: name of the manifest file
+    :return: list of DataPackage and DataResource objects with their values
+    """
+
+    client = boto3.client('s3')
+    old_manifest_name = manifest_name+".old"
+    print(f"Retrieving {manifest_name} from \x1b[32m{bucket}\x1b[0m...")
+    client.download_file(bucket,manifest_name,old_manifest_name)
+
+    previous_objects = []
+
+    # Parse the yaml
+    with open(old_manifest_name) as infile:
+        yaml_parsed = yaml.safe_load(infile)
+
+    # Now load entries as objects
+    for entry in yaml_parsed:
+        print(entry)
+
+    return previous_objects
 
 def validate_build_name(build_name: str):
     """Given a string, ensures it matches an expected
@@ -293,10 +328,14 @@ def validate_projects(bucket: str, keys: list, graph_file_keys: dict) -> None:
         
     return project_contents
 
-def get_graph_file_keys(keys: list):
+def get_graph_file_keys(keys: list, previous_manifest = {}):
     """Given a list of keys, returns a list of those
     resembling graphs.
+    If passed a previous_manifest, will ignore the keys
+    for all object ids so we don't validate them
+    redundantly in subsequent steps.
     :param keys: list of object keys, as strings
+    :param previous_manifest: dict of parsed manifest objects
     :return: dict of all keys appearing to be graph files,
             with keys denoting `compressed` or `uncompressed`.
             Values are lists of strings."""
@@ -304,6 +343,8 @@ def get_graph_file_keys(keys: list):
     graph_file_keys = {"compressed":[],"uncompressed":[]}
 
     for keyname in keys:
+        if keyname in previous_manifest:
+            continue
         try:
             if (keyname.split("/"))[0] in IGNORE_DIRS:
                 continue

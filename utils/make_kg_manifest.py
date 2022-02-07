@@ -69,12 +69,10 @@ IGNORE_DIRS = ["attic",
                help="""Name or path to the manifest file to be written.""")
 def run(bucket: str, outpath: str):
 
-    #TODO: download any existing manifest with the same name
-    #       as outpath from the bucket.
-    #       We will overwrite it locally but read it first
-    #       To retain all existing records and update if needed.
-    #       Most importantly, ignore graphs we already have builds for in the MANIFEST
-    #       so we don't spend a lot of time validating them again
+    # Download any existing manifest from the bucket.
+    # We read it first to retain all existing records and update if needed.
+    # Most importantly, ignore graphs we already have builds for in the MANIFEST
+    # so we don't spend a lot of time validating them again
 
     # Get the OBO Foundry YAML so we can cross-reference KG-OBO
     obo_metadata = retrieve_obofoundry_yaml()
@@ -93,7 +91,8 @@ def run(bucket: str, outpath: str):
         project_contents = validate_projects(bucket, keys, graph_file_keys)
         dataset_objects = create_dataset_objects(graph_file_keys, 
                                                 project_metadata,
-                                                project_contents)
+                                                project_contents,
+                                                previous_manifest)
         write_manifest(dataset_objects, outpath)
     except botocore.exceptions.NoCredentialsError:
         print("Can't find AWS credentials.")
@@ -395,7 +394,8 @@ def get_graph_file_keys(keys: list, previous_manifest = []):
 
     return graph_file_keys
 
-def create_dataset_objects(objects: list, project_metadata: dict, project_contents: dict):
+def create_dataset_objects(objects: list, project_metadata: dict, project_contents: dict,
+                            previous_manifest = []):
     """Given a list of object keys, returns a list of
     LinkML-defined DataPackage objects.
     See datasets.py for class definitions.
@@ -403,9 +403,14 @@ def create_dataset_objects(objects: list, project_metadata: dict, project_conten
     :param project_metadata: dict of parsed metadata for specific projects,
                             with project names as keys
     :param project_contents: dict with keys as project names values are dicts
+    :param previous_manifest: list of objects we have previously written to Manifest
     :return: list of DataPackage and DataResource objects with their values"""
 
     all_data_objects = []
+
+    # Append previous entries first
+    for data_object in previous_manifest:
+        all_data_objects.append(data_object)
 
     for object_type in objects:
         for object in objects[object_type]:

@@ -1,5 +1,5 @@
 # Auto generated from datasets.yaml by pythongen.py version: 0.9.0
-# Generation date: 2022-01-24T18:08:50
+# Generation date: 2022-02-07T12:11:31
 # Schema: datasets
 #
 # id: https://w3id.org/linkml/datasets
@@ -12,6 +12,7 @@ import re
 from jsonasobj2 import JsonObj, as_dict
 from typing import Optional, List, Union, Dict, ClassVar, Any
 from dataclasses import dataclass
+from linkml_runtime.linkml_model.meta import EnumDefinition, PermissibleValue, PvFormulaOptions
 
 from linkml_runtime.utils.slot import Slot
 from linkml_runtime.utils.metamodelcore import empty_list, empty_dict, bnode
@@ -21,9 +22,7 @@ from linkml_runtime.utils.formatutils import camelcase, underscore, sfx
 from linkml_runtime.utils.enumerations import EnumDefinitionImpl
 from rdflib import Namespace, URIRef
 from linkml_runtime.utils.curienamespace import CurieNamespace
-import types
-import meta
-from meta import PermissibleValue, EnumDefinition
+from linkml_runtime.linkml_model.types import Datetime, Integer, String, Uri, Uriorcurie
 from linkml_runtime.utils.metamodelcore import URI, URIorCURIE, XSDDateTime
 
 metamodel_version = "1.7.0"
@@ -101,6 +100,7 @@ class Information(YAMLRoot):
     was_derived_from: Optional[str] = None
     page: Optional[str] = None
     test_roles: Optional[Union[Union[str, "TestRole"], List[Union[str, "TestRole"]]]] = empty_list()
+    obsolete: Optional[str] = None
 
     def __post_init__(self, *_: List[str], **kwargs: Dict[str, Any]):
         if self._is_empty(self.id):
@@ -163,6 +163,9 @@ class Information(YAMLRoot):
         if not isinstance(self.test_roles, list):
             self.test_roles = [self.test_roles] if self.test_roles is not None else []
         self.test_roles = [v if isinstance(v, TestRole) else TestRole(v) for v in self.test_roles]
+
+        if self.obsolete is not None and not isinstance(self.obsolete, str):
+            self.obsolete = str(self.obsolete)
 
         super().__post_init__(**kwargs)
 
@@ -392,4 +395,119 @@ class FormatEnum(EnumDefinitionImpl):
                                  meaning=FORMATS.SPARQL_Results_TSV) )
 
 # Slots
+class slots:
+    pass
 
+slots.id = Slot(uri=DCTERMS.identifier, name="id", curie=DCTERMS.curie('identifier'),
+                   model_uri=DATASETS.id, domain=None, range=URIRef)
+
+slots.title = Slot(uri=DCTERMS.title, name="title", curie=DCTERMS.curie('title'),
+                   model_uri=DATASETS.title, domain=None, range=Optional[str])
+
+slots.description = Slot(uri=DCTERMS.description, name="description", curie=DCTERMS.curie('description'),
+                   model_uri=DATASETS.description, domain=None, range=Optional[str])
+
+slots.language = Slot(uri=DATASETS.language, name="language", curie=DATASETS.curie('language'),
+                   model_uri=DATASETS.language, domain=None, range=Optional[str])
+
+slots.publisher = Slot(uri=DCTERMS.publisher, name="publisher", curie=DCTERMS.curie('publisher'),
+                   model_uri=DATASETS.publisher, domain=None, range=Optional[Union[str, URIorCURIE]])
+
+slots.issued = Slot(uri=DCTERMS.issued, name="issued", curie=DCTERMS.curie('issued'),
+                   model_uri=DATASETS.issued, domain=None, range=Optional[Union[str, XSDDateTime]])
+
+slots.page = Slot(uri=DCAT.landingPage, name="page", curie=DCAT.curie('landingPage'),
+                   model_uri=DATASETS.page, domain=None, range=Optional[str])
+
+slots.dialect = Slot(uri=CSVW.dialect, name="dialect", curie=CSVW.curie('dialect'),
+                   model_uri=DATASETS.dialect, domain=None, range=Optional[str])
+
+slots.bytes = Slot(uri=DCAT.byteSize, name="bytes", curie=DCAT.curie('byteSize'),
+                   model_uri=DATASETS.bytes, domain=None, range=Optional[int])
+
+slots.path = Slot(uri=DATASETS.path, name="path", curie=DATASETS.curie('path'),
+                   model_uri=DATASETS.path, domain=None, range=Optional[str])
+
+slots.download_url = Slot(uri=DCAT.downloadURL, name="download_url", curie=DCAT.curie('downloadURL'),
+                   model_uri=DATASETS.download_url, domain=None, range=Optional[Union[str, URI]])
+
+slots.format = Slot(uri=DCTERMS.format, name="format", curie=DCTERMS.curie('format'),
+                   model_uri=DATASETS.format, domain=None, range=Optional[Union[str, "FormatEnum"]])
+
+slots.compression = Slot(uri=DATASETS.compression, name="compression", curie=DATASETS.curie('compression'),
+                   model_uri=DATASETS.compression, domain=None, range=Optional[str])
+
+slots.obsolete = Slot(uri=DATASETS.obsolete, name="obsolete", curie=DATASETS.curie('obsolete'),
+                   model_uri=DATASETS.obsolete, domain=None, range=Optional[str])
+
+slots.encoding = Slot(uri=DATASETS.encoding, name="encoding", curie=DATASETS.curie('encoding'),
+                   model_uri=DATASETS.encoding, domain=None, range=Optional[str])
+
+slots.hash = Slot(uri=DATASETS.hash, name="hash", curie=DATASETS.curie('hash'),
+                   model_uri=DATASETS.hash, domain=None, range=Optional[str])
+
+slots.media_type = Slot(uri=DCAT.mediaType, name="media_type", curie=DCAT.curie('mediaType'),
+                   model_uri=DATASETS.media_type, domain=None, range=Optional[str])
+
+slots.conforms_to = Slot(uri=DCTERMS.conformsTo, name="conforms_to", curie=DCTERMS.curie('conformsTo'),
+                   model_uri=DATASETS.conforms_to, domain=None, range=Optional[Union[str, URIorCURIE]])
+
+slots.conforms_to_schema = Slot(uri=DATASETS.conforms_to_schema, name="conforms_to_schema", curie=DATASETS.curie('conforms_to_schema'),
+                   model_uri=DATASETS.conforms_to_schema, domain=None, range=Optional[Union[str, URIorCURIE]])
+
+slots.conforms_to_class = Slot(uri=DATASETS.conforms_to_class, name="conforms_to_class", curie=DATASETS.curie('conforms_to_class'),
+                   model_uri=DATASETS.conforms_to_class, domain=None, range=Optional[Union[str, URIorCURIE]])
+
+slots.profile = Slot(uri=DATASETS.profile, name="profile", curie=DATASETS.curie('profile'),
+                   model_uri=DATASETS.profile, domain=None, range=Optional[Union[str, URIorCURIE]])
+
+slots.keywords = Slot(uri=DCAT.keyword, name="keywords", curie=DCAT.curie('keyword'),
+                   model_uri=DATASETS.keywords, domain=None, range=Optional[Union[str, List[str]]])
+
+slots.themes = Slot(uri=DCAT.theme, name="themes", curie=DCAT.curie('theme'),
+                   model_uri=DATASETS.themes, domain=None, range=Optional[Union[Union[str, URIorCURIE], List[Union[str, URIorCURIE]]]])
+
+slots.resources = Slot(uri=DCAT.distribution, name="resources", curie=DCAT.curie('distribution'),
+                   model_uri=DATASETS.resources, domain=None, range=Optional[Union[Union[str, DataResourceId], List[Union[str, DataResourceId]]]])
+
+slots.test_roles = Slot(uri=DATASETS.test_roles, name="test_roles", curie=DATASETS.curie('test_roles'),
+                   model_uri=DATASETS.test_roles, domain=None, range=Optional[Union[Union[str, "TestRole"], List[Union[str, "TestRole"]]]])
+
+slots.created_by = Slot(uri=PAV.createdBy, name="created_by", curie=PAV.curie('createdBy'),
+                   model_uri=DATASETS.created_by, domain=None, range=Optional[Union[str, URIorCURIE]])
+
+slots.created_on = Slot(uri=PAV.createdOn, name="created_on", curie=PAV.curie('createdOn'),
+                   model_uri=DATASETS.created_on, domain=None, range=Optional[Union[str, XSDDateTime]])
+
+slots.last_updated_on = Slot(uri=PAV.lastUpdatedOn, name="last_updated_on", curie=PAV.curie('lastUpdatedOn'),
+                   model_uri=DATASETS.last_updated_on, domain=None, range=Optional[Union[str, XSDDateTime]])
+
+slots.modified_by = Slot(uri=OSLC.modifiedBy, name="modified_by", curie=OSLC.curie('modifiedBy'),
+                   model_uri=DATASETS.modified_by, domain=None, range=Optional[Union[str, URIorCURIE]])
+
+slots.status = Slot(uri=BIBO.status, name="status", curie=BIBO.curie('status'),
+                   model_uri=DATASETS.status, domain=None, range=Optional[Union[str, URIorCURIE]])
+
+slots.license = Slot(uri=DCTERMS.license, name="license", curie=DCTERMS.curie('license'),
+                   model_uri=DATASETS.license, domain=None, range=Optional[str])
+
+slots.version = Slot(uri=PAV.version, name="version", curie=PAV.curie('version'),
+                   model_uri=DATASETS.version, domain=None, range=Optional[str])
+
+slots.was_derived_from = Slot(uri=PROV.wasDerivedFrom, name="was_derived_from", curie=PROV.curie('wasDerivedFrom'),
+                   model_uri=DATASETS.was_derived_from, domain=None, range=Optional[str])
+
+slots.formatDialect__comment_prefix = Slot(uri=DATASETS.comment_prefix, name="formatDialect__comment_prefix", curie=DATASETS.curie('comment_prefix'),
+                   model_uri=DATASETS.formatDialect__comment_prefix, domain=None, range=Optional[str])
+
+slots.formatDialect__delimiter = Slot(uri=DATASETS.delimiter, name="formatDialect__delimiter", curie=DATASETS.curie('delimiter'),
+                   model_uri=DATASETS.formatDialect__delimiter, domain=None, range=Optional[str])
+
+slots.formatDialect__double_quote = Slot(uri=DATASETS.double_quote, name="formatDialect__double_quote", curie=DATASETS.curie('double_quote'),
+                   model_uri=DATASETS.formatDialect__double_quote, domain=None, range=Optional[str])
+
+slots.formatDialect__header = Slot(uri=DATASETS.header, name="formatDialect__header", curie=DATASETS.curie('header'),
+                   model_uri=DATASETS.formatDialect__header, domain=None, range=Optional[str])
+
+slots.formatDialect__quote_char = Slot(uri=DATASETS.quote_char, name="formatDialect__quote_char", curie=DATASETS.curie('quote_char'),
+                   model_uri=DATASETS.formatDialect__quote_char, domain=None, range=Optional[str])

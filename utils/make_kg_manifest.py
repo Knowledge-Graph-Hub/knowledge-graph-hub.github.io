@@ -93,6 +93,7 @@ def run(bucket: str, outpath: str):
                                                 project_metadata,
                                                 project_contents,
                                                 previous_manifest)
+        dataset_objects = check_urls(bucket, dataset_objects)
         write_manifest(dataset_objects, outpath)
     except botocore.exceptions.NoCredentialsError:
         print("Can't find AWS credentials.")
@@ -460,8 +461,33 @@ def create_dataset_objects(objects: list, project_metadata: dict, project_conten
 
     return all_data_objects
 
+def check_urls(bucket: str, data_objects: list):
+    """Given a list of LinkML-defined dataset objects,
+    checks the id of each to see if it resolves to an
+    object on the remote.
+    If not, the object is marked as obsolete.
+    (All keys are checked, and if a link somehow becomes
+    unbroken, it will be un-set as obsolete.)
+    :param bucket: name of the bucket
+    :param data_objects: list of DataPackage and DataResource objects
+    :return: list of DataPackage and DataResource objects with their values
+    """
+
+    client = boto3.client('s3')
+
+    new_data_objects = []
+
+    for object in data_objects:
+        try:
+            client.head_object(Bucket=bucket, Key=object.id)
+            object.obsolete = "False"
+        except botocore.errorfactory.ClientError:
+            object.obsolete = "True"
+
+    return new_data_objects
+
 def write_manifest(data_objects: list, outpath: str) -> None:
-    """Given a list of LinkML-defined DataPackage objects,
+    """Given a list of LinkML-defined dataset objects,
     dumps them to a YAML file.
     If this file already exists, it is overwritten.
     :param data_objects: list of DataPackage and DataResource objects

@@ -45,8 +45,6 @@ PROJECTS = {"kg-obo": "KG-OBO: OBO ontologies into KGX TSV format.",
              "eco-kg": "eco-KG: a knowledge graph of plant traits starting with Planteome and EOL TraitBank.",
              "monarch": "Graph representation of the Monarch Initiative knowledge resource."}
 
-PROJECTS = {"monarch": "test"}
-
 # List of component types used to build larger KGs
 SUBGRAPH_TYPES = ["raw",
                 "transformed"]
@@ -155,7 +153,7 @@ def load_previous_manifest(bucket: str, manifest_name: str):
             data_object = DataResource(**entry)
         previous_objects.append(data_object)
 
-    print(f"Loaded {len(previous_objects)} entries.")
+    print(f"Loaded {len(previous_objects)} entries from previous Manifest.")
 
     return previous_objects
 
@@ -260,12 +258,26 @@ def validate_projects(bucket: str, keys: list, graph_file_keys: dict) -> None:
 
     project_contents = {}
 
+    # Check which projects/builds the graph keys are in first,
+    # so we don't bother with those without updates
+    graph_file_key_projects = []
+    graph_file_key_builds = []
+    for object_type in graph_file_keys:
+        for keyname in graph_file_keys[object_type]:
+            graph_file_key_projects.append((keyname.split("/"))[0])
+            graph_file_key_builds.append((keyname.split("/"))[1])
+    # Just the unique project names
+    graph_file_key_projects = list(set(graph_file_key_projects)) 
+
     # Iterate through all keys for each project,
     # then go back and iterate through individual builds only
     # to validate
     for project_name in PROJECTS:
         if project_name == "kg-obo": 
             continue # Don't validate KG-OBO, it has its own validators
+        if project_name not in graph_file_key_projects:
+            print(f"No updates for {project_name}.")
+            continue # No updates
         project_contents[project_name] = {"objects":[],
                                             "builds": [],
                                             "valid builds":[],
@@ -273,14 +285,14 @@ def validate_projects(bucket: str, keys: list, graph_file_keys: dict) -> None:
                                             "incorrectly structured builds":[],
                                             "builds with issues in tar.gz":[],
                                             "builds with KGX format problems":[]}
-        print(f"Validating {project_name}...")
+        print(f"Validating new builds for {project_name}...")
         for keyname in keys:
             try:
                 project_dirname = (keyname.split("/"))[0]
                 if project_dirname == project_name: # This is the target project
                     project_contents[project_name]["objects"].append(keyname)
 
-                    # Now collect all builds
+                    # Now collect all new builds
                     build_name = (keyname.split("/"))[1]
                     if build_name not in project_contents[project_name]["builds"] and \
                         build_name not in ["index.html", "current","README"]:
@@ -291,6 +303,11 @@ def validate_projects(bucket: str, keys: list, graph_file_keys: dict) -> None:
         
         # Iterate through builds now to validate
         for build_name in project_contents[project_name]["builds"]:
+            
+            # Just the new ones
+            if build_name not in graph_file_key_builds:
+                continue # No updates
+
             valid = True
 
             if not validate_build_name(build_name):
@@ -339,22 +356,29 @@ def validate_projects(bucket: str, keys: list, graph_file_keys: dict) -> None:
         
     return project_contents
 
-def get_graph_file_keys(keys: list, previous_manifest = {}):
+def get_graph_file_keys(keys: list, previous_manifest = []):
     """Given a list of keys, returns a list of those
     resembling graphs.
     If passed a previous_manifest, will ignore the keys
     for all object ids so we don't validate them
     redundantly in subsequent steps.
     :param keys: list of object keys, as strings
-    :param previous_manifest: dict of parsed manifest objects
+    :param previous_manifest: list of parsed manifest objects
+                                object.id is full url
     :return: dict of all keys appearing to be graph files,
             with keys denoting `compressed` or `uncompressed`.
             Values are lists of strings."""
     
     graph_file_keys = {"compressed":[],"uncompressed":[]}
 
+    # Prep the list of keys from previous_manifest
+    previous_manifest_keys = []
+    for object in previous_manifest:
+        previous_manifest_keys.append(object.id)
+
     for keyname in keys:
-        if keyname in previous_manifest:
+        url = "https://kg-hub.berkeleybop.io/" + keyname
+        if url in previous_manifest_keys:
             continue
         try:
             if (keyname.split("/"))[0] in IGNORE_DIRS:
@@ -367,7 +391,7 @@ def get_graph_file_keys(keys: list, previous_manifest = {}):
             graph_file_keys["uncompressed"].append(keyname)
 
     for object_type in graph_file_keys:
-        print(f"Found {len(graph_file_keys[object_type])} {object_type} graph files.")
+        print(f"Found {len(graph_file_keys[object_type])} new {object_type} graph files.")
 
     return graph_file_keys
 

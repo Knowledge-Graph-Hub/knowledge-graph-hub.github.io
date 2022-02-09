@@ -34,6 +34,9 @@ from linkml_runtime.utils import strictness
 import datasets
 from datasets import DataPackage, DataResource
 
+# Helper functions
+from get_kg_contents import retrieve_stats
+
 # List of all current, fully defined projects on KG-Hub
 # Other projects will still be indexed,
 # but won't have versions or descriptions 
@@ -44,6 +47,9 @@ PROJECTS = {"kg-obo": "KG-OBO: OBO ontologies into KGX TSV format.",
              "kg-microbe": "KG-Microbe: a knowledge graph for microbial traits.",
              "eco-kg": "eco-KG: a knowledge graph of plant traits starting with Planteome and EOL TraitBank.",
              "monarch": "Graph representation of the Monarch Initiative knowledge resource."}
+
+# Temp for testing
+PROJECTS = {"kg-microbe": "KG-Microbe: a knowledge graph for microbial traits."}
 
 # List of component types used to build larger KGs
 SUBGRAPH_TYPES = ["raw",
@@ -93,6 +99,7 @@ def run(bucket: str, outpath: str):
                                                 project_metadata,
                                                 project_contents,
                                                 previous_manifest)
+        dataset_objects = get_stats(bucket, dataset_objects)
         dataset_objects = check_urls(bucket, dataset_objects)
         write_manifest(dataset_objects, outpath)
     except botocore.exceptions.NoCredentialsError:
@@ -460,6 +467,31 @@ def create_dataset_objects(objects: list, project_metadata: dict, project_conten
             all_data_objects.append(data_object)
 
     return all_data_objects
+
+def get_stats(bucket: str, data_objects: list):
+    """Given a list of LinkML-defined dataset objects,
+    attempts to retrieve KGX stats about each graph.
+    Only considers compressed graphs.
+    :param bucket: name of the bucket
+    :param data_objects: list of DataPackage and DataResource objects
+    :return: list of DataPackage and DataResource objects with their values
+    """
+
+    new_data_objects = []
+
+    for object in data_objects:
+        object_key = ((object.id).split("https://kg-hub.berkeleybop.io"))[1]
+        object_project = (object_key.split("/"))[1]
+        object_type = (object_key.split("/"))[3]
+        if object.compression == "tar.gz" and object_project != "kg-obo" \
+            and object_type not in ["raw", "transformed"]:
+            stats = retrieve_stats(bucket, object_key)
+            if stats:
+                print(stats)
+
+    new_data_objects = data_objects
+
+    return new_data_objects 
 
 def check_urls(bucket: str, data_objects: list):
     """Given a list of LinkML-defined dataset objects,

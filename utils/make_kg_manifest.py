@@ -31,8 +31,8 @@ from linkml_runtime.dumpers import yaml_dumper
 from linkml_runtime.utils import strictness
 
 # LinkML classes
-import datasets
-from datasets import DataPackage, DataResource
+import models.datasets
+from models.datasets import DataPackage, DataResource
 
 # Helper functions
 from get_kg_contents import retrieve_stats
@@ -487,7 +487,8 @@ def get_stats(bucket: str, data_objects: list):
             and object_type not in ["raw", "transformed"]:
             stats = retrieve_stats(bucket, object_key)
             if stats:
-                print(stats)
+                print(stats['edge_stats']['total_edges'])
+                print(stats['node_stats']['total_nodes'])
 
     new_data_objects = data_objects
 

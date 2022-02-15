@@ -513,6 +513,7 @@ def check_urls(bucket: str, data_objects: list):
             object.obsolete = "False"
         except botocore.errorfactory.ClientError:
             object.obsolete = "True"
+        new_data_objects.append(object)
 
     return new_data_objects
 

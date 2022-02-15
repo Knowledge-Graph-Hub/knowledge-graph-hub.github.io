@@ -228,7 +228,7 @@ def validate_merged_graph(bucket, graph_key):
                         input_compression="tar.gz",
                         output=log_path,
                         stream=False)
-            if "Error" in errors: # i.e. there are any real errors
+            if len(errors) > 0: # i.e. there are any real errors
                 print(f"KGX found errors in graph files. See {log_path}")
             else:
                 results["file format correct"] = True

@@ -1,5 +1,5 @@
 # Auto generated from datasets.yaml by pythongen.py version: 0.9.0
-# Generation date: 2022-02-07T12:11:31
+# Generation date: 2022-02-14T17:35:25
 # Schema: datasets
 #
 # id: https://w3id.org/linkml/datasets
@@ -62,6 +62,10 @@ class InformationId(extended_str):
 
 
 class DataPackageId(InformationId):
+    pass
+
+
+class GraphDataPackageId(DataPackageId):
     pass
 
 
@@ -194,6 +198,49 @@ class DataPackage(Information):
         if not isinstance(self.resources, list):
             self.resources = [self.resources] if self.resources is not None else []
         self.resources = [v if isinstance(v, DataResourceId) else DataResourceId(v) for v in self.resources]
+
+        super().__post_init__(**kwargs)
+
+
+@dataclass
+class GraphDataPackage(DataPackage):
+    """
+    A collection of data resources, as nodes and edges
+    """
+    _inherited_slots: ClassVar[List[str]] = []
+
+    class_class_uri: ClassVar[URIRef] = VOID.Dataset
+    class_class_curie: ClassVar[str] = "void:Dataset"
+    class_name: ClassVar[str] = "GraphDataPackage"
+    class_model_uri: ClassVar[URIRef] = DATASETS.GraphDataPackage
+
+    id: Union[str, GraphDataPackageId] = None
+    edge_count: Optional[int] = None
+    node_count: Optional[int] = None
+    predicates: Optional[str] = None
+    node_categories: Optional[str] = None
+    node_prefixes: Optional[str] = None
+
+    def __post_init__(self, *_: List[str], **kwargs: Dict[str, Any]):
+        if self._is_empty(self.id):
+            self.MissingRequiredField("id")
+        if not isinstance(self.id, GraphDataPackageId):
+            self.id = GraphDataPackageId(self.id)
+
+        if self.edge_count is not None and not isinstance(self.edge_count, int):
+            self.edge_count = int(self.edge_count)
+
+        if self.node_count is not None and not isinstance(self.node_count, int):
+            self.node_count = int(self.node_count)
+
+        if self.predicates is not None and not isinstance(self.predicates, str):
+            self.predicates = str(self.predicates)
+
+        if self.node_categories is not None and not isinstance(self.node_categories, str):
+            self.node_categories = str(self.node_categories)
+
+        if self.node_prefixes is not None and not isinstance(self.node_prefixes, str):
+            self.node_prefixes = str(self.node_prefixes)
 
         super().__post_init__(**kwargs)
 
@@ -496,6 +543,21 @@ slots.version = Slot(uri=PAV.version, name="version", curie=PAV.curie('version')
 
 slots.was_derived_from = Slot(uri=PROV.wasDerivedFrom, name="was_derived_from", curie=PROV.curie('wasDerivedFrom'),
                    model_uri=DATASETS.was_derived_from, domain=None, range=Optional[str])
+
+slots.edge_count = Slot(uri=DATASETS.edge_count, name="edge_count", curie=DATASETS.curie('edge_count'),
+                   model_uri=DATASETS.edge_count, domain=None, range=Optional[int])
+
+slots.node_count = Slot(uri=DATASETS.node_count, name="node_count", curie=DATASETS.curie('node_count'),
+                   model_uri=DATASETS.node_count, domain=None, range=Optional[int])
+
+slots.predicates = Slot(uri=DATASETS.predicates, name="predicates", curie=DATASETS.curie('predicates'),
+                   model_uri=DATASETS.predicates, domain=None, range=Optional[str])
+
+slots.node_categories = Slot(uri=DATASETS.node_categories, name="node_categories", curie=DATASETS.curie('node_categories'),
+                   model_uri=DATASETS.node_categories, domain=None, range=Optional[str])
+
+slots.node_prefixes = Slot(uri=DATASETS.node_prefixes, name="node_prefixes", curie=DATASETS.curie('node_prefixes'),
+                   model_uri=DATASETS.node_prefixes, domain=None, range=Optional[str])
 
 slots.formatDialect__comment_prefix = Slot(uri=DATASETS.comment_prefix, name="formatDialect__comment_prefix", curie=DATASETS.curie('comment_prefix'),
                    model_uri=DATASETS.formatDialect__comment_prefix, domain=None, range=Optional[str])

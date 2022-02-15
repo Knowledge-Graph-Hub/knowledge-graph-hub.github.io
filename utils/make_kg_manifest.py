@@ -48,6 +48,8 @@ PROJECTS = {"kg-obo": "KG-OBO: OBO ontologies into KGX TSV format.",
              "eco-kg": "eco-KG: a knowledge graph of plant traits starting with Planteome and EOL TraitBank.",
              "monarch": "Graph representation of the Monarch Initiative knowledge resource."}
 
+PROJECTS = {"kg-microbe": "KG-Microbe: a knowledge graph for microbial traits."}
+
 # List of component types used to build larger KGs
 SUBGRAPH_TYPES = ["raw",
                 "transformed"]
@@ -486,6 +488,18 @@ def get_stats(bucket: str, data_objects: list):
             if stats:
                 object.edge_count = stats['edge_stats']['total_edges']
                 object.node_count = stats['node_stats']['total_nodes']
+
+                try:
+                    object.predicates = "|".join(stats['edge_stats']['predicates'])
+                except KeyError: # at one point this was called edge_labels
+                    object.predicates = "|".join(stats['edge_stats']['edge_labels'])
+
+                object.node_categories = "|".join(stats['node_stats']['node_categories'])
+
+                try:
+                    object.node_prefixes = "|".join(stats['node_stats']['node_id_prefixes'])
+                except KeyError: # may not be present
+                    pass
 
     new_data_objects = data_objects
 

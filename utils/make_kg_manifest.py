@@ -522,11 +522,13 @@ def check_urls(bucket: str, data_objects: list):
     new_data_objects = []
 
     for object in data_objects:
+        object_key = ((object.id).split("https://kg-hub.berkeleybop.io/"))[1]
         try:
-            client.head_object(Bucket=bucket, Key=object.id)
+            client.head_object(Bucket=bucket, Key=object_key)
             object.obsolete = "False"
         except botocore.errorfactory.ClientError:
             object.obsolete = "True"
+            print(f"!!! {object_key} not found in bucket. Marking as obsolete.")
         new_data_objects.append(object)
 
     return new_data_objects

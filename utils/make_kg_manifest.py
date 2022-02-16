@@ -20,6 +20,8 @@ import click
 import requests
 import yaml
 import tarfile
+import sys
+import logging
 
 import os
 import shutil
@@ -48,8 +50,6 @@ PROJECTS = {"kg-obo": "KG-OBO: OBO ontologies into KGX TSV format.",
              "eco-kg": "eco-KG: a knowledge graph of plant traits starting with Planteome and EOL TraitBank.",
              "monarch": "Graph representation of the Monarch Initiative knowledge resource."}
 
-PROJECTS = {"kg-microbe": "KG-Microbe: a knowledge graph for microbial traits."}
-
 # List of component types used to build larger KGs
 SUBGRAPH_TYPES = ["raw",
                 "transformed"]
@@ -62,6 +62,17 @@ IGNORE_DIRS = ["attic",
                 "kg-covid-19-sparql",
                 "ontoml",
                 "test"]
+
+# Set up logger - will write to STDOUT too
+logger = logging.getLogger('')
+logger.setLevel(logging.INFO)
+loghandler = logging.FileHandler('manifest.log')
+consolehandler = logging.StreamHandler(sys.stdout)
+formatter = logging.Formatter('[%(asctime)s] - %(message)s',
+                               datefmt='%a, %d %b %Y %H:%M:%S')
+loghandler.setFormatter(formatter)
+logger.addHandler(loghandler)
+logger.addHandler(consolehandler)
 
 @click.command()
 @click.option("--bucket",
@@ -88,7 +99,7 @@ def run(bucket: str, outpath: str):
     try:
         keys = list_bucket_contents(bucket)
         if os.path.basename(manifest_name) in keys: # Check if we have MANIFEST already
-            print("Found existing manifest. Will load and update.")
+            logging.info("Found existing manifest. Will load and update.")
             previous_manifest = load_previous_manifest(bucket, manifest_name)
         else:
             previous_manifest = []
@@ -102,7 +113,7 @@ def run(bucket: str, outpath: str):
         dataset_objects = check_urls(bucket, dataset_objects)
         write_manifest(dataset_objects, outpath)
     except botocore.exceptions.NoCredentialsError:
-        print("Can't find AWS credentials.")
+        logging.error("Can't find AWS credentials.")
 
 def list_bucket_contents(bucket: str):
     """Lists all contents, keys only, of an AWS S3 bucket.
@@ -115,13 +126,13 @@ def list_bucket_contents(bucket: str):
 
     pager = client.get_paginator("list_objects_v2")
 
-    print(f"Searching \x1b[32m{bucket}\x1b[0m...")
+    logging.info(f"Searching {bucket}...")
     for page in pager.paginate(Bucket=bucket):
         remote_contents = page['Contents']
         for key in remote_contents:
             all_object_keys.append(key['Key'])
 
-    print(f"Bucket \x1b[32m{bucket}\x1b[0m contains {len(all_object_keys)} objects.")
+    logging.info(f"Bucket {bucket} contains {len(all_object_keys)} objects.")
 
     return all_object_keys
 
@@ -138,7 +149,7 @@ def load_previous_manifest(bucket: str, manifest_name: str):
 
     client = boto3.client('s3')
     old_manifest_name = manifest_name+".old"
-    print(f"Retrieving {manifest_name} from \x1b[32m{bucket}\x1b[0m...")
+    logging.info(f"Retrieving {manifest_name} from {bucket}...")
     client.download_file(bucket,manifest_name,old_manifest_name)
 
     previous_objects = []
@@ -159,7 +170,7 @@ def load_previous_manifest(bucket: str, manifest_name: str):
             data_object = DataResource(**entry)
         previous_objects.append(data_object)
 
-    print(f"Loaded {len(previous_objects)} entries from previous Manifest.")
+    logging.info(f"Loaded {len(previous_objects)} entries from previous Manifest.")
 
     return previous_objects
 
@@ -204,23 +215,23 @@ def validate_merged_graph(bucket, graph_key):
     if not os.path.exists(log_dir):
         os.mkdir(log_dir)
 
-    print(f"Retrieving {graph_key}...")
+    logging.info(f"Retrieving {graph_key}...")
     client.download_file(bucket, graph_key, temp_path)
     with tarfile.open(temp_path) as graph_file:
         contents = graph_file.getnames()
         if len(contents) > 2:
-            print(f"Found >2 files in graph from {graph_key}.")
+            logging.warning(f"Found >2 files in graph from {graph_key}.")
             shutil.rmtree(temp_dir)
             return results
         else:
             results["file count correct"] = True
         if not 'merged-kg_edges.tsv' in contents \
             and 'merged-kg_nodes.tsv' in contents:
-            print(f"Unexpected node/edge file names: {contents}")
+            logging.warning(f"Unexpected node/edge file names: {contents}")
         else:
             results["file names correct"] = True
 
-        print("Validating graph files with KGX...")
+        logging.info("Validating graph files with KGX...")
         
         try:
             errors = kgx.cli.validate(inputs=[temp_path],
@@ -229,11 +240,11 @@ def validate_merged_graph(bucket, graph_key):
                         output=log_path,
                         stream=False)
             if len(errors) > 0: # i.e. there are any real errors
-                print(f"KGX found errors in graph files. See {log_path}")
+                logging.warning(f"KGX found errors in graph files. See {log_path}")
             else:
                 results["file format correct"] = True
         except TypeError as e:
-            print(f"Error while validating: {e}")
+            logging.error(f"Error while validating: {e}")
 
     # Clean up
     shutil.rmtree(temp_dir)
@@ -282,7 +293,7 @@ def validate_projects(bucket: str, keys: list, graph_file_keys: dict) -> None:
         if project_name == "kg-obo": 
             continue # Don't validate KG-OBO, it has its own validators
         if project_name not in graph_file_key_projects:
-            print(f"No updates for {project_name}.")
+            logging.info(f"No updates for {project_name}.")
             continue # No updates
         project_contents[project_name] = {"objects":[],
                                             "builds": [],
@@ -291,7 +302,7 @@ def validate_projects(bucket: str, keys: list, graph_file_keys: dict) -> None:
                                             "incorrectly structured builds":[],
                                             "builds with issues in tar.gz":[],
                                             "builds with KGX format problems":[]}
-        print(f"Validating new builds for {project_name}...")
+        logging.info(f"Validating new builds for {project_name}...")
         for keyname in keys:
             try:
                 project_dirname = (keyname.split("/"))[0]
@@ -348,17 +359,17 @@ def validate_projects(bucket: str, keys: list, graph_file_keys: dict) -> None:
             if valid:
                 project_contents[project_name]["valid builds"].append(build_name)
 
-        print(f"The project {project_name} contains:")
+        logging.info(f"The project {project_name} contains:")
         for object_type in project_contents[project_name]:
             object_count = len(project_contents[project_name][object_type])
             if object_count > 0:
-                print(f"\t{object_count} {object_type}")
+                logging.info(f"\t{object_count} {object_type}")
                 if object_type in ["incorrectly named builds",
                                     "incorrectly structured builds",
                                     "builds with issues in tar.gz",
                                     "builds with KGX format problems"]:
                     invalid_builds = project_contents[project_name][object_type]
-                    print(f"\t\t{invalid_builds}")
+                    logging.info(f"\t\t{invalid_builds}")
         
     return project_contents
 
@@ -397,7 +408,7 @@ def get_graph_file_keys(keys: list, previous_manifest = []):
             graph_file_keys["uncompressed"].append(keyname)
 
     for object_type in graph_file_keys:
-        print(f"Found {len(graph_file_keys[object_type])} new {object_type} graph files.")
+        logging.info(f"Found {len(graph_file_keys[object_type])} new {object_type} graph files.")
 
     return graph_file_keys
 
@@ -528,7 +539,7 @@ def check_urls(bucket: str, data_objects: list):
             object.obsolete = "False"
         except botocore.errorfactory.ClientError:
             object.obsolete = "True"
-            print(f"!!! {object_key} not found in bucket. Marking as obsolete.")
+            logging.warning(f"!!! {object_key} not found in bucket. Marking as obsolete.")
         new_data_objects.append(object)
 
     return new_data_objects
@@ -547,7 +558,7 @@ def write_manifest(data_objects: list, outpath: str) -> None:
         outfile.write(header)
         outfile.write(yaml_dumper.dumps(data_objects))
 
-    print(f"Wrote to {outpath}.")
+    logging.info(f"Wrote to {outpath}.")
 
 def retrieve_obofoundry_yaml(
         yaml_url: str = 'https://raw.githubusercontent.com/OBOFoundry/OBOFoundry.github.io/master/registry/ontologies.yml',
@@ -563,13 +574,13 @@ def retrieve_obofoundry_yaml(
 
     # Use cached yaml
     if os.path.exists(onto_file_name):
-        print(f"Loading OBO metadata from cached {onto_file_name}...")
+        logging.info(f"Loading OBO metadata from cached {onto_file_name}...")
         with open(onto_file_name) as infile:
             yaml_parsed = yaml.safe_load(infile)
             yaml_onto_list: list = yaml_parsed['ontologies']
 
     else: # Retrieve and save
-        print(f"Retrieving OBO metadata from {yaml_url}...")
+        logging.info(f"Retrieving OBO metadata from {yaml_url}...")
 
         yaml_req = requests.get(yaml_url)
         yaml_content = yaml_req.content.decode('utf-8')

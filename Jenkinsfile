@@ -71,7 +71,7 @@ pipeline {
                 dir('./gitrepo') {
                     script {
                         def run_make_manifest = sh(
-                            script: '. venv/bin/activate && python make_kg_manifest.py --bucket kg-hub-public-data --outpath MANIFEST.yaml', returnStatus: true
+                            script: '. venv/bin/activate && cd utils/ && python make_kg_manifest.py --bucket kg-hub-public-data --outpath MANIFEST.yaml', returnStatus: true
                         )
                         if (run_make_manifest == 0) {
                             if (env.BRANCH_NAME != 'main') { // upload raw to s3 if we're on correct branch

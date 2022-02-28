@@ -70,9 +70,10 @@ pipeline {
             steps {
                 dir('./gitrepo') {
                     script {
-                        def run_make_manifest = sh(
-                            script: '. venv/bin/activate && cd utils/ && python make_kg_manifest.py --bucket kg-hub-public-data --outpath MANIFEST.yaml', returnStatus: true
-                        )
+                        def run_make_manifest = withCredentials([file(credentialsId: 's3cmd_kg_hub_push_configuration', variable: 'S3CMD_CFG')]) {
+                                sh(script: '. venv/bin/activate && cd utils/ && python make_kg_manifest.py --bucket kg-hub-public-data --outpath MANIFEST.yaml', returnStatus: true
+                            )
+                        }
                         if (run_make_manifest == 0) {
                             if (env.BRANCH_NAME != 'master') { // upload raw to s3 if we're on correct branch
                                 echo "Will not push if not on main branch."

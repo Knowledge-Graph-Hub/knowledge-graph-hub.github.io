@@ -69,24 +69,28 @@ pipeline {
         stage('Make manifest') {
             steps {
                 dir('./gitrepo') {
-                    script {
-                        def run_make_manifest = sh(
-                            script: '. venv/bin/activate && cd utils/ && python make_kg_manifest.py --bucket kg-hub-public-data --outpath MANIFEST.yaml', returnStatus: true
-                        )
-                        if (run_make_manifest == 0) {
-                            if (env.BRANCH_NAME != 'main') { // upload raw to s3 if we're on correct branch
-                                echo "Will not push if not on main branch."
-                            } else {
-                                withCredentials([file(credentialsId: 's3cmd_kg_hub_push_configuration', variable: 'S3CMD_CFG')]) {
-                                    sh '. venv/bin/activate && s3cmd -c $S3CMD_CFG --acl-public --mime-type=plain/text --cf-invalidate put -r data/raw s3://kg-hub-public-data/'
-                                }
+                    withCredentials([
+                            file(credentialsId: 's3cmd_kg_hub_push_configuration', variable: 'S3CMD_CFG'),
+                            file(credentialsId: 'aws_kg_hub_push_json', variable: 'AWS_JSON'),
+                            string(credentialsId: 'aws_kg_hub_access_key', variable: 'AWS_ACCESS_KEY_ID'),
+                            string(credentialsId: 'aws_kg_hub_secret_key', variable: 'AWS_SECRET_ACCESS_KEY')]) {
+                            script {
+                                def run_make_manifest = sh(
+                                    script: '. venv/bin/activate && cd utils/ && python make_kg_manifest.py --bucket kg-hub-public-data --outpath MANIFEST.yaml', returnStatus: true
+                                )
+                                if (run_make_manifest == 0) {
+                                    if (env.BRANCH_NAME != 'main') { // upload raw to s3 if we're on correct branch
+                                        echo "Will not push if not on main branch."
+                                    } else { 
+                                        sh '. venv/bin/activate && s3cmd -c $S3CMD_CFG --acl-public --mime-type=plain/text --cf-invalidate put -r data/raw s3://kg-hub-public-data/'
+                                    }
+                                }  else { // 'make_kg_manifest.py' failed.
+                                    echo "Failed to make manifest."
+                                    currentBuild.result = "FAILED"
+                                    }
+                                
                             }
-                        }  else { // 'make_kg_manifest.py' failed.
-                            echo "Failed to make manifest."
-                            currentBuild.result = "FAILED"
-                            }
-                        
-                    }
+                        }
                 }
             }
         }

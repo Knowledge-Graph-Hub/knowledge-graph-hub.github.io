@@ -82,7 +82,9 @@ pipeline {
                                     if (env.BRANCH_NAME != 'main') { // upload raw to s3 if we're on correct branch
                                         echo "Will not push if not on main branch."
                                     } else { 
-                                        sh '. venv/bin/activate && s3cmd -c $S3CMD_CFG --acl-public --mime-type=plain/text --cf-invalidate put -r data/raw s3://kg-hub-public-data/'
+                                        sh '. venv/bin/activate && s3cmd -c $S3CMD_CFG --acl-public --mime-type=plain/text --cf-invalidate put MANIFEST.yaml s3://kg-hub-public-data/ '
+                                        sh '. venv/bin/activate && s3cmd -c $S3CMD_CFG --acl-public --mime-type=plain/text --cf-invalidate put manifest.log s3://kg-hub-public-data/ '
+                                        sh '. venv/bin/activate && s3cmd -c $S3CMD_CFG --acl-public --mime-type=plain/text --cf-invalidate put -r logs/ s3://kg-hub-public-data/ '
                                     }
                                 }  else { // 'make_kg_manifest.py' failed.
                                     echo "Failed to make manifest."

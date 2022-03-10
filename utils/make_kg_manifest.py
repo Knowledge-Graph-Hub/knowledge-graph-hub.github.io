@@ -18,6 +18,7 @@ import botocore.exceptions
 import botocore.errorfactory
 import click
 import requests
+from torch import maximum
 import yaml
 import tarfile
 import sys
@@ -83,6 +84,13 @@ logger.addHandler(consolehandler)
                required=True,
                nargs=1,
                help="""Name or path to the manifest file to be written.""")
+@click.option("--maximum",
+               type=int,
+               nargs=1,
+               help="""Maximum number of new resources to load during this run.
+                        Most helpful when building manifest from scratch.
+                        If not specified, all objects on the remote
+                        will be considered.""")
 def run(bucket: str, outpath: str):
 
     # Download any existing manifest from the bucket.
@@ -409,6 +417,18 @@ def get_graph_file_keys(keys: list, previous_manifest = []):
 
     for object_type in graph_file_keys:
         logging.info(f"Found {len(graph_file_keys[object_type])} new {object_type} graph files.")
+
+    if maximum:
+        logging.info(f"Will consider only {maximum} files in total.")
+        graph_file_keys["compressed"] = (graph_file_keys["compressed"])[:maximum]
+        remaining = maximum - len(graph_file_keys["compressed"])
+        if remaining > 0:
+            graph_file_keys["uncompressed"] = (graph_file_keys["uncompressed"])[:remaining]
+        else:
+            graph_file_keys["uncompressed"] = []
+        
+        for object_type in graph_file_keys:
+            logging.info(f"Will process {len(graph_file_keys[object_type])} new {object_type} graph files.")
 
     return graph_file_keys
 

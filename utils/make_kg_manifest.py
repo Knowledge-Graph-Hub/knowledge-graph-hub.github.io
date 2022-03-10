@@ -18,7 +18,6 @@ import botocore.exceptions
 import botocore.errorfactory
 import click
 import requests
-from torch import maximum
 import yaml
 import tarfile
 import sys
@@ -91,7 +90,7 @@ logger.addHandler(consolehandler)
                         Most helpful when building manifest from scratch.
                         If not specified, all objects on the remote
                         will be considered.""")
-def run(bucket: str, outpath: str):
+def run(bucket: str, outpath: str, maximum = None):
 
     # Download any existing manifest from the bucket.
     # We read it first to retain all existing records and update if needed.
@@ -381,7 +380,7 @@ def validate_projects(bucket: str, keys: list, graph_file_keys: dict) -> None:
         
     return project_contents
 
-def get_graph_file_keys(keys: list, previous_manifest = []):
+def get_graph_file_keys(keys: list, previous_manifest = [], maximum = None):
     """Given a list of keys, returns a list of those
     resembling graphs.
     If passed a previous_manifest, will ignore the keys

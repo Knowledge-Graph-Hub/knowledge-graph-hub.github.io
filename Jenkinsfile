@@ -76,7 +76,7 @@ pipeline {
                             string(credentialsId: 'aws_kg_hub_secret_key', variable: 'AWS_SECRET_ACCESS_KEY')]) {
                             script {
                                 def run_make_manifest = sh(
-                                    script: '. venv/bin/activate && cd utils/ && python make_kg_manifest.py --bucket kg-hub-public-data --outpath MANIFEST.yaml', returnStatus: true
+                                    script: '. venv/bin/activate && cd utils/ && python make_kg_manifest.py --bucket kg-hub-public-data --outpath MANIFEST.yaml --maximum 10', returnStatus: true
                                 )
                                 if (run_make_manifest == 0) {
                                     if (env.BRANCH_NAME != 'main') { // upload raw to s3 if we're on correct branch

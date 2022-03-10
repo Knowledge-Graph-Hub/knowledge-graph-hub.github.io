@@ -83,7 +83,14 @@ logger.addHandler(consolehandler)
                required=True,
                nargs=1,
                help="""Name or path to the manifest file to be written.""")
-def run(bucket: str, outpath: str):
+@click.option("--maximum",
+               type=int,
+               nargs=1,
+               help="""Maximum number of new resources to load during this run.
+                        Most helpful when building manifest from scratch.
+                        If not specified, all objects on the remote
+                        will be considered.""")
+def run(bucket: str, outpath: str, maximum = None):
 
     # Download any existing manifest from the bucket.
     # We read it first to retain all existing records and update if needed.
@@ -103,7 +110,7 @@ def run(bucket: str, outpath: str):
             previous_manifest = load_previous_manifest(bucket, manifest_name)
         else:
             previous_manifest = []
-        graph_file_keys = get_graph_file_keys(keys, previous_manifest)
+        graph_file_keys = get_graph_file_keys(keys, maximum, previous_manifest)
         project_contents = validate_projects(bucket, keys, graph_file_keys)
         dataset_objects = create_dataset_objects(graph_file_keys, 
                                                 project_metadata,
@@ -373,7 +380,7 @@ def validate_projects(bucket: str, keys: list, graph_file_keys: dict) -> None:
         
     return project_contents
 
-def get_graph_file_keys(keys: list, previous_manifest = []):
+def get_graph_file_keys(keys: list, maximum: int, previous_manifest = []):
     """Given a list of keys, returns a list of those
     resembling graphs.
     If passed a previous_manifest, will ignore the keys
@@ -409,6 +416,18 @@ def get_graph_file_keys(keys: list, previous_manifest = []):
 
     for object_type in graph_file_keys:
         logging.info(f"Found {len(graph_file_keys[object_type])} new {object_type} graph files.")
+
+    if maximum:
+        logging.info(f"Will consider only {maximum} files in total.")
+        graph_file_keys["compressed"] = (graph_file_keys["compressed"])[:maximum]
+        remaining = maximum - len(graph_file_keys["compressed"])
+        if remaining > 0:
+            graph_file_keys["uncompressed"] = (graph_file_keys["uncompressed"])[:remaining]
+        else:
+            graph_file_keys["uncompressed"] = []
+        
+        for object_type in graph_file_keys:
+            logging.info(f"Will process {len(graph_file_keys[object_type])} new {object_type} graph files.")
 
     return graph_file_keys
 

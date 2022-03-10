@@ -110,7 +110,7 @@ def run(bucket: str, outpath: str, maximum = None):
             previous_manifest = load_previous_manifest(bucket, manifest_name)
         else:
             previous_manifest = []
-        graph_file_keys = get_graph_file_keys(keys, previous_manifest)
+        graph_file_keys = get_graph_file_keys(keys, maximum, previous_manifest)
         project_contents = validate_projects(bucket, keys, graph_file_keys)
         dataset_objects = create_dataset_objects(graph_file_keys, 
                                                 project_metadata,
@@ -380,7 +380,7 @@ def validate_projects(bucket: str, keys: list, graph_file_keys: dict) -> None:
         
     return project_contents
 
-def get_graph_file_keys(keys: list, previous_manifest = [], maximum = None):
+def get_graph_file_keys(keys: list, maximum: int, previous_manifest = []):
     """Given a list of keys, returns a list of those
     resembling graphs.
     If passed a previous_manifest, will ignore the keys

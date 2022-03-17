@@ -39,6 +39,11 @@ from models.datasets import GraphDataPackage, DataResource
 # Helper functions
 from get_kg_contents import retrieve_stats
 
+# Keep track of all projects and builds processed this time
+# keys are project IDs, values are lists of builds
+global processed_this_run
+processed_this_run = {}
+
 # Load projects.yaml - this is the list of 
 # all current, fully defined projects on KG-Hub.
 # Other projects will still be indexed,
@@ -49,6 +54,7 @@ with open('projects.yaml') as infile:
     yaml_parsed = yaml.safe_load(infile)
     for project in yaml_parsed['projects']:
         PROJECTS[project['id']] = project['description']
+        processed_this_run[project['id']] = []
 
 # These projects won't get the full KGX validation.
 VALIDATION_DENYLIST = ["kg-covid-19"]
@@ -65,11 +71,6 @@ IGNORE_DIRS = ["attic",
                 "kg-covid-19-sparql",
                 "ontoml",
                 "test"]
-
-# Keep track of all projects and builds processed this time
-# keys are project IDs, values are lists of builds
-global processed_this_run
-processed_this_run = {}
 
 # Set up logger - will write to STDOUT too
 logger = logging.getLogger('')
@@ -276,10 +277,7 @@ def validate_merged_graph(bucket, graph_key):
             except TypeError as e:
                 logging.error(f"Error while validating: {e}")
 
-    if project_name not in processed_this_run:
-        processed_this_run[project_name] = [build_name]
-    else:
-        processed_this_run[project_name].append(build_name)
+    processed_this_run[project_name].append(build_name)
 
     # Clean up
     shutil.rmtree(temp_dir)

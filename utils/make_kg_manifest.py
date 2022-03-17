@@ -39,17 +39,16 @@ from models.datasets import GraphDataPackage, DataResource
 # Helper functions
 from get_kg_contents import retrieve_stats
 
-# List of all current, fully defined projects on KG-Hub
+# Load projects.yaml - this is the list of 
+# all current, fully defined projects on KG-Hub.
 # Other projects will still be indexed,
 # but won't have versions or descriptions 
 # assigned in the manifest unless they are here.
-PROJECTS = {"kg-obo": "KG-OBO: OBO ontologies into KGX TSV format.",
-             "kg-idg": "KG-IDG: a Knowledge Graph for Illuminating the Druggable Genome.",
-             "kg-covid-19": "KG-COVID-19: a knowledge graph for COVID-19 and SARS-COV-2.",
-             "kg-microbe": "KG-Microbe: a knowledge graph for microbial traits.",
-             "eco-kg": "eco-KG: a knowledge graph of plant traits starting with Planteome and EOL TraitBank.",
-             "monarch": "Graph representation of the Monarch Initiative knowledge resource.",
-             "kg-ontoml": "Graph representation of Monarch ontologies."}
+PROJECTS = {}
+with open('projects.yaml') as infile:
+    yaml_parsed = yaml.safe_load(infile)
+    for project in yaml_parsed['projects']:
+        PROJECTS[project['id']] = project['description']
 
 # List of component types used to build larger KGs
 SUBGRAPH_TYPES = ["raw",

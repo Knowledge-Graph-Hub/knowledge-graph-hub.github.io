@@ -39,16 +39,25 @@ from models.datasets import GraphDataPackage, DataResource
 # Helper functions
 from get_kg_contents import retrieve_stats
 
-# List of all current, fully defined projects on KG-Hub
+# Keep track of all projects and builds processed this time
+# keys are project IDs, values are lists of builds
+global processed_this_run
+processed_this_run = {}
+
+# Load projects.yaml - this is the list of 
+# all current, fully defined projects on KG-Hub.
 # Other projects will still be indexed,
 # but won't have versions or descriptions 
 # assigned in the manifest unless they are here.
-PROJECTS = {"kg-obo": "KG-OBO: OBO ontologies into KGX TSV format.",
-             "kg-idg": "KG-IDG: a Knowledge Graph for Illuminating the Druggable Genome.",
-             "kg-covid-19": "KG-COVID-19: a knowledge graph for COVID-19 and SARS-COV-2.",
-             "kg-microbe": "KG-Microbe: a knowledge graph for microbial traits.",
-             "eco-kg": "eco-KG: a knowledge graph of plant traits starting with Planteome and EOL TraitBank.",
-             "monarch": "Graph representation of the Monarch Initiative knowledge resource."}
+PROJECTS = {}
+with open('projects.yaml') as infile:
+    yaml_parsed = yaml.safe_load(infile)
+    for project in yaml_parsed['projects']:
+        PROJECTS[project['id']] = project['description']
+        processed_this_run[project['id']] = []
+
+# These projects won't get the full KGX validation.
+VALIDATION_DENYLIST = ["kg-covid-19"]
 
 # List of component types used to build larger KGs
 SUBGRAPH_TYPES = ["raw",
@@ -199,6 +208,11 @@ def validate_merged_graph(bucket, graph_key):
     graph file expected to contain one node list
     and one edge list, both in KGX format,
     validates accordingly.
+    Downloads the graph files locally to do so.
+    The full KGX validation can take a long time, 
+    especially if there are many validation errors,
+    so it may not be appropriate to perform
+    for all graphs. 
     :param bucket: name of S3 bucket, needed to retrieve graph files
     :param graph_key: str, the remote key for the graph file
     :return: dict of bools
@@ -206,7 +220,7 @@ def validate_merged_graph(bucket, graph_key):
 
     results = {"file count correct": False,
                 "file names correct": False,
-                "file format correct": False}
+                "no KGX validation errors": False}
 
     temp_dir = 'data'
     log_dir = 'logs'
@@ -238,20 +252,32 @@ def validate_merged_graph(bucket, graph_key):
         else:
             results["file names correct"] = True
 
-        logging.info("Validating graph files with KGX...")
-        
-        try:
-            errors = kgx.cli.validate(inputs=[temp_path],
-                        input_format="tsv",
-                        input_compression="tar.gz",
-                        output=log_path,
-                        stream=False)
-            if len(errors) > 0: # i.e. there are any real errors
-                logging.warning(f"KGX found errors in graph files. See {log_path}")
-            else:
-                results["file format correct"] = True
-        except TypeError as e:
-            logging.error(f"Error while validating: {e}")
+        # Verify that it's OK to proceed
+        full_validation = True
+        if project_name in VALIDATION_DENYLIST or \
+            not results["file count correct"] or \
+            not results["file names correct"] or \
+            build_name in processed_this_run[project_name]:
+            full_validation = False
+            logging.info("Not performing full validation with KGX.")
+
+        if full_validation:
+            logging.info("Validating graph files with KGX...")
+            
+            try:
+                errors = kgx.cli.validate(inputs=[temp_path],
+                            input_format="tsv",
+                            input_compression="tar.gz",
+                            output=log_path,
+                            stream=False)
+                if len(errors) > 0: # i.e. there are any real errors
+                    logging.warning(f"KGX found errors in graph files. See {log_path}")
+                else:
+                    results["no KGX validation errors"] = True
+            except TypeError as e:
+                logging.error(f"Error while validating: {e}")
+
+    processed_this_run[project_name].append(build_name)
 
     # Clean up
     shutil.rmtree(temp_dir)
@@ -307,8 +333,7 @@ def validate_projects(bucket: str, keys: list, graph_file_keys: dict) -> None:
                                             "valid builds":[],
                                             "incorrectly named builds":[],
                                             "incorrectly structured builds":[],
-                                            "builds with issues in tar.gz":[],
-                                            "builds with KGX format problems":[]}
+                                            "builds with issues in tar.gz":[]}
         logging.info(f"Validating new builds for {project_name}...")
         for keyname in keys:
             try:
@@ -317,6 +342,8 @@ def validate_projects(bucket: str, keys: list, graph_file_keys: dict) -> None:
                     project_contents[project_name]["objects"].append(keyname)
 
                     # Now collect all new builds
+                    # the 'current' build is just the most recent,
+                    # so we skip that
                     build_name = (keyname.split("/"))[1]
                     if build_name not in project_contents[project_name]["builds"] and \
                         build_name not in ["index.html", "current","README"]:
@@ -359,9 +386,8 @@ def validate_projects(bucket: str, keys: list, graph_file_keys: dict) -> None:
                     not graph_validation_results["file names correct"]:
                     valid = False
                     project_contents[project_name]["builds with issues in tar.gz"].append(build_name)
-                if not graph_validation_results["file format correct"]:
-                    valid = False
-                    project_contents[project_name]["builds with KGX format problems"].append(build_name)
+                if not graph_validation_results["no KGX validation errors"]: # almost never happens
+                    logging.info(f"Build in {merged_graph_key} may contain format errors.")
 
             if valid:
                 project_contents[project_name]["valid builds"].append(build_name)
@@ -373,8 +399,7 @@ def validate_projects(bucket: str, keys: list, graph_file_keys: dict) -> None:
                 logging.info(f"\t{object_count} {object_type}")
                 if object_type in ["incorrectly named builds",
                                     "incorrectly structured builds",
-                                    "builds with issues in tar.gz",
-                                    "builds with KGX format problems"]:
+                                    "builds with issues in tar.gz"]:
                     invalid_builds = project_contents[project_name][object_type]
                     logging.info(f"\t\t{invalid_builds}")
         

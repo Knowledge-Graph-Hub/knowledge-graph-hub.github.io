@@ -66,6 +66,11 @@ IGNORE_DIRS = ["attic",
                 "ontoml",
                 "test"]
 
+# Keep track of all projects and builds processed this time
+# keys are project IDs, values are lists of builds
+global processed_this_run
+processed_this_run = {}
+
 # Set up logger - will write to STDOUT too
 logger = logging.getLogger('')
 logger.setLevel(logging.INFO)
@@ -248,7 +253,10 @@ def validate_merged_graph(bucket, graph_key):
 
         # Verify that it's OK to proceed
         full_validation = True
-        if project_name in VALIDATION_DENYLIST:
+        if project_name in VALIDATION_DENYLIST or \
+            not results["file count correct"] or \
+            not results["file names correct"] or
+            build_name in processed_this_run[project_name]:
             full_validation = False
             logging.info("Not performing full validation with KGX.")
 
@@ -267,6 +275,11 @@ def validate_merged_graph(bucket, graph_key):
                     results["no KGX validation errors"] = True
             except TypeError as e:
                 logging.error(f"Error while validating: {e}")
+
+    if project_name not in processed_this_run:
+        processed_this_run[project_name] = [build_name]
+    else:
+        processed_this_run[project_name].append(build_name)
 
     # Clean up
     shutil.rmtree(temp_dir)
@@ -331,6 +344,8 @@ def validate_projects(bucket: str, keys: list, graph_file_keys: dict) -> None:
                     project_contents[project_name]["objects"].append(keyname)
 
                     # Now collect all new builds
+                    # the 'current' build is just the most recent,
+                    # so we skip that
                     build_name = (keyname.split("/"))[1]
                     if build_name not in project_contents[project_name]["builds"] and \
                         build_name not in ["index.html", "current","README"]:

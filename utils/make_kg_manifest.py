@@ -255,7 +255,7 @@ def validate_merged_graph(bucket, graph_key):
         full_validation = True
         if project_name in VALIDATION_DENYLIST or \
             not results["file count correct"] or \
-            not results["file names correct"] or
+            not results["file names correct"] or \
             build_name in processed_this_run[project_name]:
             full_validation = False
             logging.info("Not performing full validation with KGX.")

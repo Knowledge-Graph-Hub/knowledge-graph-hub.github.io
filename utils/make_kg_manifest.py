@@ -50,6 +50,9 @@ with open('projects.yaml') as infile:
     for project in yaml_parsed['projects']:
         PROJECTS[project['id']] = project['description']
 
+# These projects won't get the full KGX validation.
+VALIDATION_DENYLIST = ["kg-covid-19"]
+
 # List of component types used to build larger KGs
 SUBGRAPH_TYPES = ["raw",
                 "transformed"]
@@ -243,20 +246,27 @@ def validate_merged_graph(bucket, graph_key):
         else:
             results["file names correct"] = True
 
-        logging.info("Validating graph files with KGX...")
-        
-        try:
-            errors = kgx.cli.validate(inputs=[temp_path],
-                        input_format="tsv",
-                        input_compression="tar.gz",
-                        output=log_path,
-                        stream=False)
-            if len(errors) > 0: # i.e. there are any real errors
-                logging.warning(f"KGX found errors in graph files. See {log_path}")
-            else:
-                results["no KGX validation errors"] = True
-        except TypeError as e:
-            logging.error(f"Error while validating: {e}")
+        # Verify that it's OK to proceed
+        full_validation = True
+        if project_name in VALIDATION_DENYLIST:
+            full_validation = False
+            logging.info("Not performing full validation with KGX.")
+
+        if full_validation:
+            logging.info("Validating graph files with KGX...")
+            
+            try:
+                errors = kgx.cli.validate(inputs=[temp_path],
+                            input_format="tsv",
+                            input_compression="tar.gz",
+                            output=log_path,
+                            stream=False)
+                if len(errors) > 0: # i.e. there are any real errors
+                    logging.warning(f"KGX found errors in graph files. See {log_path}")
+                else:
+                    results["no KGX validation errors"] = True
+            except TypeError as e:
+                logging.error(f"Error while validating: {e}")
 
     # Clean up
     shutil.rmtree(temp_dir)

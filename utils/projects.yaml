@@ -1,0 +1,15 @@
+projects:
+- id: kg-obo
+  description: "KG-OBO: OBO ontologies into KGX TSV format."
+- id: kg-idg
+  description: "KG-IDG: a Knowledge Graph for Illuminating the Druggable Genome."
+- id: kg-covid-19
+  description: "KG-COVID-19: a knowledge graph for COVID-19 and SARS-COV-2."
+- id: kg-microbe
+  description: "KG-Microbe: a knowledge graph for microbial traits."
+- id: eco-kg
+  description: "eco-KG: a knowledge graph of plant traits starting with Planteome and EOL TraitBank."
+- id: monarch
+  description: "Graph representation of the Monarch Initiative knowledge resource."
+- id: kg-ontoml
+  description: "Graph representation of Monarch ontologies."

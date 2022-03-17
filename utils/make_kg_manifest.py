@@ -199,6 +199,11 @@ def validate_merged_graph(bucket, graph_key):
     graph file expected to contain one node list
     and one edge list, both in KGX format,
     validates accordingly.
+    Downloads the graph files locally to do so.
+    The full KGX validation can take a long time, 
+    especially if there are many validation errors,
+    so it may not be appropriate to perform
+    for all graphs. 
     :param bucket: name of S3 bucket, needed to retrieve graph files
     :param graph_key: str, the remote key for the graph file
     :return: dict of bools
@@ -206,7 +211,7 @@ def validate_merged_graph(bucket, graph_key):
 
     results = {"file count correct": False,
                 "file names correct": False,
-                "file format correct": False}
+                "no KGX validation errors": False}
 
     temp_dir = 'data'
     log_dir = 'logs'
@@ -249,7 +254,7 @@ def validate_merged_graph(bucket, graph_key):
             if len(errors) > 0: # i.e. there are any real errors
                 logging.warning(f"KGX found errors in graph files. See {log_path}")
             else:
-                results["file format correct"] = True
+                results["no KGX validation errors"] = True
         except TypeError as e:
             logging.error(f"Error while validating: {e}")
 
@@ -307,8 +312,7 @@ def validate_projects(bucket: str, keys: list, graph_file_keys: dict) -> None:
                                             "valid builds":[],
                                             "incorrectly named builds":[],
                                             "incorrectly structured builds":[],
-                                            "builds with issues in tar.gz":[],
-                                            "builds with KGX format problems":[]}
+                                            "builds with issues in tar.gz":[]}
         logging.info(f"Validating new builds for {project_name}...")
         for keyname in keys:
             try:
@@ -359,9 +363,8 @@ def validate_projects(bucket: str, keys: list, graph_file_keys: dict) -> None:
                     not graph_validation_results["file names correct"]:
                     valid = False
                     project_contents[project_name]["builds with issues in tar.gz"].append(build_name)
-                if not graph_validation_results["file format correct"]:
-                    valid = False
-                    project_contents[project_name]["builds with KGX format problems"].append(build_name)
+                if not graph_validation_results["no KGX validation errors"]: # almost never happens
+                    logging.info(f"Build in {merged_graph_key} may contain format errors.")
 
             if valid:
                 project_contents[project_name]["valid builds"].append(build_name)
@@ -373,8 +376,7 @@ def validate_projects(bucket: str, keys: list, graph_file_keys: dict) -> None:
                 logging.info(f"\t{object_count} {object_type}")
                 if object_type in ["incorrectly named builds",
                                     "incorrectly structured builds",
-                                    "builds with issues in tar.gz",
-                                    "builds with KGX format problems"]:
+                                    "builds with issues in tar.gz"]:
                     invalid_builds = project_contents[project_name][object_type]
                     logging.info(f"\t\t{invalid_builds}")
         

@@ -79,7 +79,7 @@ pipeline {
                                     script: '. venv/bin/activate && cd utils/ && python make_kg_manifest.py --bucket kg-hub-public-data --outpath MANIFEST.yaml --maximum 1', returnStatus: true
                                 )
                                 if (run_make_manifest == 0) {
-                                    if (env.BRANCH_NAME != 'main') { // upload raw to s3 if we're on correct branch
+                                    if (env.BRANCH_NAME != 'master') { // upload raw to s3 if we're on correct branch
                                         echo "Will not push if not on main branch."
                                     } else { 
                                         sh '. venv/bin/activate && s3cmd -c $S3CMD_CFG --acl-public --mime-type=plain/text --cf-invalidate put MANIFEST.yaml s3://kg-hub-public-data/ '

@@ -57,7 +57,7 @@ with open('projects.yaml') as infile:
         processed_this_run[project['id']] = []
 
 # These projects won't get the full KGX validation.
-VALIDATION_DENYLIST = ["kg-covid-19"]
+VALIDATION_DENYLIST = ["kg-covid-19","eco-kg"]
 
 # List of component types used to build larger KGs
 SUBGRAPH_TYPES = ["raw",

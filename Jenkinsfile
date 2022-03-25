@@ -83,11 +83,10 @@ pipeline {
                                     if (run_make_manifest == 1) { // testing
                                         echo "Will not push if not on main branch."
                                     } else { 
-                                        sh 'pwd'
-                                        sh 'ls -lh'
-                                        sh 's3cmd -c $S3CMD_CFG --acl-public --mime-type=plain/text --cf-invalidate put MANIFEST.yaml s3://kg-hub-public-data/ '
-                                        sh 's3cmd -c $S3CMD_CFG --acl-public --mime-type=plain/text --cf-invalidate put manifest.log s3://kg-hub-public-data/ '
-                                        sh 's3cmd -c $S3CMD_CFG --acl-public --mime-type=plain/text --cf-invalidate put -r logs/ s3://kg-hub-public-data/ '
+                                        sh 'ls -lh utils/'
+                                        sh 's3cmd -c $S3CMD_CFG --acl-public --mime-type=plain/text --cf-invalidate put utils/MANIFEST.yaml s3://kg-hub-public-data/ '
+                                        sh 's3cmd -c $S3CMD_CFG --acl-public --mime-type=plain/text --cf-invalidate put utils/manifest.log s3://kg-hub-public-data/ '
+                                        sh 's3cmd -c $S3CMD_CFG --acl-public --mime-type=plain/text --cf-invalidate put -r utils/logs/ s3://kg-hub-public-data/ '
                                     }
                                 }  else { // 'make_kg_manifest.py' failed.
                                     echo "Failed to make manifest."

@@ -80,7 +80,7 @@ pipeline {
                                 )
                                 if (run_make_manifest == 0) {
                                     //if (env.BRANCH_NAME != 'master') { // upload raw to s3 if we're on correct branch
-                                    if (run_make_manifest == 0) { // testing
+                                    if (run_make_manifest == 1) { // testing
                                         echo "Will not push if not on main branch."
                                     } else { 
                                         sh 'pwd'

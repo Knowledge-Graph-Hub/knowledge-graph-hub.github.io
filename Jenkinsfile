@@ -6,7 +6,7 @@ pipeline {
         }
     }
     triggers{
-        cron('0 8 * * 3')
+        cron('0 8 * * 2,5')
     }
     environment {
         RUNSTARTDATE = sh(script: "echo `date +%Y%m%d`", returnStdout: true).trim()
@@ -76,7 +76,7 @@ pipeline {
                             string(credentialsId: 'aws_kg_hub_secret_key', variable: 'AWS_SECRET_ACCESS_KEY')]) {
                             script {
                                 def run_make_manifest = sh(
-                                    script: '. venv/bin/activate && cd utils/ && python make_kg_manifest.py --bucket kg-hub-public-data --outpath MANIFEST.yaml --maximum 25', returnStatus: true
+                                    script: '. venv/bin/activate && cd utils/ && python make_kg_manifest.py --bucket kg-hub-public-data --outpath MANIFEST.yaml --maximum 75', returnStatus: true
                                 )
                                 if (run_make_manifest == 0) {
                                     if (env.BRANCH_NAME != 'master') { // upload raw to s3 if we're on correct branch

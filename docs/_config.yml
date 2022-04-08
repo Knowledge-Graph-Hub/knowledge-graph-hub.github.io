@@ -24,27 +24,12 @@ description: >- # this means to ignore newlines until "baseurl:"
   KG-Hub - a collection of Biological and Biomedical Knowledge Graphs
 #baseurl: / # the subpath of your site, e.g. /blog
 domain: knowledge-graph-hub.github.io
-url: https://knowledge-graph-hub.github.io/ # the base hostname & protocol for your site, e.g. http://example.com
-#twitter_username: jekyllrb
-#github_username:  jekyll
-
-texture:
-  title: Knowledge Graph Hub
-  tagline: KG-Hub - a collection of Biological and Biomedical Knowledge Graphs
-  date_format: "%b %-d, %Y"
-  style: black
-  showNav: true
-  navigation:
-    - title: About
-      url: "/about"
-    - title: Support
-      url: "/support"
+url: https://knowledge-graph-hub.github.io/
 
 # Build settings
-#theme: minima
-remote_theme: samarsault/texture
-plugins:
-  - jekyll-feed
+theme: minima
+#plugins:
+#  - jekyll-feed
 
 # Exclude from processing.
 # The following items will not be processed, by default.

@@ -22,7 +22,7 @@ title: Knowledge Graph Hub
 #email: jhc@lbl.gov
 description: >- # this means to ignore newlines until "baseurl:"
   KG-Hub - a collection of Biological and Biomedical Knowledge Graphs
-baseurl: /page/ # the subpath of your site, e.g. /blog
+#baseurl: / # the subpath of your site, e.g. /blog
 domain: knowledge-graph-hub.github.io
 url: https://knowledge-graph-hub.github.io/ # the base hostname & protocol for your site, e.g. http://example.com
 #twitter_username: jekyllrb
@@ -34,6 +34,11 @@ texture:
   date_format: "%b %-d, %Y"
   style: black
   showNav: true
+  navigation:
+    - title: About
+      url: "/about"
+    - title: Support
+      url: "/support"
 
 # Build settings
 #theme: minima

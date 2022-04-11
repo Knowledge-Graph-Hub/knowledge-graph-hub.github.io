@@ -21,7 +21,7 @@ This is a collection of biological and biomedical Knowledge Graphs, including th
 
 ## Knowledge Graph Projects
 
-| Name        | Repository                                         | Graphs                                     |
+| Name        | Source Code                                         | Knowledge Graph                                     |
 |-------------|----------------------------------------------------|--------------------------------------------|
 | KG-COVID-19 | <https://github.com/Knowledge-Graph-Hub/kg-covid-19> | <https://kg-hub.berkeleybop.io/kg-covid-19/> |
 | KG-IDG      | <https://github.com/Knowledge-Graph-Hub/kg-idg>      | <https://kg-hub.berkeleybop.io/kg-idg/>      |

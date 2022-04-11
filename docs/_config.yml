@@ -27,7 +27,7 @@ domain: knowledge-graph-hub.github.io
 url: https://knowledge-graph-hub.github.io/
 
 # Build settings
-theme: jekyll-theme-minimal
+theme: minima
 #plugins:
 #  - jekyll-feed
 

@@ -3,9 +3,8 @@
 # To modify the layout, see https://jekyllrb.com/docs/themes/#overriding-theme-defaults
 
 layout: home
+title: Welcome
 ---
-
-# Welcome to Knowledge Graph Hub
 
 This is a collection of biological and biomedical Knowledge Graphs, including their component data sources.  
 

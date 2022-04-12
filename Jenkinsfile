@@ -85,7 +85,7 @@ pipeline {
                                         sh 'ls -lh utils/'
                                         sh 's3cmd -c $S3CMD_CFG --acl-public --mime-type=plain/text --cf-invalidate put utils/MANIFEST.yaml s3://kg-hub-public-data/ '
                                         sh 's3cmd -c $S3CMD_CFG --acl-public --mime-type=plain/text --cf-invalidate put utils/manifest.log s3://kg-hub-public-data/ '
-                                        sh 'touch utils/logs/placeholder' //We want a logs folder, whether we have new logs or not
+                                        sh 'mkdir -p utils/logs/ && touch utils/logs/placeholder' //We want a logs folder, whether we have new logs or not
                                         sh 's3cmd -c $S3CMD_CFG --acl-public --mime-type=plain/text --cf-invalidate put -r utils/logs/ s3://kg-hub-public-data/ '
                                         }
                                 }  else { // 'make_kg_manifest.py' failed.

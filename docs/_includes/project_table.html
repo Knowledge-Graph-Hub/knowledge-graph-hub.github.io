@@ -1,0 +1,26 @@
+<table class="table">
+    <tbody>
+          <tr>
+              <th>Name</th>
+              <th>Description</th>
+              <th>Graph</th>
+              <th>Source Code</th>
+          </tr>
+      {% for project in site.projects %}
+            <tr>
+                <td>
+                    {{ project.id }}
+                </td>
+                <td>
+                    {{ project.description }}
+                </td>
+                <td>
+                    <a href= {{ project.url }} > {{ project.url }} </a>
+                </td>
+                <td>
+                    <a href= {{ project.repository }} > {{ project.repository }} </a>
+                </td>
+              </tr>
+          {% endfor %}
+      </tbody>
+    </table>

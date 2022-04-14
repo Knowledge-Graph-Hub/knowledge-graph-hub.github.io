@@ -1,0 +1,30 @@
+<table class="table">
+    <tbody>
+          <tr>
+            <th>Ontology</th>
+            <th>OBO Foundry Page</th>
+            <th>pURL</th>
+            <th>KG</th>
+            <th>Versions</th>
+          </tr>
+      {% for product in site.ontologies %}
+            <tr>
+                <td>
+                    {{ product[0] }}
+                </td>
+                <td>
+                    <a href= https://obofoundry.org/ontology/{{ product[0] }} > Link </a>
+                </td>
+                <td>
+                    <a href= {{ product.current_iri }} > Link </a>
+                </td>
+                <td>
+                    <a href= https://kg-hub.berkeleybop.io/kg-obo/{{ product[0] }} > Link </a>
+                </td>
+                <td>
+                    {{ product.current_version }}
+                </td>
+              </tr>
+          {% endfor %}
+      </tbody>
+    </table>

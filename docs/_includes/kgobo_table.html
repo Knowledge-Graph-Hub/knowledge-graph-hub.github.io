@@ -3,13 +3,13 @@
           <tr>
             <th>Ontology</th>
             <th>OBO Foundry Page</th>
-            <th>KG</th>
-            <th>Versions</th>
+            <th>All KG Versions</th>
+            <th>Current Version</th>
           </tr>
       {% for product in site.ontologies %}
             <tr>
                 <td>
-                    <a href= {{ product.current_iri }} > <b>{{ product[0] }}</b></a>
+                    <b>{{ product[0] }}</b></a>
                 </td>
                 <td>
                     <a href= https://obofoundry.org/ontology/{{ product[0] }} > Link </a>
@@ -19,7 +19,7 @@
                 </td>
                 <td>
                     {% for entry in product %}
-                        {{ entry }}
+                    <a href= https://kg-hub.berkeleybop.io/kg-obo/{{ product[0] }}/{{ entry.current_version }}/{{ product[0] }}_kgx_tsv.tar.gz > {{ entry.current_version }} </a>
                     {% endfor %}
                 </td>
               </tr>

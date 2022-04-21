@@ -5,7 +5,6 @@ permalink: /kg_obo/
 ---
 <div class="content">    
   <div class="col-md-12">
-    <h3>KG-OBO Graphs</h3>
     
     KG-OBO translates the biological and biomedical ontologies on <a href="https://obofoundry.org/"> OBO Foundry</a> into graph nodes and edges.
 
@@ -13,7 +12,27 @@ permalink: /kg_obo/
       <li><a href="https://github.com/Knowledge-Graph-Hub/kg-obo">Visit the KG-OBO GitHub repository</a></li>
       <br>
 
-    <p>The table below lists all graphs on KG-OBO, including both current and previous versions of ontologies.</p>
+    <h3>Why?</h3>
+
+    Knowledge graphs, or KGs, are powerful tools for modeling and learning from the complex relationships being constantly discovered among biological and biomedical phenomena. 
+    Though it can be useful to assemble a set of interactions alone (e.g., between proteins, genes, and even diseases or their symptoms), a complete understanding of these associations may be difficult to acquire without comprehensive domain knowledge.<br><br>
+
+    This is where ontologies can help. 
+    Each ontology defines the relationships between concepts, often in hierarchies. 
+    If you need to know whether salicylsulfuric acid and fenpicoxamid have anything in common (they're both esters, at least), the <a href="https://obofoundry.org/ontology/chebi.html">CHEBI</a> ontology can help. 
+    If you're trying to model the relationships between the cephalopod <i>Enoploteuthis leptura</i> and other species, there's <a href="https://obofoundry.org/ontology/ceph.html">an ontology</a> for that too.<br><br>
+
+    Ontologies are carefully designed to define specific relationships and their internal formats reflect this purpose. 
+    These formats (often OWL or OBO) are not naturally compatible with knowlege graph assembly. 
+    Their classes require translation into nodes and their relationships must be translated into edges, all with a single, consistent format retaining as much of the original ontology's value as possible. 
+    It's also preferable to keep track of which version of each ontology is to be used in a KG, for the sake of reproducibility.<br><br>
+
+    KG-OBO takes care of this for you.<br><br>
+
+    <h3>Ontology Graphs in KG-OBO</h3>
+    <p>The table below lists all graphs on KG-OBO, including both current and previous versions of ontologies.
+      Clicking the link for "Current KG Version" will take you directly to the compressed graph file.
+    </p>
   </div>
 
   <div class="col-md-12">

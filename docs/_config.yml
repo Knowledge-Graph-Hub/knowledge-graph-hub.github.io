@@ -351,7 +351,7 @@ manifest:
     node_count: 574193
     predicates: biolink:affects|biolink:affects_localization_of|biolink:affects_transport_of|biolink:capable_of|biolink:caused_by|biolink:causes|biolink:coexists_with|biolink:correlated_with|biolink:derives_from|biolink:develops_from|biolink:disrupts|biolink:enabled_by|biolink:enables|biolink:has_attribute|biolink:has_gene_product|biolink:has_input|biolink:has_output|biolink:has_part|biolink:has_participant|biolink:has_phenotype|biolink:homologous_to|biolink:in_taxon|biolink:increases_degradation_of|biolink:interacts_with|biolink:involved_in|biolink:located_in|biolink:location_of|biolink:mentions|biolink:model_of|biolink:molecularly_interacts_with|biolink:negatively_regulates|biolink:occurs_in|biolink:overlaps|biolink:part_of|biolink:participates_in|biolink:positively_regulates|biolink:preceded_by|biolink:precedes|biolink:produced_by|biolink:produces|biolink:regulates|biolink:related_to|biolink:subclass_of|biolink:temporally_related_to|biolink:type
     node_categories: biolink:AnatomicalEntity|biolink:Assay|biolink:BiologicalProcess|biolink:Cell|biolink:CellularComponent|biolink:ChemicalSubstance|biolink:Disease|biolink:Drug|biolink:Gene|biolink:MolecularActivity|biolink:MolecularEntity|biolink:NamedThing|biolink:OntologyClass|biolink:OrganismTaxon|biolink:OrganismalEntity|biolink:PhenotypicFeature|biolink:Protein|biolink:Publication|biolink:RNA|biolink:SequenceFeature
-    node_prefixes: NCIT|OPL|ZFIN|CHR|XENBASE|INTACT|dc|UPHENO|OIO|ENSEMBL|PR|RGD|SO|IDO|PCO|rdfs|OBO|UBERON|CHEBI|CHEMBL.COMPOUND|HGNC|DICTYBASE.GENE|MONDO|NCBITaxon|ENVO|CL|DrugCentral|NCBIProtein|MFOEM|FOODON|ComplexPortal|DDANAT|WD|PO|CORD|BFO|CHEMBL.TARGET|SGD|MFOMD|NBO|PATO|HP|TAIR.LOCUS|IAO|OBI|PHARMGKB|TrEMBL|DRUGBANK|CHEMBL.ASSAY|OGMS|MESH|NCBIGene|PMID|UniProtKB|WB|CARO|RO|owl|MPATH|ttd.drug|FB|MF|BSPO|MOD|FAO|OBA|GO
+    node_prefixes: CHEBI|IAO|CORD|MESH|WD|BSPO|UPHENO|owl|ENSEMBL|SO|CL|CHR|PMID|NBO|MFOMD|HP|ttd.drug|TrEMBL|FOODON|MPATH|DDANAT|CHEMBL.TARGET|FAO|IDO|MFOEM|NCBIGene|OBA|OGMS|NCIT|UniProtKB|PATO|PHARMGKB|WB|RGD|FB|INTACT|TAIR.LOCUS|NCBIProtein|GO|OPL|ENVO|MOD|rdfs|DrugCentral|CHEMBL.ASSAY|OBI|MF|DRUGBANK|PCO|RO|ZFIN|DICTYBASE.GENE|MONDO|SGD|OIO|dc|CARO|ComplexPortal|PR|HGNC|NCBITaxon|UBERON|XENBASE|BFO|OBO|PO|CHEMBL.COMPOUND
   - id: https://kg-hub.berkeleybop.io/kg-covid-19/20210902/kg-covid-19.tar.gz
     title: kg-covid-19.tar.gz
     description: 'KG-COVID-19: a knowledge graph for COVID-19 and SARS-COV-2.'
@@ -366,7 +366,7 @@ manifest:
     node_count: 574215
     predicates: biolink:affects|biolink:affects_localization_of|biolink:affects_transport_of|biolink:capable_of|biolink:caused_by|biolink:causes|biolink:coexists_with|biolink:correlated_with|biolink:derives_from|biolink:develops_from|biolink:disrupts|biolink:enabled_by|biolink:enables|biolink:has_attribute|biolink:has_gene_product|biolink:has_input|biolink:has_output|biolink:has_part|biolink:has_participant|biolink:has_phenotype|biolink:homologous_to|biolink:in_taxon|biolink:increases_degradation_of|biolink:interacts_with|biolink:involved_in|biolink:located_in|biolink:location_of|biolink:mentions|biolink:model_of|biolink:molecularly_interacts_with|biolink:negatively_regulates|biolink:occurs_in|biolink:overlaps|biolink:part_of|biolink:participates_in|biolink:positively_regulates|biolink:preceded_by|biolink:precedes|biolink:produced_by|biolink:produces|biolink:regulates|biolink:related_to|biolink:subclass_of|biolink:temporally_related_to|biolink:type
     node_categories: biolink:AnatomicalEntity|biolink:Assay|biolink:BiologicalProcess|biolink:Cell|biolink:CellularComponent|biolink:ChemicalSubstance|biolink:Disease|biolink:Drug|biolink:Gene|biolink:MolecularActivity|biolink:MolecularEntity|biolink:NamedThing|biolink:OntologyClass|biolink:OrganismTaxon|biolink:OrganismalEntity|biolink:PhenotypicFeature|biolink:Protein|biolink:Publication|biolink:RNA|biolink:SequenceFeature
-    node_prefixes: NCIT|OPL|ZFIN|CHR|XENBASE|INTACT|dc|UPHENO|OIO|ENSEMBL|PR|RGD|SO|IDO|PCO|rdfs|OBO|UBERON|CHEBI|CHEMBL.COMPOUND|HGNC|DICTYBASE.GENE|MONDO|NCBITaxon|ENVO|CL|DrugCentral|NCBIProtein|MFOEM|FOODON|ComplexPortal|DDANAT|WD|PO|CORD|BFO|CHEMBL.TARGET|SGD|MFOMD|NBO|PATO|HP|TAIR.LOCUS|IAO|OBI|PHARMGKB|TrEMBL|DRUGBANK|CHEMBL.ASSAY|OGMS|MESH|NCBIGene|PMID|UniProtKB|WB|CARO|RO|owl|MPATH|ttd.drug|FB|MF|BSPO|MOD|FAO|OBA|GO
+    node_prefixes: CHEBI|IAO|CORD|MESH|WD|BSPO|UPHENO|owl|ENSEMBL|SO|CL|CHR|PMID|NBO|MFOMD|HP|ttd.drug|TrEMBL|FOODON|MPATH|DDANAT|CHEMBL.TARGET|FAO|IDO|MFOEM|NCBIGene|OBA|OGMS|NCIT|UniProtKB|PATO|PHARMGKB|WB|RGD|FB|INTACT|TAIR.LOCUS|NCBIProtein|GO|OPL|ENVO|MOD|rdfs|DrugCentral|CHEMBL.ASSAY|OBI|MF|DRUGBANK|PCO|RO|ZFIN|DICTYBASE.GENE|MONDO|SGD|OIO|dc|CARO|ComplexPortal|PR|HGNC|NCBITaxon|UBERON|XENBASE|BFO|OBO|PO|CHEMBL.COMPOUND
   - id: https://kg-hub.berkeleybop.io/kg-covid-19/20211002/kg-covid-19.tar.gz
     title: kg-covid-19.tar.gz
     description: 'KG-COVID-19: a knowledge graph for COVID-19 and SARS-COV-2.'
@@ -381,7 +381,7 @@ manifest:
     node_count: 574232
     predicates: biolink:affects|biolink:affects_localization_of|biolink:affects_transport_of|biolink:capable_of|biolink:caused_by|biolink:causes|biolink:coexists_with|biolink:correlated_with|biolink:derives_from|biolink:develops_from|biolink:disrupts|biolink:enabled_by|biolink:enables|biolink:has_attribute|biolink:has_gene_product|biolink:has_input|biolink:has_output|biolink:has_part|biolink:has_participant|biolink:has_phenotype|biolink:homologous_to|biolink:in_taxon|biolink:increases_degradation_of|biolink:interacts_with|biolink:involved_in|biolink:located_in|biolink:location_of|biolink:mentions|biolink:model_of|biolink:molecularly_interacts_with|biolink:negatively_regulates|biolink:occurs_in|biolink:overlaps|biolink:part_of|biolink:participates_in|biolink:positively_regulates|biolink:preceded_by|biolink:precedes|biolink:produced_by|biolink:produces|biolink:regulates|biolink:related_to|biolink:subclass_of|biolink:temporally_related_to|biolink:type
     node_categories: biolink:AnatomicalEntity|biolink:Assay|biolink:BiologicalProcess|biolink:Cell|biolink:CellularComponent|biolink:ChemicalSubstance|biolink:Disease|biolink:Drug|biolink:Gene|biolink:MolecularActivity|biolink:MolecularEntity|biolink:NamedThing|biolink:OntologyClass|biolink:OrganismTaxon|biolink:OrganismalEntity|biolink:PhenotypicFeature|biolink:Protein|biolink:Publication|biolink:RNA|biolink:SequenceFeature
-    node_prefixes: NCIT|OPL|ZFIN|CHR|XENBASE|INTACT|dc|UPHENO|OIO|ENSEMBL|PR|RGD|SO|IDO|PCO|rdfs|OBO|UBERON|CHEBI|CHEMBL.COMPOUND|HGNC|DICTYBASE.GENE|MONDO|NCBITaxon|ENVO|CL|DrugCentral|NCBIProtein|MFOEM|FOODON|ComplexPortal|DDANAT|WD|PO|CORD|BFO|CHEMBL.TARGET|SGD|MFOMD|NBO|PATO|HP|TAIR.LOCUS|IAO|OBI|PHARMGKB|TrEMBL|DRUGBANK|CHEMBL.ASSAY|OGMS|MESH|NCBIGene|PMID|UniProtKB|WB|CARO|RO|owl|MPATH|ttd.drug|FB|MF|BSPO|MOD|FAO|OBA|GO
+    node_prefixes: CHEBI|IAO|CORD|MESH|WD|BSPO|UPHENO|owl|ENSEMBL|SO|CL|CHR|PMID|NBO|MFOMD|HP|ttd.drug|TrEMBL|FOODON|MPATH|DDANAT|CHEMBL.TARGET|FAO|IDO|MFOEM|NCBIGene|OBA|OGMS|NCIT|UniProtKB|PATO|PHARMGKB|WB|RGD|FB|INTACT|TAIR.LOCUS|NCBIProtein|GO|OPL|ENVO|MOD|rdfs|DrugCentral|CHEMBL.ASSAY|OBI|MF|DRUGBANK|PCO|RO|ZFIN|DICTYBASE.GENE|MONDO|SGD|OIO|dc|CARO|ComplexPortal|PR|HGNC|NCBITaxon|UBERON|XENBASE|BFO|OBO|PO|CHEMBL.COMPOUND
   - id: https://kg-hub.berkeleybop.io/kg-covid-19/20211102/kg-covid-19.tar.gz
     title: kg-covid-19.tar.gz
     description: 'KG-COVID-19: a knowledge graph for COVID-19 and SARS-COV-2.'
@@ -396,7 +396,7 @@ manifest:
     node_count: 574232
     predicates: biolink:affects|biolink:affects_localization_of|biolink:affects_transport_of|biolink:capable_of|biolink:caused_by|biolink:causes|biolink:coexists_with|biolink:correlated_with|biolink:derives_from|biolink:develops_from|biolink:disrupts|biolink:enabled_by|biolink:enables|biolink:has_gene_product|biolink:has_input|biolink:has_part|biolink:has_participant|biolink:has_phenotype|biolink:homologous_to|biolink:in_taxon|biolink:increases_degradation_of|biolink:interacts_with|biolink:involved_in|biolink:located_in|biolink:location_of|biolink:mentions|biolink:model_of|biolink:molecularly_interacts_with|biolink:negatively_regulates|biolink:occurs_in|biolink:overlaps|biolink:part_of|biolink:participates_in|biolink:positively_regulates|biolink:preceded_by|biolink:precedes|biolink:produced_by|biolink:produces|biolink:regulates|biolink:related_to|biolink:subclass_of|biolink:temporally_related_to|biolink:type
     node_categories: biolink:AnatomicalEntity|biolink:Assay|biolink:BiologicalProcess|biolink:Cell|biolink:CellularComponent|biolink:ChemicalSubstance|biolink:Disease|biolink:Drug|biolink:Gene|biolink:MolecularActivity|biolink:MolecularEntity|biolink:NamedThing|biolink:OntologyClass|biolink:OrganismTaxon|biolink:OrganismalEntity|biolink:PhenotypicFeature|biolink:Protein|biolink:Publication|biolink:RNA|biolink:SequenceFeature
-    node_prefixes: NCIT|OPL|ZFIN|CHR|XENBASE|INTACT|dc|UPHENO|OIO|ENSEMBL|PR|RGD|SO|IDO|PCO|rdfs|OBO|UBERON|CHEBI|CHEMBL.COMPOUND|HGNC|DICTYBASE.GENE|MONDO|NCBITaxon|ENVO|CL|DrugCentral|NCBIProtein|MFOEM|FOODON|ComplexPortal|DDANAT|WD|PO|CORD|BFO|CHEMBL.TARGET|SGD|MFOMD|NBO|PATO|HP|TAIR.LOCUS|IAO|OBI|PHARMGKB|TrEMBL|DRUGBANK|CHEMBL.ASSAY|OGMS|MESH|NCBIGene|PMID|UniProtKB|WB|CARO|RO|owl|MPATH|ttd.drug|FB|MF|BSPO|MOD|FAO|OBA|GO
+    node_prefixes: CHEBI|IAO|CORD|MESH|WD|BSPO|UPHENO|owl|ENSEMBL|SO|CL|CHR|PMID|NBO|MFOMD|HP|ttd.drug|TrEMBL|FOODON|MPATH|DDANAT|CHEMBL.TARGET|FAO|IDO|MFOEM|NCBIGene|OBA|OGMS|NCIT|UniProtKB|PATO|PHARMGKB|WB|RGD|FB|INTACT|TAIR.LOCUS|NCBIProtein|GO|OPL|ENVO|MOD|rdfs|DrugCentral|CHEMBL.ASSAY|OBI|MF|DRUGBANK|PCO|RO|ZFIN|DICTYBASE.GENE|MONDO|SGD|OIO|dc|CARO|ComplexPortal|PR|HGNC|NCBITaxon|UBERON|XENBASE|BFO|OBO|PO|CHEMBL.COMPOUND
   - id: https://kg-hub.berkeleybop.io/kg-covid-19/20211202/kg-covid-19.tar.gz
     title: kg-covid-19.tar.gz
     description: 'KG-COVID-19: a knowledge graph for COVID-19 and SARS-COV-2.'
@@ -411,7 +411,7 @@ manifest:
     node_count: 574232
     predicates: biolink:affects|biolink:affects_localization_of|biolink:affects_transport_of|biolink:associated_with|biolink:capable_of|biolink:caused_by|biolink:causes|biolink:coexists_with|biolink:derives_from|biolink:develops_from|biolink:disrupts|biolink:enabled_by|biolink:enables|biolink:has_gene_product|biolink:has_input|biolink:has_part|biolink:has_participant|biolink:has_phenotype|biolink:homologous_to|biolink:in_taxon|biolink:increases_degradation_of|biolink:interacts_with|biolink:involved_in|biolink:located_in|biolink:location_of|biolink:mentions|biolink:model_of|biolink:molecularly_interacts_with|biolink:negatively_regulates|biolink:occurs_in|biolink:overlaps|biolink:part_of|biolink:participates_in|biolink:positively_regulates|biolink:preceded_by|biolink:precedes|biolink:produced_by|biolink:produces|biolink:regulates|biolink:related_to|biolink:subclass_of|biolink:temporally_related_to|biolink:type
     node_categories: biolink:AnatomicalEntity|biolink:Assay|biolink:BiologicalProcess|biolink:Cell|biolink:CellularComponent|biolink:ChemicalSubstance|biolink:Disease|biolink:Drug|biolink:Gene|biolink:MolecularActivity|biolink:MolecularEntity|biolink:NamedThing|biolink:OntologyClass|biolink:OrganismTaxon|biolink:OrganismalEntity|biolink:PhenotypicFeature|biolink:Protein|biolink:Publication|biolink:RNA|biolink:SequenceFeature
-    node_prefixes: NCIT|OPL|ZFIN|CHR|XENBASE|INTACT|dc|UPHENO|OIO|ENSEMBL|PR|RGD|SO|IDO|PCO|rdfs|OBO|UBERON|CHEBI|CHEMBL.COMPOUND|HGNC|DICTYBASE.GENE|MONDO|NCBITaxon|ENVO|CL|DrugCentral|NCBIProtein|MFOEM|FOODON|ComplexPortal|DDANAT|WD|PO|CORD|BFO|CHEMBL.TARGET|SGD|MFOMD|NBO|PATO|HP|TAIR.LOCUS|IAO|OBI|PHARMGKB|TrEMBL|DRUGBANK|CHEMBL.ASSAY|OGMS|MESH|NCBIGene|PMID|UniProtKB|WB|CARO|RO|owl|MPATH|ttd.drug|FB|MF|BSPO|MOD|FAO|OBA|GO
+    node_prefixes: CHEBI|IAO|CORD|MESH|WD|BSPO|UPHENO|owl|ENSEMBL|SO|CL|CHR|PMID|NBO|MFOMD|HP|ttd.drug|TrEMBL|FOODON|MPATH|DDANAT|CHEMBL.TARGET|FAO|IDO|MFOEM|NCBIGene|OBA|OGMS|NCIT|UniProtKB|PATO|PHARMGKB|WB|RGD|FB|INTACT|TAIR.LOCUS|NCBIProtein|GO|OPL|ENVO|MOD|rdfs|DrugCentral|CHEMBL.ASSAY|OBI|MF|DRUGBANK|PCO|RO|ZFIN|DICTYBASE.GENE|MONDO|SGD|OIO|dc|CARO|ComplexPortal|PR|HGNC|NCBITaxon|UBERON|XENBASE|BFO|OBO|PO|CHEMBL.COMPOUND
   - id: https://kg-hub.berkeleybop.io/kg-covid-19/20220102/kg-covid-19.tar.gz
     title: kg-covid-19.tar.gz
     description: 'KG-COVID-19: a knowledge graph for COVID-19 and SARS-COV-2.'
@@ -426,7 +426,7 @@ manifest:
     node_count: 574232
     predicates: biolink:affects|biolink:affects_localization_of|biolink:affects_transport_of|biolink:associated_with|biolink:capable_of|biolink:caused_by|biolink:causes|biolink:coexists_with|biolink:derives_from|biolink:develops_from|biolink:disrupts|biolink:enabled_by|biolink:enables|biolink:has_gene_product|biolink:has_input|biolink:has_part|biolink:has_participant|biolink:has_phenotype|biolink:homologous_to|biolink:in_taxon|biolink:increases_degradation_of|biolink:interacts_with|biolink:involved_in|biolink:located_in|biolink:location_of|biolink:mentions|biolink:model_of|biolink:molecularly_interacts_with|biolink:negatively_regulates|biolink:occurs_in|biolink:overlaps|biolink:part_of|biolink:participates_in|biolink:positively_regulates|biolink:preceded_by|biolink:precedes|biolink:produced_by|biolink:produces|biolink:regulates|biolink:related_to|biolink:subclass_of|biolink:temporally_related_to|biolink:type
     node_categories: biolink:AnatomicalEntity|biolink:Assay|biolink:BiologicalProcess|biolink:Cell|biolink:CellularComponent|biolink:ChemicalSubstance|biolink:Disease|biolink:Drug|biolink:Gene|biolink:MolecularActivity|biolink:MolecularEntity|biolink:NamedThing|biolink:OntologyClass|biolink:OrganismTaxon|biolink:OrganismalEntity|biolink:PhenotypicFeature|biolink:Protein|biolink:Publication|biolink:RNA|biolink:SequenceFeature
-    node_prefixes: NCIT|OPL|ZFIN|CHR|XENBASE|INTACT|dc|UPHENO|OIO|ENSEMBL|PR|RGD|SO|IDO|PCO|rdfs|OBO|UBERON|CHEBI|CHEMBL.COMPOUND|HGNC|DICTYBASE.GENE|MONDO|NCBITaxon|ENVO|CL|DrugCentral|NCBIProtein|MFOEM|FOODON|ComplexPortal|DDANAT|WD|PO|CORD|BFO|CHEMBL.TARGET|SGD|MFOMD|NBO|PATO|HP|TAIR.LOCUS|IAO|OBI|PHARMGKB|TrEMBL|DRUGBANK|CHEMBL.ASSAY|OGMS|MESH|NCBIGene|PMID|UniProtKB|WB|CARO|RO|owl|MPATH|ttd.drug|FB|MF|BSPO|MOD|FAO|OBA|GO
+    node_prefixes: CHEBI|IAO|CORD|MESH|WD|BSPO|UPHENO|owl|ENSEMBL|SO|CL|CHR|PMID|NBO|MFOMD|HP|ttd.drug|TrEMBL|FOODON|MPATH|DDANAT|CHEMBL.TARGET|FAO|IDO|MFOEM|NCBIGene|OBA|OGMS|NCIT|UniProtKB|PATO|PHARMGKB|WB|RGD|FB|INTACT|TAIR.LOCUS|NCBIProtein|GO|OPL|ENVO|MOD|rdfs|DrugCentral|CHEMBL.ASSAY|OBI|MF|DRUGBANK|PCO|RO|ZFIN|DICTYBASE.GENE|MONDO|SGD|OIO|dc|CARO|ComplexPortal|PR|HGNC|NCBITaxon|UBERON|XENBASE|BFO|OBO|PO|CHEMBL.COMPOUND
   - id: https://kg-hub.berkeleybop.io/kg-covid-19/20220202/kg-covid-19.tar.gz
     title: kg-covid-19.tar.gz
     description: 'KG-COVID-19: a knowledge graph for COVID-19 and SARS-COV-2.'
@@ -441,7 +441,7 @@ manifest:
     node_count: 574232
     predicates: biolink:affects|biolink:affects_localization_of|biolink:affects_transport_of|biolink:associated_with|biolink:capable_of|biolink:caused_by|biolink:causes|biolink:coexists_with|biolink:derives_from|biolink:develops_from|biolink:disrupts|biolink:enabled_by|biolink:enables|biolink:has_attribute|biolink:has_gene_product|biolink:has_input|biolink:has_output|biolink:has_part|biolink:has_participant|biolink:has_phenotype|biolink:homologous_to|biolink:in_taxon|biolink:increases_degradation_of|biolink:interacts_with|biolink:involved_in|biolink:located_in|biolink:location_of|biolink:mentions|biolink:model_of|biolink:molecularly_interacts_with|biolink:negatively_regulates|biolink:occurs_in|biolink:overlaps|biolink:part_of|biolink:participates_in|biolink:positively_regulates|biolink:preceded_by|biolink:precedes|biolink:produced_by|biolink:produces|biolink:regulates|biolink:related_to|biolink:subclass_of|biolink:temporally_related_to|biolink:type
     node_categories: biolink:AnatomicalEntity|biolink:Assay|biolink:BiologicalProcess|biolink:Cell|biolink:CellularComponent|biolink:ChemicalSubstance|biolink:Disease|biolink:Drug|biolink:Gene|biolink:MolecularActivity|biolink:MolecularEntity|biolink:NamedThing|biolink:OntologyClass|biolink:OrganismTaxon|biolink:OrganismalEntity|biolink:PhenotypicFeature|biolink:Protein|biolink:Publication|biolink:RNA|biolink:SequenceFeature
-    node_prefixes: NCIT|OPL|ZFIN|CHR|XENBASE|INTACT|dc|UPHENO|OIO|ENSEMBL|PR|RGD|SO|IDO|PCO|rdfs|OBO|UBERON|CHEBI|CHEMBL.COMPOUND|HGNC|DICTYBASE.GENE|MONDO|NCBITaxon|ENVO|CL|DrugCentral|NCBIProtein|MFOEM|FOODON|ComplexPortal|DDANAT|WD|PO|CORD|BFO|CHEMBL.TARGET|SGD|MFOMD|NBO|PATO|HP|TAIR.LOCUS|IAO|OBI|PHARMGKB|TrEMBL|DRUGBANK|CHEMBL.ASSAY|OGMS|MESH|NCBIGene|PMID|UniProtKB|WB|CARO|RO|owl|MPATH|ttd.drug|FB|MF|BSPO|MOD|FAO|OBA|GO
+    node_prefixes: CHEBI|IAO|CORD|MESH|WD|BSPO|UPHENO|owl|ENSEMBL|SO|CL|CHR|PMID|NBO|MFOMD|HP|ttd.drug|TrEMBL|FOODON|MPATH|DDANAT|CHEMBL.TARGET|FAO|IDO|MFOEM|NCBIGene|OBA|OGMS|NCIT|UniProtKB|PATO|PHARMGKB|WB|RGD|FB|INTACT|TAIR.LOCUS|NCBIProtein|GO|OPL|ENVO|MOD|rdfs|DrugCentral|CHEMBL.ASSAY|OBI|MF|DRUGBANK|PCO|RO|ZFIN|DICTYBASE.GENE|MONDO|SGD|OIO|dc|CARO|ComplexPortal|PR|HGNC|NCBITaxon|UBERON|XENBASE|BFO|OBO|PO|CHEMBL.COMPOUND
   - id: https://kg-hub.berkeleybop.io/kg-covid-19/20220217/kg-covid-19.tar.gz
     title: kg-covid-19.tar.gz
     description: 'KG-COVID-19: a knowledge graph for COVID-19 and SARS-COV-2.'
@@ -456,7 +456,7 @@ manifest:
     node_count: 574232
     predicates: biolink:affects|biolink:affects_localization_of|biolink:affects_transport_of|biolink:associated_with|biolink:capable_of|biolink:caused_by|biolink:causes|biolink:coexists_with|biolink:derives_from|biolink:develops_from|biolink:disrupts|biolink:enabled_by|biolink:enables|biolink:has_attribute|biolink:has_gene_product|biolink:has_input|biolink:has_output|biolink:has_part|biolink:has_participant|biolink:has_phenotype|biolink:homologous_to|biolink:in_taxon|biolink:increases_degradation_of|biolink:interacts_with|biolink:involved_in|biolink:located_in|biolink:location_of|biolink:mentions|biolink:model_of|biolink:molecularly_interacts_with|biolink:negatively_regulates|biolink:occurs_in|biolink:overlaps|biolink:part_of|biolink:participates_in|biolink:positively_regulates|biolink:preceded_by|biolink:precedes|biolink:produced_by|biolink:produces|biolink:regulates|biolink:related_to|biolink:subclass_of|biolink:temporally_related_to|biolink:type
     node_categories: biolink:AnatomicalEntity|biolink:Assay|biolink:BiologicalProcess|biolink:Cell|biolink:CellularComponent|biolink:ChemicalSubstance|biolink:Disease|biolink:Drug|biolink:Gene|biolink:MolecularActivity|biolink:MolecularEntity|biolink:NamedThing|biolink:OntologyClass|biolink:OrganismTaxon|biolink:OrganismalEntity|biolink:PhenotypicFeature|biolink:Protein|biolink:Publication|biolink:RNA|biolink:SequenceFeature
-    node_prefixes: NCIT|OPL|ZFIN|CHR|XENBASE|INTACT|dc|UPHENO|OIO|ENSEMBL|PR|RGD|SO|IDO|PCO|rdfs|OBO|UBERON|CHEBI|CHEMBL.COMPOUND|HGNC|DICTYBASE.GENE|MONDO|NCBITaxon|ENVO|CL|DrugCentral|NCBIProtein|MFOEM|FOODON|ComplexPortal|DDANAT|WD|PO|CORD|BFO|CHEMBL.TARGET|SGD|MFOMD|NBO|PATO|HP|TAIR.LOCUS|IAO|OBI|PHARMGKB|TrEMBL|DRUGBANK|CHEMBL.ASSAY|OGMS|MESH|NCBIGene|PMID|UniProtKB|WB|CARO|RO|owl|MPATH|ttd.drug|FB|MF|BSPO|MOD|FAO|OBA|GO
+    node_prefixes: CHEBI|IAO|CORD|MESH|WD|BSPO|UPHENO|owl|ENSEMBL|SO|CL|CHR|PMID|NBO|MFOMD|HP|ttd.drug|TrEMBL|FOODON|MPATH|DDANAT|CHEMBL.TARGET|FAO|IDO|MFOEM|NCBIGene|OBA|OGMS|NCIT|UniProtKB|PATO|PHARMGKB|WB|RGD|FB|INTACT|TAIR.LOCUS|NCBIProtein|GO|OPL|ENVO|MOD|rdfs|DrugCentral|CHEMBL.ASSAY|OBI|MF|DRUGBANK|PCO|RO|ZFIN|DICTYBASE.GENE|MONDO|SGD|OIO|dc|CARO|ComplexPortal|PR|HGNC|NCBITaxon|UBERON|XENBASE|BFO|OBO|PO|CHEMBL.COMPOUND
   - id: https://kg-hub.berkeleybop.io/kg-covid-19/20220223/kg-covid-19.tar.gz
     title: kg-covid-19.tar.gz
     description: 'KG-COVID-19: a knowledge graph for COVID-19 and SARS-COV-2.'
@@ -525,7 +525,7 @@ manifest:
     node_count: 923555
     predicates: biolink:affects|biolink:affects_transport_of|biolink:biomarker_for|biolink:capable_of|biolink:caused_by|biolink:causes|biolink:coexists_with|biolink:contributes_to|biolink:correlated_with|biolink:disrupts|biolink:enabled_by|biolink:has_attribute|biolink:has_input|biolink:has_output|biolink:has_part|biolink:has_participant|biolink:has_phenotype|biolink:has_sequence_location|biolink:in_taxon|biolink:mentions|biolink:molecularly_interacts_with|biolink:negatively_regulates|biolink:occurs_in|biolink:overlaps|biolink:part_of|biolink:participates_in|biolink:positively_regulates|biolink:preceded_by|biolink:precedes|biolink:regulates|biolink:related_to|biolink:same_as|biolink:subclass_of|biolink:temporally_related_to
     node_categories: biolink:BiologicalProcess|biolink:BiologicalProcessOrActivity|biolink:Disease|biolink:Drug|biolink:Gene|biolink:GenomeBuild|biolink:MolecularEntity|biolink:NamedThing|biolink:NucleicAcidEntity|biolink:Pathway|biolink:Polypeptide|biolink:Protein|biolink:SequenceVariant
-    node_prefixes: '!/hgnc_id/HGNC|NCIT|UMLS|ZFIN|dbSNP|MEDDRA|XENBASE|dc|ECTO|GOREL|OIO|ENSEMBL|PR|MONARCH_NODE|RGD|SO|IDO|foaf|ClinVar|rdfs|OBO|UBERON|CHEBI|SwissProt|HGNC|DICTYBASE.GENE|MONDO|NCBITaxon|ENVO|CL|DrugCentral|FOODON|DDANAT|PO|BFO|SGD|NBO|PATO|HP|GOP|TAIR.LOCUS|IAO|faldo|OBI|SNOMEDCT|ORPHA|DOID|MAXO|GENO|OGMS|MESH|NCBIGene|PMID|UniProtKB|WB|RO|owl|xsd|MPATH|REACT|dct|HsapDv|FB|BSPO|FAO|GO'
+    node_prefixes: CHEBI|IAO|dbSNP|MEDDRA|REACT|xsd|BSPO|owl|ENSEMBL|SO|CL|dct|PMID|NBO|HP|FOODON|ORPHA|SwissProt|MPATH|GENO|GOREL|ClinVar|DDANAT|FAO|IDO|MONARCH_NODE|NCBIGene|DOID|OGMS|foaf|NCIT|UniProtKB|PATO|SNOMEDCT|WB|RGD|FB|TAIR.LOCUS|GO|HsapDv|ENVO|MAXO|rdfs|DrugCentral|GOP|ECTO|OBI|RO|UMLS|ZFIN|DICTYBASE.GENE|MONDO|SGD|OIO|dc|!/hgnc_id/HGNC|PR|HGNC|NCBITaxon|UBERON|XENBASE|BFO|faldo|OBO|PO|MESH
   - id: https://kg-hub.berkeleybop.io/kg-idg/20211029/raw/chebi_kgx_tsv.tar.gz
     title: chebi_kgx_tsv.tar.gz
     conforms_to: KG-Hub
@@ -580,7 +580,7 @@ manifest:
     node_count: 923555
     predicates: biolink:affects|biolink:affects_transport_of|biolink:biomarker_for|biolink:capable_of|biolink:caused_by|biolink:causes|biolink:coexists_with|biolink:contributes_to|biolink:correlated_with|biolink:disrupts|biolink:enabled_by|biolink:has_attribute|biolink:has_input|biolink:has_output|biolink:has_part|biolink:has_participant|biolink:has_phenotype|biolink:has_sequence_location|biolink:in_taxon|biolink:mentions|biolink:molecularly_interacts_with|biolink:negatively_regulates|biolink:occurs_in|biolink:overlaps|biolink:part_of|biolink:participates_in|biolink:positively_regulates|biolink:preceded_by|biolink:precedes|biolink:regulates|biolink:related_to|biolink:same_as|biolink:subclass_of|biolink:temporally_related_to
     node_categories: biolink:BiologicalProcess|biolink:BiologicalProcessOrActivity|biolink:Disease|biolink:Drug|biolink:Gene|biolink:GenomeBuild|biolink:MolecularEntity|biolink:NamedThing|biolink:NucleicAcidEntity|biolink:Pathway|biolink:Polypeptide|biolink:Protein|biolink:SequenceVariant
-    node_prefixes: '!/hgnc_id/HGNC|NCIT|UMLS|ZFIN|dbSNP|MEDDRA|XENBASE|dc|ECTO|GOREL|OIO|ENSEMBL|PR|MONARCH_NODE|RGD|SO|IDO|foaf|ClinVar|rdfs|OBO|UBERON|CHEBI|SwissProt|HGNC|DICTYBASE.GENE|MONDO|NCBITaxon|ENVO|CL|DrugCentral|FOODON|DDANAT|PO|BFO|SGD|NBO|PATO|HP|GOP|TAIR.LOCUS|IAO|faldo|OBI|SNOMEDCT|ORPHA|DOID|MAXO|GENO|OGMS|MESH|NCBIGene|PMID|UniProtKB|WB|RO|owl|xsd|MPATH|REACT|dct|HsapDv|FB|BSPO|FAO|GO'
+    node_prefixes: CHEBI|IAO|dbSNP|MEDDRA|REACT|xsd|BSPO|owl|ENSEMBL|SO|CL|dct|PMID|NBO|HP|FOODON|ORPHA|SwissProt|MPATH|GENO|GOREL|ClinVar|DDANAT|FAO|IDO|MONARCH_NODE|NCBIGene|DOID|OGMS|foaf|NCIT|UniProtKB|PATO|SNOMEDCT|WB|RGD|FB|TAIR.LOCUS|GO|HsapDv|ENVO|MAXO|rdfs|DrugCentral|GOP|ECTO|OBI|RO|UMLS|ZFIN|DICTYBASE.GENE|MONDO|SGD|OIO|dc|!/hgnc_id/HGNC|PR|HGNC|NCBITaxon|UBERON|XENBASE|BFO|faldo|OBO|PO|MESH
   - id: https://kg-hub.berkeleybop.io/kg-idg/20211101/raw/chebi_kgx_tsv.tar.gz
     title: chebi_kgx_tsv.tar.gz
     conforms_to: KG-Hub
@@ -635,7 +635,7 @@ manifest:
     node_count: 944952
     predicates: biolink:affects|biolink:affects_transport_of|biolink:biomarker_for|biolink:capable_of|biolink:caused_by|biolink:causes|biolink:coexists_with|biolink:contributes_to|biolink:correlated_with|biolink:disrupts|biolink:enabled_by|biolink:has_attribute|biolink:has_input|biolink:has_output|biolink:has_part|biolink:has_participant|biolink:has_phenotype|biolink:has_sequence_location|biolink:in_taxon|biolink:interacts_with|biolink:mentions|biolink:molecularly_interacts_with|biolink:negatively_regulates|biolink:occurs_in|biolink:overlaps|biolink:part_of|biolink:participates_in|biolink:positively_regulates|biolink:preceded_by|biolink:precedes|biolink:regulates|biolink:related_to|biolink:same_as|biolink:subclass_of|biolink:temporally_related_to
     node_categories: biolink:BiologicalProcess|biolink:BiologicalProcessOrActivity|biolink:ChemicalEntity|biolink:ChemicalMixture|biolink:Disease|biolink:Drug|biolink:Gene|biolink:GenomeBuild|biolink:MolecularMixture|biolink:NamedThing|biolink:Pathway|biolink:Polypeptide|biolink:Protein|biolink:SequenceVariant
-    node_prefixes: '!/hgnc_id/HGNC|NCIT|UMLS|ZFIN|dbSNP|MEDDRA|XENBASE|dc|ECTO|GOREL|OIO|ENSEMBL|PR|MONARCH_NODE|RGD|SO|IDO|foaf|ClinVar|rdfs|OBO|UBERON|CHEBI|SwissProt|HGNC|DICTYBASE.GENE|MONDO|NCBITaxon|ENVO|CL|DrugCentral|FOODON|DDANAT|PO|BFO|SGD|NBO|PATO|HP|GOP|TAIR.LOCUS|IAO|faldo|OBI|SNOMEDCT|ORPHA|DOID|MAXO|GENO|OGMS|MESH|NCBIGene|PMID|UniProtKB|WB|RO|owl|xsd|MPATH|REACT|dct|HsapDv|FB|BSPO|FAO|GO'
+    node_prefixes: CHEBI|IAO|dbSNP|MEDDRA|REACT|xsd|BSPO|owl|ENSEMBL|SO|CL|dct|PMID|NBO|HP|FOODON|ORPHA|SwissProt|MPATH|GENO|GOREL|ClinVar|DDANAT|FAO|IDO|MONARCH_NODE|NCBIGene|DOID|OGMS|foaf|NCIT|UniProtKB|PATO|SNOMEDCT|WB|RGD|FB|TAIR.LOCUS|GO|HsapDv|ENVO|MAXO|rdfs|DrugCentral|GOP|ECTO|OBI|RO|UMLS|ZFIN|DICTYBASE.GENE|MONDO|SGD|OIO|dc|!/hgnc_id/HGNC|PR|HGNC|NCBITaxon|UBERON|XENBASE|BFO|faldo|OBO|PO|MESH
   - id: https://kg-hub.berkeleybop.io/kg-idg/20211112/raw/chebi_kgx_tsv.tar.gz
     title: chebi_kgx_tsv.tar.gz
     conforms_to: KG-Hub
@@ -690,7 +690,7 @@ manifest:
     node_count: 968338
     predicates: biolink:affects|biolink:affects_transport_of|biolink:biomarker_for|biolink:capable_of|biolink:caused_by|biolink:causes|biolink:coexists_with|biolink:contributes_to|biolink:correlated_with|biolink:disrupts|biolink:enabled_by|biolink:has_attribute|biolink:has_input|biolink:has_output|biolink:has_part|biolink:has_participant|biolink:has_phenotype|biolink:has_sequence_location|biolink:in_taxon|biolink:interacts_with|biolink:mentions|biolink:molecularly_interacts_with|biolink:negatively_regulates|biolink:occurs_in|biolink:overlaps|biolink:part_of|biolink:participates_in|biolink:positively_regulates|biolink:preceded_by|biolink:precedes|biolink:regulates|biolink:related_to|biolink:same_as|biolink:subclass_of|biolink:temporally_related_to
     node_categories: biolink:BiologicalProcess|biolink:BiologicalProcessOrActivity|biolink:ChemicalEntity|biolink:ChemicalMixture|biolink:Disease|biolink:Drug|biolink:Gene|biolink:GenomeBuild|biolink:MolecularMixture|biolink:NamedThing|biolink:Pathway|biolink:Polypeptide|biolink:Protein|biolink:SequenceVariant
-    node_prefixes: '!/hgnc_id/HGNC|NCIT|UMLS|ZFIN|dbSNP|MEDDRA|XENBASE|dc|ECTO|GOREL|OIO|ENSEMBL|PR|MONARCH_NODE|RGD|SO|IDO|foaf|ClinVar|rdfs|OBO|UBERON|CHEBI|SwissProt|HGNC|DICTYBASE.GENE|MONDO|NCBITaxon|ENVO|CL|DrugCentral|ATC|FOODON|DDANAT|PO|BFO|SGD|NBO|PATO|HP|GOP|TAIR.LOCUS|IAO|faldo|OBI|SNOMEDCT|ORPHA|DOID|MAXO|GENO|OGMS|MESH|NCBIGene|PMID|UniProtKB|WB|RO|owl|xsd|MPATH|REACT|dct|HsapDv|FB|BSPO|FAO|GO'
+    node_prefixes: CHEBI|IAO|dbSNP|MEDDRA|REACT|xsd|BSPO|owl|ENSEMBL|SO|ATC|CL|dct|PMID|NBO|HP|FOODON|ORPHA|SwissProt|MPATH|GENO|GOREL|ClinVar|DDANAT|FAO|IDO|MONARCH_NODE|NCBIGene|DOID|OGMS|foaf|NCIT|UniProtKB|PATO|SNOMEDCT|WB|RGD|FB|TAIR.LOCUS|GO|HsapDv|ENVO|MAXO|rdfs|DrugCentral|GOP|ECTO|OBI|RO|UMLS|ZFIN|DICTYBASE.GENE|MONDO|SGD|OIO|dc|!/hgnc_id/HGNC|PR|HGNC|NCBITaxon|UBERON|XENBASE|BFO|faldo|OBO|PO|MESH
   - id: https://kg-hub.berkeleybop.io/kg-idg/20211123/raw/chebi_kgx_tsv.tar.gz
     title: chebi_kgx_tsv.tar.gz
     conforms_to: KG-Hub
@@ -745,7 +745,7 @@ manifest:
     node_count: 969625
     predicates: biolink:affects|biolink:affects_transport_of|biolink:biomarker_for|biolink:capable_of|biolink:caused_by|biolink:causes|biolink:close_match|biolink:coexists_with|biolink:contributes_to|biolink:correlated_with|biolink:disrupts|biolink:enabled_by|biolink:has_attribute|biolink:has_input|biolink:has_output|biolink:has_part|biolink:has_participant|biolink:has_phenotype|biolink:has_sequence_location|biolink:in_taxon|biolink:interacts_with|biolink:mentions|biolink:molecularly_interacts_with|biolink:negatively_regulates|biolink:occurs_in|biolink:overlaps|biolink:part_of|biolink:participates_in|biolink:positively_regulates|biolink:preceded_by|biolink:precedes|biolink:regulates|biolink:related_to|biolink:same_as|biolink:subclass_of|biolink:temporally_related_to
     node_categories: biolink:BiologicalProcess|biolink:BiologicalProcessOrActivity|biolink:ChemicalEntity|biolink:ChemicalMixture|biolink:Disease|biolink:Drug|biolink:Gene|biolink:GenomeBuild|biolink:MolecularMixture|biolink:NamedThing|biolink:Pathway|biolink:Polypeptide|biolink:Protein|biolink:SequenceVariant
-    node_prefixes: '!/hgnc_id/HGNC|NCIT|UMLS|ZFIN|dbSNP|MEDDRA|XENBASE|dc|ECTO|GOREL|OIO|ENSEMBL|PR|MONARCH_NODE|RGD|SO|IDO|foaf|ClinVar|rdfs|OBO|UBERON|CHEBI|SwissProt|HGNC|DICTYBASE.GENE|MONDO|NCBITaxon|ENVO|CL|DrugCentral|ATC|FOODON|DDANAT|PO|BFO|SGD|NBO|PATO|HP|GOP|TAIR.LOCUS|IAO|faldo|OBI|SNOMEDCT|ORPHA|DOID|MAXO|GENO|OGMS|MESH|NCBIGene|PMID|UniProtKB|WB|RO|owl|xsd|MPATH|REACT|dct|HsapDv|FB|BSPO|FAO|GO'
+    node_prefixes: CHEBI|IAO|dbSNP|MEDDRA|REACT|xsd|BSPO|owl|ENSEMBL|SO|ATC|CL|dct|PMID|NBO|HP|FOODON|ORPHA|SwissProt|MPATH|GENO|GOREL|ClinVar|DDANAT|FAO|IDO|MONARCH_NODE|NCBIGene|DOID|OGMS|foaf|NCIT|UniProtKB|PATO|SNOMEDCT|WB|RGD|FB|TAIR.LOCUS|GO|HsapDv|ENVO|MAXO|rdfs|DrugCentral|GOP|ECTO|OBI|RO|UMLS|ZFIN|DICTYBASE.GENE|MONDO|SGD|OIO|dc|!/hgnc_id/HGNC|PR|HGNC|NCBITaxon|UBERON|XENBASE|BFO|faldo|OBO|PO|MESH
   - id: https://kg-hub.berkeleybop.io/kg-idg/20211201/raw/chebi_kgx_tsv.tar.gz
     title: chebi_kgx_tsv.tar.gz
     conforms_to: KG-Hub
@@ -800,7 +800,7 @@ manifest:
     node_count: 969625
     predicates: biolink:affects|biolink:affects_transport_of|biolink:biomarker_for|biolink:capable_of|biolink:caused_by|biolink:causes|biolink:close_match|biolink:coexists_with|biolink:contributes_to|biolink:correlated_with|biolink:disrupts|biolink:enabled_by|biolink:has_attribute|biolink:has_input|biolink:has_output|biolink:has_part|biolink:has_participant|biolink:has_phenotype|biolink:has_sequence_location|biolink:in_taxon|biolink:interacts_with|biolink:mentions|biolink:molecularly_interacts_with|biolink:negatively_regulates|biolink:occurs_in|biolink:overlaps|biolink:part_of|biolink:participates_in|biolink:positively_regulates|biolink:preceded_by|biolink:precedes|biolink:regulates|biolink:related_to|biolink:same_as|biolink:subclass_of|biolink:temporally_related_to
     node_categories: biolink:BiologicalProcess|biolink:BiologicalProcessOrActivity|biolink:ChemicalEntity|biolink:ChemicalMixture|biolink:Disease|biolink:Drug|biolink:Gene|biolink:GenomeBuild|biolink:MolecularMixture|biolink:NamedThing|biolink:Pathway|biolink:Polypeptide|biolink:Protein|biolink:SequenceVariant
-    node_prefixes: '!/hgnc_id/HGNC|NCIT|UMLS|ZFIN|dbSNP|MEDDRA|XENBASE|dc|ECTO|GOREL|OIO|ENSEMBL|PR|MONARCH_NODE|RGD|SO|IDO|foaf|ClinVar|rdfs|OBO|UBERON|CHEBI|SwissProt|HGNC|DICTYBASE.GENE|MONDO|NCBITaxon|ENVO|CL|DrugCentral|ATC|FOODON|DDANAT|PO|BFO|SGD|NBO|PATO|HP|GOP|TAIR.LOCUS|IAO|faldo|OBI|SNOMEDCT|ORPHA|DOID|MAXO|GENO|OGMS|MESH|NCBIGene|PMID|UniProtKB|WB|RO|owl|xsd|MPATH|REACT|dct|HsapDv|FB|BSPO|FAO|GO'
+    node_prefixes: CHEBI|IAO|dbSNP|MEDDRA|REACT|xsd|BSPO|owl|ENSEMBL|SO|ATC|CL|dct|PMID|NBO|HP|FOODON|ORPHA|SwissProt|MPATH|GENO|GOREL|ClinVar|DDANAT|FAO|IDO|MONARCH_NODE|NCBIGene|DOID|OGMS|foaf|NCIT|UniProtKB|PATO|SNOMEDCT|WB|RGD|FB|TAIR.LOCUS|GO|HsapDv|ENVO|MAXO|rdfs|DrugCentral|GOP|ECTO|OBI|RO|UMLS|ZFIN|DICTYBASE.GENE|MONDO|SGD|OIO|dc|!/hgnc_id/HGNC|PR|HGNC|NCBITaxon|UBERON|XENBASE|BFO|faldo|OBO|PO|MESH
   - id: https://kg-hub.berkeleybop.io/kg-idg/20211202/raw/chebi_kgx_tsv.tar.gz
     title: chebi_kgx_tsv.tar.gz
     conforms_to: KG-Hub
@@ -855,7 +855,7 @@ manifest:
     node_count: 960218
     predicates: biolink:affects|biolink:affects_transport_of|biolink:biomarker_for|biolink:capable_of|biolink:caused_by|biolink:causes|biolink:close_match|biolink:coexists_with|biolink:contributes_to|biolink:correlated_with|biolink:disrupts|biolink:enabled_by|biolink:has_attribute|biolink:has_input|biolink:has_output|biolink:has_part|biolink:has_participant|biolink:has_phenotype|biolink:has_sequence_location|biolink:in_taxon|biolink:interacts_with|biolink:mentions|biolink:molecularly_interacts_with|biolink:negatively_regulates|biolink:occurs_in|biolink:overlaps|biolink:part_of|biolink:participates_in|biolink:positively_regulates|biolink:preceded_by|biolink:precedes|biolink:regulates|biolink:related_to|biolink:same_as|biolink:subclass_of|biolink:temporally_related_to
     node_categories: biolink:Article|biolink:BiologicalProcess|biolink:BiologicalProcessOrActivity|biolink:Book|biolink:ChemicalEntity|biolink:ChemicalMixture|biolink:Disease|biolink:Drug|biolink:Gene|biolink:GenomeBuild|biolink:InformationResource|biolink:MolecularMixture|biolink:NamedThing|biolink:Pathway|biolink:Polypeptide|biolink:Protein|biolink:Publication|biolink:SequenceVariant
-    node_prefixes: '!/hgnc_id/HGNC|NCIT|UMLS|ZFIN|dbSNP|MEDDRA|XENBASE|dc|ECTO|GOREL|isbn|OIO|ENSEMBL|PR|MONARCH_NODE|RGD|SO|IDO|foaf|ClinVar|rdfs|OBO|UBERON|CHEBI|SwissProt|HGNC|DICTYBASE.GENE|MONDO|NCBITaxon|ENVO|CL|DrugCentral|ATC|FOODON|DDANAT|PO|BFO|SGD|GOOGLE_PATENT|NBO|PATO|HP|GOP|TAIR.LOCUS|IAO|faldo|OBI|SNOMEDCT|ORPHA|DOID|MAXO|GENO|OGMS|MESH|WB|PMID|UniProtKB|RO|owl|xsd|MPATH|REACT|dct|HsapDv|FB|BSPO|FAO|GO'
+    node_prefixes: CHEBI|IAO|dbSNP|MEDDRA|REACT|xsd|BSPO|GOOGLE_PATENT|owl|ENSEMBL|SO|ATC|CL|dct|PMID|NBO|HP|FOODON|ORPHA|SwissProt|MPATH|isbn|GENO|GOREL|ClinVar|DDANAT|FAO|IDO|MONARCH_NODE|DOID|OGMS|foaf|NCIT|UniProtKB|PATO|SNOMEDCT|WB|RGD|FB|TAIR.LOCUS|GO|HsapDv|ENVO|MAXO|rdfs|DrugCentral|GOP|ECTO|OBI|RO|UMLS|ZFIN|DICTYBASE.GENE|MONDO|SGD|OIO|dc|!/hgnc_id/HGNC|PR|HGNC|NCBITaxon|UBERON|XENBASE|BFO|faldo|OBO|PO|MESH
   - id: https://kg-hub.berkeleybop.io/kg-idg/20211207/raw/chebi_kgx_tsv.tar.gz
     title: chebi_kgx_tsv.tar.gz
     conforms_to: KG-Hub
@@ -910,7 +910,7 @@ manifest:
     node_count: 942103
     predicates: biolink:actively_involved_in|biolink:affects_transport_of|biolink:associated_with|biolink:biomarker_for|biolink:capable_of|biolink:caused_by|biolink:causes|biolink:close_match|biolink:coexists_with|biolink:contributes_to|biolink:derives_from|biolink:develops_from|biolink:disrupts|biolink:enabled_by|biolink:expressed_in|biolink:has_attribute|biolink:has_input|biolink:has_output|biolink:has_part|biolink:has_participant|biolink:has_phenotype|biolink:has_sequence_location|biolink:homologous_to|biolink:in_taxon|biolink:interacts_with|biolink:located_in|biolink:location_of|biolink:mentions|biolink:model_of|biolink:molecularly_interacts_with|biolink:negatively_regulates|biolink:occurs_in|biolink:overlaps|biolink:part_of|biolink:participates_in|biolink:positively_regulates|biolink:preceded_by|biolink:precedes|biolink:produced_by|biolink:produces|biolink:regulates|biolink:related_to|biolink:same_as|biolink:subclass_of|biolink:temporally_related_to
     node_categories: biolink:AnatomicalEntity|biolink:Article|biolink:BiologicalProcess|biolink:BiologicalProcessOrActivity|biolink:Book|biolink:ChemicalEntity|biolink:ChemicalMixture|biolink:Disease|biolink:Drug|biolink:Gene|biolink:GenomeBuild|biolink:InformationResource|biolink:MolecularMixture|biolink:NamedThing|biolink:Pathway|biolink:Polypeptide|biolink:Protein|biolink:Publication|biolink:SequenceVariant
-    node_prefixes: '!/hgnc_id/HGNC|NCIT|UMLS|ZFIN|dbSNP|MEDDRA|XENBASE|dc|UPHENO|ECTO|GOREL|isbn|OIO|ENSEMBL|PR|MONARCH_NODE|RGD|SO|IDO|foaf|ClinVar|PCO|rdfs|OBO|UBERON|CHEBI|SwissProt|HGNC|DICTYBASE.GENE|MONDO|NCBITaxon|ENVO|CL|DrugCentral|ATC|FOODON|PO|UBERON_CORE|BFO|urn|SGD|GOOGLE_PATENT|NBO|PATO|HP|GOP|TAIR.LOCUS|IAO|faldo|OBI|SNOMEDCT|ORPHA|DOID|MAXO|ExO|GENO|OGMS|MESH|WB|PMID|UniProtKB|RO|owl|xsd|MPATH|REACT|dct|HsapDv|FB|BSPO|GO'
+    node_prefixes: CHEBI|UBERON_CORE|IAO|dbSNP|MEDDRA|REACT|xsd|BSPO|GOOGLE_PATENT|UPHENO|owl|ExO|ENSEMBL|SO|ATC|CL|dct|PMID|NBO|HP|FOODON|ORPHA|SwissProt|MPATH|isbn|GENO|GOREL|ClinVar|IDO|MONARCH_NODE|DOID|OGMS|foaf|NCIT|UniProtKB|PATO|SNOMEDCT|WB|RGD|FB|TAIR.LOCUS|GO|HsapDv|ENVO|MAXO|rdfs|urn|DrugCentral|GOP|ECTO|OBI|PCO|RO|UMLS|ZFIN|DICTYBASE.GENE|MONDO|SGD|OIO|dc|!/hgnc_id/HGNC|PR|HGNC|NCBITaxon|UBERON|XENBASE|BFO|faldo|OBO|PO|MESH
   - id: https://kg-hub.berkeleybop.io/kg-idg/20211210/raw/chebi_kgx_tsv.tar.gz
     title: chebi_kgx_tsv.tar.gz
     conforms_to: KG-Hub
@@ -965,7 +965,7 @@ manifest:
     node_count: 942103
     predicates: biolink:actively_involved_in|biolink:affects_transport_of|biolink:associated_with|biolink:biomarker_for|biolink:capable_of|biolink:caused_by|biolink:causes|biolink:close_match|biolink:coexists_with|biolink:contributes_to|biolink:derives_from|biolink:develops_from|biolink:disrupts|biolink:enabled_by|biolink:expressed_in|biolink:has_attribute|biolink:has_input|biolink:has_output|biolink:has_part|biolink:has_participant|biolink:has_phenotype|biolink:has_sequence_location|biolink:homologous_to|biolink:in_taxon|biolink:interacts_with|biolink:located_in|biolink:location_of|biolink:mentions|biolink:model_of|biolink:molecularly_interacts_with|biolink:negatively_regulates|biolink:occurs_in|biolink:overlaps|biolink:part_of|biolink:participates_in|biolink:positively_regulates|biolink:preceded_by|biolink:precedes|biolink:produced_by|biolink:produces|biolink:regulates|biolink:related_to|biolink:same_as|biolink:subclass_of|biolink:temporally_related_to
     node_categories: biolink:AnatomicalEntity|biolink:Article|biolink:BiologicalProcess|biolink:BiologicalProcessOrActivity|biolink:Book|biolink:ChemicalEntity|biolink:ChemicalMixture|biolink:Disease|biolink:Drug|biolink:Gene|biolink:GenomeBuild|biolink:InformationResource|biolink:MolecularMixture|biolink:NamedThing|biolink:Pathway|biolink:Polypeptide|biolink:Protein|biolink:Publication|biolink:SequenceVariant
-    node_prefixes: '!/hgnc_id/HGNC|NCIT|UMLS|ZFIN|dbSNP|MEDDRA|XENBASE|dc|UPHENO|ECTO|GOREL|isbn|OIO|ENSEMBL|PR|MONARCH_NODE|RGD|SO|IDO|foaf|ClinVar|PCO|rdfs|OBO|UBERON|CHEBI|SwissProt|HGNC|DICTYBASE.GENE|MONDO|NCBITaxon|ENVO|CL|DrugCentral|ATC|FOODON|PO|UBERON_CORE|BFO|urn|SGD|GOOGLE_PATENT|NBO|PATO|HP|GOP|TAIR.LOCUS|IAO|faldo|OBI|SNOMEDCT|ORPHA|DOID|MAXO|ExO|GENO|OGMS|MESH|WB|PMID|UniProtKB|RO|owl|xsd|MPATH|REACT|dct|HsapDv|FB|BSPO|GO'
+    node_prefixes: CHEBI|UBERON_CORE|IAO|dbSNP|MEDDRA|REACT|xsd|BSPO|GOOGLE_PATENT|UPHENO|owl|ExO|ENSEMBL|SO|ATC|CL|dct|PMID|NBO|HP|FOODON|ORPHA|SwissProt|MPATH|isbn|GENO|GOREL|ClinVar|IDO|MONARCH_NODE|DOID|OGMS|foaf|NCIT|UniProtKB|PATO|SNOMEDCT|WB|RGD|FB|TAIR.LOCUS|GO|HsapDv|ENVO|MAXO|rdfs|urn|DrugCentral|GOP|ECTO|OBI|PCO|RO|UMLS|ZFIN|DICTYBASE.GENE|MONDO|SGD|OIO|dc|!/hgnc_id/HGNC|PR|HGNC|NCBITaxon|UBERON|XENBASE|BFO|faldo|OBO|PO|MESH
   - id: https://kg-hub.berkeleybop.io/kg-idg/20211213/raw/chebi_kgx_tsv.tar.gz
     title: chebi_kgx_tsv.tar.gz
     conforms_to: KG-Hub
@@ -1020,7 +1020,7 @@ manifest:
     node_count: 969625
     predicates: biolink:affects|biolink:affects_transport_of|biolink:biomarker_for|biolink:capable_of|biolink:caused_by|biolink:causes|biolink:close_match|biolink:coexists_with|biolink:contributes_to|biolink:correlated_with|biolink:disrupts|biolink:enabled_by|biolink:has_attribute|biolink:has_input|biolink:has_output|biolink:has_part|biolink:has_participant|biolink:has_phenotype|biolink:has_sequence_location|biolink:in_taxon|biolink:interacts_with|biolink:mentions|biolink:molecularly_interacts_with|biolink:negatively_regulates|biolink:occurs_in|biolink:overlaps|biolink:part_of|biolink:participates_in|biolink:positively_regulates|biolink:preceded_by|biolink:precedes|biolink:regulates|biolink:related_to|biolink:same_as|biolink:subclass_of|biolink:temporally_related_to
     node_categories: biolink:BiologicalProcess|biolink:BiologicalProcessOrActivity|biolink:ChemicalEntity|biolink:ChemicalMixture|biolink:Disease|biolink:Drug|biolink:Gene|biolink:GenomeBuild|biolink:MolecularMixture|biolink:NamedThing|biolink:Pathway|biolink:Polypeptide|biolink:Protein|biolink:SequenceVariant
-    node_prefixes: '!/hgnc_id/HGNC|NCIT|UMLS|ZFIN|dbSNP|MEDDRA|XENBASE|dc|ECTO|GOREL|OIO|ENSEMBL|PR|MONARCH_NODE|RGD|SO|IDO|foaf|ClinVar|rdfs|OBO|UBERON|CHEBI|SwissProt|HGNC|DICTYBASE.GENE|MONDO|NCBITaxon|ENVO|CL|DrugCentral|ATC|FOODON|DDANAT|PO|BFO|SGD|NBO|PATO|HP|GOP|TAIR.LOCUS|IAO|faldo|OBI|SNOMEDCT|ORPHA|DOID|MAXO|GENO|OGMS|MESH|NCBIGene|PMID|UniProtKB|WB|RO|owl|xsd|MPATH|REACT|dct|HsapDv|FB|BSPO|FAO|GO'
+    node_prefixes: CHEBI|IAO|dbSNP|MEDDRA|REACT|xsd|BSPO|owl|ENSEMBL|SO|ATC|CL|dct|PMID|NBO|HP|FOODON|ORPHA|SwissProt|MPATH|GENO|GOREL|ClinVar|DDANAT|FAO|IDO|MONARCH_NODE|NCBIGene|DOID|OGMS|foaf|NCIT|UniProtKB|PATO|SNOMEDCT|WB|RGD|FB|TAIR.LOCUS|GO|HsapDv|ENVO|MAXO|rdfs|DrugCentral|GOP|ECTO|OBI|RO|UMLS|ZFIN|DICTYBASE.GENE|MONDO|SGD|OIO|dc|!/hgnc_id/HGNC|PR|HGNC|NCBITaxon|UBERON|XENBASE|BFO|faldo|OBO|PO|MESH
   - id: https://kg-hub.berkeleybop.io/kg-idg/20211215/raw/chebi_kgx_tsv.tar.gz
     title: chebi_kgx_tsv.tar.gz
     conforms_to: KG-Hub
@@ -1075,7 +1075,7 @@ manifest:
     node_count: 969625
     predicates: biolink:affects|biolink:affects_transport_of|biolink:biomarker_for|biolink:capable_of|biolink:caused_by|biolink:causes|biolink:close_match|biolink:coexists_with|biolink:contributes_to|biolink:correlated_with|biolink:disrupts|biolink:enabled_by|biolink:has_attribute|biolink:has_input|biolink:has_output|biolink:has_part|biolink:has_participant|biolink:has_phenotype|biolink:has_sequence_location|biolink:in_taxon|biolink:interacts_with|biolink:mentions|biolink:molecularly_interacts_with|biolink:negatively_regulates|biolink:occurs_in|biolink:overlaps|biolink:part_of|biolink:participates_in|biolink:positively_regulates|biolink:preceded_by|biolink:precedes|biolink:regulates|biolink:related_to|biolink:same_as|biolink:subclass_of|biolink:temporally_related_to
     node_categories: biolink:BiologicalProcess|biolink:BiologicalProcessOrActivity|biolink:ChemicalEntity|biolink:ChemicalMixture|biolink:Disease|biolink:Drug|biolink:Gene|biolink:GenomeBuild|biolink:MolecularMixture|biolink:NamedThing|biolink:Pathway|biolink:Polypeptide|biolink:Protein|biolink:SequenceVariant
-    node_prefixes: '!/hgnc_id/HGNC|NCIT|UMLS|ZFIN|dbSNP|MEDDRA|XENBASE|dc|ECTO|GOREL|OIO|ENSEMBL|PR|MONARCH_NODE|RGD|SO|IDO|foaf|ClinVar|rdfs|OBO|UBERON|CHEBI|SwissProt|HGNC|DICTYBASE.GENE|MONDO|NCBITaxon|ENVO|CL|DrugCentral|ATC|FOODON|DDANAT|PO|BFO|SGD|NBO|PATO|HP|GOP|TAIR.LOCUS|IAO|faldo|OBI|SNOMEDCT|ORPHA|DOID|MAXO|GENO|OGMS|MESH|NCBIGene|PMID|UniProtKB|WB|RO|owl|xsd|MPATH|REACT|dct|HsapDv|FB|BSPO|FAO|GO'
+    node_prefixes: CHEBI|IAO|dbSNP|MEDDRA|REACT|xsd|BSPO|owl|ENSEMBL|SO|ATC|CL|dct|PMID|NBO|HP|FOODON|ORPHA|SwissProt|MPATH|GENO|GOREL|ClinVar|DDANAT|FAO|IDO|MONARCH_NODE|NCBIGene|DOID|OGMS|foaf|NCIT|UniProtKB|PATO|SNOMEDCT|WB|RGD|FB|TAIR.LOCUS|GO|HsapDv|ENVO|MAXO|rdfs|DrugCentral|GOP|ECTO|OBI|RO|UMLS|ZFIN|DICTYBASE.GENE|MONDO|SGD|OIO|dc|!/hgnc_id/HGNC|PR|HGNC|NCBITaxon|UBERON|XENBASE|BFO|faldo|OBO|PO|MESH
   - id: https://kg-hub.berkeleybop.io/kg-idg/20211221/raw/chebi_kgx_tsv.tar.gz
     title: chebi_kgx_tsv.tar.gz
     conforms_to: KG-Hub
@@ -1130,7 +1130,7 @@ manifest:
     node_count: 942103
     predicates: biolink:actively_involved_in|biolink:affects_transport_of|biolink:associated_with|biolink:biomarker_for|biolink:capable_of|biolink:caused_by|biolink:causes|biolink:close_match|biolink:coexists_with|biolink:contributes_to|biolink:derives_from|biolink:develops_from|biolink:disrupts|biolink:enabled_by|biolink:expressed_in|biolink:has_attribute|biolink:has_input|biolink:has_output|biolink:has_part|biolink:has_participant|biolink:has_phenotype|biolink:has_sequence_location|biolink:homologous_to|biolink:in_taxon|biolink:interacts_with|biolink:located_in|biolink:location_of|biolink:mentions|biolink:model_of|biolink:molecularly_interacts_with|biolink:negatively_regulates|biolink:occurs_in|biolink:overlaps|biolink:part_of|biolink:participates_in|biolink:positively_regulates|biolink:preceded_by|biolink:precedes|biolink:produced_by|biolink:produces|biolink:regulates|biolink:related_to|biolink:same_as|biolink:subclass_of|biolink:temporally_related_to
     node_categories: biolink:AnatomicalEntity|biolink:Article|biolink:BiologicalProcess|biolink:BiologicalProcessOrActivity|biolink:Book|biolink:ChemicalEntity|biolink:ChemicalMixture|biolink:Disease|biolink:Drug|biolink:Gene|biolink:GenomeBuild|biolink:InformationResource|biolink:MolecularMixture|biolink:NamedThing|biolink:Pathway|biolink:Polypeptide|biolink:Protein|biolink:Publication|biolink:SequenceVariant
-    node_prefixes: '!/hgnc_id/HGNC|NCIT|UMLS|ZFIN|dbSNP|MEDDRA|XENBASE|dc|UPHENO|ECTO|GOREL|isbn|OIO|ENSEMBL|PR|MONARCH_NODE|RGD|SO|IDO|foaf|ClinVar|PCO|rdfs|OBO|UBERON|CHEBI|SwissProt|HGNC|DICTYBASE.GENE|MONDO|NCBITaxon|ENVO|CL|DrugCentral|ATC|FOODON|PO|UBERON_CORE|BFO|urn|SGD|GOOGLE_PATENT|NBO|PATO|HP|GOP|TAIR.LOCUS|IAO|faldo|OBI|SNOMEDCT|ORPHA|DOID|MAXO|ExO|GENO|OGMS|MESH|WB|PMID|UniProtKB|RO|owl|xsd|MPATH|REACT|dct|HsapDv|FB|BSPO|GO'
+    node_prefixes: CHEBI|UBERON_CORE|IAO|dbSNP|MEDDRA|REACT|xsd|BSPO|GOOGLE_PATENT|UPHENO|owl|ExO|ENSEMBL|SO|ATC|CL|dct|PMID|NBO|HP|FOODON|ORPHA|SwissProt|MPATH|isbn|GENO|GOREL|ClinVar|IDO|MONARCH_NODE|DOID|OGMS|foaf|NCIT|UniProtKB|PATO|SNOMEDCT|WB|RGD|FB|TAIR.LOCUS|GO|HsapDv|ENVO|MAXO|rdfs|urn|DrugCentral|GOP|ECTO|OBI|PCO|RO|UMLS|ZFIN|DICTYBASE.GENE|MONDO|SGD|OIO|dc|!/hgnc_id/HGNC|PR|HGNC|NCBITaxon|UBERON|XENBASE|BFO|faldo|OBO|PO|MESH
   - id: https://kg-hub.berkeleybop.io/kg-idg/20211223/raw/chebi_kgx_tsv.tar.gz
     title: chebi_kgx_tsv.tar.gz
     conforms_to: KG-Hub
@@ -1185,7 +1185,7 @@ manifest:
     node_count: 942103
     predicates: biolink:actively_involved_in|biolink:affects_transport_of|biolink:associated_with|biolink:biomarker_for|biolink:capable_of|biolink:caused_by|biolink:causes|biolink:close_match|biolink:coexists_with|biolink:contributes_to|biolink:derives_from|biolink:develops_from|biolink:disrupts|biolink:enabled_by|biolink:expressed_in|biolink:has_attribute|biolink:has_input|biolink:has_output|biolink:has_part|biolink:has_participant|biolink:has_phenotype|biolink:has_sequence_location|biolink:homologous_to|biolink:in_taxon|biolink:interacts_with|biolink:located_in|biolink:location_of|biolink:mentions|biolink:model_of|biolink:molecularly_interacts_with|biolink:negatively_regulates|biolink:occurs_in|biolink:overlaps|biolink:part_of|biolink:participates_in|biolink:positively_regulates|biolink:preceded_by|biolink:precedes|biolink:produced_by|biolink:produces|biolink:regulates|biolink:related_to|biolink:same_as|biolink:subclass_of|biolink:temporally_related_to
     node_categories: biolink:AnatomicalEntity|biolink:Article|biolink:BiologicalProcess|biolink:BiologicalProcessOrActivity|biolink:Book|biolink:ChemicalEntity|biolink:ChemicalMixture|biolink:Disease|biolink:Drug|biolink:Gene|biolink:GenomeBuild|biolink:InformationResource|biolink:MolecularMixture|biolink:NamedThing|biolink:Pathway|biolink:Polypeptide|biolink:Protein|biolink:Publication|biolink:SequenceVariant
-    node_prefixes: '!/hgnc_id/HGNC|NCIT|UMLS|ZFIN|dbSNP|MEDDRA|XENBASE|dc|UPHENO|ECTO|GOREL|isbn|OIO|ENSEMBL|PR|MONARCH_NODE|RGD|SO|IDO|foaf|ClinVar|PCO|rdfs|OBO|UBERON|CHEBI|SwissProt|HGNC|DICTYBASE.GENE|MONDO|NCBITaxon|ENVO|CL|DrugCentral|ATC|FOODON|PO|UBERON_CORE|BFO|urn|SGD|GOOGLE_PATENT|NBO|PATO|HP|GOP|TAIR.LOCUS|IAO|faldo|OBI|SNOMEDCT|ORPHA|DOID|MAXO|ExO|GENO|OGMS|MESH|WB|PMID|UniProtKB|RO|owl|xsd|MPATH|REACT|dct|HsapDv|FB|BSPO|GO'
+    node_prefixes: CHEBI|UBERON_CORE|IAO|dbSNP|MEDDRA|REACT|xsd|BSPO|GOOGLE_PATENT|UPHENO|owl|ExO|ENSEMBL|SO|ATC|CL|dct|PMID|NBO|HP|FOODON|ORPHA|SwissProt|MPATH|isbn|GENO|GOREL|ClinVar|IDO|MONARCH_NODE|DOID|OGMS|foaf|NCIT|UniProtKB|PATO|SNOMEDCT|WB|RGD|FB|TAIR.LOCUS|GO|HsapDv|ENVO|MAXO|rdfs|urn|DrugCentral|GOP|ECTO|OBI|PCO|RO|UMLS|ZFIN|DICTYBASE.GENE|MONDO|SGD|OIO|dc|!/hgnc_id/HGNC|PR|HGNC|NCBITaxon|UBERON|XENBASE|BFO|faldo|OBO|PO|MESH
   - id: https://kg-hub.berkeleybop.io/kg-idg/20220101/raw/chebi_kgx_tsv.tar.gz
     title: chebi_kgx_tsv.tar.gz
     conforms_to: KG-Hub
@@ -1255,7 +1255,7 @@ manifest:
     node_count: 942103
     predicates: biolink:actively_involved_in|biolink:affects_transport_of|biolink:associated_with|biolink:biomarker_for|biolink:capable_of|biolink:caused_by|biolink:causes|biolink:close_match|biolink:coexists_with|biolink:contributes_to|biolink:derives_from|biolink:develops_from|biolink:disrupts|biolink:enabled_by|biolink:expressed_in|biolink:has_attribute|biolink:has_input|biolink:has_output|biolink:has_part|biolink:has_participant|biolink:has_phenotype|biolink:has_sequence_location|biolink:homologous_to|biolink:in_taxon|biolink:interacts_with|biolink:located_in|biolink:location_of|biolink:mentions|biolink:model_of|biolink:molecularly_interacts_with|biolink:negatively_regulates|biolink:occurs_in|biolink:overlaps|biolink:part_of|biolink:participates_in|biolink:positively_regulates|biolink:preceded_by|biolink:precedes|biolink:produced_by|biolink:produces|biolink:regulates|biolink:related_to|biolink:same_as|biolink:subclass_of|biolink:temporally_related_to
     node_categories: biolink:AnatomicalEntity|biolink:Article|biolink:BiologicalProcess|biolink:BiologicalProcessOrActivity|biolink:Book|biolink:ChemicalEntity|biolink:ChemicalMixture|biolink:Disease|biolink:Drug|biolink:Gene|biolink:GenomeBuild|biolink:InformationResource|biolink:MolecularMixture|biolink:NamedThing|biolink:Pathway|biolink:Polypeptide|biolink:Protein|biolink:Publication|biolink:SequenceVariant
-    node_prefixes: '!/hgnc_id/HGNC|NCIT|UMLS|ZFIN|dbSNP|MEDDRA|XENBASE|dc|UPHENO|ECTO|GOREL|isbn|OIO|ENSEMBL|PR|MONARCH_NODE|RGD|SO|IDO|foaf|ClinVar|PCO|rdfs|OBO|UBERON|CHEBI|SwissProt|HGNC|DICTYBASE.GENE|MONDO|NCBITaxon|ENVO|CL|DrugCentral|ATC|FOODON|PO|UBERON_CORE|BFO|urn|SGD|GOOGLE_PATENT|NBO|PATO|HP|GOP|TAIR.LOCUS|IAO|faldo|OBI|SNOMEDCT|ORPHA|DOID|MAXO|ExO|GENO|OGMS|MESH|WB|PMID|UniProtKB|RO|owl|xsd|MPATH|REACT|dct|HsapDv|FB|BSPO|GO'
+    node_prefixes: CHEBI|UBERON_CORE|IAO|dbSNP|MEDDRA|REACT|xsd|BSPO|GOOGLE_PATENT|UPHENO|owl|ExO|ENSEMBL|SO|ATC|CL|dct|PMID|NBO|HP|FOODON|ORPHA|SwissProt|MPATH|isbn|GENO|GOREL|ClinVar|IDO|MONARCH_NODE|DOID|OGMS|foaf|NCIT|UniProtKB|PATO|SNOMEDCT|WB|RGD|FB|TAIR.LOCUS|GO|HsapDv|ENVO|MAXO|rdfs|urn|DrugCentral|GOP|ECTO|OBI|PCO|RO|UMLS|ZFIN|DICTYBASE.GENE|MONDO|SGD|OIO|dc|!/hgnc_id/HGNC|PR|HGNC|NCBITaxon|UBERON|XENBASE|BFO|faldo|OBO|PO|MESH
   - id: https://kg-hub.berkeleybop.io/kg-idg/20220106/raw/chebi_kgx_tsv.tar.gz
     title: chebi_kgx_tsv.tar.gz
     conforms_to: KG-Hub
@@ -1310,7 +1310,7 @@ manifest:
     node_count: 1013358
     predicates: biolink:actively_involved_in|biolink:affects_transport_of|biolink:associated_with|biolink:biomarker_for|biolink:capable_of|biolink:caused_by|biolink:causes|biolink:close_match|biolink:coexists_with|biolink:contributes_to|biolink:derives_from|biolink:develops_from|biolink:disrupts|biolink:enabled_by|biolink:expressed_in|biolink:has_attribute|biolink:has_input|biolink:has_output|biolink:has_part|biolink:has_participant|biolink:has_phenotype|biolink:has_sequence_location|biolink:homologous_to|biolink:in_taxon|biolink:interacts_with|biolink:located_in|biolink:location_of|biolink:mentions|biolink:model_of|biolink:molecularly_interacts_with|biolink:negatively_regulates|biolink:occurs_in|biolink:overlaps|biolink:part_of|biolink:participates_in|biolink:positively_regulates|biolink:preceded_by|biolink:precedes|biolink:produced_by|biolink:produces|biolink:regulates|biolink:related_to|biolink:same_as|biolink:subclass_of|biolink:temporally_related_to
     node_categories: biolink:AnatomicalEntity|biolink:Article|biolink:BiologicalProcess|biolink:BiologicalProcessOrActivity|biolink:Book|biolink:ChemicalEntity|biolink:ChemicalMixture|biolink:Disease|biolink:Drug|biolink:Gene|biolink:GenomeBuild|biolink:InformationResource|biolink:MolecularMixture|biolink:NamedThing|biolink:Pathway|biolink:Polypeptide|biolink:Protein|biolink:Publication|biolink:SequenceVariant
-    node_prefixes: '!/hgnc_id/HGNC|NCIT|UMLS|ZFIN|dbSNP|MEDDRA|XENBASE|dc|UPHENO|ECTO|GOREL|isbn|OIO|ENSEMBL|PR|MONARCH_NODE|RGD|SO|IDO|foaf|CAS|VANDF|ClinVar|PCO|rdfs|UNII|OBO|UBERON|CHEBI|SwissProt|MMSL|HGNC|DICTYBASE.GENE|MONDO|NCBITaxon|INN|ENVO|CL|DrugCentral|ATC|FOODON|NUI|PO|IUPHAR_LIGAND|UBERON_CORE|BFO|urn|SGD|GOOGLE_PATENT|NBO|PATO|HP|GOP|CHEMBL_COMPOUND|NDDF|IAO|TAIR.LOCUS|VUID|faldo|OBI|KEGG_DRUG|SNOMEDCT|DRUGBANK|ORPHA|DOID|MAXO|ExO|GENO|OGMS|MESH|WB|PMID|UniProtKB|RO|owl|xsd|MPATH|REACT|dct|PUBCHEM_COMPOUND|HsapDv|FB|RXNORM|BSPO|PDB|GO'
+    node_prefixes: CHEBI|UBERON_CORE|IAO|VUID|PDB|dbSNP|MEDDRA|REACT|xsd|BSPO|GOOGLE_PATENT|UPHENO|owl|ExO|ENSEMBL|INN|SO|ATC|CL|dct|PMID|NUI|NBO|HP|KEGG_DRUG|CHEMBL_COMPOUND|FOODON|ORPHA|SwissProt|MPATH|isbn|GENO|VANDF|GOREL|ClinVar|IDO|MONARCH_NODE|CAS|DOID|OGMS|foaf|NCIT|UniProtKB|PATO|SNOMEDCT|WB|RGD|FB|TAIR.LOCUS|GO|HsapDv|UNII|RXNORM|ENVO|PUBCHEM_COMPOUND|IUPHAR_LIGAND|MAXO|rdfs|urn|DrugCentral|GOP|ECTO|OBI|PCO|DRUGBANK|RO|UMLS|ZFIN|DICTYBASE.GENE|MONDO|SGD|MMSL|OIO|!/hgnc_id/HGNC|dc|PR|HGNC|NCBITaxon|UBERON|NDDF|BFO|XENBASE|faldo|OBO|PO|MESH
   - id: https://kg-hub.berkeleybop.io/kg-idg/20220107/raw/chebi_kgx_tsv.tar.gz
     title: chebi_kgx_tsv.tar.gz
     conforms_to: KG-Hub
@@ -1365,7 +1365,7 @@ manifest:
     node_count: 1013358
     predicates: biolink:actively_involved_in|biolink:affects_transport_of|biolink:associated_with|biolink:biomarker_for|biolink:capable_of|biolink:caused_by|biolink:causes|biolink:close_match|biolink:coexists_with|biolink:contributes_to|biolink:derives_from|biolink:develops_from|biolink:disrupts|biolink:enabled_by|biolink:expressed_in|biolink:has_attribute|biolink:has_input|biolink:has_output|biolink:has_part|biolink:has_participant|biolink:has_phenotype|biolink:has_sequence_location|biolink:homologous_to|biolink:in_taxon|biolink:interacts_with|biolink:located_in|biolink:location_of|biolink:mentions|biolink:model_of|biolink:molecularly_interacts_with|biolink:negatively_regulates|biolink:occurs_in|biolink:overlaps|biolink:part_of|biolink:participates_in|biolink:positively_regulates|biolink:preceded_by|biolink:precedes|biolink:produced_by|biolink:produces|biolink:regulates|biolink:related_to|biolink:same_as|biolink:subclass_of|biolink:temporally_related_to
     node_categories: biolink:AnatomicalEntity|biolink:Article|biolink:BiologicalProcess|biolink:BiologicalProcessOrActivity|biolink:Book|biolink:ChemicalEntity|biolink:ChemicalMixture|biolink:Disease|biolink:Drug|biolink:Gene|biolink:GenomeBuild|biolink:InformationResource|biolink:MolecularMixture|biolink:NamedThing|biolink:Pathway|biolink:Polypeptide|biolink:Protein|biolink:Publication|biolink:SequenceVariant
-    node_prefixes: '!/hgnc_id/HGNC|NCIT|UMLS|ZFIN|dbSNP|MEDDRA|XENBASE|dc|UPHENO|ECTO|GOREL|isbn|OIO|ENSEMBL|PR|MONARCH_NODE|RGD|SO|IDO|foaf|CAS|VANDF|ClinVar|PCO|rdfs|UNII|OBO|UBERON|CHEBI|SwissProt|MMSL|HGNC|DICTYBASE.GENE|MONDO|NCBITaxon|INN|ENVO|CL|DrugCentral|ATC|FOODON|PO|UBERON_CORE|IUPHAR_LIGAND|BFO|urn|SGD|GOOGLE_PATENT|NBO|PATO|HP|GOP|CHEMBL_COMPOUND|NDDF|IAO|TAIR.LOCUS|VUID|faldo|OBI|KEGG_DRUG|SNOMEDCT|DRUGBANK|ORPHA|DOID|MAXO|ExO|GENO|OGMS|MESH|WB|PMID|UniProtKB|RO|owl|xsd|MPATH|REACT|dct|PUBCHEM_COMPOUND|HsapDv|FB|RXNORM|BSPO|NDFRT|PDB|GO'
+    node_prefixes: CHEBI|UBERON_CORE|IAO|VUID|PDB|dbSNP|MEDDRA|REACT|xsd|BSPO|GOOGLE_PATENT|UPHENO|owl|ExO|ENSEMBL|INN|SO|ATC|CL|dct|PMID|NBO|HP|KEGG_DRUG|CHEMBL_COMPOUND|FOODON|ORPHA|SwissProt|MPATH|isbn|GENO|VANDF|GOREL|ClinVar|IDO|MONARCH_NODE|CAS|DOID|OGMS|foaf|NCIT|UniProtKB|PATO|SNOMEDCT|WB|RGD|FB|TAIR.LOCUS|GO|HsapDv|UNII|RXNORM|ENVO|PUBCHEM_COMPOUND|IUPHAR_LIGAND|MAXO|rdfs|urn|DrugCentral|GOP|ECTO|OBI|PCO|DRUGBANK|RO|UMLS|ZFIN|DICTYBASE.GENE|MONDO|SGD|MMSL|OIO|!/hgnc_id/HGNC|dc|PR|HGNC|NCBITaxon|UBERON|NDDF|BFO|XENBASE|faldo|NDFRT|OBO|PO|MESH
   - id: https://kg-hub.berkeleybop.io/kg-idg/20220119/raw/chebi_kgx_tsv.tar.gz
     title: chebi_kgx_tsv.tar.gz
     conforms_to: KG-Hub
@@ -1420,7 +1420,7 @@ manifest:
     node_count: 969625
     predicates: biolink:affects|biolink:affects_transport_of|biolink:biomarker_for|biolink:capable_of|biolink:caused_by|biolink:causes|biolink:close_match|biolink:coexists_with|biolink:contributes_to|biolink:correlated_with|biolink:disrupts|biolink:enabled_by|biolink:has_attribute|biolink:has_input|biolink:has_output|biolink:has_part|biolink:has_participant|biolink:has_phenotype|biolink:has_sequence_location|biolink:in_taxon|biolink:interacts_with|biolink:mentions|biolink:molecularly_interacts_with|biolink:negatively_regulates|biolink:occurs_in|biolink:overlaps|biolink:part_of|biolink:participates_in|biolink:positively_regulates|biolink:preceded_by|biolink:precedes|biolink:regulates|biolink:related_to|biolink:same_as|biolink:subclass_of|biolink:temporally_related_to
     node_categories: biolink:BiologicalProcess|biolink:BiologicalProcessOrActivity|biolink:ChemicalEntity|biolink:ChemicalMixture|biolink:Disease|biolink:Drug|biolink:Gene|biolink:GenomeBuild|biolink:MolecularMixture|biolink:NamedThing|biolink:Pathway|biolink:Polypeptide|biolink:Protein|biolink:SequenceVariant
-    node_prefixes: '!/hgnc_id/HGNC|NCIT|UMLS|ZFIN|dbSNP|MEDDRA|XENBASE|dc|ECTO|GOREL|OIO|ENSEMBL|PR|MONARCH_NODE|RGD|SO|IDO|foaf|ClinVar|rdfs|OBO|UBERON|CHEBI|SwissProt|HGNC|DICTYBASE.GENE|MONDO|NCBITaxon|ENVO|CL|DrugCentral|ATC|FOODON|DDANAT|PO|BFO|SGD|NBO|PATO|HP|GOP|TAIR.LOCUS|IAO|faldo|OBI|SNOMEDCT|ORPHA|DOID|MAXO|GENO|OGMS|MESH|NCBIGene|PMID|UniProtKB|WB|RO|owl|xsd|MPATH|REACT|dct|HsapDv|FB|BSPO|FAO|GO'
+    node_prefixes: CHEBI|IAO|dbSNP|MEDDRA|REACT|xsd|BSPO|owl|ENSEMBL|SO|ATC|CL|dct|PMID|NBO|HP|FOODON|ORPHA|SwissProt|MPATH|GENO|GOREL|ClinVar|DDANAT|FAO|IDO|MONARCH_NODE|NCBIGene|DOID|OGMS|foaf|NCIT|UniProtKB|PATO|SNOMEDCT|WB|RGD|FB|TAIR.LOCUS|GO|HsapDv|ENVO|MAXO|rdfs|DrugCentral|GOP|ECTO|OBI|RO|UMLS|ZFIN|DICTYBASE.GENE|MONDO|SGD|OIO|dc|!/hgnc_id/HGNC|PR|HGNC|NCBITaxon|UBERON|XENBASE|BFO|faldo|OBO|PO|MESH
   - id: https://kg-hub.berkeleybop.io/kg-idg/20220201/raw/chebi_kgx_tsv.tar.gz
     title: chebi_kgx_tsv.tar.gz
     conforms_to: KG-Hub
@@ -1475,7 +1475,7 @@ manifest:
     node_count: 1018616
     predicates: biolink:actively_involved_in|biolink:affects_transport_of|biolink:associated_with|biolink:biomarker_for|biolink:capable_of|biolink:caused_by|biolink:causes|biolink:close_match|biolink:coexists_with|biolink:contains_process|biolink:contributes_to|biolink:derives_from|biolink:develops_from|biolink:disrupts|biolink:enabled_by|biolink:expressed_in|biolink:has_attribute|biolink:has_input|biolink:has_output|biolink:has_part|biolink:has_participant|biolink:has_phenotype|biolink:has_sequence_location|biolink:homologous_to|biolink:in_taxon|biolink:interacts_with|biolink:located_in|biolink:location_of|biolink:mentions|biolink:model_of|biolink:molecularly_interacts_with|biolink:negatively_regulates|biolink:occurs_in|biolink:overlaps|biolink:part_of|biolink:participates_in|biolink:positively_regulates|biolink:preceded_by|biolink:precedes|biolink:produced_by|biolink:produces|biolink:regulates|biolink:related_to|biolink:same_as|biolink:subclass_of|biolink:temporally_related_to
     node_categories: biolink:AnatomicalEntity|biolink:Article|biolink:BiologicalProcess|biolink:BiologicalProcessOrActivity|biolink:Book|biolink:ChemicalEntity|biolink:ChemicalMixture|biolink:Disease|biolink:Drug|biolink:Gene|biolink:GenomeBuild|biolink:InformationResource|biolink:MolecularMixture|biolink:NamedThing|biolink:Pathway|biolink:Polypeptide|biolink:Protein|biolink:Publication|biolink:SequenceVariant
-    node_prefixes: '!/hgnc_id/HGNC|NCIT|UMLS|ZFIN|dbSNP|MEDDRA|XENBASE|dc|UPHENO|ECTO|GOREL|isbn|OIO|ENSEMBL|PR|MONARCH_NODE|RGD|SO|IDO|foaf|CAS|VANDF|ClinVar|PCO|rdfs|TAIR_LOCUS|UNII|MGI|OBO|UBERON|CHEBI|SwissProt|MMSL|HGNC|MONDO|NCBITaxon|INN|ENVO|CL|DrugCentral|ATC|FOODON|PO|UBERON_CORE|IUPHAR_LIGAND|BFO|urn|SGD|GOOGLE_PATENT|NBO|PATO|HP|FlyBase|CHEMBL_COMPOUND|GOP|IAO|NDDF|VUID|faldo|OBI|KEGG_DRUG|SNOMEDCT|DRUGBANK|ORPHA|DOID|DICTYBASE_GENE|MAXO|ExO|GENO|OGMS|MESH|PomBase|PMID|UniProtKB|RO|owl|xsd|MPATH|REACT|dct|PUBCHEM_COMPOUND|HsapDv|RXNORM|BSPO|WormBase|NDFRT|PDB|GO'
+    node_prefixes: CHEBI|UBERON_CORE|IAO|VUID|PDB|dbSNP|MEDDRA|REACT|xsd|BSPO|GOOGLE_PATENT|UPHENO|owl|ExO|ENSEMBL|INN|SO|ATC|CL|dct|PMID|NBO|HP|KEGG_DRUG|CHEMBL_COMPOUND|FOODON|ORPHA|SwissProt|MPATH|isbn|GENO|VANDF|GOREL|ClinVar|IDO|MONARCH_NODE|CAS|DOID|OGMS|foaf|NCIT|UniProtKB|PATO|DICTYBASE_GENE|SNOMEDCT|RGD|TAIR_LOCUS|GO|HsapDv|UNII|RXNORM|WormBase|ENVO|PUBCHEM_COMPOUND|FlyBase|IUPHAR_LIGAND|MAXO|rdfs|urn|DrugCentral|GOP|ECTO|OBI|PCO|DRUGBANK|RO|UMLS|ZFIN|MONDO|PomBase|MGI|SGD|MMSL|OIO|!/hgnc_id/HGNC|dc|PR|HGNC|NCBITaxon|UBERON|NDDF|BFO|XENBASE|faldo|NDFRT|OBO|PO|MESH
   - id: https://kg-hub.berkeleybop.io/kg-idg/20220203/raw/chebi_kgx_tsv.tar.gz
     title: chebi_kgx_tsv.tar.gz
     conforms_to: KG-Hub
@@ -1530,7 +1530,7 @@ manifest:
     node_count: 1018779
     predicates: biolink:actively_involved_in|biolink:affects_transport_of|biolink:associated_with|biolink:biomarker_for|biolink:capable_of|biolink:caused_by|biolink:causes|biolink:close_match|biolink:coexists_with|biolink:contains_process|biolink:contributes_to|biolink:derives_from|biolink:develops_from|biolink:disrupts|biolink:enabled_by|biolink:expressed_in|biolink:has_attribute|biolink:has_input|biolink:has_output|biolink:has_part|biolink:has_participant|biolink:has_phenotype|biolink:has_sequence_location|biolink:homologous_to|biolink:in_taxon|biolink:interacts_with|biolink:located_in|biolink:location_of|biolink:mentions|biolink:model_of|biolink:molecularly_interacts_with|biolink:negatively_regulates|biolink:occurs_in|biolink:overlaps|biolink:part_of|biolink:participates_in|biolink:positively_regulates|biolink:preceded_by|biolink:precedes|biolink:produced_by|biolink:produces|biolink:regulates|biolink:related_to|biolink:same_as|biolink:subclass_of|biolink:temporally_related_to
     node_categories: biolink:AnatomicalEntity|biolink:Article|biolink:BiologicalProcess|biolink:BiologicalProcessOrActivity|biolink:Book|biolink:ChemicalEntity|biolink:ChemicalMixture|biolink:Disease|biolink:Drug|biolink:Gene|biolink:GenomeBuild|biolink:InformationResource|biolink:MolecularMixture|biolink:NamedThing|biolink:Pathway|biolink:Polypeptide|biolink:Protein|biolink:Publication|biolink:SequenceVariant
-    node_prefixes: '!/hgnc_id/HGNC|NCIT|UMLS|ZFIN|dbSNP|MEDDRA|XENBASE|dc|UPHENO|ECTO|GOREL|isbn|OIO|ENSEMBL|PR|MONARCH_NODE|RGD|SO|IDO|foaf|CAS|VANDF|ClinVar|PCO|rdfs|TAIR_LOCUS|UNII|MGI|OBO|UBERON|CHEBI|SwissProt|MMSL|HGNC|MONDO|NCBITaxon|INN|ENVO|CL|DrugCentral|ATC|FOODON|PO|UBERON_CORE|IUPHAR_LIGAND|BFO|urn|SGD|GOOGLE_PATENT|NBO|PATO|HP|FlyBase|CHEMBL_COMPOUND|GOP|IAO|NDDF|VUID|faldo|OBI|KEGG_DRUG|SNOMEDCT|DRUGBANK|ORPHA|DOID|DICTYBASE_GENE|MAXO|ExO|GENO|OGMS|MESH|PomBase|PMID|UniProtKB|RO|owl|xsd|MPATH|REACT|dct|PUBCHEM_COMPOUND|HsapDv|RXNORM|BSPO|WormBase|NDFRT|PDB|GO'
+    node_prefixes: CHEBI|UBERON_CORE|IAO|VUID|PDB|dbSNP|MEDDRA|REACT|xsd|BSPO|GOOGLE_PATENT|UPHENO|owl|ExO|ENSEMBL|INN|SO|ATC|CL|dct|PMID|NBO|HP|KEGG_DRUG|CHEMBL_COMPOUND|FOODON|ORPHA|SwissProt|MPATH|isbn|GENO|VANDF|GOREL|ClinVar|IDO|MONARCH_NODE|CAS|DOID|OGMS|foaf|NCIT|UniProtKB|PATO|DICTYBASE_GENE|SNOMEDCT|RGD|TAIR_LOCUS|GO|HsapDv|UNII|RXNORM|WormBase|ENVO|PUBCHEM_COMPOUND|FlyBase|IUPHAR_LIGAND|MAXO|rdfs|urn|DrugCentral|GOP|ECTO|OBI|PCO|DRUGBANK|RO|UMLS|ZFIN|MONDO|PomBase|MGI|SGD|MMSL|OIO|!/hgnc_id/HGNC|dc|PR|HGNC|NCBITaxon|UBERON|NDDF|BFO|XENBASE|faldo|NDFRT|OBO|PO|MESH
   - id: https://kg-hub.berkeleybop.io/kg-idg/20220204/raw/chebi_kgx_tsv.tar.gz
     title: chebi_kgx_tsv.tar.gz
     conforms_to: KG-Hub
@@ -1585,7 +1585,7 @@ manifest:
     node_count: 1024244
     predicates: biolink:actively_involved_in|biolink:affects_transport_of|biolink:associated_with|biolink:biomarker_for|biolink:capable_of|biolink:caused_by|biolink:causes|biolink:close_match|biolink:coexists_with|biolink:contains_process|biolink:contributes_to|biolink:derives_from|biolink:develops_from|biolink:disrupts|biolink:enabled_by|biolink:expressed_in|biolink:has_attribute|biolink:has_input|biolink:has_output|biolink:has_part|biolink:has_participant|biolink:has_phenotype|biolink:has_sequence_location|biolink:homologous_to|biolink:in_taxon|biolink:interacts_with|biolink:located_in|biolink:location_of|biolink:mentions|biolink:model_of|biolink:molecularly_interacts_with|biolink:negatively_regulates|biolink:occurs_in|biolink:overlaps|biolink:part_of|biolink:participates_in|biolink:positively_regulates|biolink:preceded_by|biolink:precedes|biolink:produced_by|biolink:produces|biolink:regulates|biolink:related_to|biolink:same_as|biolink:subclass_of|biolink:temporally_related_to
     node_categories: biolink:AnatomicalEntity|biolink:Article|biolink:BiologicalProcess|biolink:BiologicalProcessOrActivity|biolink:Book|biolink:ChemicalEntity|biolink:ChemicalMixture|biolink:Disease|biolink:Drug|biolink:Gene|biolink:GenomeBuild|biolink:InformationResource|biolink:MolecularMixture|biolink:NamedThing|biolink:Pathway|biolink:Polypeptide|biolink:Protein|biolink:Publication|biolink:SequenceVariant
-    node_prefixes: '!/hgnc_id/HGNC|NCIT|UMLS|ZFIN|dbSNP|MEDDRA|XENBASE|dc|UPHENO|ECTO|GOREL|isbn|OIO|ENSEMBL|PR|MONARCH_NODE|RGD|SO|IDO|foaf|CAS|VANDF|ClinVar|PCO|rdfs|TAIR_LOCUS|UNII|MGI|OBO|UBERON|CHEBI|SwissProt|MMSL|HGNC|MONDO|NCBITaxon|INN|ENVO|CL|DrugCentral|ATC|FOODON|PO|UBERON_CORE|IUPHAR_LIGAND|BFO|urn|SGD|GOOGLE_PATENT|NBO|PATO|HP|FlyBase|CHEMBL_COMPOUND|GOP|IAO|NDDF|VUID|faldo|OBI|KEGG_DRUG|SNOMEDCT|DRUGBANK|ORPHA|DOID|DICTYBASE_GENE|MAXO|ExO|GENO|OGMS|MESH|PomBase|PMID|UniProtKB|RO|owl|xsd|MPATH|REACT|dct|PUBCHEM_COMPOUND|HsapDv|RXNORM|BSPO|WormBase|NDFRT|PDB|GO'
+    node_prefixes: CHEBI|UBERON_CORE|IAO|VUID|PDB|dbSNP|MEDDRA|REACT|xsd|BSPO|GOOGLE_PATENT|UPHENO|owl|ExO|ENSEMBL|INN|SO|ATC|CL|dct|PMID|NBO|HP|KEGG_DRUG|CHEMBL_COMPOUND|FOODON|ORPHA|SwissProt|MPATH|isbn|GENO|VANDF|GOREL|ClinVar|IDO|MONARCH_NODE|CAS|DOID|OGMS|foaf|NCIT|UniProtKB|PATO|DICTYBASE_GENE|SNOMEDCT|RGD|TAIR_LOCUS|GO|HsapDv|UNII|RXNORM|WormBase|ENVO|PUBCHEM_COMPOUND|FlyBase|IUPHAR_LIGAND|MAXO|rdfs|urn|DrugCentral|GOP|ECTO|OBI|PCO|DRUGBANK|RO|UMLS|ZFIN|MONDO|PomBase|MGI|SGD|MMSL|OIO|!/hgnc_id/HGNC|dc|PR|HGNC|NCBITaxon|UBERON|NDDF|BFO|XENBASE|faldo|NDFRT|OBO|PO|MESH
   - id: https://kg-hub.berkeleybop.io/kg-idg/20220216/raw/chebi_kgx_tsv.tar.gz
     title: chebi_kgx_tsv.tar.gz
     conforms_to: KG-Hub
@@ -2029,7 +2029,7 @@ manifest:
     node_count: 272876
     predicates: biolink:capable_of|biolink:caused_by|biolink:causes|biolink:coexists_with|biolink:derives_from|biolink:derives_into|biolink:develops_from|biolink:has_attribute|biolink:has_input|biolink:has_output|biolink:has_part|biolink:has_participant|biolink:has_phenotype|biolink:in_taxon|biolink:interacts_with|biolink:located_in|biolink:location_of|biolink:negatively_regulates|biolink:occurs_in|biolink:overlaps|biolink:part_of|biolink:participates_in|biolink:positively_regulates|biolink:preceded_by|biolink:precedes|biolink:regulates|biolink:related_to|biolink:subclass_of|biolink:temporally_related_to|biolink:type
     node_categories: biolink:AbstractEntity|biolink:ActivityAndBehavior|biolink:AnatomicalEntity|biolink:BiologicalProcess|biolink:CellularComponent|biolink:ChemicalSubstance|biolink:MolecularActivity|biolink:OntologyClass|biolink:OrganismTaxon|biolink:OrganismalEntity
-    node_prefixes: PCO|PO|BFO|OBO|UBERON|CHEBI|microtraits.cell_shape_enum|PATO|microtraits.pathways|ECOCORE|CARO|NCBITaxon|RO|WD_Entity|IAO|ENVO|OBI|OIO|FOODON|microtraits.data_source|microtraits.carbon_substrates|FAO|GO
+    node_prefixes: OBI|CHEBI|PCO|RO|IAO|microtraits.pathways|PO|FOODON|OIO|GO|CARO|FAO|ENVO|microtraits.carbon_substrates|NCBITaxon|PATO|UBERON|microtraits.cell_shape_enum|BFO|WD_Entity|microtraits.data_source|OBO|ECOCORE
   - id: https://kg-hub.berkeleybop.io/kg-microbe/20210715/kg-microbe.tar.gz
     title: kg-microbe.tar.gz
     description: 'KG-Microbe: a knowledge graph for microbial traits.'
@@ -2044,7 +2044,7 @@ manifest:
     node_count: 276359
     predicates: biolink:capable_of|biolink:caused_by|biolink:causes|biolink:coexists_with|biolink:derives_from|biolink:derives_into|biolink:develops_from|biolink:has_attribute|biolink:has_input|biolink:has_output|biolink:has_part|biolink:has_participant|biolink:has_phenotype|biolink:in_taxon|biolink:interacts_with|biolink:located_in|biolink:location_of|biolink:negatively_regulates|biolink:occurs_in|biolink:overlaps|biolink:part_of|biolink:participates_in|biolink:positively_regulates|biolink:preceded_by|biolink:precedes|biolink:regulates|biolink:related_to|biolink:subclass_of|biolink:temporally_related_to|biolink:type
     node_categories: biolink:AbstractEntity|biolink:ActivityAndBehavior|biolink:AnatomicalEntity|biolink:BiologicalProcess|biolink:CellularComponent|biolink:ChemicalSubstance|biolink:MolecularActivity|biolink:OntologyClass|biolink:OrganismTaxon|biolink:OrganismalEntity
-    node_prefixes: PCO|PO|BFO|OBO|UBERON|CHEBI|microtraits.cell_shape_enum|PATO|microtraits.pathways|ECOCORE|CARO|NCBITaxon|RO|WD_Entity|IAO|ENVO|OBI|OIO|FOODON|microtraits.data_source|microtraits.carbon_substrates|FAO|GO
+    node_prefixes: OBI|CHEBI|PCO|RO|IAO|microtraits.pathways|PO|FOODON|OIO|GO|CARO|FAO|ENVO|microtraits.carbon_substrates|NCBITaxon|PATO|UBERON|microtraits.cell_shape_enum|BFO|WD_Entity|microtraits.data_source|OBO|ECOCORE
   - id: https://kg-hub.berkeleybop.io/kg-microbe/current/kg-microbe.tar.gz
     title: kg-microbe.tar.gz
     description: 'KG-Microbe: a knowledge graph for microbial traits.'
@@ -2058,7 +2058,7 @@ manifest:
     node_count: 276359
     predicates: biolink:capable_of|biolink:caused_by|biolink:causes|biolink:coexists_with|biolink:derives_from|biolink:derives_into|biolink:develops_from|biolink:has_attribute|biolink:has_input|biolink:has_output|biolink:has_part|biolink:has_participant|biolink:has_phenotype|biolink:in_taxon|biolink:interacts_with|biolink:located_in|biolink:location_of|biolink:negatively_regulates|biolink:occurs_in|biolink:overlaps|biolink:part_of|biolink:participates_in|biolink:positively_regulates|biolink:preceded_by|biolink:precedes|biolink:regulates|biolink:related_to|biolink:subclass_of|biolink:temporally_related_to|biolink:type
     node_categories: biolink:AbstractEntity|biolink:ActivityAndBehavior|biolink:AnatomicalEntity|biolink:BiologicalProcess|biolink:CellularComponent|biolink:ChemicalSubstance|biolink:MolecularActivity|biolink:OntologyClass|biolink:OrganismTaxon|biolink:OrganismalEntity
-    node_prefixes: PCO|PO|BFO|OBO|UBERON|CHEBI|microtraits.cell_shape_enum|PATO|microtraits.pathways|ECOCORE|CARO|NCBITaxon|RO|WD_Entity|IAO|ENVO|OBI|OIO|FOODON|microtraits.data_source|microtraits.carbon_substrates|FAO|GO
+    node_prefixes: OBI|CHEBI|PCO|RO|IAO|microtraits.pathways|PO|FOODON|OIO|GO|CARO|FAO|ENVO|microtraits.carbon_substrates|NCBITaxon|PATO|UBERON|microtraits.cell_shape_enum|BFO|WD_Entity|microtraits.data_source|OBO|ECOCORE
   - id: https://kg-hub.berkeleybop.io/kg-obo/aeo/2014-12-05/aeo_kgx_tsv.tar.gz
     license: CC BY 4.0
     title: aeo_kgx_tsv.tar.gz
@@ -6820,7 +6820,7 @@ manifest:
     - merged-kg_edges.tsv
     - merged-kg_nodes.tsv
     edge_count: 820356
-    node_count: 511960
+    node_count: 510143
     predicates: biolink:actively_involved_in|biolink:affects|biolink:affects_localization_of|biolink:affects_transport_of|biolink:associated_with|biolink:broad_match|biolink:capable_of|biolink:caused_by|biolink:causes|biolink:close_match|biolink:coexists_with|biolink:contributor|biolink:derives_from|biolink:develops_from|biolink:disrupts|biolink:exact_match|biolink:expresses|biolink:has_attribute|biolink:has_input|biolink:has_output|biolink:has_part|biolink:has_participant|biolink:has_phenotype|biolink:has_unit|biolink:has_variant_part|biolink:homologous_to|biolink:in_taxon|biolink:increases_degradation_of|biolink:interacts_with|biolink:located_in|biolink:location_of|biolink:model_of|biolink:narrow_match|biolink:negatively_regulates|biolink:object|biolink:occurs_in|biolink:opposite_of|biolink:overlaps|biolink:part_of|biolink:participates_in|biolink:positively_regulates|biolink:preceded_by|biolink:precedes|biolink:produced_by|biolink:produces|biolink:publisher|biolink:regulates|biolink:related_to|biolink:same_as|biolink:similar_to|biolink:subclass_of|biolink:subject|biolink:temporally_related_to
     node_categories: biolink:NamedThing
     node_prefixes: '!/hgnc_id/HGNC|BFO|BSPO|CHEBI|CL|CLO|DDANAT|DOID|ECO|ECTO|EDAM-DATA|EFO|ENVO|ExO|FAO|FBcv|FMA|FOODON|GENO|GO|GOP|GOREL|HP|HsapDv|IAO|IDO|MA|MAXO|MEDDRA|MESH|MGI|MONDO|MP|MPATH|NBO|NCBITaxon|NCIT|OBI|OBO|OGMS|OIO|ORCID|ORPHA|PATO|PCO|PMID|PO|PR|PW|RO|SEPIO|SIO|SNOMED|SO|STATO|TAXRANK|UBERON|UBERON_CORE|UMLS|UPHENO|VT|WBPhenotype|WBbt|XAO|XCO|XPO|ZFA|ZP|dc|dct|dctypes|faldo|foaf|owl|pav|prov|rdf|rdfs|schema|skos|urn|wgs|xsd'
@@ -8430,3 +8430,2164 @@ manifest:
     title: hp_edges.tsv
     was_derived_from: ontologies
     obsolete: 'False'
+  - id: https://kg-hub.berkeleybop.io/kg-covid-19/20210301/transformed/ontologies/hp_nodes.tsv
+    title: hp_nodes.tsv
+    was_derived_from: ontologies
+    obsolete: 'False'
+  - id: https://kg-hub.berkeleybop.io/kg-covid-19/20210301/transformed/ontologies/mondo_edges.tsv
+    title: mondo_edges.tsv
+    was_derived_from: ontologies
+    obsolete: 'False'
+  - id: https://kg-hub.berkeleybop.io/kg-covid-19/20210301/transformed/ontologies/mondo_nodes.tsv
+    title: mondo_nodes.tsv
+    was_derived_from: ontologies
+    obsolete: 'False'
+  - id: https://kg-hub.berkeleybop.io/kg-covid-19/20210301/transformed/pharmgkb/edges.tsv
+    title: edges.tsv
+    was_derived_from: pharmgkb
+    obsolete: 'False'
+  - id: https://kg-hub.berkeleybop.io/kg-covid-19/20210301/transformed/pharmgkb/nodes.tsv
+    title: nodes.tsv
+    was_derived_from: pharmgkb
+    obsolete: 'False'
+  - id: https://kg-hub.berkeleybop.io/kg-covid-19/20210301/transformed/sars_cov_2_gene_annot/edges.tsv
+    title: edges.tsv
+    was_derived_from: sars_cov_2_gene_annot
+    obsolete: 'False'
+  - id: https://kg-hub.berkeleybop.io/kg-covid-19/20210301/transformed/sars_cov_2_gene_annot/nodes.tsv
+    title: nodes.tsv
+    was_derived_from: sars_cov_2_gene_annot
+    obsolete: 'False'
+  - id: https://kg-hub.berkeleybop.io/kg-covid-19/20210301/transformed/ttd/edges.tsv
+    title: edges.tsv
+    was_derived_from: ttd
+    obsolete: 'False'
+  - id: https://kg-hub.berkeleybop.io/kg-covid-19/20210301/transformed/ttd/nodes.tsv
+    title: nodes.tsv
+    was_derived_from: ttd
+    obsolete: 'False'
+  - id: https://kg-hub.berkeleybop.io/kg-covid-19/20210301/transformed/zhou_host_proteins/edges.tsv
+    title: edges.tsv
+    was_derived_from: zhou_host_proteins
+    obsolete: 'False'
+  - id: https://kg-hub.berkeleybop.io/kg-covid-19/20210301/transformed/zhou_host_proteins/nodes.tsv
+    title: nodes.tsv
+    was_derived_from: zhou_host_proteins
+    obsolete: 'False'
+  - id: https://kg-hub.berkeleybop.io/kg-covid-19/20210412/transformed/ChEMBL/edges.tsv
+    title: edges.tsv
+    was_derived_from: ChEMBL
+    obsolete: 'False'
+  - id: https://kg-hub.berkeleybop.io/kg-covid-19/20210412/transformed/ChEMBL/nodes.tsv
+    title: nodes.tsv
+    was_derived_from: ChEMBL
+    obsolete: 'False'
+  - id: https://kg-hub.berkeleybop.io/kg-covid-19/20210412/transformed/GOCAMs/GOCAMs_edges.tsv
+    title: GOCAMs_edges.tsv
+    was_derived_from: GOCAMs
+    obsolete: 'False'
+  - id: https://kg-hub.berkeleybop.io/kg-covid-19/20210412/transformed/GOCAMs/GOCAMs_nodes.tsv
+    title: GOCAMs_nodes.tsv
+    was_derived_from: GOCAMs
+    obsolete: 'False'
+  - id: https://kg-hub.berkeleybop.io/kg-covid-19/20210412/transformed/STRING/edges.tsv
+    title: edges.tsv
+    was_derived_from: STRING
+    obsolete: 'False'
+  - id: https://kg-hub.berkeleybop.io/kg-covid-19/20210412/transformed/STRING/nodes.tsv
+    title: nodes.tsv
+    was_derived_from: STRING
+    obsolete: 'False'
+  - id: https://kg-hub.berkeleybop.io/kg-covid-19/20210412/transformed/SciBite-CORD-19/edges.tsv
+    title: edges.tsv
+    was_derived_from: SciBite-CORD-19
+    obsolete: 'False'
+  - id: https://kg-hub.berkeleybop.io/kg-covid-19/20210412/transformed/SciBite-CORD-19/entity_cooccurrence_edges.tsv
+    title: entity_cooccurrence_edges.tsv
+    was_derived_from: SciBite-CORD-19
+    obsolete: 'False'
+  - id: https://kg-hub.berkeleybop.io/kg-covid-19/20210412/transformed/SciBite-CORD-19/entity_cooccurrence_nodes.tsv
+    title: entity_cooccurrence_nodes.tsv
+    was_derived_from: SciBite-CORD-19
+    obsolete: 'False'
+  - id: https://kg-hub.berkeleybop.io/kg-covid-19/20210412/transformed/SciBite-CORD-19/nodes.tsv
+    title: nodes.tsv
+    was_derived_from: SciBite-CORD-19
+    obsolete: 'False'
+  - id: https://kg-hub.berkeleybop.io/kg-covid-19/20210412/transformed/drug_central/edges.tsv
+    title: edges.tsv
+    was_derived_from: drug_central
+    obsolete: 'False'
+  - id: https://kg-hub.berkeleybop.io/kg-covid-19/20210412/transformed/drug_central/nodes.tsv
+    title: nodes.tsv
+    was_derived_from: drug_central
+    obsolete: 'False'
+  - id: https://kg-hub.berkeleybop.io/kg-covid-19/20210412/transformed/intact/edges.tsv
+    title: edges.tsv
+    was_derived_from: intact
+    obsolete: 'False'
+  - id: https://kg-hub.berkeleybop.io/kg-covid-19/20210412/transformed/intact/nodes.tsv
+    title: nodes.tsv
+    was_derived_from: intact
+    obsolete: 'False'
+  - id: https://kg-hub.berkeleybop.io/kg-covid-19/20210412/transformed/ontologies/chebi_edges.tsv
+    title: chebi_edges.tsv
+    was_derived_from: ontologies
+    obsolete: 'False'
+  - id: https://kg-hub.berkeleybop.io/kg-covid-19/20210412/transformed/ontologies/chebi_nodes.tsv
+    title: chebi_nodes.tsv
+    was_derived_from: ontologies
+    obsolete: 'False'
+  - id: https://kg-hub.berkeleybop.io/kg-covid-19/20210412/transformed/ontologies/go-plus_edges.tsv
+    title: go-plus_edges.tsv
+    was_derived_from: ontologies
+    obsolete: 'False'
+  - id: https://kg-hub.berkeleybop.io/kg-covid-19/20210412/transformed/ontologies/go-plus_nodes.tsv
+    title: go-plus_nodes.tsv
+    was_derived_from: ontologies
+    obsolete: 'False'
+  - id: https://kg-hub.berkeleybop.io/kg-covid-19/20210412/transformed/ontologies/hp_edges.tsv
+    title: hp_edges.tsv
+    was_derived_from: ontologies
+    obsolete: 'False'
+  - id: https://kg-hub.berkeleybop.io/kg-covid-19/20210412/transformed/ontologies/hp_nodes.tsv
+    title: hp_nodes.tsv
+    was_derived_from: ontologies
+    obsolete: 'False'
+  - id: https://kg-hub.berkeleybop.io/kg-covid-19/20210412/transformed/ontologies/mondo_edges.tsv
+    title: mondo_edges.tsv
+    was_derived_from: ontologies
+    obsolete: 'False'
+  - id: https://kg-hub.berkeleybop.io/kg-covid-19/20210412/transformed/ontologies/mondo_nodes.tsv
+    title: mondo_nodes.tsv
+    was_derived_from: ontologies
+    obsolete: 'False'
+  - id: https://kg-hub.berkeleybop.io/kg-covid-19/20210412/transformed/pharmgkb/edges.tsv
+    title: edges.tsv
+    was_derived_from: pharmgkb
+    obsolete: 'False'
+  - id: https://kg-hub.berkeleybop.io/kg-covid-19/20210412/transformed/pharmgkb/nodes.tsv
+    title: nodes.tsv
+    was_derived_from: pharmgkb
+    obsolete: 'False'
+  - id: https://kg-hub.berkeleybop.io/kg-covid-19/20210412/transformed/sars_cov_2_gene_annot/edges.tsv
+    title: edges.tsv
+    was_derived_from: sars_cov_2_gene_annot
+    obsolete: 'False'
+  - id: https://kg-hub.berkeleybop.io/kg-covid-19/20210412/transformed/sars_cov_2_gene_annot/nodes.tsv
+    title: nodes.tsv
+    was_derived_from: sars_cov_2_gene_annot
+    obsolete: 'False'
+  - id: https://kg-hub.berkeleybop.io/kg-covid-19/20210412/transformed/ttd/edges.tsv
+    title: edges.tsv
+    was_derived_from: ttd
+    obsolete: 'False'
+  - id: https://kg-hub.berkeleybop.io/kg-covid-19/20210412/transformed/ttd/nodes.tsv
+    title: nodes.tsv
+    was_derived_from: ttd
+    obsolete: 'False'
+  - id: https://kg-hub.berkeleybop.io/kg-covid-19/20210412/transformed/zhou_host_proteins/edges.tsv
+    title: edges.tsv
+    was_derived_from: zhou_host_proteins
+    obsolete: 'False'
+  - id: https://kg-hub.berkeleybop.io/kg-covid-19/20210412/transformed/zhou_host_proteins/nodes.tsv
+    title: nodes.tsv
+    was_derived_from: zhou_host_proteins
+    obsolete: 'False'
+  - id: https://kg-hub.berkeleybop.io/kg-covid-19/20210725/transformed/ChEMBL/edges.tsv
+    title: edges.tsv
+    was_derived_from: ChEMBL
+    obsolete: 'False'
+  - id: https://kg-hub.berkeleybop.io/kg-covid-19/20210725/transformed/ChEMBL/nodes.tsv
+    title: nodes.tsv
+    was_derived_from: ChEMBL
+    obsolete: 'False'
+  - id: https://kg-hub.berkeleybop.io/kg-covid-19/20210725/transformed/GOCAMs/GOCAMs_edges.tsv
+    title: GOCAMs_edges.tsv
+    was_derived_from: GOCAMs
+    obsolete: 'False'
+  - id: https://kg-hub.berkeleybop.io/kg-covid-19/20210725/transformed/GOCAMs/GOCAMs_nodes.tsv
+    title: GOCAMs_nodes.tsv
+    was_derived_from: GOCAMs
+    obsolete: 'False'
+  - id: https://kg-hub.berkeleybop.io/kg-covid-19/20210725/transformed/STRING/edges.tsv
+    title: edges.tsv
+    was_derived_from: STRING
+    obsolete: 'False'
+  - id: https://kg-hub.berkeleybop.io/kg-covid-19/20210725/transformed/STRING/nodes.tsv
+    title: nodes.tsv
+    was_derived_from: STRING
+    obsolete: 'False'
+  - id: https://kg-hub.berkeleybop.io/kg-covid-19/20210725/transformed/SciBite-CORD-19/edges.tsv
+    title: edges.tsv
+    was_derived_from: SciBite-CORD-19
+    obsolete: 'False'
+  - id: https://kg-hub.berkeleybop.io/kg-covid-19/20210725/transformed/SciBite-CORD-19/entity_cooccurrence_edges.tsv
+    title: entity_cooccurrence_edges.tsv
+    was_derived_from: SciBite-CORD-19
+    obsolete: 'False'
+  - id: https://kg-hub.berkeleybop.io/kg-covid-19/20210725/transformed/SciBite-CORD-19/entity_cooccurrence_nodes.tsv
+    title: entity_cooccurrence_nodes.tsv
+    was_derived_from: SciBite-CORD-19
+    obsolete: 'False'
+  - id: https://kg-hub.berkeleybop.io/kg-covid-19/20210725/transformed/SciBite-CORD-19/nodes.tsv
+    title: nodes.tsv
+    was_derived_from: SciBite-CORD-19
+    obsolete: 'False'
+  - id: https://kg-hub.berkeleybop.io/kg-covid-19/20210725/transformed/drug_central/edges.tsv
+    title: edges.tsv
+    was_derived_from: drug_central
+    obsolete: 'False'
+  - id: https://kg-hub.berkeleybop.io/kg-covid-19/20210725/transformed/drug_central/nodes.tsv
+    title: nodes.tsv
+    was_derived_from: drug_central
+    obsolete: 'False'
+  - id: https://kg-hub.berkeleybop.io/kg-covid-19/20210725/transformed/intact/edges.tsv
+    title: edges.tsv
+    was_derived_from: intact
+    obsolete: 'False'
+  - id: https://kg-hub.berkeleybop.io/kg-covid-19/20210725/transformed/intact/nodes.tsv
+    title: nodes.tsv
+    was_derived_from: intact
+    obsolete: 'False'
+  - id: https://kg-hub.berkeleybop.io/kg-covid-19/20210725/transformed/ontologies/chebi_edges.tsv
+    title: chebi_edges.tsv
+    was_derived_from: ontologies
+    obsolete: 'False'
+  - id: https://kg-hub.berkeleybop.io/kg-covid-19/20210725/transformed/ontologies/chebi_nodes.tsv
+    title: chebi_nodes.tsv
+    was_derived_from: ontologies
+    obsolete: 'False'
+  - id: https://kg-hub.berkeleybop.io/kg-covid-19/20210725/transformed/ontologies/go-plus_edges.tsv
+    title: go-plus_edges.tsv
+    was_derived_from: ontologies
+    obsolete: 'False'
+  - id: https://kg-hub.berkeleybop.io/kg-covid-19/20210725/transformed/ontologies/go-plus_nodes.tsv
+    title: go-plus_nodes.tsv
+    was_derived_from: ontologies
+    obsolete: 'False'
+  - id: https://kg-hub.berkeleybop.io/kg-covid-19/20210725/transformed/ontologies/hp_edges.tsv
+    title: hp_edges.tsv
+    was_derived_from: ontologies
+    obsolete: 'False'
+  - id: https://kg-hub.berkeleybop.io/kg-covid-19/20210725/transformed/ontologies/hp_nodes.tsv
+    title: hp_nodes.tsv
+    was_derived_from: ontologies
+    obsolete: 'False'
+  - id: https://kg-hub.berkeleybop.io/kg-covid-19/20210725/transformed/ontologies/mondo_edges.tsv
+    title: mondo_edges.tsv
+    was_derived_from: ontologies
+    obsolete: 'False'
+  - id: https://kg-hub.berkeleybop.io/kg-covid-19/20210725/transformed/ontologies/mondo_nodes.tsv
+    title: mondo_nodes.tsv
+    was_derived_from: ontologies
+    obsolete: 'False'
+  - id: https://kg-hub.berkeleybop.io/kg-covid-19/20210725/transformed/pharmgkb/edges.tsv
+    title: edges.tsv
+    was_derived_from: pharmgkb
+    obsolete: 'False'
+  - id: https://kg-hub.berkeleybop.io/kg-covid-19/20210725/transformed/pharmgkb/nodes.tsv
+    title: nodes.tsv
+    was_derived_from: pharmgkb
+    obsolete: 'False'
+  - id: https://kg-hub.berkeleybop.io/kg-covid-19/20210725/transformed/sars_cov_2_gene_annot/edges.tsv
+    title: edges.tsv
+    was_derived_from: sars_cov_2_gene_annot
+    obsolete: 'False'
+  - id: https://kg-hub.berkeleybop.io/kg-covid-19/20210725/transformed/sars_cov_2_gene_annot/nodes.tsv
+    title: nodes.tsv
+    was_derived_from: sars_cov_2_gene_annot
+    obsolete: 'False'
+  - id: https://kg-hub.berkeleybop.io/kg-covid-19/20210725/transformed/ttd/edges.tsv
+    title: edges.tsv
+    was_derived_from: ttd
+    obsolete: 'False'
+  - id: https://kg-hub.berkeleybop.io/kg-covid-19/20210725/transformed/ttd/nodes.tsv
+    title: nodes.tsv
+    was_derived_from: ttd
+    obsolete: 'False'
+  - id: https://kg-hub.berkeleybop.io/kg-covid-19/20210725/transformed/zhou_host_proteins/edges.tsv
+    title: edges.tsv
+    was_derived_from: zhou_host_proteins
+    obsolete: 'False'
+  - id: https://kg-hub.berkeleybop.io/kg-covid-19/20210725/transformed/zhou_host_proteins/nodes.tsv
+    title: nodes.tsv
+    was_derived_from: zhou_host_proteins
+    obsolete: 'False'
+  - id: https://kg-hub.berkeleybop.io/kg-covid-19/20210726/transformed/ChEMBL/edges.tsv
+    title: edges.tsv
+    was_derived_from: ChEMBL
+    obsolete: 'False'
+  - id: https://kg-hub.berkeleybop.io/kg-covid-19/20210726/transformed/ChEMBL/nodes.tsv
+    title: nodes.tsv
+    was_derived_from: ChEMBL
+    obsolete: 'False'
+  - id: https://kg-hub.berkeleybop.io/kg-covid-19/20210726/transformed/GOCAMs/GOCAMs_edges.tsv
+    title: GOCAMs_edges.tsv
+    was_derived_from: GOCAMs
+    obsolete: 'False'
+  - id: https://kg-hub.berkeleybop.io/kg-covid-19/20210726/transformed/GOCAMs/GOCAMs_nodes.tsv
+    title: GOCAMs_nodes.tsv
+    was_derived_from: GOCAMs
+    obsolete: 'False'
+  - id: https://kg-hub.berkeleybop.io/kg-obo/dpo/2022-04-13/dpo_kgx_tsv.tar.gz
+    license: CC BY 3.0
+    title: dpo_kgx_tsv.tar.gz
+    description: DPO. An ontology of commonly encountered and/or high level Drosophila
+      phenotypes.
+    version: '2022-04-13'
+    publisher: Clare Pilgrim (cp390@cam.ac.uk)
+    compression: tar.gz
+    was_derived_from: http://purl.obolibrary.org/obo/dpo.owl
+    obsolete: 'False'
+    resources:
+    - merged-kg_edges.tsv
+    - merged-kg_nodes.tsv
+  - id: https://kg-hub.berkeleybop.io/kg-obo/eco/2022-04-11/eco_kgx_tsv.tar.gz
+    license: CC0 1.0
+    title: eco_kgx_tsv.tar.gz
+    description: ECO. An ontology for experimental and other evidence statements.
+    version: '2022-04-11'
+    publisher: Michelle Giglio (mgiglio@som.umaryland.edu)
+    compression: tar.gz
+    was_derived_from: http://purl.obolibrary.org/obo/eco.owl
+    obsolete: 'False'
+    resources:
+    - merged-kg_edges.tsv
+    - merged-kg_nodes.tsv
+  - id: https://kg-hub.berkeleybop.io/kg-obo/fbbt/2022-04-13/fbbt_kgx_tsv.tar.gz
+    license: CC BY 3.0
+    title: fbbt_kgx_tsv.tar.gz
+    description: FBBT. An ontology representing the gross anatomy of Drosophila melanogaster.
+    version: '2022-04-13'
+    publisher: Clare Pilgrim (cp390@cam.ac.uk)
+    compression: tar.gz
+    was_derived_from: http://purl.obolibrary.org/obo/fbbt.owl
+    obsolete: 'False'
+    resources:
+    - merged-kg_edges.tsv
+    - merged-kg_nodes.tsv
+  - id: https://kg-hub.berkeleybop.io/kg-obo/fbcv/2022-04-14/fbcv_kgx_tsv.tar.gz
+    license: CC BY 3.0
+    title: fbcv_kgx_tsv.tar.gz
+    description: FBCV. A structured controlled vocabulary used for various aspects of
+      annotation by FlyBase.
+    version: '2022-04-14'
+    publisher: Clare Pilgrim (cp390@cam.ac.uk)
+    compression: tar.gz
+    was_derived_from: http://purl.obolibrary.org/obo/fbcv.owl
+    obsolete: 'False'
+    resources:
+    - merged-kg_edges.tsv
+    - merged-kg_nodes.tsv
+  - id: https://kg-hub.berkeleybop.io/kg-obo/fbdv/2022-04-12/fbdv_kgx_tsv.tar.gz
+    license: CC BY 3.0
+    title: fbdv_kgx_tsv.tar.gz
+    description: FBDV. A structured controlled vocabulary of the development of Drosophila
+      melanogaster.
+    version: '2022-04-12'
+    publisher: Clare Pilgrim (cp390@cam.ac.uk)
+    compression: tar.gz
+    was_derived_from: http://purl.obolibrary.org/obo/fbdv.owl
+    obsolete: 'False'
+    resources:
+    - merged-kg_edges.tsv
+    - merged-kg_nodes.tsv
+  - id: https://kg-hub.berkeleybop.io/kg-obo/hp/2022-04-14/hp_kgx_tsv.tar.gz
+    license: hpo
+    title: hp_kgx_tsv.tar.gz
+    description: HP. A structured and controlled vocabulary for the phenotypic features
+      encountered in human hereditary and other disease.
+    version: '2022-04-14'
+    publisher: Sebastian Koehler (dr.sebastian.koehler@gmail.com)
+    compression: tar.gz
+    was_derived_from: http://purl.obolibrary.org/obo/hp.owl
+    obsolete: 'False'
+    resources:
+    - merged-kg_edges.tsv
+    - merged-kg_nodes.tsv
+  - id: https://kg-hub.berkeleybop.io/kg-obo/maxo/2022-04-11/maxo_kgx_tsv.tar.gz
+    license: CC BY 3.0
+    title: maxo_kgx_tsv.tar.gz
+    description: MAXO. Medical Action Ontology is an ontology...
+    version: '2022-04-11'
+    publisher: Leigh Carmody (Leigh.Carmody@jax.org)
+    compression: tar.gz
+    was_derived_from: http://purl.obolibrary.org/obo/maxo.owl
+    obsolete: 'False'
+    resources:
+    - merged-kg_edges.tsv
+    - merged-kg_nodes.tsv
+  - id: https://kg-hub.berkeleybop.io/kg-obo/ms/4.1.83/ms_kgx_tsv.tar.gz
+    license: CC BY 3.0
+    title: ms_kgx_tsv.tar.gz
+    description: MS. A structured controlled vocabulary for the annotation of experiments
+      concerned with proteomics mass spectrometry.
+    version: 4.1.83
+    publisher: Gerhard Mayer (gerhard.mayer@rub.de)
+    compression: tar.gz
+    was_derived_from: http://purl.obolibrary.org/obo/ms.owl
+    obsolete: 'False'
+    resources:
+    - merged-kg_edges.tsv
+    - merged-kg_nodes.tsv
+  - id: https://kg-hub.berkeleybop.io/kg-obo/ncit/2021-12-17/ncit_kgx_tsv.tar.gz
+    license: CC BY 4.0
+    title: ncit_kgx_tsv.tar.gz
+    description: NCIT. NCI Thesaurus (NCIt)is a reference terminology that includes
+      broad coverage of the cancer domain, including cancer related diseases, findings
+      and abnormalities. The NCIt OBO Edition aims to increase integration of the NCIt
+      with OBO Library ontologies. NCIt OBO Edition releases should be considered experimental.
+    version: '2021-12-17'
+    publisher: Melissa Haendel (haendel@ohsu.edu)
+    compression: tar.gz
+    was_derived_from: http://purl.obolibrary.org/obo/ncit.owl
+    obsolete: 'False'
+    resources:
+    - merged-kg_edges.tsv
+    - merged-kg_nodes.tsv
+  - id: https://kg-hub.berkeleybop.io/kg-obo/ncit/2022-04-14/ncit_kgx_tsv.tar.gz
+    license: CC BY 4.0
+    title: ncit_kgx_tsv.tar.gz
+    description: NCIT. NCI Thesaurus (NCIt)is a reference terminology that includes
+      broad coverage of the cancer domain, including cancer related diseases, findings
+      and abnormalities. The NCIt OBO Edition aims to increase integration of the NCIt
+      with OBO Library ontologies. NCIt OBO Edition releases should be considered experimental.
+    version: '2022-04-14'
+    publisher: Melissa Haendel (haendel@ohsu.edu)
+    compression: tar.gz
+    was_derived_from: http://purl.obolibrary.org/obo/ncit.owl
+    obsolete: 'False'
+    resources:
+    - merged-kg_edges.tsv
+    - merged-kg_nodes.tsv
+  - id: https://kg-hub.berkeleybop.io/kg-obo/omp/2022-04-11/omp_kgx_tsv.tar.gz
+    license: CC BY 3.0
+    title: omp_kgx_tsv.tar.gz
+    description: OMP. An ontology of phenotypes covering microbes
+    version: '2022-04-11'
+    publisher: James C. Hu (jimhu@tamu.edu)
+    compression: tar.gz
+    was_derived_from: http://purl.obolibrary.org/obo/omp.owl
+    obsolete: 'False'
+    resources:
+    - merged-kg_edges.tsv
+    - merged-kg_nodes.tsv
+  - id: https://kg-hub.berkeleybop.io/kg-obo/to/2022-04-13/to_kgx_tsv.tar.gz
+    license: CC BY 4.0
+    title: to_kgx_tsv.tar.gz
+    description: TO. A controlled vocabulary to describe phenotypic traits in plants.
+    version: '2022-04-13'
+    publisher: Pankaj Jaiswal (jaiswalp@science.oregonstate.edu)
+    compression: tar.gz
+    was_derived_from: http://purl.obolibrary.org/obo/to.owl
+    obsolete: 'False'
+    resources:
+    - merged-kg_edges.tsv
+    - merged-kg_nodes.tsv
+  - id: https://kg-hub.berkeleybop.io/kg-ontoml/20220414/KG-OntoML.tar.gz
+    title: KG-OntoML.tar.gz
+    description: Graph representation of Monarch ontologies.
+    conforms_to: KG-Hub
+    version: '20220414'
+    compression: tar.gz
+    obsolete: 'False'
+    resources:
+    - merged-kg_edges.tsv
+    - merged-kg_nodes.tsv
+    edge_count: 820356
+    node_count: 510143
+    predicates: biolink:actively_involved_in|biolink:affects|biolink:affects_localization_of|biolink:affects_transport_of|biolink:associated_with|biolink:broad_match|biolink:capable_of|biolink:caused_by|biolink:causes|biolink:close_match|biolink:coexists_with|biolink:contributor|biolink:derives_from|biolink:develops_from|biolink:disrupts|biolink:exact_match|biolink:expresses|biolink:has_attribute|biolink:has_input|biolink:has_output|biolink:has_part|biolink:has_participant|biolink:has_phenotype|biolink:has_unit|biolink:has_variant_part|biolink:homologous_to|biolink:in_taxon|biolink:increases_degradation_of|biolink:interacts_with|biolink:located_in|biolink:location_of|biolink:model_of|biolink:narrow_match|biolink:negatively_regulates|biolink:object|biolink:occurs_in|biolink:opposite_of|biolink:overlaps|biolink:part_of|biolink:participates_in|biolink:positively_regulates|biolink:preceded_by|biolink:precedes|biolink:produced_by|biolink:produces|biolink:publisher|biolink:regulates|biolink:related_to|biolink:same_as|biolink:similar_to|biolink:subclass_of|biolink:subject|biolink:temporally_related_to
+    node_categories: biolink:NamedThing
+    node_prefixes: '!/hgnc_id/HGNC|BFO|BSPO|CHEBI|CL|CLO|DDANAT|DOID|ECO|ECTO|EDAM-DATA|EFO|ENVO|ExO|FAO|FBcv|FMA|FOODON|GENO|GO|GOP|GOREL|HP|HsapDv|IAO|IDO|MA|MAXO|MEDDRA|MESH|MGI|MONDO|MP|MPATH|NBO|NCBITaxon|NCIT|OBI|OBO|OGMS|OIO|ORCID|ORPHA|PATO|PCO|PMID|PO|PR|PW|RO|SEPIO|SIO|SNOMED|SO|STATO|TAXRANK|UBERON|UBERON_CORE|UMLS|UPHENO|VT|WBPhenotype|WBbt|XAO|XCO|XPO|ZFA|ZP|dc|dct|dctypes|faldo|foaf|owl|pav|prov|rdf|rdfs|schema|skos|urn|wgs|xsd'
+  - id: https://kg-hub.berkeleybop.io/kg-covid-19/20210726/transformed/STRING/edges.tsv
+    title: edges.tsv
+    was_derived_from: STRING
+    obsolete: 'False'
+  - id: https://kg-hub.berkeleybop.io/kg-covid-19/20210726/transformed/STRING/nodes.tsv
+    title: nodes.tsv
+    was_derived_from: STRING
+    obsolete: 'False'
+  - id: https://kg-hub.berkeleybop.io/kg-covid-19/20210726/transformed/SciBite-CORD-19/edges.tsv
+    title: edges.tsv
+    was_derived_from: SciBite-CORD-19
+    obsolete: 'False'
+  - id: https://kg-hub.berkeleybop.io/kg-covid-19/20210726/transformed/SciBite-CORD-19/entity_cooccurrence_edges.tsv
+    title: entity_cooccurrence_edges.tsv
+    was_derived_from: SciBite-CORD-19
+    obsolete: 'False'
+  - id: https://kg-hub.berkeleybop.io/kg-covid-19/20210726/transformed/SciBite-CORD-19/entity_cooccurrence_nodes.tsv
+    title: entity_cooccurrence_nodes.tsv
+    was_derived_from: SciBite-CORD-19
+    obsolete: 'False'
+  - id: https://kg-hub.berkeleybop.io/kg-covid-19/20210726/transformed/SciBite-CORD-19/nodes.tsv
+    title: nodes.tsv
+    was_derived_from: SciBite-CORD-19
+    obsolete: 'False'
+  - id: https://kg-hub.berkeleybop.io/kg-covid-19/20210726/transformed/drug_central/edges.tsv
+    title: edges.tsv
+    was_derived_from: drug_central
+    obsolete: 'False'
+  - id: https://kg-hub.berkeleybop.io/kg-covid-19/20210726/transformed/drug_central/nodes.tsv
+    title: nodes.tsv
+    was_derived_from: drug_central
+    obsolete: 'False'
+  - id: https://kg-hub.berkeleybop.io/kg-covid-19/20210726/transformed/intact/edges.tsv
+    title: edges.tsv
+    was_derived_from: intact
+    obsolete: 'False'
+  - id: https://kg-hub.berkeleybop.io/kg-covid-19/20210726/transformed/intact/nodes.tsv
+    title: nodes.tsv
+    was_derived_from: intact
+    obsolete: 'False'
+  - id: https://kg-hub.berkeleybop.io/kg-covid-19/20210726/transformed/ontologies/chebi_edges.tsv
+    title: chebi_edges.tsv
+    was_derived_from: ontologies
+    obsolete: 'False'
+  - id: https://kg-hub.berkeleybop.io/kg-covid-19/20210726/transformed/ontologies/chebi_nodes.tsv
+    title: chebi_nodes.tsv
+    was_derived_from: ontologies
+    obsolete: 'False'
+  - id: https://kg-hub.berkeleybop.io/kg-covid-19/20210726/transformed/ontologies/go-plus_edges.tsv
+    title: go-plus_edges.tsv
+    was_derived_from: ontologies
+    obsolete: 'False'
+  - id: https://kg-hub.berkeleybop.io/kg-covid-19/20210726/transformed/ontologies/go-plus_nodes.tsv
+    title: go-plus_nodes.tsv
+    was_derived_from: ontologies
+    obsolete: 'False'
+  - id: https://kg-hub.berkeleybop.io/kg-covid-19/20210726/transformed/ontologies/hp_edges.tsv
+    title: hp_edges.tsv
+    was_derived_from: ontologies
+    obsolete: 'False'
+  - id: https://kg-hub.berkeleybop.io/kg-covid-19/20210726/transformed/ontologies/hp_nodes.tsv
+    title: hp_nodes.tsv
+    was_derived_from: ontologies
+    obsolete: 'False'
+  - id: https://kg-hub.berkeleybop.io/kg-covid-19/20210726/transformed/ontologies/mondo_edges.tsv
+    title: mondo_edges.tsv
+    was_derived_from: ontologies
+    obsolete: 'False'
+  - id: https://kg-hub.berkeleybop.io/kg-covid-19/20210726/transformed/ontologies/mondo_nodes.tsv
+    title: mondo_nodes.tsv
+    was_derived_from: ontologies
+    obsolete: 'False'
+  - id: https://kg-hub.berkeleybop.io/kg-covid-19/20210726/transformed/pharmgkb/edges.tsv
+    title: edges.tsv
+    was_derived_from: pharmgkb
+    obsolete: 'False'
+  - id: https://kg-hub.berkeleybop.io/kg-covid-19/20210726/transformed/pharmgkb/nodes.tsv
+    title: nodes.tsv
+    was_derived_from: pharmgkb
+    obsolete: 'False'
+  - id: https://kg-hub.berkeleybop.io/kg-covid-19/20210726/transformed/sars_cov_2_gene_annot/edges.tsv
+    title: edges.tsv
+    was_derived_from: sars_cov_2_gene_annot
+    obsolete: 'False'
+  - id: https://kg-hub.berkeleybop.io/kg-covid-19/20210726/transformed/sars_cov_2_gene_annot/nodes.tsv
+    title: nodes.tsv
+    was_derived_from: sars_cov_2_gene_annot
+    obsolete: 'False'
+  - id: https://kg-hub.berkeleybop.io/kg-covid-19/20210726/transformed/ttd/edges.tsv
+    title: edges.tsv
+    was_derived_from: ttd
+    obsolete: 'False'
+  - id: https://kg-hub.berkeleybop.io/kg-covid-19/20210726/transformed/ttd/nodes.tsv
+    title: nodes.tsv
+    was_derived_from: ttd
+    obsolete: 'False'
+  - id: https://kg-hub.berkeleybop.io/kg-covid-19/20210726/transformed/zhou_host_proteins/edges.tsv
+    title: edges.tsv
+    was_derived_from: zhou_host_proteins
+    obsolete: 'False'
+  - id: https://kg-hub.berkeleybop.io/kg-covid-19/20210726/transformed/zhou_host_proteins/nodes.tsv
+    title: nodes.tsv
+    was_derived_from: zhou_host_proteins
+    obsolete: 'False'
+  - id: https://kg-hub.berkeleybop.io/kg-covid-19/20210727/transformed/ChEMBL/edges.tsv
+    title: edges.tsv
+    was_derived_from: ChEMBL
+    obsolete: 'False'
+  - id: https://kg-hub.berkeleybop.io/kg-covid-19/20210727/transformed/ChEMBL/nodes.tsv
+    title: nodes.tsv
+    was_derived_from: ChEMBL
+    obsolete: 'False'
+  - id: https://kg-hub.berkeleybop.io/kg-covid-19/20210727/transformed/GOCAMs/GOCAMs_edges.tsv
+    title: GOCAMs_edges.tsv
+    was_derived_from: GOCAMs
+    obsolete: 'False'
+  - id: https://kg-hub.berkeleybop.io/kg-covid-19/20210727/transformed/GOCAMs/GOCAMs_nodes.tsv
+    title: GOCAMs_nodes.tsv
+    was_derived_from: GOCAMs
+    obsolete: 'False'
+  - id: https://kg-hub.berkeleybop.io/kg-covid-19/20210727/transformed/STRING/edges.tsv
+    title: edges.tsv
+    was_derived_from: STRING
+    obsolete: 'False'
+  - id: https://kg-hub.berkeleybop.io/kg-covid-19/20210727/transformed/STRING/nodes.tsv
+    title: nodes.tsv
+    was_derived_from: STRING
+    obsolete: 'False'
+  - id: https://kg-hub.berkeleybop.io/kg-covid-19/20210727/transformed/SciBite-CORD-19/edges.tsv
+    title: edges.tsv
+    was_derived_from: SciBite-CORD-19
+    obsolete: 'False'
+  - id: https://kg-hub.berkeleybop.io/kg-covid-19/20210727/transformed/SciBite-CORD-19/entity_cooccurrence_edges.tsv
+    title: entity_cooccurrence_edges.tsv
+    was_derived_from: SciBite-CORD-19
+    obsolete: 'False'
+  - id: https://kg-hub.berkeleybop.io/kg-covid-19/20210727/transformed/SciBite-CORD-19/entity_cooccurrence_nodes.tsv
+    title: entity_cooccurrence_nodes.tsv
+    was_derived_from: SciBite-CORD-19
+    obsolete: 'False'
+  - id: https://kg-hub.berkeleybop.io/kg-covid-19/20210727/transformed/SciBite-CORD-19/nodes.tsv
+    title: nodes.tsv
+    was_derived_from: SciBite-CORD-19
+    obsolete: 'False'
+  - id: https://kg-hub.berkeleybop.io/kg-covid-19/20210727/transformed/drug_central/edges.tsv
+    title: edges.tsv
+    was_derived_from: drug_central
+    obsolete: 'False'
+  - id: https://kg-hub.berkeleybop.io/kg-covid-19/20210727/transformed/drug_central/nodes.tsv
+    title: nodes.tsv
+    was_derived_from: drug_central
+    obsolete: 'False'
+  - id: https://kg-hub.berkeleybop.io/kg-covid-19/20210727/transformed/intact/edges.tsv
+    title: edges.tsv
+    was_derived_from: intact
+    obsolete: 'False'
+  - id: https://kg-hub.berkeleybop.io/kg-covid-19/20210727/transformed/intact/nodes.tsv
+    title: nodes.tsv
+    was_derived_from: intact
+    obsolete: 'False'
+  - id: https://kg-hub.berkeleybop.io/kg-covid-19/20210727/transformed/ontologies/chebi_edges.tsv
+    title: chebi_edges.tsv
+    was_derived_from: ontologies
+    obsolete: 'False'
+  - id: https://kg-hub.berkeleybop.io/kg-covid-19/20210727/transformed/ontologies/chebi_nodes.tsv
+    title: chebi_nodes.tsv
+    was_derived_from: ontologies
+    obsolete: 'False'
+  - id: https://kg-hub.berkeleybop.io/kg-covid-19/20210727/transformed/ontologies/go-plus_edges.tsv
+    title: go-plus_edges.tsv
+    was_derived_from: ontologies
+    obsolete: 'False'
+  - id: https://kg-hub.berkeleybop.io/kg-covid-19/20210727/transformed/ontologies/go-plus_nodes.tsv
+    title: go-plus_nodes.tsv
+    was_derived_from: ontologies
+    obsolete: 'False'
+  - id: https://kg-hub.berkeleybop.io/kg-covid-19/20210727/transformed/ontologies/hp_edges.tsv
+    title: hp_edges.tsv
+    was_derived_from: ontologies
+    obsolete: 'False'
+  - id: https://kg-hub.berkeleybop.io/kg-covid-19/20210727/transformed/ontologies/hp_nodes.tsv
+    title: hp_nodes.tsv
+    was_derived_from: ontologies
+    obsolete: 'False'
+  - id: https://kg-hub.berkeleybop.io/kg-covid-19/20210727/transformed/ontologies/mondo_edges.tsv
+    title: mondo_edges.tsv
+    was_derived_from: ontologies
+    obsolete: 'False'
+  - id: https://kg-hub.berkeleybop.io/kg-covid-19/20210727/transformed/ontologies/mondo_nodes.tsv
+    title: mondo_nodes.tsv
+    was_derived_from: ontologies
+    obsolete: 'False'
+  - id: https://kg-hub.berkeleybop.io/kg-covid-19/20210727/transformed/pharmgkb/edges.tsv
+    title: edges.tsv
+    was_derived_from: pharmgkb
+    obsolete: 'False'
+  - id: https://kg-hub.berkeleybop.io/kg-covid-19/20210727/transformed/pharmgkb/nodes.tsv
+    title: nodes.tsv
+    was_derived_from: pharmgkb
+    obsolete: 'False'
+  - id: https://kg-hub.berkeleybop.io/kg-covid-19/20210727/transformed/sars_cov_2_gene_annot/edges.tsv
+    title: edges.tsv
+    was_derived_from: sars_cov_2_gene_annot
+    obsolete: 'False'
+  - id: https://kg-hub.berkeleybop.io/kg-covid-19/20210727/transformed/sars_cov_2_gene_annot/nodes.tsv
+    title: nodes.tsv
+    was_derived_from: sars_cov_2_gene_annot
+    obsolete: 'False'
+  - id: https://kg-hub.berkeleybop.io/kg-covid-19/20210727/transformed/ttd/edges.tsv
+    title: edges.tsv
+    was_derived_from: ttd
+    obsolete: 'False'
+  - id: https://kg-hub.berkeleybop.io/kg-covid-19/20210727/transformed/ttd/nodes.tsv
+    title: nodes.tsv
+    was_derived_from: ttd
+    obsolete: 'False'
+  - id: https://kg-hub.berkeleybop.io/kg-covid-19/20210727/transformed/zhou_host_proteins/edges.tsv
+    title: edges.tsv
+    was_derived_from: zhou_host_proteins
+    obsolete: 'False'
+  - id: https://kg-hub.berkeleybop.io/kg-covid-19/20210727/transformed/zhou_host_proteins/nodes.tsv
+    title: nodes.tsv
+    was_derived_from: zhou_host_proteins
+    obsolete: 'False'
+  - id: https://kg-hub.berkeleybop.io/kg-covid-19/20210823/transformed/ChEMBL/edges.tsv
+    title: edges.tsv
+    was_derived_from: ChEMBL
+    obsolete: 'False'
+  - id: https://kg-hub.berkeleybop.io/kg-covid-19/20210823/transformed/ChEMBL/nodes.tsv
+    title: nodes.tsv
+    was_derived_from: ChEMBL
+    obsolete: 'False'
+  - id: https://kg-hub.berkeleybop.io/kg-covid-19/20210823/transformed/GOCAMs/GOCAMs_edges.tsv
+    title: GOCAMs_edges.tsv
+    was_derived_from: GOCAMs
+    obsolete: 'False'
+  - id: https://kg-hub.berkeleybop.io/kg-covid-19/20210823/transformed/GOCAMs/GOCAMs_nodes.tsv
+    title: GOCAMs_nodes.tsv
+    was_derived_from: GOCAMs
+    obsolete: 'False'
+  - id: https://kg-hub.berkeleybop.io/kg-covid-19/20210823/transformed/STRING/edges.tsv
+    title: edges.tsv
+    was_derived_from: STRING
+    obsolete: 'False'
+  - id: https://kg-hub.berkeleybop.io/kg-covid-19/20210823/transformed/STRING/nodes.tsv
+    title: nodes.tsv
+    was_derived_from: STRING
+    obsolete: 'False'
+  - id: https://kg-hub.berkeleybop.io/kg-covid-19/20210823/transformed/SciBite-CORD-19/edges.tsv
+    title: edges.tsv
+    was_derived_from: SciBite-CORD-19
+    obsolete: 'False'
+  - id: https://kg-hub.berkeleybop.io/kg-covid-19/20210823/transformed/SciBite-CORD-19/entity_cooccurrence_edges.tsv
+    title: entity_cooccurrence_edges.tsv
+    was_derived_from: SciBite-CORD-19
+    obsolete: 'False'
+  - id: https://kg-hub.berkeleybop.io/kg-covid-19/20210823/transformed/SciBite-CORD-19/entity_cooccurrence_nodes.tsv
+    title: entity_cooccurrence_nodes.tsv
+    was_derived_from: SciBite-CORD-19
+    obsolete: 'False'
+  - id: https://kg-hub.berkeleybop.io/kg-covid-19/20210823/transformed/SciBite-CORD-19/nodes.tsv
+    title: nodes.tsv
+    was_derived_from: SciBite-CORD-19
+    obsolete: 'False'
+  - id: https://kg-hub.berkeleybop.io/kg-covid-19/20210823/transformed/drug_central/edges.tsv
+    title: edges.tsv
+    was_derived_from: drug_central
+    obsolete: 'False'
+  - id: https://kg-hub.berkeleybop.io/kg-covid-19/20210823/transformed/drug_central/nodes.tsv
+    title: nodes.tsv
+    was_derived_from: drug_central
+    obsolete: 'False'
+  - id: https://kg-hub.berkeleybop.io/kg-covid-19/20210823/transformed/intact/edges.tsv
+    title: edges.tsv
+    was_derived_from: intact
+    obsolete: 'False'
+  - id: https://kg-hub.berkeleybop.io/kg-covid-19/20210823/transformed/intact/nodes.tsv
+    title: nodes.tsv
+    was_derived_from: intact
+    obsolete: 'False'
+  - id: https://kg-hub.berkeleybop.io/kg-covid-19/20210823/transformed/ontologies/chebi_edges.tsv
+    title: chebi_edges.tsv
+    was_derived_from: ontologies
+    obsolete: 'False'
+  - id: https://kg-hub.berkeleybop.io/kg-covid-19/20210823/transformed/ontologies/chebi_nodes.tsv
+    title: chebi_nodes.tsv
+    was_derived_from: ontologies
+    obsolete: 'False'
+  - id: https://kg-hub.berkeleybop.io/kg-covid-19/20210823/transformed/ontologies/go-plus_edges.tsv
+    title: go-plus_edges.tsv
+    was_derived_from: ontologies
+    obsolete: 'False'
+  - id: https://kg-hub.berkeleybop.io/kg-covid-19/20210823/transformed/ontologies/go-plus_nodes.tsv
+    title: go-plus_nodes.tsv
+    was_derived_from: ontologies
+    obsolete: 'False'
+  - id: https://kg-hub.berkeleybop.io/kg-covid-19/20210823/transformed/ontologies/hp_edges.tsv
+    title: hp_edges.tsv
+    was_derived_from: ontologies
+    obsolete: 'False'
+  - id: https://kg-hub.berkeleybop.io/kg-covid-19/20210823/transformed/ontologies/hp_nodes.tsv
+    title: hp_nodes.tsv
+    was_derived_from: ontologies
+    obsolete: 'False'
+  - id: https://kg-hub.berkeleybop.io/kg-covid-19/20210823/transformed/ontologies/mondo_edges.tsv
+    title: mondo_edges.tsv
+    was_derived_from: ontologies
+    obsolete: 'False'
+  - id: https://kg-hub.berkeleybop.io/kg-covid-19/20210823/transformed/ontologies/mondo_nodes.tsv
+    title: mondo_nodes.tsv
+    was_derived_from: ontologies
+    obsolete: 'False'
+  - id: https://kg-hub.berkeleybop.io/kg-covid-19/20210823/transformed/pharmgkb/edges.tsv
+    title: edges.tsv
+    was_derived_from: pharmgkb
+    obsolete: 'False'
+  - id: https://kg-hub.berkeleybop.io/kg-covid-19/20210823/transformed/pharmgkb/nodes.tsv
+    title: nodes.tsv
+    was_derived_from: pharmgkb
+    obsolete: 'False'
+  - id: https://kg-hub.berkeleybop.io/kg-covid-19/20210823/transformed/sars_cov_2_gene_annot/edges.tsv
+    title: edges.tsv
+    was_derived_from: sars_cov_2_gene_annot
+    obsolete: 'False'
+  - id: https://kg-hub.berkeleybop.io/kg-covid-19/20210823/transformed/sars_cov_2_gene_annot/nodes.tsv
+    title: nodes.tsv
+    was_derived_from: sars_cov_2_gene_annot
+    obsolete: 'False'
+  - id: https://kg-hub.berkeleybop.io/kg-covid-19/20210823/transformed/ttd/edges.tsv
+    title: edges.tsv
+    was_derived_from: ttd
+    obsolete: 'False'
+  - id: https://kg-hub.berkeleybop.io/kg-covid-19/20210823/transformed/ttd/nodes.tsv
+    title: nodes.tsv
+    was_derived_from: ttd
+    obsolete: 'False'
+  - id: https://kg-hub.berkeleybop.io/kg-covid-19/20210823/transformed/zhou_host_proteins/edges.tsv
+    title: edges.tsv
+    was_derived_from: zhou_host_proteins
+    obsolete: 'False'
+  - id: https://kg-hub.berkeleybop.io/kg-covid-19/20210823/transformed/zhou_host_proteins/nodes.tsv
+    title: nodes.tsv
+    was_derived_from: zhou_host_proteins
+    obsolete: 'False'
+  - id: https://kg-hub.berkeleybop.io/kg-covid-19/20210902/transformed/ChEMBL/edges.tsv
+    title: edges.tsv
+    was_derived_from: ChEMBL
+    obsolete: 'False'
+  - id: https://kg-hub.berkeleybop.io/kg-covid-19/20210902/transformed/ChEMBL/nodes.tsv
+    title: nodes.tsv
+    was_derived_from: ChEMBL
+    obsolete: 'False'
+  - id: https://kg-hub.berkeleybop.io/kg-covid-19/20210902/transformed/GOCAMs/GOCAMs_edges.tsv
+    title: GOCAMs_edges.tsv
+    was_derived_from: GOCAMs
+    obsolete: 'False'
+  - id: https://kg-hub.berkeleybop.io/kg-covid-19/20210902/transformed/GOCAMs/GOCAMs_nodes.tsv
+    title: GOCAMs_nodes.tsv
+    was_derived_from: GOCAMs
+    obsolete: 'False'
+  - id: https://kg-hub.berkeleybop.io/kg-covid-19/20210902/transformed/STRING/edges.tsv
+    title: edges.tsv
+    was_derived_from: STRING
+    obsolete: 'False'
+  - id: https://kg-hub.berkeleybop.io/kg-covid-19/20210902/transformed/STRING/nodes.tsv
+    title: nodes.tsv
+    was_derived_from: STRING
+    obsolete: 'False'
+  - id: https://kg-hub.berkeleybop.io/kg-covid-19/20210902/transformed/SciBite-CORD-19/edges.tsv
+    title: edges.tsv
+    was_derived_from: SciBite-CORD-19
+    obsolete: 'False'
+  - id: https://kg-hub.berkeleybop.io/kg-covid-19/20210902/transformed/SciBite-CORD-19/entity_cooccurrence_edges.tsv
+    title: entity_cooccurrence_edges.tsv
+    was_derived_from: SciBite-CORD-19
+    obsolete: 'False'
+  - id: https://kg-hub.berkeleybop.io/kg-covid-19/20210902/transformed/SciBite-CORD-19/entity_cooccurrence_nodes.tsv
+    title: entity_cooccurrence_nodes.tsv
+    was_derived_from: SciBite-CORD-19
+    obsolete: 'False'
+  - id: https://kg-hub.berkeleybop.io/kg-covid-19/20210902/transformed/SciBite-CORD-19/nodes.tsv
+    title: nodes.tsv
+    was_derived_from: SciBite-CORD-19
+    obsolete: 'False'
+  - id: https://kg-hub.berkeleybop.io/kg-covid-19/20210902/transformed/drug_central/edges.tsv
+    title: edges.tsv
+    was_derived_from: drug_central
+    obsolete: 'False'
+  - id: https://kg-hub.berkeleybop.io/kg-covid-19/20210902/transformed/drug_central/nodes.tsv
+    title: nodes.tsv
+    was_derived_from: drug_central
+    obsolete: 'False'
+  - id: https://kg-hub.berkeleybop.io/kg-covid-19/20210902/transformed/intact/edges.tsv
+    title: edges.tsv
+    was_derived_from: intact
+    obsolete: 'False'
+  - id: https://kg-hub.berkeleybop.io/kg-covid-19/20210902/transformed/intact/nodes.tsv
+    title: nodes.tsv
+    was_derived_from: intact
+    obsolete: 'False'
+  - id: https://kg-hub.berkeleybop.io/kg-covid-19/20210902/transformed/ontologies/chebi_edges.tsv
+    title: chebi_edges.tsv
+    was_derived_from: ontologies
+    obsolete: 'False'
+  - id: https://kg-hub.berkeleybop.io/kg-covid-19/20210902/transformed/ontologies/chebi_nodes.tsv
+    title: chebi_nodes.tsv
+    was_derived_from: ontologies
+    obsolete: 'False'
+  - id: https://kg-hub.berkeleybop.io/kg-covid-19/20210902/transformed/ontologies/go-plus_edges.tsv
+    title: go-plus_edges.tsv
+    was_derived_from: ontologies
+    obsolete: 'False'
+  - id: https://kg-hub.berkeleybop.io/kg-covid-19/20210902/transformed/ontologies/go-plus_nodes.tsv
+    title: go-plus_nodes.tsv
+    was_derived_from: ontologies
+    obsolete: 'False'
+  - id: https://kg-hub.berkeleybop.io/kg-covid-19/20210902/transformed/ontologies/hp_edges.tsv
+    title: hp_edges.tsv
+    was_derived_from: ontologies
+    obsolete: 'False'
+  - id: https://kg-hub.berkeleybop.io/kg-covid-19/20210902/transformed/ontologies/hp_nodes.tsv
+    title: hp_nodes.tsv
+    was_derived_from: ontologies
+    obsolete: 'False'
+  - id: https://kg-hub.berkeleybop.io/kg-covid-19/20210902/transformed/ontologies/mondo_edges.tsv
+    title: mondo_edges.tsv
+    was_derived_from: ontologies
+    obsolete: 'False'
+  - id: https://kg-hub.berkeleybop.io/kg-covid-19/20210902/transformed/ontologies/mondo_nodes.tsv
+    title: mondo_nodes.tsv
+    was_derived_from: ontologies
+    obsolete: 'False'
+  - id: https://kg-hub.berkeleybop.io/kg-covid-19/20210902/transformed/pharmgkb/edges.tsv
+    title: edges.tsv
+    was_derived_from: pharmgkb
+    obsolete: 'False'
+  - id: https://kg-hub.berkeleybop.io/kg-covid-19/20210902/transformed/pharmgkb/nodes.tsv
+    title: nodes.tsv
+    was_derived_from: pharmgkb
+    obsolete: 'False'
+  - id: https://kg-hub.berkeleybop.io/kg-covid-19/20210902/transformed/sars_cov_2_gene_annot/edges.tsv
+    title: edges.tsv
+    was_derived_from: sars_cov_2_gene_annot
+    obsolete: 'False'
+  - id: https://kg-hub.berkeleybop.io/kg-covid-19/20210902/transformed/sars_cov_2_gene_annot/nodes.tsv
+    title: nodes.tsv
+    was_derived_from: sars_cov_2_gene_annot
+    obsolete: 'False'
+  - id: https://kg-hub.berkeleybop.io/kg-covid-19/20210902/transformed/ttd/edges.tsv
+    title: edges.tsv
+    was_derived_from: ttd
+    obsolete: 'False'
+  - id: https://kg-hub.berkeleybop.io/kg-covid-19/20210902/transformed/ttd/nodes.tsv
+    title: nodes.tsv
+    was_derived_from: ttd
+    obsolete: 'False'
+  - id: https://kg-hub.berkeleybop.io/kg-covid-19/20210902/transformed/zhou_host_proteins/edges.tsv
+    title: edges.tsv
+    was_derived_from: zhou_host_proteins
+    obsolete: 'False'
+  - id: https://kg-hub.berkeleybop.io/kg-covid-19/20210902/transformed/zhou_host_proteins/nodes.tsv
+    title: nodes.tsv
+    was_derived_from: zhou_host_proteins
+    obsolete: 'False'
+  - id: https://kg-hub.berkeleybop.io/kg-covid-19/20211002/transformed/ChEMBL/edges.tsv
+    title: edges.tsv
+    was_derived_from: ChEMBL
+    obsolete: 'False'
+  - id: https://kg-hub.berkeleybop.io/kg-covid-19/20211002/transformed/ChEMBL/nodes.tsv
+    title: nodes.tsv
+    was_derived_from: ChEMBL
+    obsolete: 'False'
+  - id: https://kg-hub.berkeleybop.io/kg-covid-19/20211002/transformed/GOCAMs/GOCAMs_edges.tsv
+    title: GOCAMs_edges.tsv
+    was_derived_from: GOCAMs
+    obsolete: 'False'
+  - id: https://kg-hub.berkeleybop.io/kg-covid-19/20211002/transformed/GOCAMs/GOCAMs_nodes.tsv
+    title: GOCAMs_nodes.tsv
+    was_derived_from: GOCAMs
+    obsolete: 'False'
+  - id: https://kg-hub.berkeleybop.io/kg-covid-19/20211002/transformed/STRING/edges.tsv
+    title: edges.tsv
+    was_derived_from: STRING
+    obsolete: 'False'
+  - id: https://kg-hub.berkeleybop.io/kg-covid-19/20211002/transformed/STRING/nodes.tsv
+    title: nodes.tsv
+    was_derived_from: STRING
+    obsolete: 'False'
+  - id: https://kg-hub.berkeleybop.io/kg-covid-19/20211002/transformed/SciBite-CORD-19/edges.tsv
+    title: edges.tsv
+    was_derived_from: SciBite-CORD-19
+    obsolete: 'False'
+  - id: https://kg-hub.berkeleybop.io/kg-covid-19/20211002/transformed/SciBite-CORD-19/entity_cooccurrence_edges.tsv
+    title: entity_cooccurrence_edges.tsv
+    was_derived_from: SciBite-CORD-19
+    obsolete: 'False'
+  - id: https://kg-hub.berkeleybop.io/kg-covid-19/20211002/transformed/SciBite-CORD-19/entity_cooccurrence_nodes.tsv
+    title: entity_cooccurrence_nodes.tsv
+    was_derived_from: SciBite-CORD-19
+    obsolete: 'False'
+  - id: https://kg-hub.berkeleybop.io/kg-covid-19/20211002/transformed/SciBite-CORD-19/nodes.tsv
+    title: nodes.tsv
+    was_derived_from: SciBite-CORD-19
+    obsolete: 'False'
+  - id: https://kg-hub.berkeleybop.io/kg-covid-19/20211002/transformed/drug_central/edges.tsv
+    title: edges.tsv
+    was_derived_from: drug_central
+    obsolete: 'False'
+  - id: https://kg-hub.berkeleybop.io/kg-covid-19/20211002/transformed/drug_central/nodes.tsv
+    title: nodes.tsv
+    was_derived_from: drug_central
+    obsolete: 'False'
+  - id: https://kg-hub.berkeleybop.io/kg-covid-19/20211002/transformed/intact/edges.tsv
+    title: edges.tsv
+    was_derived_from: intact
+    obsolete: 'False'
+  - id: https://kg-hub.berkeleybop.io/kg-covid-19/20211002/transformed/intact/nodes.tsv
+    title: nodes.tsv
+    was_derived_from: intact
+    obsolete: 'False'
+  - id: https://kg-hub.berkeleybop.io/kg-covid-19/20211002/transformed/ontologies/chebi_edges.tsv
+    title: chebi_edges.tsv
+    was_derived_from: ontologies
+    obsolete: 'False'
+  - id: https://kg-hub.berkeleybop.io/kg-covid-19/20211002/transformed/ontologies/chebi_nodes.tsv
+    title: chebi_nodes.tsv
+    was_derived_from: ontologies
+    obsolete: 'False'
+  - id: https://kg-hub.berkeleybop.io/kg-covid-19/20211002/transformed/ontologies/go-plus_edges.tsv
+    title: go-plus_edges.tsv
+    was_derived_from: ontologies
+    obsolete: 'False'
+  - id: https://kg-hub.berkeleybop.io/kg-covid-19/20211002/transformed/ontologies/go-plus_nodes.tsv
+    title: go-plus_nodes.tsv
+    was_derived_from: ontologies
+    obsolete: 'False'
+  - id: https://kg-hub.berkeleybop.io/kg-covid-19/20211002/transformed/ontologies/hp_edges.tsv
+    title: hp_edges.tsv
+    was_derived_from: ontologies
+    obsolete: 'False'
+  - id: https://kg-hub.berkeleybop.io/kg-covid-19/20211002/transformed/ontologies/hp_nodes.tsv
+    title: hp_nodes.tsv
+    was_derived_from: ontologies
+    obsolete: 'False'
+  - id: https://kg-hub.berkeleybop.io/kg-covid-19/20211002/transformed/ontologies/mondo_edges.tsv
+    title: mondo_edges.tsv
+    was_derived_from: ontologies
+    obsolete: 'False'
+ontologies:
+  aeo:
+    current_iri: http://purl.obolibrary.org/obo/aeo/releases/2014-12-05/aeo.owl
+    current_version: '2014-12-05'
+  agro:
+    archive:
+    - iri: http://purl.obolibrary.org/obo/agro/releases/2021-07-01/agro.owl
+      version: '2021-07-01'
+    current_iri: http://purl.obolibrary.org/obo/agro/releases/2021-11-05/agro.owl
+    current_version: '2021-11-05'
+  aism:
+    archive:
+    - iri: http://purl.obolibrary.org/obo/aism/releases/2021-09-08/aism-base.owl
+      version: '2021-09-08'
+    - iri: http://purl.obolibrary.org/obo/aism/releases/2021-09-08/aism.owl
+      version: '2021-09-08'
+    - iri: http://purl.obolibrary.org/obo/aism/releases/2021-11-19/aism.owl
+      version: '2021-11-19'
+    - iri: http://purl.obolibrary.org/obo/aism/releases/2021-12-13/aism.owl
+      version: '2021-12-13'
+    current_iri: http://purl.obolibrary.org/obo/aism/releases/2022-03-17/aism.owl
+    current_version: '2022-03-17'
+  amphx:
+    current_iri: http://purl.obolibrary.org/obo/amphx/releases/2020-12-18/amphx.owl
+    current_version: '2020-12-18'
+  apo:
+    archive:
+    - iri: http://purl.obolibrary.org/obo/apo/releases/2021-09-07/apo.owl
+      version: '2021-09-07'
+    - iri: http://purl.obolibrary.org/obo/apo/releases/2021-10-07/apo.owl
+      version: '2021-10-07'
+    - iri: http://purl.obolibrary.org/obo/apo/releases/2022-01-03/apo.owl
+      version: '2022-01-03'
+    - iri: http://purl.obolibrary.org/obo/apo/releases/2022-02-08/apo.owl
+      version: '2022-02-08'
+    - iri: http://purl.obolibrary.org/obo/apo/releases/2022-03-23/apo.owl
+      version: '2022-03-23'
+    current_iri: http://purl.obolibrary.org/obo/apo/releases/2022-04-19/apo.owl
+    current_version: '2022-04-19'
+  apollo_sv:
+    current_iri: http://purl.obolibrary.org/obo/apollo_sv/v4.1.1./apollo_sv.owl
+    current_version: v4.1.1.
+  aro:
+    current_iri: http://purl.obolibrary.org/obo/antibiotic_resistance.owl
+    current_version: 05-10-2021-09-37
+  bco:
+    archive:
+    - iri: http://purl.obolibrary.org/obo/bco/releases/2020-03-27/bco-base.owl
+      version: '2020-03-27'
+    - iri: http://purl.obolibrary.org/obo/bco/releases/2020-03-27/bco.owl
+      version: '2020-03-27'
+    current_iri: http://purl.obolibrary.org/obo/bco/releases/2021-11-14/bco.owl
+    current_version: '2021-11-14'
+  bfo:
+    current_iri: http://purl.obolibrary.org/obo/bfo/2019-08-26/bfo.owl
+    current_version: '2019-08-26'
+  bspo:
+    archive:
+    - iri: http://purl.obolibrary.org/obo/bspo/releases/2021-09-22/bspo-base.owl
+      version: '2021-09-22'
+    - iri: http://purl.obolibrary.org/obo/bspo/releases/2021-10-13/bspo-base.owl
+      version: '2021-10-13'
+    current_iri: http://purl.obolibrary.org/obo/bspo/releases/2021-10-13/bspo.owl
+    current_version: '2021-10-13'
+  bto:
+    archive:
+    - iri: http://purl.obolibrary.org/obo/bto/releases/2021-04-27/bto-base.owl
+      version: '2021-04-27'
+    - iri: http://purl.obolibrary.org/obo/bto/releases/2021-10-26/bto-base.owl
+      version: '2021-10-26'
+    current_iri: http://purl.obolibrary.org/obo/bto/releases/2021-10-26/bto.owl
+    current_version: '2021-10-26'
+  caro:
+    current_iri: http://purl.obolibrary.org/obo/caro/releases/2022-02-18/caro.owl
+    current_version: '2022-02-18'
+  cdao:
+    current_iri: http://purl.obolibrary.org/obo/cdao/2019-06-26/cdao.owl
+    current_version: '2019-06-26'
+  cdno:
+    archive:
+    - iri: http://purl.obolibrary.org/obo/cdno/releases/2021-10-20/cdno.owl
+      version: '2021-10-20'
+    - iri: http://purl.obolibrary.org/obo/cdno/releases/2022-01-10/cdno.owl
+      version: '2022-01-10'
+    current_iri: http://purl.obolibrary.org/obo/cdno/releases/2022-04-06/cdno.owl
+    current_version: '2022-04-06'
+  ceph:
+    current_iri: http://purl.obolibrary.org/obo/ceph/releases/2016-01-12/ceph.owl
+    current_version: '2016-01-12'
+  chebi:
+    archive:
+    - iri: http://purl.obolibrary.org/obo/chebi/203/chebi.owl
+      version: '203'
+    - iri: http://purl.obolibrary.org/obo/chebi/204/chebi.owl
+      version: '204'
+    - iri: http://purl.obolibrary.org/obo/chebi/205/chebi.owl
+      version: '205'
+    - iri: http://purl.obolibrary.org/obo/chebi/206/chebi.owl
+      version: '206'
+    - iri: http://purl.obolibrary.org/obo/chebi/207/chebi.owl
+      version: '207'
+    - iri: http://purl.obolibrary.org/obo/chebi/208/chebi.owl
+      version: '208'
+    - iri: http://purl.obolibrary.org/obo/chebi/209/chebi.owl
+      version: '209'
+    current_iri: http://purl.obolibrary.org/obo/chebi/210/chebi.owl
+    current_version: '210'
+  cheminf:
+    current_iri: http://semanticchemistry.github.io/semanticchemistry/ontology/cheminf.owl
+    current_version: '2.0'
+  chiro:
+    current_iri: http://purl.obolibrary.org/obo/chiro/releases/2015-11-23/chiro.owl
+    current_version: '2015-11-23'
+  chmo:
+    archive:
+    - iri: http://purl.obolibrary.org/obo/chmo.owl
+      version: no_version
+    current_iri: http://purl.obolibrary.org/obo/chmo/releases/2022-02-17/chmo.owl
+    current_version: '2022-02-17'
+  cido:
+    current_iri: http://purl.obolibrary.org/obo/cido.owl
+    current_version: 09-03-2021
+  cio:
+    current_iri: http://purl.obolibrary.org/obo/cio/releases/2015-03-10/cio.owl
+    current_version: '2015-03-10'
+  cl:
+    archive:
+    - iri: http://purl.obolibrary.org/obo/cl/releases/2021-09-09/cl-base.owl
+      version: '2021-09-09'
+    - iri: http://purl.obolibrary.org/obo/cl/releases/2021-09-09/cl.owl
+      version: '2021-09-09'
+    - iri: http://purl.obolibrary.org/obo/cl/releases/2021-11-25/cl.owl
+      version: '2021-11-25'
+    - iri: http://purl.obolibrary.org/obo/cl/releases/2021-12-07/cl.owl
+      version: '2021-12-07'
+    - iri: http://purl.obolibrary.org/obo/cl/releases/2021-12-16/cl.owl
+      version: '2021-12-16'
+    - iri: http://purl.obolibrary.org/obo/cl/releases/2022-01-05/cl.owl
+      version: '2022-01-05'
+    current_iri: http://purl.obolibrary.org/obo/cl/releases/2022-02-16/cl.owl
+    current_version: '2022-02-16'
+  clao:
+    archive:
+    - iri: http://purl.obolibrary.org/obo/clao/releases/2021-09-27/clao-base.owl
+      version: '2021-09-27'
+    current_iri: http://purl.obolibrary.org/obo/clao/releases/2021-09-27/clao.owl
+    current_version: '2021-09-27'
+  clo:
+    archive:
+    - iri: '&obo;clo.owl'
+      version: '2019-02-10'
+    current_iri: http://purl.obolibrary.org/obo/clo.owl
+    current_version: '2022-03-20'
+  clyh:
+    current_iri: http://purl.obolibrary.org/obo/clyh/releases/2020-05-29/clyh.owl
+    current_version: '2020-05-29'
+  cmo:
+    current_iri: http://purl.obolibrary.org/obo/cmo/releases/2019-02-19/cmo.owl
+    current_version: '2019-02-19'
+  cob:
+    current_iri: http://purl.obolibrary.org/obo/cob/releases/2021-09-13/cob-native.owl
+    current_version: '2021-09-13'
+  colao:
+    current_iri: http://purl.obolibrary.org/obo/colao/releases/2021-12-14/colao.owl
+    current_version: '2021-12-14'
+  cro:
+    current_iri: http://purl.obolibrary.org/obo/cro/releases/2019-12-11/cro.owl
+    current_version: '2019-12-11'
+  cteno:
+    current_iri: http://purl.obolibrary.org/obo/cteno/releases/2016-10-19/cteno.owl
+    current_version: '2016-10-19'
+  cto:
+    current_iri: no_iri
+    current_version: no_version
+  cvdo:
+    current_iri: http://purl.obolibrary.org/obo/2020-03-05/cvdo.owl
+    current_version: '2020-03-05'
+  ddanat:
+    current_iri: http://purl.obolibrary.org/obo/ddanat/releases/2020-04-13/ddanat.owl
+    current_version: '2020-04-13'
+  ddpheno:
+    archive:
+    - iri: http://purl.obolibrary.org/obo/ddpheno/releases/2020-06-19/ddpheno-base.owl
+      version: '2020-06-19'
+    - iri: http://purl.obolibrary.org/obo/ddpheno/releases/2020-06-19/ddpheno.owl
+      version: '2020-06-19'
+    current_iri: http://purl.obolibrary.org/obo/ddpheno/releases/2022-01-19/ddpheno.owl
+    current_version: '2022-01-19'
+  dideo:
+    current_iri: http://purl.obolibrary.org/obo/dideo/release/2021-06-11/dideo.owl
+    current_version: '2021-06-11'
+  disdriv:
+    current_iri: http://purl.obolibrary.org/obo/doid/imports/disdriv_import.owl
+    current_version: no_version
+  doid:
+    archive:
+    - iri: http://purl.obolibrary.org/obo/doid/releases/2021-10-01/doid-base.owl
+      version: '2021-10-01'
+    - iri: http://purl.obolibrary.org/obo/doid/releases/2021-10-12/doid-base.owl
+      version: '2021-10-12'
+    - iri: http://purl.obolibrary.org/obo/doid/releases/2021-10-12/doid.owl
+      version: '2021-10-12'
+    - iri: http://purl.obolibrary.org/obo/doid/releases/2021-11-17/doid.owl
+      version: '2021-11-17'
+    - iri: http://purl.obolibrary.org/obo/doid/releases/2021-12-15/doid.owl
+      version: '2021-12-15'
+    - iri: http://purl.obolibrary.org/obo/doid/releases/2022-01-31/doid.owl
+      version: '2022-01-31'
+    - iri: http://purl.obolibrary.org/obo/doid/releases/2022-02-21/doid.owl
+      version: '2022-02-21'
+    - iri: http://purl.obolibrary.org/obo/doid/releases/2022-03-02/doid.owl
+      version: '2022-03-02'
+    current_iri: http://purl.obolibrary.org/obo/doid/releases/2022-04-01/doid.owl
+    current_version: '2022-04-01'
+  dpo:
+    archive:
+    - iri: http://purl.obolibrary.org/obo/dpo/releases/2021-09-02/dpo-base.owl
+      version: '2021-09-02'
+    - iri: http://purl.obolibrary.org/obo/dpo/releases/2021-10-15/dpo-base.owl
+      version: '2021-10-15'
+    - iri: http://purl.obolibrary.org/obo/dpo/releases/2021-10-15/dpo.owl
+      version: '2021-10-15'
+    - iri: http://purl.obolibrary.org/obo/dpo/releases/2021-12-10/dpo.owl
+      version: '2021-12-10'
+    - iri: http://purl.obolibrary.org/obo/dpo/releases/2022-01-24/dpo.owl
+      version: '2022-01-24'
+    - iri: http://purl.obolibrary.org/obo/dpo/releases/2022-02-24/dpo.owl
+      version: '2022-02-24'
+    current_iri: http://purl.obolibrary.org/obo/dpo/releases/2022-04-13/dpo.owl
+    current_version: '2022-04-13'
+  dron:
+    archive:
+    - iri: http://purl.obolibrary.org/obo/dron/releases/2021-08-12/dron-base.owl
+      version: '2021-08-12'
+    - iri: http://purl.obolibrary.org/obo/dron/releases/2021-10-20/dron-base.owl
+      version: '2021-10-20'
+    - iri: http://purl.obolibrary.org/obo/dron/releases/2021-10-20/dron.owl
+      version: '2021-10-20'
+    current_iri: http://purl.obolibrary.org/obo/dron/releases/2022-01-28/dron.owl
+    current_version: '2022-01-28'
+  duo:
+    current_iri: http://purl.obolibrary.org/obo/duo/releases/2021-02-23/duo.owl
+    current_version: '2021-02-23'
+  ecao:
+    archive:
+    - iri: http://purl.obolibrary.org/obo/ecao/releases/2020-05-22/ecao-base.owl
+      version: '2020-05-22'
+    current_iri: http://purl.obolibrary.org/obo/ecao/releases/2020-05-22/ecao.owl
+    current_version: '2020-05-22'
+  eco:
+    archive:
+    - iri: http://purl.obolibrary.org/obo/eco/releases/2021-10-20/eco.owl
+      version: '2021-10-20'
+    - iri: http://purl.obolibrary.org/obo/eco/releases/2021-12-03/eco.owl
+      version: '2021-12-03'
+    - iri: http://purl.obolibrary.org/obo/eco/releases/2022-01-04/eco.owl
+      version: '2022-01-04'
+    - iri: http://purl.obolibrary.org/obo/eco/releases/2022-02-09/eco.owl
+      version: '2022-02-09'
+    current_iri: http://purl.obolibrary.org/obo/eco/releases/2022-04-11/eco.owl
+    current_version: '2022-04-11'
+  ecocore:
+    archive:
+    - iri: http://purl.obolibrary.org/obo/ecocore/releases/2021-02-17/ecocore-base.owl
+      version: '2021-02-17'
+    - iri: http://purl.obolibrary.org/obo/ecocore/releases/2021-02-17/ecocore.owl
+      version: '2021-02-17'
+    current_iri: http://purl.obolibrary.org/obo/ecocore/releases/2022-03-09/ecocore.owl
+    current_version: '2022-03-09'
+  ecto:
+    archive:
+    - iri: http://purl.obolibrary.org/obo/ecto/releases/2021-08-25/ecto-base.owl
+      version: '2021-08-25'
+    - iri: http://purl.obolibrary.org/obo/ecto/releases/2021-08-25/ecto.owl
+      version: '2021-08-25'
+    current_iri: http://purl.obolibrary.org/obo/ecto/releases/2022-03-09/ecto.owl
+    current_version: '2022-03-09'
+  ehdaa2:
+    current_iri: http://purl.obolibrary.org/obo/ehdaa2/releases/2013-07-04/ehdaa2.owl
+    current_version: '2013-07-04'
+  emapa:
+    current_iri: http://purl.obolibrary.org/obo/emapa/releases/2021-09-01/emapa.owl
+    current_version: '2021-09-01'
+  envo:
+    archive:
+    - iri: http://purl.obolibrary.org/obo/envo/releases/2021-05-14/envo-base.owl
+      version: '2021-05-14'
+    current_iri: http://purl.obolibrary.org/obo/envo/releases/2021-05-14/envo.owl
+    current_version: '2021-05-14'
+  epio:
+    current_iri: https://bio.scai.fraunhofer.de/ontology/epilepsy/2021-05-28/EPIO.owl
+    current_version: '2021-05-28'
+  epso:
+    archive:
+    - iri: ''
+      version: ''
+    current_iri: https://bio.scai.fraunhofer.de/ontology/epilepsy/2021-05-28/EPSO.owl
+    current_version: '2021-05-28'
+  ero:
+    archive:
+    - iri: http://purl.obolibrary.org/obo/ero.owl
+      version: no_version
+    current_iri: no_iri
+    current_version: no_version
+  eupath:
+    archive:
+    - iri: http://purl.obolibrary.org/obo/eupath/2021-09-09/eupath.owl
+      version: '2021-09-09'
+    current_iri: http://purl.obolibrary.org/obo/eupath/2022-02-15/eupath.owl
+    current_version: '2022-02-15'
+  exo:
+    current_iri: http://purl.obolibrary.org/obo/exo/2.1/exo.owl
+    current_version: '2.1'
+  fao:
+    archive:
+    - iri: http://purl.obolibrary.org/obo/fao/releases/2020-05-07/fao/fao-base.owl
+      version: '2020-05-07'
+    current_iri: http://purl.obolibrary.org/obo/fao/releases/2020-05-07/fao.owl
+    current_version: '2020-05-07'
+  fbbi:
+    current_iri: http://purl.obolibrary.org/obo/fbbi/releases/2020-11-06/fbbi.owl
+    current_version: '2020-11-06'
+  fbbt:
+    archive:
+    - iri: http://purl.obolibrary.org/obo/fbbt/releases/2021-09-01/fbbt-base.owl
+      version: '2021-09-01'
+    - iri: http://purl.obolibrary.org/obo/fbbt/releases/2021-10-14/fbbt-base.owl
+      version: '2021-10-14'
+    - iri: http://purl.obolibrary.org/obo/fbbt/releases/2021-10-14/fbbt.owl
+      version: '2021-10-14'
+    - iri: http://purl.obolibrary.org/obo/fbbt/releases/2021-12-09/fbbt.owl
+      version: '2021-12-09'
+    - iri: http://purl.obolibrary.org/obo/fbbt/releases/2022-01-27/fbbt.owl
+      version: '2022-01-27'
+    - iri: http://purl.obolibrary.org/obo/fbbt/releases/2022-02-24/fbbt.owl
+      version: '2022-02-24'
+    current_iri: http://purl.obolibrary.org/obo/fbbt/releases/2022-04-13/fbbt.owl
+    current_version: '2022-04-13'
+  fbcv:
+    archive:
+    - iri: http://purl.obolibrary.org/obo/fbcv/releases/2021-09-02/fbcv-base.owl
+      version: '2021-09-02'
+    - iri: http://purl.obolibrary.org/obo/fbcv/releases/2021-10-18/fbcv-base.owl
+      version: '2021-10-18'
+    - iri: http://purl.obolibrary.org/obo/fbcv/releases/2021-10-18/fbcv.owl
+      version: '2021-10-18'
+    - iri: http://purl.obolibrary.org/obo/fbcv/releases/2021-12-13/fbcv.owl
+      version: '2021-12-13'
+    - iri: http://purl.obolibrary.org/obo/fbcv/releases/2022-01-24/fbcv.owl
+      version: '2022-01-24'
+    - iri: http://purl.obolibrary.org/obo/fbcv/releases/2022-02-24/fbcv.owl
+      version: '2022-02-24'
+    current_iri: http://purl.obolibrary.org/obo/fbcv/releases/2022-04-14/fbcv.owl
+    current_version: '2022-04-14'
+  fbdv:
+    archive:
+    - iri: http://purl.obolibrary.org/obo/fbdv/releases/2021-09-01/fbdv-base.owl
+      version: '2021-09-01'
+    - iri: http://purl.obolibrary.org/obo/fbdv/releases/2021-10-13/fbdv-base.owl
+      version: '2021-10-13'
+    - iri: http://purl.obolibrary.org/obo/fbdv/releases/2021-10-13/fbdv.owl
+      version: '2021-10-13'
+    - iri: http://purl.obolibrary.org/obo/fbdv/releases/2021-12-06/fbdv.owl
+      version: '2021-12-06'
+    - iri: http://purl.obolibrary.org/obo/fbdv/releases/2022-01-24/fbdv.owl
+      version: '2022-01-24'
+    - iri: http://purl.obolibrary.org/obo/fbdv/releases/2022-02-25/fbdv.owl
+      version: '2022-02-25'
+    current_iri: http://purl.obolibrary.org/obo/fbdv/releases/2022-04-12/fbdv.owl
+    current_version: '2022-04-12'
+  fideo:
+    current_iri: NA
+    current_version: NA
+  fix:
+    current_iri: http://purl.obolibrary.org/obo/fix/releases/2020-04-13/fix.owl
+    current_version: '2020-04-13'
+  flopo:
+    current_iri: http://purl.obolibrary.org/obo/flopo.owl
+    current_version: no_version
+  fma:
+    current_iri: http://purl.obolibrary.org/obo/fma/releases/2020-04-13/fma.owl
+    current_version: '2020-04-13'
+  fobi:
+    current_iri: NA
+    current_version: NA
+  foodon:
+    archive:
+    - iri: '&obo;foodon/releases/2021-09-15/foodon.owl'
+      version: '2021-09-15'
+    - iri: '&obo;foodon/releases/2021-11-25/foodon.owl'
+      version: '2021-11-25'
+    current_iri: '&obo;foodon/releases/2022-02-01/foodon.owl'
+    current_version: '2022-02-01'
+  fovt:
+    archive:
+    - iri: http://purl.obolibrary.org/obo/fovt/releases/2021-06-02/fovt-base.owl
+      version: '2021-06-02'
+    - iri: http://purl.obolibrary.org/obo/fovt/releases/2021-10-29/fovt-base.owl
+      version: '2021-10-29'
+    current_iri: http://purl.obolibrary.org/obo/fovt/releases/2021-11-10/fovt.owl
+    current_version: '2021-11-10'
+  fypo:
+    archive:
+    - iri: http://purl.obolibrary.org/obo/fypo/releases/2021-10-05/fypo-base.owl
+      version: '2021-10-05'
+    - iri: http://purl.obolibrary.org/obo/fypo/releases/2021-11-08/fypo-base.owl
+      version: '2021-11-08'
+    - iri: http://purl.obolibrary.org/obo/fypo/releases/2021-11-08/fypo.owl
+      version: '2021-11-08'
+    - iri: http://purl.obolibrary.org/obo/fypo/releases/2021-11-18/fypo.owl
+      version: '2021-11-18'
+    - iri: http://purl.obolibrary.org/obo/fypo/releases/2021-12-07/fypo.owl
+      version: '2021-12-07'
+    - iri: http://purl.obolibrary.org/obo/fypo/releases/2022-01-18/fypo.owl
+      version: '2022-01-18'
+    current_iri: http://purl.obolibrary.org/obo/fypo/releases/2022-01-27/fypo.owl
+    current_version: '2022-01-27'
+  gaz:
+    current_iri: http://purl.obolibrary.org/obo/gaz.owl
+    current_version: no_version
+  gecko:
+    current_iri: http://purl.obolibrary.org/obo/gecko/releases/2021-01-18/gecko.owl
+    current_version: '2021-01-18'
+  genepio:
+    archive:
+    - iri: '&obo;genepio/releases/2021-05-24/genepio.owl'
+      version: '2021-05-24'
+    - iri: '&obo;genepio/releases/2022-01-26/genepio.owl'
+      version: '2022-01-26'
+    current_iri: '&obo;genepio/releases/2022-02-06/genepio.owl'
+    current_version: '2022-02-06'
+  geno:
+    archive:
+    - iri: http://purl.obolibrary.org/obo/geno/releases/2020-03-08/geno-base.owl
+      version: '2020-03-08'
+    - iri: http://purl.obolibrary.org/obo/geno/releases/2020-03-08/geno.owl
+      version: '2020-03-08'
+    current_iri: http://purl.obolibrary.org/obo/geno/releases/2022-03-05/geno.owl
+    current_version: '2022-03-05'
+  geo:
+    current_iri: http://purl.obolibrary.org/obo/geo.owl
+    current_version: production-version-2016-03-26
+  gno:
+    archive:
+    - iri: http://purl.obolibrary.org/obo/gno/2021-08-13/gno.owl
+      version: '2021-08-13'
+    current_iri: http://purl.obolibrary.org/obo/gno/2022-02-23/gno.owl
+    current_version: '2022-02-23'
+  go:
+    archive:
+    - iri: http://purl.obolibrary.org/obo/go/releases/2021-09-01/go-base.owl
+      version: '2021-09-01'
+    - iri: http://purl.obolibrary.org/obo/go/releases/2021-10-26/go-base.owl
+      version: '2021-10-26'
+    - iri: http://purl.obolibrary.org/obo/go/releases/2021-10-26/go.owl
+      version: '2021-10-26'
+    - iri: http://purl.obolibrary.org/obo/go/releases/2021-11-16/go.owl
+      version: '2021-11-16'
+    - iri: http://purl.obolibrary.org/obo/go/releases/2021-12-15/go.owl
+      version: '2021-12-15'
+    - iri: http://purl.obolibrary.org/obo/go/releases/2022-01-13/go.owl
+      version: '2022-01-13'
+    - iri: http://purl.obolibrary.org/obo/go/releases/2022-03-10/go.owl
+      version: '2022-03-10'
+    current_iri: http://purl.obolibrary.org/obo/go/releases/2022-03-22/go.owl
+    current_version: '2022-03-22'
+  gsso:
+    current_iri: http://purl.obolibrary.org/obo/gsso/releases/2.0.5/gsso.owl
+    current_version: 2.0.5
+  hancestro:
+    current_iri: http://purl.obolibrary.org/obo/hancestro/releases/2020-12-18/hancestro.owl
+    current_version: '2020-12-18'
+  hao:
+    current_iri: http://purl.obolibrary.org/obo/hao.owl
+    current_version: no_version
+  hom:
+    current_iri: http://purl.obolibrary.org/obo/hom/releases/2015-01-07/hom.owl
+    current_version: '2015-01-07'
+  hp:
+    archive:
+    - iri: http://purl.obolibrary.org/obo/hp/releases/2021-08-02/hp-base.owl
+      version: '2021-08-02'
+    - iri: http://purl.obolibrary.org/obo/hp/releases/2021-10-10/hp-base.owl
+      version: '2021-10-10'
+    - iri: http://purl.obolibrary.org/obo/hp/releases/2021-10-10/hp.owl
+      version: '2021-10-10'
+    - iri: http://purl.obolibrary.org/obo/hp/releases/2022-02-14/hp.owl
+      version: '2022-02-14'
+    current_iri: http://purl.obolibrary.org/obo/hp/releases/2022-04-14/hp.owl
+    current_version: '2022-04-14'
+  hsapdv:
+    current_iri: http://purl.obolibrary.org/obo/hsapdv/releases/2020-03-10/hsapdv.owl
+    current_version: '2020-03-10'
+  hso:
+    archive:
+    - iri: http://purl.obolibrary.org/obo/hso/2020-11-28/hso.owl
+      version: '2020-11-28'
+    current_iri: http://purl.obolibrary.org/obo/hso/2021-12-13/hso.owl
+    current_version: '2021-12-13'
+  htn:
+    current_iri: https://raw.githubusercontent.com/aellenhicks/htn_owl/master/htn.owl
+    current_version: no_version
+  iao:
+    current_iri: http://purl.obolibrary.org/obo/iao/2020-12-09/iao.owl
+    current_version: '2020-12-09'
+  iceo:
+    current_iri: http://purl.obolibrary.org/obo/2019/1/ICEO
+    current_version: '2.1'
+  ico:
+    current_iri: http://purl.obolibrary.org/obo/ico.owl
+    current_version: '2021-04-21'
+  ido:
+    current_iri: http://purl.obolibrary.org/obo/ido/2017-11-03/ido.owl
+    current_version: '2017-11-03'
+  idomal:
+    current_iri: http://purl.obolibrary.org/obo/idomal/2015-03-16/idomal.owl
+    current_version: '2015-03-16'
+  ino:
+    archive:
+    - iri: '&obo;ino.owl'
+      version: 1.0.112
+    current_iri: http://purl.obolibrary.org/obo/ino.owl
+    current_version: '
+
+      ----'
+  kisao:
+    current_iri: http://www.biomodels.net/kisao/KISAO#
+    current_version: '2.30'
+  labo:
+    current_iri: http://purl.obolibrary.org/obo/labo/2021-06-08/labo.owl
+    current_version: '2021-06-08'
+  lepao:
+    current_iri: http://purl.obolibrary.org/obo/lepao/releases/2021-11-20/lepao.owl
+    current_version: '2021-11-20'
+  ma:
+    current_iri: http://purl.obolibrary.org/obo/ma/releases/2017-02-07/ma.owl
+    current_version: '2017-02-07'
+  mamo:
+    current_iri: no_iri
+    current_version: no_version
+  maxo:
+    archive:
+    - iri: http://purl.obolibrary.org/obo/maxo/releases/2021-08-19/maxo-base.owl
+      version: '2021-08-19'
+    - iri: http://purl.obolibrary.org/obo/maxo/releases/2021-08-19/maxo.owl
+      version: '2021-08-19'
+    - iri: http://purl.obolibrary.org/obo/maxo/releases/2022-03-23/maxo.owl
+      version: '2022-03-23'
+    - iri: http://purl.obolibrary.org/obo/maxo/releases/2022-04-08/maxo.owl
+      version: '2022-04-08'
+    current_iri: http://purl.obolibrary.org/obo/maxo/releases/2022-04-11/maxo.owl
+    current_version: '2022-04-11'
+  mco:
+    current_iri: http://purl.obolibrary.org/obo/mco/releases/2019-05-15/mco.owl
+    current_version: '2019-05-15'
+  mf:
+    archive:
+    - iri: http://purl.obolibrary.org/obo/MF/2021-09-21/MF.owl
+      version: '2021-09-21'
+    current_iri: http://purl.obolibrary.org/obo/MF/2021-11-17/MF.owl
+    current_version: '2021-11-17'
+  mfmo:
+    current_iri: '&obo;mfmo/2013-11-16/mfmo.owl'
+    current_version: '2013-11-16'
+  mfoem:
+    archive:
+    - iri: http://purl.obolibrary.org/obo/MFOEM/2021-09-21/MFOEM.owl
+      version: '2021-09-21'
+    current_iri: http://purl.obolibrary.org/obo/MFOEM/2021-11-17/MFOEM.owl
+    current_version: '2021-11-17'
+  mfomd:
+    current_iri: http://purl.obolibrary.org/obo/MFOMD/2020-04-26/MFOMD.owl
+    current_version: '2020-04-26'
+  mi:
+    current_iri: http://purl.obolibrary.org/obo/mi/releases/2020-04-13/mi.owl
+    current_version: '2020-04-13'
+  miapa:
+    current_iri: '&obo;miapa.owl'
+    current_version: no_version
+  micro:
+    current_iri: NA
+    current_version: NA
+  miro:
+    current_iri: http://purl.obolibrary.org/obo/miro/releases/2014-05-14/miro.owl
+    current_version: '2014-05-14'
+  mmo:
+    current_iri: http://purl.obolibrary.org/obo/mmo/2.39/mmo.owl
+    current_version: '2.39'
+  mmusdv:
+    current_iri: http://purl.obolibrary.org/obo/mmusdv/releases/2020-03-10/mmusdv.owl
+    current_version: '2020-03-10'
+  mod:
+    archive:
+    - iri: http://purl.obolibrary.org/obo/mod.owl
+      version: 10-03-2021-14-36
+    current_iri: http://purl.obolibrary.org/obo/mod/1.031.4/mod.owl
+    current_version: 1.031.4
+  mondo:
+    archive:
+    - iri: http://purl.obolibrary.org/obo/mondo/releases/2021-09-01/mondo-base.owl
+      version: '2021-09-01'
+    - iri: http://purl.obolibrary.org/obo/mondo/releases/2021-10-01/mondo-base.owl
+      version: '2021-10-01'
+    - iri: http://purl.obolibrary.org/obo/mondo/releases/2021-11-01/mondo-base.owl
+      version: '2021-11-01'
+    - iri: http://purl.obolibrary.org/obo/mondo/releases/2021-11-01/mondo.owl
+      version: '2021-11-01'
+    - iri: http://purl.obolibrary.org/obo/mondo/releases/2021-12-01/mondo.owl
+      version: '2021-12-01'
+    - iri: http://purl.obolibrary.org/obo/mondo/releases/2021-12-30/mondo.owl
+      version: '2021-12-30'
+    - iri: http://purl.obolibrary.org/obo/mondo/releases/2022-02-04/mondo.owl
+      version: '2022-02-04'
+    - iri: http://purl.obolibrary.org/obo/mondo/releases/2022-03-01/mondo.owl
+      version: '2022-03-01'
+    current_iri: http://purl.obolibrary.org/obo/mondo/releases/2022-04-04/mondo.owl
+    current_version: '2022-04-04'
+  mop:
+    archive:
+    - iri: http://purl.obolibrary.org/obo/mop/releases/2014-09-03/mop.owl
+      version: '2014-09-03'
+    current_iri: http://purl.obolibrary.org/obo/mop/releases/2022-02-01/mop.owl
+    current_version: '2022-02-01'
+  mp:
+    archive:
+    - iri: http://purl.obolibrary.org/obo/mp/releases/2021-09-21/mp-base.owl
+      version: '2021-09-21'
+    - iri: http://purl.obolibrary.org/obo/mp/releases/2021-10-15/mp-base.owl
+      version: '2021-10-15'
+    - iri: http://purl.obolibrary.org/obo/mp/releases/2021-10-26/mp-base.owl
+      version: '2021-10-26'
+    - iri: http://purl.obolibrary.org/obo/mp/releases/2021-11-04/mp-base.owl
+      version: '2021-11-04'
+    - iri: http://purl.obolibrary.org/obo/mp/releases/2021-11-04
+      version: releases
+    - iri: http://purl.obolibrary.org/obo/mp/releases/2021-12-16
+      version: releases
+    - iri: http://purl.obolibrary.org/obo/mp/releases/2022-02-02
+      version: releases
+    - iri: http://purl.obolibrary.org/obo/mp/releases/2022-02-16
+      version: releases
+    - iri: http://purl.obolibrary.org/obo/mp/releases/2022-02-24
+      version: releases
+    - iri: http://purl.obolibrary.org/obo/mp/releases/2022-03-09
+      version: releases
+    - iri: http://purl.obolibrary.org/obo/mp/releases/2022-04-05
+      version: releases
+    current_iri: http://purl.obolibrary.org/obo/mp/releases/2022-04-08
+    current_version: releases
+  mpath:
+    current_iri: http://purl.obolibrary.org/obo/mpath/2020-05-19/mpath.owl
+    current_version: '2020-05-19'
+  mpio:
+    current_iri: http://purl.obolibrary.org/obo/mpio/release/2019-01-30/mpio.owl
+    current_version: '2019-01-30'
+  mro:
+    archive:
+    - iri: http://purl.obolibrary.org/obo/mro/2021-09-24/mro.owl
+      version: '2021-09-24'
+    - iri: http://purl.obolibrary.org/obo/mro/2021-10-15/mro.owl
+      version: '2021-10-15'
+    - iri: http://purl.obolibrary.org/obo/mro/2021-11-04/mro.owl
+      version: '2021-11-04'
+    - iri: http://purl.obolibrary.org/obo/mro/2021-11-29/mro.owl
+      version: '2021-11-29'
+    - iri: http://purl.obolibrary.org/obo/mro/2021-12-15/mro.owl
+      version: '2021-12-15'
+    - iri: http://purl.obolibrary.org/obo/mro/2022-01-13/mro.owl
+      version: '2022-01-13'
+    - iri: http://purl.obolibrary.org/obo/mro/2022-01-21/mro.owl
+      version: '2022-01-21'
+    current_iri: http://purl.obolibrary.org/obo/mro/2022-03-14/mro.owl
+    current_version: '2022-03-14'
+  ms:
+    archive:
+    - iri: http://purl.obolibrary.org/obo/ms/4.1.35/ms.owl
+      version: 4.1.35
+    - iri: http://purl.obolibrary.org/obo/ms/4.1.62/ms.owl
+      version: 4.1.62
+    - iri: http://purl.obolibrary.org/obo/ms/4.1.64/ms.owl
+      version: 4.1.64
+    - iri: http://purl.obolibrary.org/obo/ms/4.1.65/ms.owl
+      version: 4.1.65
+    - iri: http://purl.obolibrary.org/obo/ms/4.1.67/ms.owl
+      version: 4.1.67
+    - iri: http://purl.obolibrary.org/obo/ms/4.1.69/ms.owl
+      version: 4.1.69
+    - iri: http://purl.obolibrary.org/obo/ms/4.1.70/ms.owl
+      version: 4.1.70
+    - iri: http://purl.obolibrary.org/obo/ms/4.1.71/ms.owl
+      version: 4.1.71
+    - iri: http://purl.obolibrary.org/obo/ms/4.1.78/ms.owl
+      version: 4.1.78
+    - iri: http://purl.obolibrary.org/obo/ms/4.1.82/ms.owl
+      version: 4.1.82
+    current_iri: http://purl.obolibrary.org/obo/ms/4.1.83/ms.owl
+    current_version: 4.1.83
+  nbo:
+    archive:
+    - iri: http://purl.obolibrary.org/obo/nbo/releases/2021-02-15/nbo-base.owl
+      version: '2021-02-15'
+    current_iri: http://purl.obolibrary.org/obo/nbo/releases/2021-02-15/nbo.owl
+    current_version: '2021-02-15'
+  ncbitaxon:
+    archive:
+    - iri: http://purl.obolibrary.org/obo/ncbitaxon/2021-06-10/ncbitaxon.owl
+      version: '2021-06-10'
+    - iri: http://purl.obolibrary.org/obo/ncbitaxon/2021-12-14/ncbitaxon.owl
+      version: '2021-12-14'
+    current_iri: http://purl.obolibrary.org/obo/ncbitaxon/2022-02-21/ncbitaxon.owl
+    current_version: '2022-02-21'
+  ncit:
+    archive:
+    - iri: http://purl.obolibrary.org/obo/ncit/releases/2021-08-20/ncit.owl
+      version: '2021-08-20'
+    - iri: http://purl.obolibrary.org/obo/ncit/releases/2021-12-17/ncit.owl
+      version: '2021-12-17'
+    current_iri: http://purl.obolibrary.org/obo/ncit/releases/2022-04-14/ncit.owl
+    current_version: '2022-04-14'
+  ncro:
+    current_iri: http://purl.obolibrary.org/obo/ncro/2015-12-10/ncro-combined.owl
+    current_version: '2015-12-10'
+  nomen:
+    current_iri: http://purl.obolibrary.org/obo/NOMEN
+    current_version: no_version
+  oae:
+    current_iri: http://purl.obolibrary.org/obo/oae.owl
+    current_version: 1.2.44
+  oarcs:
+    current_iri: http://purl.obolibrary.org/obo/oarcs.owl
+    current_version: no_version
+  oba:
+    archive:
+    - iri: http://purl.obolibrary.org/obo/oba.owl
+      version: 13-11-2015-10-21
+    - iri: http://purl.obolibrary.org/obo/oba/releases/2021-12-03/oba.owl
+      version: '2021-12-03'
+    current_iri: http://purl.obolibrary.org/obo/oba/releases/2022-01-19/oba.owl
+    current_version: '2022-01-19'
+  obcs:
+    current_iri: http://purl.obolibrary.org/obo/obcs/2018-02-22/obcs.owl
+    current_version: '2018-02-22'
+  obi:
+    archive:
+    - iri: http://purl.obolibrary.org/obo/obi/2021-08-18/obi-base.owl
+      version: '2021-08-18'
+    - iri: http://purl.obolibrary.org/obo/obi/2021-08-18/obi.owl
+      version: '2021-08-18'
+    current_iri: http://purl.obolibrary.org/obo/obi/2022-01-03/obi.owl
+    current_version: '2022-01-03'
+  obib:
+    archive:
+    - iri: http://purl.obolibrary.org/obo/obib/2021-02-02/obib.owl
+      version: '2021-02-02'
+    current_iri: http://purl.obolibrary.org/obo/obib/2021-11-12/obib.owl
+    current_version: '2021-11-12'
+  ogg:
+    current_iri: '&obo;ogg.owl'
+    current_version: 12-01-2016
+  ogi:
+    current_iri: NA
+    current_version: NA
+  ogms:
+    current_iri: http://purl.obolibrary.org/obo/ogms/2021-08-19/ogms.owl
+    current_version: '2021-08-19'
+  ogsf:
+    current_iri: '&obo;ogsf-merged.owl'
+    current_version: 11-22-2014
+  ohd:
+    current_iri: http://purl.obolibrary.org/obo/2016-06-27/ohd-inferred.owl
+    current_version: '2016-06-27'
+  ohmi:
+    current_iri: http://purl.obolibrary.org/obo/ohmi/2019-09-17/ohmi.owl
+    current_version: '2019-09-17'
+  ohpi:
+    current_iri: http://purl.obolibrary.org/obo/ohpi/releases/2019-09-30
+    current_version: releases
+  olatdv:
+    current_iri: http://purl.obolibrary.org/obo/olatdv/releases/2020-03-10/olatdv.owl
+    current_version: '2020-03-10'
+  omit:
+    current_iri: '&obo;omit/dev/omit.owl'
+    current_version: dev
+  omo:
+    current_iri: http://purl.obolibrary.org/obo/omo/2020-06-08/omo.owl
+    current_version: '2020-06-08'
+  omp:
+    archive:
+    - iri: http://purl.obolibrary.org/obo/omp/releases/2021-10-01/omp.owl
+      version: '2021-10-01'
+    - iri: http://purl.obolibrary.org/obo/omp/releases/2021-12-03/omp.owl
+      version: '2021-12-03'
+    - iri: http://purl.obolibrary.org/obo/omp/releases/2022-01-07/omp.owl
+      version: '2022-01-07'
+    - iri: http://purl.obolibrary.org/obo/omp/releases/2022-02-08/omp.owl
+      version: '2022-02-08'
+    - iri: http://purl.obolibrary.org/obo/omp/releases/2022-03-04/omp.owl
+      version: '2022-03-04'
+    current_iri: http://purl.obolibrary.org/obo/omp/releases/2022-04-11/omp.owl
+    current_version: '2022-04-11'
+  omrse:
+    archive:
+    - iri: http://purl.obolibrary.org/obo/omrse/releases/2021-08-30/omrse-base.owl
+      version: '2021-08-30'
+    - iri: http://purl.obolibrary.org/obo/omrse/releases/2021-08-30/omrse.owl
+      version: '2021-08-30'
+    current_iri: http://purl.obolibrary.org/obo/omrse/releases/2022-04-06/omrse.owl
+    current_version: '2022-04-06'
+  one:
+    current_iri: http://purl.obolibrary.org/obo/ONE
+    current_version: no_version
+  ons:
+    archive:
+    - iri: https://raw.githubusercontent.com/enpadasi/Ontology-for-Nutritional-Studies/master/ons.owl
+      version: 1.2.2
+    current_iri: no_iri
+    current_version: no_version
+  ontoneo:
+    current_iri: http://purl.obolibrary.org/obo/ontoneo/releases/2021-04-29/ontoneo.owl
+    current_version: '2021-04-29'
+  oostt:
+    current_iri: http://purl.obolibrary.org/obo/oostt//2021-01-08/oostt.owl
+    current_version: '2021-01-08'
+  opl:
+    current_iri: http://purl.obolibrary.org/obo/opl/2021-01-28/opl.owl
+    current_version: '2021-01-28'
+  opmi:
+    current_iri: http://purl.obolibrary.org/obo/opmi.owl
+    current_version: Vision-Release--1.0.130
+  ornaseq:
+    current_iri: http://purl.obolibrary.org/obo/ornaseq/2019-07-08/ornaseq.owl
+    current_version: '2019-07-08'
+  ovae:
+    current_iri: '&obo;ovae.owl'
+    current_version: 04-11-2016
+  pato:
+    archive:
+    - iri: http://purl.obolibrary.org/obo/pato/releases/2021-09-09/pato-base.owl
+      version: '2021-09-09'
+    - iri: http://purl.obolibrary.org/obo/pato/releases/2021-11-05/pato-base.owl
+      version: '2021-11-05'
+    - iri: http://purl.obolibrary.org/obo/pato/releases/2021-11-05/pato.owl
+      version: '2021-11-05'
+    - iri: http://purl.obolibrary.org/obo/pato/releases/2021-12-03/pato.owl
+      version: '2021-12-03'
+    - iri: http://purl.obolibrary.org/obo/pato/releases/2022-01-12/pato.owl
+      version: '2022-01-12'
+    - iri: http://purl.obolibrary.org/obo/pato/releases/2022-02-08/pato.owl
+      version: '2022-02-08'
+    current_iri: http://purl.obolibrary.org/obo/pato/releases/2022-02-20/pato.owl
+    current_version: '2022-02-20'
+  pcl:
+    archive:
+    - iri: http://purl.obolibrary.org/obo/pcl/releases/2022-01-24/pcl.owl
+      version: '2022-01-24'
+    - iri: http://purl.obolibrary.org/obo/pcl/releases/2022-02-02/pcl.owl
+      version: '2022-02-02'
+    - iri: http://purl.obolibrary.org/obo/pcl/releases/2022-02-09/pcl.owl
+      version: '2022-02-09'
+    current_iri: http://purl.obolibrary.org/obo/pcl/releases/2022-03-02/pcl.owl
+    current_version: '2022-03-02'
+  pco:
+    archive:
+    - iri: http://purl.obolibrary.org/obo/pco/releases/2021-05-03/pco-base.owl
+      version: '2021-05-03'
+    current_iri: http://purl.obolibrary.org/obo/pco/releases/2021-05-03/pco.owl
+    current_version: '2021-05-03'
+  pdro:
+    current_iri: http://purl.obolibrary.org/obo/pdro/2021-06-08/pdro.owl
+    current_version: '2021-06-08'
+  pdumdv:
+    current_iri: http://purl.obolibrary.org/obo/pdumdv/releases/2020-03-10/pdumdv.owl
+    current_version: '2020-03-10'
+  peco:
+    current_iri: http://purl.obolibrary.org/obo/peco/releases/2020-08-21/peco.owl
+    current_version: '2020-08-21'
+  phipo:
+    archive:
+    - iri: http://purl.obolibrary.org/obo/phipo/releases/2021-07-14/phipo-base.owl
+      version: '2021-07-14'
+    current_iri: http://purl.obolibrary.org/obo/phipo/releases/2021-07-14/phipo.owl
+    current_version: '2021-07-14'
+  plana:
+    archive:
+    - iri: http://purl.obolibrary.org/obo/plana/releases/2021-09-29/plana-base.owl
+      version: '2021-09-29'
+    - iri: http://purl.obolibrary.org/obo/plana/releases/2021-10-06/plana-base.owl
+      version: '2021-10-06'
+    - iri: http://purl.obolibrary.org/obo/plana/releases/2021-10-21/plana-base.owl
+      version: '2021-10-21'
+    - iri: http://purl.obolibrary.org/obo/plana/releases/2021-10-21
+      version: releases
+    - iri: http://purl.obolibrary.org/obo/plana/releases/2022-03-02
+      version: releases
+    current_iri: http://purl.obolibrary.org/obo/plana/releases/2022-03-09
+    current_version: releases
+  planp:
+    current_iri: http://purl.obolibrary.org/obo/planp/releases/2020-03-28/planp.owl
+    current_version: '2020-03-28'
+  po:
+    current_iri: http://purl.obolibrary.org/obo/po/releases/2021-08-13/po.owl
+    current_version: '2021-08-13'
+  poro:
+    archive:
+    - iri: http://purl.obolibrary.org/obo/poro/releases/2016-09-13/poro.owl
+      version: '2016-09-13'
+    current_iri: http://purl.obolibrary.org/obo/poro/releases/2016-10-06/poro.owl
+    current_version: '2016-10-06'
+  ppo:
+    current_iri: https://raw.githubusercontent.com/PlantPhenoOntology/ppo/master/releases/2018-10-26/ppo.owl
+    current_version: '2018-10-26'
+  pr:
+    archive:
+    - iri: http://purl.obolibrary.org/obo/pr/63.0/pr.owl
+      version: '63.0'
+    - iri: http://purl.obolibrary.org/obo/pr/64.0/pr.owl
+      version: '64.0'
+    - iri: http://purl.obolibrary.org/obo/pr/65.0/pr.owl
+      version: '65.0'
+    current_iri: http://purl.obolibrary.org/obo/pr/66.0/pr.owl
+    current_version: '66.0'
+  psdo:
+    current_iri: http://purl.obolibrary.org/obo/2020-12-04/psdo.owl
+    current_version: '2020-12-04'
+  pso:
+    current_iri: http://purl.obolibrary.org/obo/pso/releases/2020-05-19/pso.owl
+    current_version: '2020-05-19'
+  pw:
+    current_iri: http://purl.obolibrary.org/obo/pw/7.52/pw.owl
+    current_version: '7.52'
+  rbo:
+    archive:
+    - iri: http://purl.obolibrary.org/obo/rbo/releases/2021-08-30/rbo-base.owl
+      version: '2021-08-30'
+    - iri: http://purl.obolibrary.org/obo/rbo/releases/2021-08-30/rbo.owl
+      version: '2021-08-30'
+    - iri: http://purl.obolibrary.org/obo/rbo/releases/2022-01-14/rbo.owl
+      version: '2022-01-14'
+    current_iri: http://purl.obolibrary.org/obo/rbo/releases/2022-04-16/rbo.owl
+    current_version: '2022-04-16'
+  rex:
+    current_iri: http://purl.obolibrary.org/obo/rex/releases/2017-11-19/rex.owl
+    current_version: '2017-11-19'
+  rnao:
+    current_iri: NA
+    current_version: NA
+  ro:
+    archive:
+    - iri: http://purl.obolibrary.org/obo/ro/releases/2021-08-31/ro-base.owl
+      version: '2021-08-31'
+    - iri: http://purl.obolibrary.org/obo/ro/releases/2021-10-27/ro-base.owl
+      version: '2021-10-27'
+    - iri: http://purl.obolibrary.org/obo/ro/releases/2021-10-27/ro.owl
+      version: '2021-10-27'
+    - iri: http://purl.obolibrary.org/obo/ro/releases/2021-12-06/ro.owl
+      version: '2021-12-06'
+    - iri: http://purl.obolibrary.org/obo/ro/releases/2022-01-20/ro.owl
+      version: '2022-01-20'
+    current_iri: http://purl.obolibrary.org/obo/ro/releases/2022-02-07/ro.owl
+    current_version: '2022-02-07'
+  rs:
+    current_iri: http://purl.obolibrary.org/obo/rs/6.107/rs.owl
+    current_version: '6.107'
+  rxno:
+    archive:
+    - iri: http://purl.obolibrary.org/obo/rxno.obo/2021-01-21/rxno.obo.owl
+      version: '2021-01-21'
+    - iri: http://purl.obolibrary.org/obo/rxno.obo/2021-11-15/rxno.owl
+      version: '2021-11-15'
+    - iri: http://purl.obolibrary.org/obo/rxno.obo/2021-12-06/rxno.owl
+      version: '2021-12-06'
+    current_iri: http://purl.obolibrary.org/obo/rxno/releases/2021-12-16/rxno.owl
+    current_version: '2021-12-16'
+  sbo:
+    current_iri: ''
+    current_version: 28-08-2021-03-13
+  scdo:
+    current_iri: http://purl.obolibrary.org/obo/scdo/releases/2021-04-15/scdo.owl
+    current_version: '2021-04-15'
+  sepio:
+    current_iri: http://purl.obolibrary.org/obo/sepio.owl
+    current_version: no_version
+  sibo:
+    current_iri: http://purl.obolibrary.org/obo/sibo/releases/2015-06-15/sibo.owl
+    current_version: '2015-06-15'
+  so:
+    archive:
+    - iri: http://purl.obolibrary.org/obo/so/2021-07-12/so.owl
+      version: '2021-07-12'
+    current_iri: http://purl.obolibrary.org/obo/so/2021-11-22/so.owl
+    current_version: '2021-11-22'
+  spd:
+    current_iri: http://purl.obolibrary.org/obo/spd/1.0/spd.owl
+    current_version: '1.0'
+  stato:
+    current_iri: http://purl.obolibrary.org/obo/stato.owl
+    current_version: RC1.4
+  swo:
+    current_iri: http://www.ebi.ac.uk/swo/swo.owl/1.7
+    current_version: swo.owl
+  symp:
+    archive:
+    - iri: http://purl.obolibrary.org/obo/symp/releases/2020-08-04/symp.owl
+      version: '2020-08-04'
+    current_iri: http://purl.obolibrary.org/obo/symp/releases/2022-04-05/symp.owl
+    current_version: '2022-04-05'
+  tads:
+    current_iri: http://purl.obolibrary.org/obo/tads/2015-08-20/tads.owl
+    current_version: '2015-08-20'
+  taxrank:
+    current_iri: http://purl.obolibrary.org/obo/taxrank/releases/2016-04-15/taxrank.owl
+    current_version: '2016-04-15'
+  tgma:
+    current_iri: http://purl.obolibrary.org/obo/tgma/releases/2013-06-03/tgma.owl
+    current_version: '2013-06-03'
+  to:
+    archive:
+    - iri: http://purl.obolibrary.org/obo/to/releases/2021-04-06/to.owl
+      version: '2021-04-06'
+    - iri: http://purl.obolibrary.org/obo/to/releases/2022-03-09/to.owl
+      version: '2022-03-09'
+    current_iri: http://purl.obolibrary.org/obo/to/releases/2022-04-13/to.owl
+    current_version: '2022-04-13'
+  trans:
+    current_iri: http://purl.obolibrary.org/obo/trans/releases/2020-08-04/trans.owl
+    current_version: '2020-08-04'
+  tto:
+    current_iri: http://purl.obolibrary.org/obo/tto.owl
+    current_version: 19-07-2012-13-26
+  txpo:
+    current_iri: http://purl.obolibrary.org/obo/txpo/releases/2020-03-03/txpo.owl
+    current_version: '2020-03-03'
+  uberon:
+    archive:
+    - iri: http://purl.obolibrary.org/obo/uberon/releases/2021-10-01/uberon-base.owl
+      version: '2021-10-01'
+    - iri: http://purl.obolibrary.org/obo/uberon/releases/2021-10-01/uberon.owl
+      version: '2021-10-01'
+    - iri: http://purl.obolibrary.org/obo/uberon/releases/2021-11-28/uberon.owl
+      version: '2021-11-28'
+    - iri: http://purl.obolibrary.org/obo/uberon/releases/2022-02-21/uberon.owl
+      version: '2022-02-21'
+    current_iri: http://purl.obolibrary.org/obo/uberon/releases/2022-04-05/uberon.owl
+    current_version: '2022-04-05'
+  uo:
+    current_iri: http://purl.obolibrary.org/obo/uo.owl
+    current_version: no_version
+  upa:
+    archive:
+    - iri: http://purl.obolibrary.org/obo/upa/releases/2018-12-12/upa-base.owl
+      version: '2018-12-12'
+    current_iri: http://purl.obolibrary.org/obo/upa/releases/2018-12-12/upa.owl
+    current_version: '2018-12-12'
+  upheno:
+    current_iri: http://purl.obolibrary.org/obo/upheno.owl
+    current_version: no_version
+  vario:
+    current_iri: no_iri
+    current_version: no_version
+  vo:
+    current_iri: http://purl.obolibrary.org/obo/vo.owl
+    current_version: September_18__2021
+  vt:
+    current_iri: http://purl.obolibrary.org/obo/TEMP
+    current_version: 04-10-2021-10-15
+  vto:
+    current_iri: http://purl.obolibrary.org/obo/vto/2020-11-13/vto.owl
+    current_version: '2020-11-13'
+  wbbt:
+    archive:
+    - iri: http://purl.obolibrary.org/obo/wbbt/releases/2021-09-27/wbbt-base.owl
+      version: '2021-09-27'
+    - iri: http://purl.obolibrary.org/obo/wbbt/releases/2021-09-27/wbbt.owl
+      version: '2021-09-27'
+    - iri: http://purl.obolibrary.org/obo/wbbt/releases/2021-12-14/wbbt.owl
+      version: '2021-12-14'
+    current_iri: http://purl.obolibrary.org/obo/wbbt/releases/2022-03-22/wbbt.owl
+    current_version: '2022-03-22'
+  wbls:
+    archive:
+    - iri: http://purl.obolibrary.org/obo/wbls/releases/2021-07-06/wbls-base.owl
+      version: '2021-07-06'
+    - iri: http://purl.obolibrary.org/obo/wbls/releases/2021-07-06/wbls.owl
+      version: '2021-07-06'
+    - iri: http://purl.obolibrary.org/obo/wbls/releases/2021-12-08/wbls.owl
+      version: '2021-12-08'
+    current_iri: http://purl.obolibrary.org/obo/wbls/releases/2022-03-22/wbls.owl
+    current_version: '2022-03-22'
+  wbphenotype:
+    archive:
+    - iri: http://purl.obolibrary.org/obo/wbphenotype/releases/2021-09-27/wbphenotype-base.owl
+      version: '2021-09-27'
+    - iri: http://purl.obolibrary.org/obo/wbphenotype/releases/2021-10-25/wbphenotype-base.owl
+      version: '2021-10-25'
+    - iri: http://purl.obolibrary.org/obo/wbphenotype/releases/2021-10-25/wbphenotype.owl
+      version: '2021-10-25'
+    - iri: http://purl.obolibrary.org/obo/wbphenotype/releases/2021-12-12/wbphenotype.owl
+      version: '2021-12-12'
+    - iri: http://purl.obolibrary.org/obo/wbphenotype/releases/2021-12-20/wbphenotype.owl
+      version: '2021-12-20'
+    current_iri: http://purl.obolibrary.org/obo/wbphenotype/releases/2022-03-22/wbphenotype.owl
+    current_version: '2022-03-22'
+  xao:
+    current_iri: http://purl.obolibrary.org/obo/xao/releases/2021-03-04/xao.owl
+    current_version: '2021-03-04'
+  xco:
+    current_iri: http://purl.obolibrary.org/obo/xco/4.46/xco.owl
+    current_version: '4.46'
+  xlmod:
+    archive:
+    - iri: no_iri
+      version: no_version
+    current_iri: http://purl.obolibrary.org/obo/xlmod/release/2019-10-28/xlmod.owl
+    current_version: '2019-10-28'
+  xpo:
+    current_iri: http://purl.obolibrary.org/obo/xpo/releases/2021-03-05/xpo.owl
+    current_version: '2021-03-05'
+  zeco:
+    archive:
+    - iri: http://purl.obolibrary.org/obo/zeco/releases/2021-06-04/zeco-base.owl
+      version: '2021-06-04'
+    - iri: http://purl.obolibrary.org/obo/zeco/releases/2021-06-04/zeco.owl
+      version: '2021-06-04'
+    current_iri: http://purl.obolibrary.org/obo/zeco/releases/2022-02-14/zeco.owl
+    current_version: '2022-02-14'
+  zfa:
+    archive:
+    - iri: http://purl.obolibrary.org/obo/zfa/releases/2020-04-14/zfa.owl
+      version: '2020-04-14'
+    - iri: http://purl.obolibrary.org/obo/zfa/releases/2021-12-09/zfa.owl
+      version: '2021-12-09'
+    - iri: http://purl.obolibrary.org/obo/zfa/releases/2022-02-15/zfa.owl
+      version: '2022-02-15'
+    - iri: http://purl.obolibrary.org/obo/zfa/releases/2022-02-28/zfa.owl
+      version: '2022-02-28'
+    current_iri: http://purl.obolibrary.org/obo/zfa/releases/2022-03-15/zfa.owl
+    current_version: '2022-03-15'
+  zfs:
+    current_iri: http://purl.obolibrary.org/obo/zfs/releases/2020-03-10/zfs.owl
+    current_version: '2020-03-10'
+  zp:
+    current_iri: http://purl.obolibrary.org/obo/zp/releases/2021-12-12/zp.owl
+    current_version: '2021-12-12'

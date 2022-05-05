@@ -23,7 +23,7 @@ projects:
   description: "Graph representation of the Monarch Initiative knowledge resource."
   url: "https://kg-hub.berkeleybop.io/monarch/"
   repository: ""
-- id: kg-ontoml
+- id: kg-phenio
   description: "Graph representation of Monarch ontologies."
-  url: "https://kg-hub.berkeleybop.io/kg-ontoml/"
-  repository: "https://github.com/Knowledge-Graph-Hub/kg-ontoml"
+  url: "https://kg-hub.berkeleybop.io/kg-phenio/"
+  repository: "https://github.com/Knowledge-Graph-Hub/kg-phenio"

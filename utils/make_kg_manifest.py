@@ -567,6 +567,9 @@ def check_urls(bucket: str, data_objects: list):
     If not, the object is marked as obsolete.
     (All keys are checked, and if a link somehow becomes
     unbroken, it will be un-set as obsolete.)
+    If we have an obsolete URL, we update the download_url
+    value to the appropriate redirect, first trying 
+    projects.yaml for any known project ID changes. 
     :param bucket: name of the bucket
     :param data_objects: list of GraphDataPackage and DataResource objects
     :return: list of GraphDataPackage and DataResource objects with their values
@@ -584,6 +587,12 @@ def check_urls(bucket: str, data_objects: list):
         except botocore.errorfactory.ClientError:
             object.obsolete = "True"
             logging.warning(f"!!! {object_key} not found in bucket. Marking as obsolete.")
+            logging.warning(f"!!! Will search for potential redirect...")
+            object_project = (object_key.split("/"))[0]
+            for project in yaml_parsed['projects']:
+                if 'former_id' in project:
+                    if project['former_id'] == object_project:
+                        object.download_url = (object.id).replace(object_project, project['id'], 1)
         new_data_objects.append(object)
 
     return new_data_objects

@@ -27,3 +27,7 @@ projects:
   description: "Graph representation of Monarch ontologies."
   url: "https://kg-hub.berkeleybop.io/kg-phenio/"
   repository: "https://github.com/Knowledge-Graph-Hub/kg-phenio"
+- id: sldb
+  description: "A graph of synthetic lethal interactions."
+  url: "https://kg-hub.berkeleybop.io/sldb/"
+  repository: "https://github.com/monarch-initiative/SLDBGen"

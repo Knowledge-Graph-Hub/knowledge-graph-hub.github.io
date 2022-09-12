@@ -28,3 +28,7 @@ projects:
   url: "https://kg-hub.berkeleybop.io/kg-phenio/"
   repository: "https://github.com/Knowledge-Graph-Hub/kg-phenio"
   former_id: kg-ontoml
+- id: sldb
+  description: "A graph of synthetic lethal interactions."
+  url: "https://kg-hub.berkeleybop.io/sldb/"
+  repository: "https://github.com/monarch-initiative/SLDBGen"

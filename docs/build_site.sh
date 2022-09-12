@@ -15,6 +15,9 @@ wget -N $MANIFEST_URL
 sed -i -e 's/^/  /' $MANIFEST_FILE
 sed -i '1s/^/manifest:\n /' $MANIFEST_FILE
 
+# Set up redirects as needed
+python make_redirect.py
+
 # Retrieve KG-OBO tracking file - this has some of its own metadata
 wget -N $KGOBO_URL
 

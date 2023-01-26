@@ -5,9 +5,9 @@
 JEKYLL_CONFIG_HEADER_FILE="_config_header.yml"
 JEKYLL_CONFIG_FILE="_config.yml"
 PROJECT_FILE="../utils/projects.yaml"
-MANIFEST_URL="https://kg-hub.berkeleybop.io/MANIFEST.yaml"
+MANIFEST_URL="https://kghub.io/MANIFEST.yaml"
 MANIFEST_FILE="MANIFEST.yaml"
-KGOBO_URL="https://kg-hub.berkeleybop.io/kg-obo/tracking.yaml"
+KGOBO_URL="https://kghub.io/kg-obo/tracking.yaml"
 KGOBO_FILE="tracking.yaml"
 
 # Retrieve most recent MANIFEST and do some format prep

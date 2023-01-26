@@ -2,7 +2,7 @@
 
 This repository contains the code for assembling the Knowledge Graph Hub (KG-Hub) web site.
 
-Visit the site at <https://knowledge-graph-hub.github.io/>.
+Visit the site at <https://kghub.org/>.
 
 The `utils` directory contains utilities for tracking metadata on all graphs on KG-Hub, with the major KG projects listed in `projects.yaml`.
 

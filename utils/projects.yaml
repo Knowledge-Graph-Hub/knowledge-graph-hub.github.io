@@ -1,34 +1,34 @@
 projects:
 - id: kg-obo
   description: "KG-OBO: OBO ontologies into KGX TSV format."
-  url: "https://kg-hub.berkeleybop.io/kg-obo/"
+  url: "https://kghub.io/kg-obo/"
   repository: "https://github.com/Knowledge-Graph-Hub/kg-obo"
 - id: kg-idg
   description: "KG-IDG: a Knowledge Graph for Illuminating the Druggable Genome."
-  url: "https://kg-hub.berkeleybop.io/kg-idg/"
+  url: "https://kghub.io/kg-idg/"
   repository: "https://github.com/Knowledge-Graph-Hub/kg-idg"
 - id: kg-covid-19
   description: "KG-COVID-19: a knowledge graph for COVID-19 and SARS-COV-2."
-  url: "https://kg-hub.berkeleybop.io/kg-covid-19/"
+  url: "https://kghub.io/kg-covid-19/"
   repository: "https://github.com/Knowledge-Graph-Hub/kg-covid-19"
 - id: kg-microbe
   description: "KG-Microbe: a knowledge graph for microbial traits."
-  url: "https://kg-hub.berkeleybop.io/kg-microbe/"
+  url: "https://kghub.io/kg-microbe/"
   repository: "https://github.com/Knowledge-Graph-Hub/kg-microbe"
 - id: eco-kg
   description: "eco-KG: a knowledge graph of plant traits starting with Planteome and EOL TraitBank."
-  url: "https://kg-hub.berkeleybop.io/eco-kg/"
+  url: "https://kghub.io/eco-kg/"
   repository: "https://github.com/Knowledge-Graph-Hub/eco-kg"
 - id: monarch
   description: "Graph representation of the Monarch Initiative knowledge resource."
-  url: "https://kg-hub.berkeleybop.io/monarch/"
-  repository: ""
+  url: "https://kghub.io/kg-monarch/"
+  repository: "https://github.com/monarch-initiative"
 - id: kg-phenio
   description: "Graph representation of Monarch ontologies."
-  url: "https://kg-hub.berkeleybop.io/kg-phenio/"
+  url: "https://kghub.io/kg-phenio/"
   repository: "https://github.com/Knowledge-Graph-Hub/kg-phenio"
   former_id: kg-ontoml
 - id: sldb
   description: "A graph of synthetic lethal interactions."
-  url: "https://kg-hub.berkeleybop.io/sldb/"
+  url: "https://kghub.io/sldb/"
   repository: "https://github.com/monarch-initiative/SLDBGen"

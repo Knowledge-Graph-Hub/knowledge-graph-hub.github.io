@@ -44,6 +44,8 @@ from get_kg_contents import retrieve_stats
 global processed_this_run
 processed_this_run = {}
 
+KG_HUB_URL = "https://kghub.io/"
+
 # Load projects.yaml - this is the list of 
 # all current, fully defined projects on KG-Hub.
 # Other projects will still be indexed,
@@ -426,7 +428,7 @@ def get_graph_file_keys(keys: list, maximum: int, previous_manifest = []):
         previous_manifest_keys.append(object.id)
 
     for keyname in keys:
-        url = "https://kg-hub.berkeleybop.io/" + keyname
+        url = KG_HUB_URL + keyname
         if url in previous_manifest_keys:
             continue
         try:
@@ -476,7 +478,7 @@ def create_dataset_objects(objects: list, project_metadata: dict, project_conten
 
     for object_type in objects:
         for object in objects[object_type]:
-            url = "https://kg-hub.berkeleybop.io/" + object
+            url = KG_HUB_URL + object
             title = (object.split("/"))[-1]
             project_name = (object.split("/"))[0]
             build_name = (object.split("/"))[1]
@@ -534,7 +536,7 @@ def get_stats(bucket: str, data_objects: list):
     new_data_objects = []
 
     for object in data_objects:
-        object_key = ((object.id).split("https://kg-hub.berkeleybop.io"))[1]
+        object_key = ((object.id).split(KG_HUB_URL))[1]
         object_project = (object_key.split("/"))[1]
         object_type = (object_key.split("/"))[3]
         if object.compression == "tar.gz" and object_project != "kg-obo" \
@@ -582,7 +584,7 @@ def check_urls(bucket: str, data_objects: list):
     new_data_objects = []
 
     for object in data_objects:
-        object_key = ((object.id).split("https://kg-hub.berkeleybop.io/"))[1]
+        object_key = ((object.id).split(KG_HUB_URL))[1]
         try:
             client.head_object(Bucket=bucket, Key=object_key)
             object.obsolete = "False"

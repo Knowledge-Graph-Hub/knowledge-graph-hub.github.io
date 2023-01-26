@@ -15,11 +15,11 @@
                     <a href= https://obofoundry.org/ontology/{{ product[0] }} > Link </a>
                 </td>
                 <td>
-                    <a href= https://kg-hub.berkeleybop.io/kg-obo/{{ product[0] }} > Link </a>
+                    <a href= https://kghub.io/kg-obo/{{ product[0] }} > Link </a>
                 </td>
                 <td>
                     {% for entry in product %}
-                    <a href= https://kg-hub.berkeleybop.io/kg-obo/{{ product[0] }}/{{ entry.current_version }}/{{ product[0] }}_kgx_tsv.tar.gz > {{ entry.current_version }} </a>
+                    <a href= https://kghub.io/kg-obo/{{ product[0] }}/{{ entry.current_version }}/{{ product[0] }}_kgx_tsv.tar.gz > {{ entry.current_version }} </a>
                     {% endfor %}
                 </td>
               </tr>

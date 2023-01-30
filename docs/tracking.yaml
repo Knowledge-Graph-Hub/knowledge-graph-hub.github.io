@@ -9,8 +9,10 @@ ontologies:
     archive:
     - iri: http://purl.obolibrary.org/obo/agro/releases/2021-07-01/agro.owl
       version: '2021-07-01'
-    current_iri: http://purl.obolibrary.org/obo/agro/releases/2021-11-05/agro.owl
-    current_version: '2021-11-05'
+    - iri: http://purl.obolibrary.org/obo/agro/releases/2021-11-05/agro.owl
+      version: '2021-11-05'
+    current_iri: http://purl.obolibrary.org/obo/agro/releases/2022-11-02/agro.owl
+    current_version: '2022-11-02'
   aism:
     archive:
     - iri: http://purl.obolibrary.org/obo/aism/releases/2021-09-08/aism-base.owl
@@ -27,8 +29,12 @@ ontologies:
       version: '2022-06-18'
     - iri: http://purl.obolibrary.org/obo/aism/releases/2022-06-27/aism.owl
       version: '2022-06-27'
-    current_iri: http://purl.obolibrary.org/obo/aism/releases/2022-08-25/aism.owl
-    current_version: '2022-08-25'
+    - iri: http://purl.obolibrary.org/obo/aism/releases/2022-08-25/aism.owl
+      version: '2022-08-25'
+    - iri: http://purl.obolibrary.org/obo/aism/releases/2022-10-08/aism.owl
+      version: '2022-10-08'
+    current_iri: http://purl.obolibrary.org/obo/aism/releases/2023-01-22/aism.owl
+    current_version: '2023-01-22'
   amphx:
     current_iri: http://purl.obolibrary.org/obo/amphx/releases/2020-12-18/amphx.owl
     current_version: '2020-12-18'
@@ -48,14 +54,25 @@ ontologies:
       version: '2022-04-19'
     - iri: http://purl.obolibrary.org/obo/apo/releases/2022-07-06/apo.owl
       version: '2022-07-06'
-    current_iri: http://purl.obolibrary.org/obo/apo/releases/2022-08-29/apo.owl
-    current_version: '2022-08-29'
+    - iri: http://purl.obolibrary.org/obo/apo/releases/2022-08-29/apo.owl
+      version: '2022-08-29'
+    - iri: http://purl.obolibrary.org/obo/apo/releases/2022-10-10/apo.owl
+      version: '2022-10-10'
+    - iri: http://purl.obolibrary.org/obo/apo/releases/2022-11-14/apo.owl
+      version: '2022-11-14'
+    current_iri: http://purl.obolibrary.org/obo/apo/releases/2022-12-13/apo.owl
+    current_version: '2022-12-13'
   apollo_sv:
-    current_iri: http://purl.obolibrary.org/obo/apollo_sv/v4.1.1./apollo_sv.owl
-    current_version: v4.1.1.
+    archive:
+    - iri: http://purl.obolibrary.org/obo/apollo_sv/v4.1.1./apollo_sv.owl
+      version: v4.1.1.
+    - iri: http://purl.obolibrary.org/obo/apollo_sv/releases/2022-11-25/apollo_sv.owl
+      version: '2022-11-25'
+    current_iri: http://purl.obolibrary.org/obo/apollo_sv/releases/v2023-01-10/apollo_sv.owl
+    current_version: v2023-01-10
   aro:
     current_iri: http://purl.obolibrary.org/obo/antibiotic_resistance.owl
-    current_version: 05-10-2021-09-37
+    current_version: 12-09-2022-11-38
   bco:
     archive:
     - iri: http://purl.obolibrary.org/obo/bco/releases/2020-03-27/bco-base.owl
@@ -75,8 +92,12 @@ ontologies:
       version: '2021-10-13'
     - iri: http://purl.obolibrary.org/obo/bspo/releases/2021-10-13/bspo.owl
       version: '2021-10-13'
-    current_iri: http://purl.obolibrary.org/obo/bspo/releases/2022-06-28/bspo.owl
-    current_version: '2022-06-28'
+    - iri: http://purl.obolibrary.org/obo/bspo/releases/2022-06-28/bspo.owl
+      version: '2022-06-28'
+    - iri: http://purl.obolibrary.org/obo/bspo/releases/2022-10-07/bspo.owl
+      version: '2022-10-07'
+    current_iri: http://purl.obolibrary.org/obo/bspo/releases/2022-11-16/bspo.owl
+    current_version: '2022-11-16'
   bto:
     archive:
     - iri: http://purl.obolibrary.org/obo/bto/releases/2021-04-27/bto-base.owl
@@ -89,8 +110,11 @@ ontologies:
     current_iri: http://purl.obolibrary.org/obo/caro/releases/2022-02-18/caro.owl
     current_version: '2022-02-18'
   cdao:
-    current_iri: http://purl.obolibrary.org/obo/cdao/2019-06-26/cdao.owl
-    current_version: '2019-06-26'
+    archive:
+    - iri: http://purl.obolibrary.org/obo/cdao/2019-06-26/cdao.owl
+      version: '2019-06-26'
+    current_iri: http://purl.obolibrary.org/obo/cdao/2022-11-30/cdao.owl
+    current_version: '2022-11-30'
   cdno:
     archive:
     - iri: http://purl.obolibrary.org/obo/cdno/releases/2021-10-20/cdno.owl
@@ -99,8 +123,16 @@ ontologies:
       version: '2022-01-10'
     - iri: http://purl.obolibrary.org/obo/cdno/releases/2022-04-06/cdno.owl
       version: '2022-04-06'
-    current_iri: http://purl.obolibrary.org/obo/cdno/releases/2022-06-23/cdno.owl
-    current_version: '2022-06-23'
+    - iri: http://purl.obolibrary.org/obo/cdno/releases/2022-06-23/cdno.owl
+      version: '2022-06-23'
+    - iri: http://purl.obolibrary.org/obo/cdno/releases/2022-09-20/cdno.owl
+      version: '2022-09-20'
+    - iri: http://purl.obolibrary.org/obo/cdno/releases/2022-09-22/cdno.owl
+      version: '2022-09-22'
+    - iri: http://purl.obolibrary.org/obo/cdno/releases/2022-11-17/cdno.owl
+      version: '2022-11-17'
+    current_iri: http://purl.obolibrary.org/obo/cdno/releases/2022-12-23/cdno.owl
+    current_version: '2022-12-23'
   ceph:
     current_iri: http://purl.obolibrary.org/obo/ceph/releases/2016-01-12/ceph.owl
     current_version: '2016-01-12'
@@ -122,8 +154,16 @@ ontologies:
       version: '209'
     - iri: http://purl.obolibrary.org/obo/chebi/210/chebi.owl
       version: '210'
-    current_iri: http://purl.obolibrary.org/obo/chebi/211/chebi.owl
-    current_version: '211'
+    - iri: http://purl.obolibrary.org/obo/chebi/211/chebi.owl
+      version: '211'
+    - iri: http://purl.obolibrary.org/obo/chebi/213/chebi.owl
+      version: '213'
+    - iri: http://purl.obolibrary.org/obo/chebi/214/chebi.owl
+      version: '214'
+    - iri: http://purl.obolibrary.org/obo/chebi/219/chebi.owl
+      version: '219'
+    current_iri: http://purl.obolibrary.org/obo/chebi/217/chebi.owl
+    current_version: '217'
   cheminf:
     current_iri: http://semanticchemistry.github.io/semanticchemistry/ontology/cheminf.owl
     current_version: '2.0'
@@ -140,7 +180,7 @@ ontologies:
     current_version: '2022-04-19'
   cido:
     current_iri: http://purl.obolibrary.org/obo/cido.owl
-    current_version: 09-03-2021
+    current_version: 08-01-2022
   cio:
     current_iri: http://purl.obolibrary.org/obo/cio/releases/2015-03-10/cio.owl
     current_version: '2015-03-10'
@@ -164,8 +204,14 @@ ontologies:
       version: '2022-06-15'
     - iri: http://purl.obolibrary.org/obo/cl/releases/2022-06-18/cl.owl
       version: '2022-06-18'
-    current_iri: http://purl.obolibrary.org/obo/cl/releases/2022-08-16/cl.owl
-    current_version: '2022-08-16'
+    - iri: http://purl.obolibrary.org/obo/cl/releases/2022-09-15/cl.owl
+      version: '2022-09-15'
+    - iri: http://purl.obolibrary.org/obo/cl/releases/2022-10-28/cl.owl
+      version: '2022-10-28'
+    - iri: http://purl.obolibrary.org/obo/cl/releases/2022-11-25/cl.owl
+      version: '2022-11-25'
+    current_iri: http://purl.obolibrary.org/obo/cl/releases/2023-01-09/cl.owl
+    current_version: '2023-01-09'
   clao:
     archive:
     - iri: http://purl.obolibrary.org/obo/clao/releases/2021-09-27/clao-base.owl
@@ -188,8 +234,10 @@ ontologies:
     archive:
     - iri: http://purl.obolibrary.org/obo/cob/releases/2021-09-13/cob-native.owl
       version: '2021-09-13'
-    current_iri: http://purl.obolibrary.org/obo/cob/releases/2022-05-02/cob.owl
-    current_version: '2022-05-02'
+    - iri: http://purl.obolibrary.org/obo/cob/releases/2022-05-02/cob.owl
+      version: '2022-05-02'
+    current_iri: http://purl.obolibrary.org/obo/cob/releases/2022-11-02/cob.owl
+    current_version: '2022-11-02'
   colao:
     archive:
     - iri: http://purl.obolibrary.org/obo/colao/releases/2021-12-14/colao.owl
@@ -253,8 +301,14 @@ ontologies:
       version: '2022-06-07'
     - iri: http://purl.obolibrary.org/obo/doid/releases/2022-07-27/doid.owl
       version: '2022-07-27'
-    current_iri: http://purl.obolibrary.org/obo/doid/releases/2022-08-29/doid.owl
-    current_version: '2022-08-29'
+    - iri: http://purl.obolibrary.org/obo/doid/releases/2022-08-29/doid.owl
+      version: '2022-08-29'
+    - iri: http://purl.obolibrary.org/obo/doid/releases/2022-09-29/doid.owl
+      version: '2022-09-29'
+    - iri: http://purl.obolibrary.org/obo/doid/releases/2022-11-01/doid.owl
+      version: '2022-11-01'
+    current_iri: http://purl.obolibrary.org/obo/doid/releases/2022-12-15/doid.owl
+    current_version: '2022-12-15'
   dpo:
     archive:
     - iri: http://purl.obolibrary.org/obo/dpo/releases/2021-09-02/dpo-base.owl
@@ -273,8 +327,12 @@ ontologies:
       version: '2022-04-13'
     - iri: http://purl.obolibrary.org/obo/dpo/releases/2022-06-09/dpo.owl
       version: '2022-06-09'
-    current_iri: http://purl.obolibrary.org/obo/dpo/releases/2022-08-11/dpo.owl
-    current_version: '2022-08-11'
+    - iri: http://purl.obolibrary.org/obo/dpo/releases/2022-08-11/dpo.owl
+      version: '2022-08-11'
+    - iri: http://purl.obolibrary.org/obo/dpo/releases/2022-10-20/dpo.owl
+      version: '2022-10-20'
+    current_iri: http://purl.obolibrary.org/obo/dpo/releases/2022-12-02/dpo.owl
+    current_version: '2022-12-02'
   dron:
     archive:
     - iri: http://purl.obolibrary.org/obo/dron/releases/2021-08-12/dron-base.owl
@@ -285,8 +343,12 @@ ontologies:
       version: '2021-10-20'
     - iri: http://purl.obolibrary.org/obo/dron/releases/2022-01-28/dron.owl
       version: '2022-01-28'
-    current_iri: http://purl.obolibrary.org/obo/dron/releases/2022-04-22/dron.owl
-    current_version: '2022-04-22'
+    - iri: http://purl.obolibrary.org/obo/dron/releases/2022-04-22/dron.owl
+      version: '2022-04-22'
+    - iri: http://purl.obolibrary.org/obo/dron/releases/2022-10-02/dron.owl
+      version: '2022-10-02'
+    current_iri: http://purl.obolibrary.org/obo/dron/releases/2022-10-22/dron.owl
+    current_version: '2022-10-22'
   duo:
     current_iri: http://purl.obolibrary.org/obo/duo/releases/2021-02-23/duo.owl
     current_version: '2021-02-23'
@@ -310,8 +372,12 @@ ontologies:
       version: '2022-04-11'
     - iri: http://purl.obolibrary.org/obo/eco/releases/2022-05-27/eco.owl
       version: '2022-05-27'
-    current_iri: http://purl.obolibrary.org/obo/eco/releases/2022-08-05/eco.owl
-    current_version: '2022-08-05'
+    - iri: http://purl.obolibrary.org/obo/eco/releases/2022-08-05/eco.owl
+      version: '2022-08-05'
+    - iri: http://purl.obolibrary.org/obo/eco/releases/2022-10-10/eco.owl
+      version: '2022-10-10'
+    current_iri: http://purl.obolibrary.org/obo/eco/releases/2022-12-04/eco.owl
+    current_version: '2022-12-04'
   ecocore:
     archive:
     - iri: http://purl.obolibrary.org/obo/ecocore/releases/2021-02-17/ecocore-base.owl
@@ -332,8 +398,10 @@ ontologies:
       version: '2022-05-04'
     - iri: http://purl.obolibrary.org/obo/ecto/releases/2022-05-12/ecto.owl
       version: '2022-05-12'
-    current_iri: http://purl.obolibrary.org/obo/ecto/releases/2022-08-12/ecto.owl
-    current_version: '2022-08-12'
+    - iri: http://purl.obolibrary.org/obo/ecto/releases/2022-08-12/ecto.owl
+      version: '2022-08-12'
+    current_iri: http://purl.obolibrary.org/obo/ecto/releases/2022-12-12/ecto.owl
+    current_version: '2022-12-12'
   ehdaa2:
     current_iri: http://purl.obolibrary.org/obo/ehdaa2/releases/2013-07-04/ehdaa2.owl
     current_version: '2013-07-04'
@@ -347,22 +415,18 @@ ontologies:
       version: '2022-07-28'
     - iri: http://purl.obolibrary.org/obo/emapa/releases/2022-08-26/emapa.owl
       version: '2022-08-26'
-    current_iri: http://purl.obolibrary.org/obo/emapa/releases/2022-08-31/emapa.owl
-    current_version: '2022-08-31'
+    - iri: http://purl.obolibrary.org/obo/emapa/releases/2022-08-31/emapa.owl
+      version: '2022-08-31'
+    current_iri: http://purl.obolibrary.org/obo/emapa/releases/2022-11-04/emapa.owl
+    current_version: '2022-11-04'
   envo:
-    archive:
-    - iri: http://purl.obolibrary.org/obo/envo/releases/2021-05-14/envo-base.owl
-      version: '2021-05-14'
     current_iri: http://purl.obolibrary.org/obo/envo/releases/2021-05-14/envo.owl
     current_version: '2021-05-14'
   epio:
     current_iri: https://bio.scai.fraunhofer.de/ontology/epilepsy/2021-05-28/EPIO.owl
     current_version: '2021-05-28'
   ero:
-    archive:
-    - iri: http://purl.obolibrary.org/obo/ero.owl
-      version: no_version
-    current_iri: no_iri
+    current_iri: http://purl.obolibrary.org/obo/ero.owl
     current_version: no_version
   eupath:
     archive:
@@ -370,8 +434,14 @@ ontologies:
       version: '2021-09-09'
     - iri: http://purl.obolibrary.org/obo/eupath/2022-02-15/eupath.owl
       version: '2022-02-15'
-    current_iri: http://purl.obolibrary.org/obo/eupath/2022-06-08/eupath.owl
-    current_version: '2022-06-08'
+    - iri: http://purl.obolibrary.org/obo/eupath/2022-06-08/eupath.owl
+      version: '2022-06-08'
+    - iri: http://purl.obolibrary.org/obo/eupath/2022-08-12/eupath.owl
+      version: '2022-08-12'
+    - iri: http://purl.obolibrary.org/obo/eupath/2022-11-04/eupath.owl
+      version: '2022-11-04'
+    current_iri: http://purl.obolibrary.org/obo/eupath/2023-01-19/eupath.owl
+    current_version: '2023-01-19'
   exo:
     archive:
     - iri: http://purl.obolibrary.org/obo/exo/2.1/exo.owl
@@ -405,8 +475,12 @@ ontologies:
       version: '2022-04-13'
     - iri: http://purl.obolibrary.org/obo/fbbt/releases/2022-06-09/fbbt.owl
       version: '2022-06-09'
-    current_iri: http://purl.obolibrary.org/obo/fbbt/releases/2022-08-11/fbbt.owl
-    current_version: '2022-08-11'
+    - iri: http://purl.obolibrary.org/obo/fbbt/releases/2022-08-11/fbbt.owl
+      version: '2022-08-11'
+    - iri: http://purl.obolibrary.org/obo/fbbt/releases/2022-10-19/fbbt.owl
+      version: '2022-10-19'
+    current_iri: http://purl.obolibrary.org/obo/fbbt/releases/2022-12-01/fbbt.owl
+    current_version: '2022-12-01'
   fbcv:
     archive:
     - iri: http://purl.obolibrary.org/obo/fbcv/releases/2021-09-02/fbcv-base.owl
@@ -425,8 +499,12 @@ ontologies:
       version: '2022-04-14'
     - iri: http://purl.obolibrary.org/obo/fbcv/releases/2022-06-09/fbcv.owl
       version: '2022-06-09'
-    current_iri: http://purl.obolibrary.org/obo/fbcv/releases/2022-08-11/fbcv.owl
-    current_version: '2022-08-11'
+    - iri: http://purl.obolibrary.org/obo/fbcv/releases/2022-08-11/fbcv.owl
+      version: '2022-08-11'
+    - iri: http://purl.obolibrary.org/obo/fbcv/releases/2022-10-20/fbcv.owl
+      version: '2022-10-20'
+    current_iri: http://purl.obolibrary.org/obo/fbcv/releases/2022-12-02/fbcv.owl
+    current_version: '2022-12-02'
   fbdv:
     archive:
     - iri: http://purl.obolibrary.org/obo/fbdv/releases/2021-09-01/fbdv-base.owl
@@ -447,11 +525,12 @@ ontologies:
       version: '2022-06-08'
     - iri: http://purl.obolibrary.org/obo/fbdv/releases/2022-08-10/fbdv.owl
       version: '2022-08-10'
-    current_iri: http://purl.obolibrary.org/obo/fbdv/releases/2022-08-17/fbdv.owl
-    current_version: '2022-08-17'
-  fideo:
-    current_iri: NA
-    current_version: NA
+    - iri: http://purl.obolibrary.org/obo/fbdv/releases/2022-08-17/fbdv.owl
+      version: '2022-08-17'
+    - iri: http://purl.obolibrary.org/obo/fbdv/releases/2022-10-19/fbdv.owl
+      version: '2022-10-19'
+    current_iri: http://purl.obolibrary.org/obo/fbdv/releases/2022-11-30/fbdv.owl
+    current_version: '2022-11-30'
   fix:
     current_iri: http://purl.obolibrary.org/obo/fix/releases/2020-04-13/fix.owl
     current_version: '2020-04-13'
@@ -472,8 +551,14 @@ ontologies:
       version: '2021-11-25'
     - iri: '&obo;foodon/releases/2022-02-01/foodon.owl'
       version: '2022-02-01'
-    current_iri: '&obo;foodon/releases/2022-08-12/foodon.owl'
-    current_version: '2022-08-12'
+    - iri: '&obo;foodon/releases/2022-08-12/foodon.owl'
+      version: '2022-08-12'
+    - iri: '&obo;foodon/releases/2022-09-27/foodon.owl'
+      version: '2022-09-27'
+    - iri: '&obo;foodon/releases/2022-10-22/foodon.owl'
+      version: '2022-10-22'
+    current_iri: '&obo;foodon/releases/2023-01-10/foodon.owl'
+    current_version: '2023-01-10'
   fovt:
     archive:
     - iri: http://purl.obolibrary.org/obo/fovt/releases/2021-06-02/fovt-base.owl
@@ -514,8 +599,12 @@ ontologies:
       version: '2022-07-14'
     - iri: http://purl.obolibrary.org/obo/fypo/releases/2022-08-23/fypo.owl
       version: '2022-08-23'
-    current_iri: http://purl.obolibrary.org/obo/fypo/releases/2022-08-31/fypo.owl
-    current_version: '2022-08-31'
+    - iri: http://purl.obolibrary.org/obo/fypo/releases/2022-08-31/fypo.owl
+      version: '2022-08-31'
+    - iri: http://purl.obolibrary.org/obo/fypo/releases/2022-10-13/fypo.owl
+      version: '2022-10-13'
+    current_iri: http://purl.obolibrary.org/obo/fypo/releases/2022-11-30/fypo.owl
+    current_version: '2022-11-30'
   gaz:
     current_iri: http://purl.obolibrary.org/obo/gaz.owl
     current_version: no_version
@@ -528,8 +617,12 @@ ontologies:
       version: '2021-05-24'
     - iri: '&obo;genepio/releases/2022-01-26/genepio.owl'
       version: '2022-01-26'
-    current_iri: '&obo;genepio/releases/2022-02-06/genepio.owl'
-    current_version: '2022-02-06'
+    - iri: '&obo;genepio/releases/2022-02-06/genepio.owl'
+      version: '2022-02-06'
+    - iri: '&obo;genepio/releases/2022-11-23/genepio.owl'
+      version: '2022-11-23'
+    current_iri: '&obo;genepio/releases/2023-01-26/genepio.owl'
+    current_version: '2023-01-26'
   geno:
     archive:
     - iri: http://purl.obolibrary.org/obo/geno/releases/2020-03-08/geno-base.owl
@@ -547,8 +640,10 @@ ontologies:
     archive:
     - iri: http://purl.obolibrary.org/obo/gno/2021-08-13/gno.owl
       version: '2021-08-13'
-    current_iri: http://purl.obolibrary.org/obo/gno/2022-02-23/gno.owl
-    current_version: '2022-02-23'
+    - iri: http://purl.obolibrary.org/obo/gno/2022-02-23/gno.owl
+      version: '2022-02-23'
+    current_iri: http://purl.obolibrary.org/obo/gno/2022-12-20/gno.owl
+    current_version: '2022-12-20'
   go:
     archive:
     - iri: http://purl.obolibrary.org/obo/go/releases/2021-09-01/go-base.owl
@@ -571,8 +666,16 @@ ontologies:
       version: '2022-05-16'
     - iri: http://purl.obolibrary.org/obo/go/releases/2022-06-15/go.owl
       version: '2022-06-15'
-    current_iri: http://purl.obolibrary.org/obo/go/releases/2022-07-01/go.owl
-    current_version: '2022-07-01'
+    - iri: http://purl.obolibrary.org/obo/go/releases/2022-07-01/go.owl
+      version: '2022-07-01'
+    - iri: http://purl.obolibrary.org/obo/go/releases/2022-09-19/go.owl
+      version: '2022-09-19'
+    - iri: http://purl.obolibrary.org/obo/go/releases/2022-10-07/go.owl
+      version: '2022-10-07'
+    - iri: http://purl.obolibrary.org/obo/go/releases/2022-11-03/go.owl
+      version: '2022-11-03'
+    current_iri: http://purl.obolibrary.org/obo/go/releases/2023-01-01/go.owl
+    current_version: '2023-01-01'
   gsso:
     current_iri: http://purl.obolibrary.org/obo/gsso/releases/2.0.5/gsso.owl
     current_version: 2.0.5
@@ -600,8 +703,12 @@ ontologies:
       version: '2022-02-14'
     - iri: http://purl.obolibrary.org/obo/hp/releases/2022-04-14/hp.owl
       version: '2022-04-14'
-    current_iri: http://purl.obolibrary.org/obo/hp/releases/2022-06-11/hp.owl
-    current_version: '2022-06-11'
+    - iri: http://purl.obolibrary.org/obo/hp/releases/2022-06-11/hp.owl
+      version: '2022-06-11'
+    - iri: http://purl.obolibrary.org/obo/hp/releases/2022-10-05/hp.owl
+      version: '2022-10-05'
+    current_iri: http://purl.obolibrary.org/obo/hp/releases/2023-01-27/hp.owl
+    current_version: '2023-01-27'
   hsapdv:
     current_iri: http://purl.obolibrary.org/obo/hsapdv/releases/2020-03-10/hsapdv.owl
     current_version: '2020-03-10'
@@ -615,8 +722,11 @@ ontologies:
     current_iri: https://raw.githubusercontent.com/aellenhicks/htn_owl/master/htn.owl
     current_version: no_version
   iao:
-    current_iri: http://purl.obolibrary.org/obo/iao/2020-12-09/iao.owl
-    current_version: '2020-12-09'
+    archive:
+    - iri: http://purl.obolibrary.org/obo/iao/2020-12-09/iao.owl
+      version: '2020-12-09'
+    current_iri: http://purl.obolibrary.org/obo/iao/2022-11-07/iao.owl
+    current_version: '2022-11-07'
   iceo:
     current_iri: http://purl.obolibrary.org/obo/2019/1/ICEO
     current_version: '2.1'
@@ -665,8 +775,14 @@ ontologies:
       version: '2022-06-01'
     - iri: http://purl.obolibrary.org/obo/maxo/releases/2022-06-23/maxo.owl
       version: '2022-06-23'
-    current_iri: http://purl.obolibrary.org/obo/maxo/releases/2022-08-22/maxo.owl
-    current_version: '2022-08-22'
+    - iri: http://purl.obolibrary.org/obo/maxo/releases/2022-08-22/maxo.owl
+      version: '2022-08-22'
+    - iri: http://purl.obolibrary.org/obo/maxo/releases/2022-09-07/maxo.owl
+      version: '2022-09-07'
+    - iri: http://purl.obolibrary.org/obo/maxo/releases/2022-11-21/maxo.owl
+      version: '2022-11-21'
+    current_iri: http://purl.obolibrary.org/obo/maxo/releases/2022-12-19/maxo.owl
+    current_version: '2022-12-19'
   mco:
     current_iri: http://purl.obolibrary.org/obo/mco/releases/2019-05-15/mco.owl
     current_version: '2019-05-15'
@@ -693,14 +809,17 @@ ontologies:
     current_iri: http://purl.obolibrary.org/obo/MFOMD/2020-04-26/MFOMD.owl
     current_version: '2020-04-26'
   mi:
-    current_iri: http://purl.obolibrary.org/obo/mi/releases/2020-04-13/mi.owl
-    current_version: '2020-04-13'
+    archive:
+    - iri: http://purl.obolibrary.org/obo/mi/releases/2020-04-13/mi.owl
+      version: '2020-04-13'
+    current_iri: http://purl.obolibrary.org/obo/mi.owl
+    current_version: 15-04-2021-22-57
   miapa:
     current_iri: '&obo;miapa.owl'
     current_version: no_version
   micro:
-    current_iri: NA
-    current_version: NA
+    current_iri: '&obo;MicrO.owl'
+    current_version: 20ca3a0f90793de0c0f9b2ecbd186456e1393cdd0547b46f8eb2d466c6fa080a
   miro:
     current_iri: http://purl.obolibrary.org/obo/miro/releases/2014-05-14/miro.owl
     current_version: '2014-05-14'
@@ -744,8 +863,18 @@ ontologies:
       version: '2022-06-01'
     - iri: http://purl.obolibrary.org/obo/mondo/releases/2022-07-01/mondo.owl
       version: '2022-07-01'
-    current_iri: http://purl.obolibrary.org/obo/mondo/releases/2022-08-01/mondo.owl
-    current_version: '2022-08-01'
+    - iri: http://purl.obolibrary.org/obo/mondo/releases/2022-08-01/mondo.owl
+      version: '2022-08-01'
+    - iri: http://purl.obolibrary.org/obo/mondo/releases/2022-09-06/mondo.owl
+      version: '2022-09-06'
+    - iri: http://purl.obolibrary.org/obo/mondo/releases/2022-10-03/mondo.owl
+      version: '2022-10-03'
+    - iri: http://purl.obolibrary.org/obo/mondo/releases/2022-10-11/mondo.owl
+      version: '2022-10-11'
+    - iri: http://purl.obolibrary.org/obo/mondo/releases/2022-11-01/mondo.owl
+      version: '2022-11-01'
+    current_iri: http://purl.obolibrary.org/obo/mondo/releases/2023-01-04/mondo.owl
+    current_version: '2023-01-04'
   mop:
     archive:
     - iri: http://purl.obolibrary.org/obo/mop/releases/2014-09-03/mop.owl
@@ -794,7 +923,21 @@ ontologies:
       version: releases
     - iri: http://purl.obolibrary.org/obo/mp/releases/2022-07-26
       version: releases
-    current_iri: http://purl.obolibrary.org/obo/mp/releases/2022-08-04
+    - iri: http://purl.obolibrary.org/obo/mp/releases/2022-08-04
+      version: releases
+    - iri: http://purl.obolibrary.org/obo/mp/releases/2022-09-01
+      version: releases
+    - iri: http://purl.obolibrary.org/obo/mp/releases/2022-09-29
+      version: releases
+    - iri: http://purl.obolibrary.org/obo/mp/releases/2022-10-11
+      version: releases
+    - iri: http://purl.obolibrary.org/obo/mp/releases/2022-10-19
+      version: releases
+    - iri: http://purl.obolibrary.org/obo/mp/releases/2022-11-02
+      version: releases
+    - iri: http://purl.obolibrary.org/obo/mp/releases/2022-11-16
+      version: releases
+    current_iri: http://purl.obolibrary.org/obo/mp/releases/2022-12-28
     current_version: releases
   mpath:
     current_iri: http://purl.obolibrary.org/obo/mpath/2020-05-19/mpath.owl
@@ -826,8 +969,10 @@ ontologies:
       version: '2022-06-17'
     - iri: http://purl.obolibrary.org/obo/mro/2022-07-18/mro.owl
       version: '2022-07-18'
-    current_iri: http://purl.obolibrary.org/obo/mro/2022-08-18/mro.owl
-    current_version: '2022-08-18'
+    - iri: http://purl.obolibrary.org/obo/mro/2022-08-18/mro.owl
+      version: '2022-08-18'
+    current_iri: http://purl.obolibrary.org/obo/mro/2022-10-17/mro.owl
+    current_version: '2022-10-17'
   ms:
     archive:
     - iri: http://purl.obolibrary.org/obo/ms/4.1.35/ms.owl
@@ -872,8 +1017,18 @@ ontologies:
       version: 4.1.98
     - iri: http://purl.obolibrary.org/obo/ms/4.1.99/ms.owl
       version: 4.1.99
-    current_iri: http://purl.obolibrary.org/obo/ms/4.1.100/ms.owl
-    current_version: 4.1.100
+    - iri: http://purl.obolibrary.org/obo/ms/4.1.100/ms.owl
+      version: 4.1.100
+    - iri: http://purl.obolibrary.org/obo/ms/4.1.103/ms.owl
+      version: 4.1.103
+    - iri: http://purl.obolibrary.org/obo/ms/4.1.105/ms.owl
+      version: 4.1.105
+    - iri: http://purl.obolibrary.org/obo/ms/4.1.107/ms.owl
+      version: 4.1.107
+    - iri: http://purl.obolibrary.org/obo/ms/4.1.108/ms.owl
+      version: 4.1.108
+    current_iri: http://purl.obolibrary.org/obo/ms/4.1.110/ms.owl
+    current_version: 4.1.110
   nbo:
     archive:
     - iri: http://purl.obolibrary.org/obo/nbo/releases/2021-02-15/nbo-base.owl
@@ -890,8 +1045,12 @@ ontologies:
       version: '2022-02-21'
     - iri: http://purl.obolibrary.org/obo/ncbitaxon/2022-06-28/ncbitaxon.owl
       version: '2022-06-28'
-    current_iri: http://purl.obolibrary.org/obo/ncbitaxon/2022-08-18/ncbitaxon.owl
-    current_version: '2022-08-18'
+    - iri: http://purl.obolibrary.org/obo/ncbitaxon/2022-08-18/ncbitaxon.owl
+      version: '2022-08-18'
+    - iri: http://purl.obolibrary.org/obo/ncbitaxon/2022-10-05/ncbitaxon.owl
+      version: '2022-10-05'
+    current_iri: http://purl.obolibrary.org/obo/ncbitaxon/2022-12-21/ncbitaxon.owl
+    current_version: '2022-12-21'
   ncit:
     archive:
     - iri: http://purl.obolibrary.org/obo/ncit/releases/2021-08-20/ncit.owl
@@ -905,12 +1064,15 @@ ontologies:
   ncro:
     current_iri: http://purl.obolibrary.org/obo/ncro/2015-12-10/ncro-combined.owl
     current_version: '2015-12-10'
+  ngbo:
+    current_iri: http://purl.obolibrary.org/obo/ngbo/2022-10-05/ngbo.owl
+    current_version: '2022-10-05'
   nomen:
     current_iri: http://purl.obolibrary.org/obo/NOMEN
     current_version: no_version
   oae:
     current_iri: http://purl.obolibrary.org/obo/oae.owl
-    current_version: 1.2.44
+    current_version: 1.2.47
   oarcs:
     current_iri: http://purl.obolibrary.org/obo/oarcs.owl
     current_version: no_version
@@ -924,8 +1086,12 @@ ontologies:
       version: '2022-01-19'
     - iri: http://purl.obolibrary.org/obo/oba/releases/2022-05-11/oba.owl
       version: '2022-05-11'
-    current_iri: http://purl.obolibrary.org/obo/oba/releases/2022-08-03/oba.owl
-    current_version: '2022-08-03'
+    - iri: http://purl.obolibrary.org/obo/oba/releases/2022-08-03/oba.owl
+      version: '2022-08-03'
+    - iri: http://purl.obolibrary.org/obo/oba/releases/2022-09-06/oba.owl
+      version: '2022-09-06'
+    current_iri: http://purl.obolibrary.org/obo/oba/releases/2022-12-21/oba.owl
+    current_version: '2022-12-21'
   obcs:
     current_iri: http://purl.obolibrary.org/obo/obcs/2018-02-22/obcs.owl
     current_version: '2018-02-22'
@@ -937,8 +1103,10 @@ ontologies:
       version: '2021-08-18'
     - iri: http://purl.obolibrary.org/obo/obi/2022-01-03/obi.owl
       version: '2022-01-03'
-    current_iri: http://purl.obolibrary.org/obo/obi/2022-07-11/obi.owl
-    current_version: '2022-07-11'
+    - iri: http://purl.obolibrary.org/obo/obi/2022-07-11/obi.owl
+      version: '2022-07-11'
+    current_iri: http://purl.obolibrary.org/obo/obi/2022-12-14/obi.owl
+    current_version: '2022-12-14'
   obib:
     archive:
     - iri: http://purl.obolibrary.org/obo/obib/2021-02-02/obib.owl
@@ -948,9 +1116,6 @@ ontologies:
   ogg:
     current_iri: '&obo;ogg.owl'
     current_version: 12-01-2016
-  ogi:
-    current_iri: NA
-    current_version: NA
   ogms:
     current_iri: http://purl.obolibrary.org/obo/ogms/2021-08-19/ogms.owl
     current_version: '2021-08-19'
@@ -958,8 +1123,11 @@ ontologies:
     current_iri: '&obo;ogsf-merged.owl'
     current_version: 11-22-2014
   ohd:
-    current_iri: http://purl.obolibrary.org/obo/2016-06-27/ohd-inferred.owl
-    current_version: '2016-06-27'
+    archive:
+    - iri: http://purl.obolibrary.org/obo/2016-06-27/ohd-inferred.owl
+      version: '2016-06-27'
+    current_iri: http://purl.obolibrary.org/obo/ohd/releases/2022-10-10/ohd.owl
+    current_version: '2022-10-10'
   ohmi:
     current_iri: http://purl.obolibrary.org/obo/ohmi/2019-09-17/ohmi.owl
     current_version: '2019-09-17'
@@ -998,16 +1166,26 @@ ontologies:
       version: '2022-06-03'
     - iri: http://purl.obolibrary.org/obo/omp/releases/2022-08-05/omp.owl
       version: '2022-08-05'
-    current_iri: http://purl.obolibrary.org/obo/omp/releases/2022-09-02/omp.owl
-    current_version: '2022-09-02'
+    - iri: http://purl.obolibrary.org/obo/omp/releases/2022-09-02/omp.owl
+      version: '2022-09-02'
+    - iri: http://purl.obolibrary.org/obo/omp/releases/2022-10-10/omp.owl
+      version: '2022-10-10'
+    - iri: http://purl.obolibrary.org/obo/omp/releases/2022-11-11/omp.owl
+      version: '2022-11-11'
+    current_iri: http://purl.obolibrary.org/obo/omp/releases/2022-12-04/omp.owl
+    current_version: '2022-12-04'
   omrse:
     archive:
     - iri: http://purl.obolibrary.org/obo/omrse/releases/2021-08-30/omrse-base.owl
       version: '2021-08-30'
     - iri: http://purl.obolibrary.org/obo/omrse/releases/2021-08-30/omrse.owl
       version: '2021-08-30'
-    current_iri: http://purl.obolibrary.org/obo/omrse/releases/2022-04-06/omrse.owl
-    current_version: '2022-04-06'
+    - iri: http://purl.obolibrary.org/obo/omrse/releases/2022-04-06/omrse.owl
+      version: '2022-04-06'
+    - iri: http://purl.obolibrary.org/obo/omrse/releases/2022-09-06/omrse.owl
+      version: '2022-09-06'
+    current_iri: http://purl.obolibrary.org/obo/omrse/releases/2022-12-21/omrse.owl
+    current_version: '2022-12-21'
   one:
     current_iri: http://purl.obolibrary.org/obo/ONE
     current_version: no_version
@@ -1021,14 +1199,19 @@ ontologies:
     current_iri: http://purl.obolibrary.org/obo/ontoneo/releases/2021-04-29/ontoneo.owl
     current_version: '2021-04-29'
   oostt:
-    current_iri: http://purl.obolibrary.org/obo/oostt//2021-01-08/oostt.owl
-    current_version: '2021-01-08'
+    archive:
+    - iri: http://purl.obolibrary.org/obo/oostt//2021-01-08/oostt.owl
+      version: '2021-01-08'
+    - iri: http://purl.obolibrary.org/obo/oostt/release/2022-09-23/oostt.owl
+      version: '2022-09-23'
+    current_iri: http://purl.obolibrary.org/obo/oostt/release/2022-10-27/oostt.owl
+    current_version: '2022-10-27'
   opl:
     current_iri: http://purl.obolibrary.org/obo/opl/2021-01-28/opl.owl
     current_version: '2021-01-28'
   opmi:
     current_iri: http://purl.obolibrary.org/obo/opmi.owl
-    current_version: Vision-Release--1.0.130
+    current_version: Vision-Release--1.0.161
   ornaseq:
     current_iri: http://purl.obolibrary.org/obo/ornaseq/2019-07-08/ornaseq.owl
     current_version: '2019-07-08'
@@ -1059,8 +1242,14 @@ ontologies:
       version: '2022-07-21'
     - iri: http://purl.obolibrary.org/obo/pato/releases/2022-08-10/pato.owl
       version: '2022-08-10'
-    current_iri: http://purl.obolibrary.org/obo/pato/releases/2022-08-31/pato.owl
-    current_version: '2022-08-31'
+    - iri: http://purl.obolibrary.org/obo/pato/releases/2022-08-31/pato.owl
+      version: '2022-08-31'
+    - iri: http://purl.obolibrary.org/obo/pato/releases/2022-11-03/pato.owl
+      version: '2022-11-03'
+    - iri: http://purl.obolibrary.org/obo/pato/releases/2022-11-09/pato.owl
+      version: '2022-11-09'
+    current_iri: http://purl.obolibrary.org/obo/pato/releases/2022-12-15/pato.owl
+    current_version: '2022-12-15'
   pcl:
     archive:
     - iri: http://purl.obolibrary.org/obo/pcl/releases/2022-01-24/pcl.owl
@@ -1071,8 +1260,12 @@ ontologies:
       version: '2022-02-09'
     - iri: http://purl.obolibrary.org/obo/pcl/releases/2022-03-02/pcl.owl
       version: '2022-03-02'
-    current_iri: http://purl.obolibrary.org/obo/pcl/releases/2022-04-27/pcl.owl
-    current_version: '2022-04-27'
+    - iri: http://purl.obolibrary.org/obo/pcl/releases/2022-04-27/pcl.owl
+      version: '2022-04-27'
+    - iri: http://purl.obolibrary.org/obo/pcl/releases/2022-09-02/pcl.owl
+      version: '2022-09-02'
+    current_iri: http://purl.obolibrary.org/obo/pcl/releases/2022-10-19/pcl.owl
+    current_version: '2022-10-19'
   pco:
     archive:
     - iri: http://purl.obolibrary.org/obo/pco/releases/2021-05-03/pco-base.owl
@@ -1094,8 +1287,10 @@ ontologies:
       version: '2021-07-14'
     - iri: http://purl.obolibrary.org/obo/phipo/releases/2021-07-14/phipo.owl
       version: '2021-07-14'
-    current_iri: http://purl.obolibrary.org/obo/phipo/releases/2022-07-29/phipo.owl
-    current_version: '2022-07-29'
+    - iri: http://purl.obolibrary.org/obo/phipo/releases/2022-07-29/phipo.owl
+      version: '2022-07-29'
+    current_iri: http://purl.obolibrary.org/obo/phipo/releases/2022-11-23/phipo.owl
+    current_version: '2022-11-23'
   plana:
     archive:
     - iri: http://purl.obolibrary.org/obo/plana/releases/2021-09-29/plana-base.owl
@@ -1161,14 +1356,17 @@ ontologies:
       version: '2022-04-16'
     - iri: http://purl.obolibrary.org/obo/rbo/releases/2022-06-02/rbo.owl
       version: '2022-06-02'
-    current_iri: http://purl.obolibrary.org/obo/rbo/releases/2022-08-11/rbo.owl
-    current_version: '2022-08-11'
+    - iri: http://purl.obolibrary.org/obo/rbo/releases/2022-08-11/rbo.owl
+      version: '2022-08-11'
+    - iri: http://purl.obolibrary.org/obo/rbo/releases/2022-10-06/rbo.owl
+      version: '2022-10-06'
+    - iri: http://purl.obolibrary.org/obo/rbo/releases/2022-10-20/rbo.owl
+      version: '2022-10-20'
+    current_iri: http://purl.obolibrary.org/obo/rbo/releases/2022-10-27/rbo.owl
+    current_version: '2022-10-27'
   rex:
     current_iri: http://purl.obolibrary.org/obo/rex/releases/2017-11-19/rex.owl
     current_version: '2017-11-19'
-  rnao:
-    current_iri: NA
-    current_version: NA
   ro:
     archive:
     - iri: http://purl.obolibrary.org/obo/ro/releases/2021-08-31/ro-base.owl
@@ -1187,8 +1385,14 @@ ontologies:
       version: '2022-04-25'
     - iri: http://purl.obolibrary.org/obo/ro/releases/2022-05-23/ro.owl
       version: '2022-05-23'
-    current_iri: http://purl.obolibrary.org/obo/ro/releases/2022-07-19/ro.owl
-    current_version: '2022-07-19'
+    - iri: http://purl.obolibrary.org/obo/ro/releases/2022-07-19/ro.owl
+      version: '2022-07-19'
+    - iri: http://purl.obolibrary.org/obo/ro/releases/2022-09-07/ro.owl
+      version: '2022-09-07'
+    - iri: http://purl.obolibrary.org/obo/ro/releases/2022-10-26/ro.owl
+      version: '2022-10-26'
+    current_iri: http://purl.obolibrary.org/obo/ro/releases/2023-01-04/ro.owl
+    current_version: '2023-01-04'
   rs:
     current_iri: http://purl.obolibrary.org/obo/rs/6.107/rs.owl
     current_version: '6.107'
@@ -1230,8 +1434,11 @@ ontologies:
     current_iri: http://purl.obolibrary.org/obo/stato.owl
     current_version: RC1.4
   swo:
-    current_iri: http://www.ebi.ac.uk/swo/swo.owl/1.7
-    current_version: swo.owl
+    archive:
+    - iri: http://www.ebi.ac.uk/swo/swo.owl/1.7
+      version: '1.7'
+    current_iri: http://www.ebi.ac.uk/swo/swo/releases/2022-10-11/swo.owl
+    current_version: '2022-10-11'
   symp:
     archive:
     - iri: http://purl.obolibrary.org/obo/symp/releases/2020-08-04/symp.owl
@@ -1252,8 +1459,20 @@ ontologies:
       version: '2022-07-26'
     - iri: http://purl.obolibrary.org/obo/symp/releases/2022-08-16/symp.owl
       version: '2022-08-16'
-    current_iri: http://purl.obolibrary.org/obo/symp/releases/2022-08-29/symp.owl
-    current_version: '2022-08-29'
+    - iri: http://purl.obolibrary.org/obo/symp/releases/2022-08-29/symp.owl
+      version: '2022-08-29'
+    - iri: http://purl.obolibrary.org/obo/symp/releases/2022-09-06/symp.owl
+      version: '2022-09-06'
+    - iri: http://purl.obolibrary.org/obo/symp/releases/2022-10-20/symp.owl
+      version: '2022-10-20'
+    current_iri: http://purl.obolibrary.org/obo/symp/releases/2022-11-30/symp.owl
+    current_version: '2022-11-30'
+  t4fs:
+    archive:
+    - iri: http://purl.obolibrary.org/obo/t4fs/releases/2022-10-05/t4fs.owl
+      version: '2022-10-05'
+    current_iri: http://purl.obolibrary.org/obo/t4fs/releases/2022-12-05/t4fs.owl
+    current_version: '2022-12-05'
   tads:
     current_iri: http://purl.obolibrary.org/obo/tads/2015-08-20/tads.owl
     current_version: '2015-08-20'
@@ -1272,14 +1491,20 @@ ontologies:
     current_iri: http://purl.obolibrary.org/obo/to/releases/2022-04-13/to.owl
     current_version: '2022-04-13'
   trans:
-    current_iri: http://purl.obolibrary.org/obo/trans/releases/2020-08-04/trans.owl
-    current_version: '2020-08-04'
+    archive:
+    - iri: http://purl.obolibrary.org/obo/trans/releases/2020-08-04/trans.owl
+      version: '2020-08-04'
+    current_iri: http://purl.obolibrary.org/obo/trans/releases/2022-10-10/trans.owl
+    current_version: '2022-10-10'
   tto:
     current_iri: http://purl.obolibrary.org/obo/tto.owl
     current_version: 19-07-2012-13-26
   txpo:
-    current_iri: http://purl.obolibrary.org/obo/txpo/releases/2020-03-03/txpo.owl
-    current_version: '2020-03-03'
+    archive:
+    - iri: http://purl.obolibrary.org/obo/txpo/releases/2020-03-03/txpo.owl
+      version: '2020-03-03'
+    current_iri: http://purl.obolibrary.org/obo/txpo/releases/2022-12-07/txpo.owl
+    current_version: '2022-12-07'
   uberon:
     archive:
     - iri: http://purl.obolibrary.org/obo/uberon/releases/2021-10-01/uberon-base.owl
@@ -1302,8 +1527,12 @@ ontologies:
       version: '2022-06-20'
     - iri: http://purl.obolibrary.org/obo/uberon/releases/2022-06-30/uberon.owl
       version: '2022-06-30'
-    current_iri: http://purl.obolibrary.org/obo/uberon/releases/2022-08-19/uberon.owl
-    current_version: '2022-08-19'
+    - iri: http://purl.obolibrary.org/obo/uberon/releases/2022-08-19/uberon.owl
+      version: '2022-08-19'
+    - iri: http://purl.obolibrary.org/obo/uberon/releases/2022-09-30/uberon.owl
+      version: '2022-09-30'
+    current_iri: http://purl.obolibrary.org/obo/uberon/releases/2023-01-09/uberon.owl
+    current_version: '2023-01-09'
   uo:
     current_iri: http://purl.obolibrary.org/obo/uo.owl
     current_version: no_version
@@ -1319,15 +1548,22 @@ ontologies:
   vario:
     current_iri: no_iri
     current_version: no_version
-  vo:
+  vbo:
     archive:
-    - iri: http://purl.obolibrary.org/obo/vo.owl
-      version: September_18__2021
-    current_iri: http://purl.obolibrary.org/obo/v.owl
-    current_version: March-19--2022
+    - iri: http://purl.obolibrary.org/obo/vbo/releases/2022-05-06/vbo.owl
+      version: '2022-05-06'
+    - iri: http://purl.obolibrary.org/obo/vbo/releases/2022-09-22/vbo.owl
+      version: '2022-09-22'
+    - iri: http://purl.obolibrary.org/obo/vbo/releases/2022-10-31/vbo.owl
+      version: '2022-10-31'
+    current_iri: http://purl.obolibrary.org/obo/vbo/releases/2022-11-29/vbo.owl
+    current_version: '2022-11-29'
+  vo:
+    current_iri: http://purl.obolibrary.org/obo/vo.owl
+    current_version: September_18__2021
   vt:
     current_iri: http://purl.obolibrary.org/obo/TEMP
-    current_version: 04-10-2021-10-15
+    current_version: 19-07-2022-13-21
   vto:
     current_iri: http://purl.obolibrary.org/obo/vto/2020-11-13/vto.owl
     current_version: '2020-11-13'
@@ -1341,8 +1577,10 @@ ontologies:
       version: '2021-12-14'
     - iri: http://purl.obolibrary.org/obo/wbbt/releases/2022-03-22/wbbt.owl
       version: '2022-03-22'
-    current_iri: http://purl.obolibrary.org/obo/wbbt/releases/2022-06-13/wbbt.owl
-    current_version: '2022-06-13'
+    - iri: http://purl.obolibrary.org/obo/wbbt/releases/2022-06-13/wbbt.owl
+      version: '2022-06-13'
+    current_iri: http://purl.obolibrary.org/obo/wbbt/releases/2023-01-03/wbbt.owl
+    current_version: '2023-01-03'
   wbls:
     archive:
     - iri: http://purl.obolibrary.org/obo/wbls/releases/2021-07-06/wbls-base.owl
@@ -1355,8 +1593,14 @@ ontologies:
       version: '2022-03-22'
     - iri: http://purl.obolibrary.org/obo/wbls/releases/2022-06-21/wbls.owl
       version: '2022-06-21'
-    current_iri: http://purl.obolibrary.org/obo/wbls/releases/2022-08-18/wbls.owl
-    current_version: '2022-08-18'
+    - iri: http://purl.obolibrary.org/obo/wbls/releases/2022-08-18/wbls.owl
+      version: '2022-08-18'
+    - iri: http://purl.obolibrary.org/obo/wbls/releases/2022-09-22/wbls.owl
+      version: '2022-09-22'
+    - iri: http://purl.obolibrary.org/obo/wbls/releases/2022-10-21/wbls.owl
+      version: '2022-10-21'
+    current_iri: http://purl.obolibrary.org/obo/wbls/releases/2023-01-03/wbls.owl
+    current_version: '2023-01-03'
   wbphenotype:
     archive:
     - iri: http://purl.obolibrary.org/obo/wbphenotype/releases/2021-09-27/wbphenotype-base.owl
@@ -1373,8 +1617,14 @@ ontologies:
       version: '2022-03-22'
     - iri: http://purl.obolibrary.org/obo/wbphenotype/releases/2022-06-21/wbphenotype.owl
       version: '2022-06-21'
-    current_iri: http://purl.obolibrary.org/obo/wbphenotype/releases/2022-08-18/wbphenotype.owl
-    current_version: '2022-08-18'
+    - iri: http://purl.obolibrary.org/obo/wbphenotype/releases/2022-08-18/wbphenotype.owl
+      version: '2022-08-18'
+    - iri: http://purl.obolibrary.org/obo/wbphenotype/releases/2022-09-21/wbphenotype.owl
+      version: '2022-09-21'
+    - iri: http://purl.obolibrary.org/obo/wbphenotype/releases/2022-10-21/wbphenotype.owl
+      version: '2022-10-21'
+    current_iri: http://purl.obolibrary.org/obo/wbphenotype/releases/2023-01-03/wbphenotype.owl
+    current_version: '2023-01-03'
   xao:
     archive:
     - iri: http://purl.obolibrary.org/obo/xao/releases/2021-03-04/xao.owl
@@ -1390,8 +1640,8 @@ ontologies:
     current_iri: http://purl.obolibrary.org/obo/xlmod/release/2019-10-28/xlmod.owl
     current_version: '2019-10-28'
   xpo:
-    current_iri: http://purl.obolibrary.org/obo/xpo/releases/2021-03-05/xpo.owl
-    current_version: '2021-03-05'
+    current_iri: http://purl.obolibrary.org/obo/xpo/releases/2022-09-15/xpo.owl
+    current_version: '2022-09-15'
   zeco:
     archive:
     - iri: http://purl.obolibrary.org/obo/zeco/releases/2021-06-04/zeco-base.owl
@@ -1410,11 +1660,16 @@ ontologies:
       version: '2022-02-15'
     - iri: http://purl.obolibrary.org/obo/zfa/releases/2022-02-28/zfa.owl
       version: '2022-02-28'
-    current_iri: http://purl.obolibrary.org/obo/zfa/releases/2022-03-15/zfa.owl
-    current_version: '2022-03-15'
+    - iri: http://purl.obolibrary.org/obo/zfa/releases/2022-03-15/zfa.owl
+      version: '2022-03-15'
+    current_iri: http://purl.obolibrary.org/obo/zfa/releases/2022-12-09/zfa.owl
+    current_version: '2022-12-09'
   zfs:
     current_iri: http://purl.obolibrary.org/obo/zfs/releases/2020-03-10/zfs.owl
     current_version: '2020-03-10'
   zp:
-    current_iri: http://purl.obolibrary.org/obo/zp/releases/2021-12-12/zp.owl
-    current_version: '2021-12-12'
+    archive:
+    - iri: http://purl.obolibrary.org/obo/zp/releases/2021-12-12/zp.owl
+      version: '2021-12-12'
+    current_iri: http://purl.obolibrary.org/obo/zp/releases/2022-12-17/zp.owl
+    current_version: '2022-12-17'

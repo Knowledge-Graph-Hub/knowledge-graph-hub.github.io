@@ -34,6 +34,9 @@ projects:
   repository: "https://github.com/monarch-initiative/SLDBGen"
 - id: rna-kg
   description: "A graph integrating knowledge about human RNAs. A preprint describing this project is [here](https://arxiv.org/abs/2312.00183)"
-  # https://zenodo.org/records/10418431/files/RNA-KG.nt?download=1
   url: "https://github.com/AnacletoLAB/RNA-KG"
+  repository: "https://github.com/AnacletoLAB/RNA-KG"
+- id: kg-enp
+  description: "Experimental natural products knowledge graph."
+  url: "https://enpkg.commons-lab.org/"
   repository: "https://github.com/AnacletoLAB/RNA-KG"

@@ -1,0 +1,41 @@
+- id: kg-obo
+  description: "KG-OBO: OBO ontologies into KGX TSV format."
+  url: "https://kghub.io/kg-obo/"
+  repository: "https://github.com/Knowledge-Graph-Hub/kg-obo"
+- id: kg-idg
+  description: "KG-IDG: a Knowledge Graph for Illuminating the Druggable Genome."
+  url: "https://kghub.io/kg-idg/"
+  repository: "https://github.com/Knowledge-Graph-Hub/kg-idg"
+- id: kg-covid-19
+  description: "KG-COVID-19: a knowledge graph for COVID-19 and SARS-COV-2."
+  url: "https://kghub.io/kg-covid-19/"
+  repository: "https://github.com/Knowledge-Graph-Hub/kg-covid-19"
+- id: kg-microbe
+  description: "KG-Microbe: a knowledge graph for microbial traits."
+  url: "https://kghub.io/kg-microbe/"
+  repository: "https://github.com/Knowledge-Graph-Hub/kg-microbe"
+- id: eco-kg
+  description: "eco-KG: a knowledge graph of plant traits starting with Planteome and EOL TraitBank."
+  url: "https://kghub.io/eco-kg/"
+  repository: "https://github.com/Knowledge-Graph-Hub/eco-kg"
+- id: monarch
+  description: "Graph representation of the Monarch Initiative knowledge resource."
+  url: "https://kghub.io/kg-monarch/"
+  repository: "https://github.com/monarch-initiative"
+- id: kg-phenio
+  description: "Graph representation of Monarch ontologies."
+  url: "https://kghub.io/kg-phenio/"
+  repository: "https://github.com/Knowledge-Graph-Hub/kg-phenio"
+  former_id: kg-ontoml
+- id: sldb
+  description: "A graph of synthetic lethal interactions."
+  url: "https://kghub.io/sldb/"
+  repository: "https://github.com/monarch-initiative/SLDBGen"
+- id: rna-kg
+  description: "A graph integrating knowledge about human RNAs. A preprint describing this project is [here](https://arxiv.org/abs/2312.00183)"
+  url: "https://github.com/AnacletoLAB/RNA-KG"
+  repository: "https://github.com/AnacletoLAB/RNA-KG"
+- id: kg-enp
+  description: "Experimental natural products knowledge graph."
+  url: "https://enpkg.commons-lab.org/"
+  repository: "https://github.com/AnacletoLAB/RNA-KG"

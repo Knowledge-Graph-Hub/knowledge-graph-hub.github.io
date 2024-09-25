@@ -8,9 +8,13 @@ Visit the site at <https://kghub.org/>.
 
 This project uses `poetry`. After cloning the repository, it may be installed by running `poetry install` from its root directory.
 
-The `utils` directory contains utilities for tracking metadata on all graphs on KG-Hub, with the major KG projects listed in `projects.yaml`.
+To build the site, do the following:
 
-Graph collections are modeled using [LinkML](https://github.com/linkml/linkml). See `utils/models/` for more details.
+* Install [Poetry](https://python-poetry.org/) if needed.
+* Clone the repository
+* Change to the root directory of the cloned repo, then run `poetry install`.
+* Change to the `docs` directory and run `build_site.sh`. This will retrieve recent metadata.
+* Run `mkdocs gh-deploy` to deploy the site.
 
 ## Updates
 

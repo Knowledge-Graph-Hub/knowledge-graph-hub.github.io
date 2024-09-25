@@ -1,0 +1,28 @@
+---
+site_name: "Knowledge Graph Hub"
+theme:
+  name: material
+  palette:
+    - media: '(prefers-color-scheme: light)'
+      scheme: default
+      primary: blue
+      accent: white
+      toggle:
+        icon: material/lightbulb
+        name: Switch to light mode
+    - media: '(prefers-color-scheme: dark)'
+      scheme: slate
+      primary: blue
+      accent: white
+      toggle:
+        icon: material/lightbulb-outline
+        name: Switch to dark mode
+  features:
+    - content.tabs.link
+plugins:
+  - search
+nav:
+  - Introduction: index.md
+  - Code of Conduct: code_of_conduct.md
+site_url: https://kghub.org
+repo_url: https://github.com/Knowledge-Graph-Hub/knowledge-graph-hub.github.io

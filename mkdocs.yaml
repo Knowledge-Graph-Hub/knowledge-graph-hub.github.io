@@ -21,6 +21,7 @@ theme:
     - content.tabs.link
 plugins:
   - search
+  - table-reader
 nav:
   - Introduction: index.md
   - Code of Conduct: code_of_conduct.md
@@ -28,3 +29,8 @@ nav:
   - Support: support.md
 site_url: https://kghub.org
 repo_url: https://github.com/Knowledge-Graph-Hub/knowledge-graph-hub.github.io
+markdown_extensions:
+  - tables
+extra_javascript:
+  - https://unpkg.com/tablesort@5.3.0/dist/tablesort.min.js
+  - javascripts/tablesort.js

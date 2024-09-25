@@ -38,7 +38,8 @@ For example, [KG-COVID-19](https://github.com/Knowledge-Graph-Hub/kg-covid-19), 
 
 Optionally, each instance of a KG Hub can also provide a Docker image such that their code can be run easily as a container.
 
-### KG-Hub Projects
-The table below lists active KG projects.
+## KG-Hub Projects
 
-{% include project_table.html %}
+The table below lists active KG projects. Click headings to sort.
+
+{{ read_yaml('projects.yaml') }}

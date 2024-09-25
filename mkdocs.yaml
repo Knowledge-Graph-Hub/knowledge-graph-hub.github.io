@@ -5,18 +5,23 @@ theme:
   palette:
     - media: '(prefers-color-scheme: light)'
       scheme: default
-      primary: blue
-      accent: white
+      primary: deep orange
+      accent: light green
       toggle:
         icon: material/lightbulb
         name: Switch to light mode
     - media: '(prefers-color-scheme: dark)'
       scheme: slate
-      primary: blue
-      accent: white
+      primary: deep orange
+      accent: light green
       toggle:
         icon: material/lightbulb-outline
         name: Switch to dark mode
+  icon:
+    logo: material/ship-wheel
+  font:
+    text: Fira Sans
+    code: Fira Mono
   features:
     - content.tabs.link
     - navigation.footer

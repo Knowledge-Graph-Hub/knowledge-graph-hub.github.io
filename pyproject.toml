@@ -1,0 +1,21 @@
+[tool.poetry]
+name = "knowledge-graph-hub-github-io"
+version = "1.0.0"
+description = "Public-facing site for Knowledge Graph Hub documentation."
+authors = ["caufieldjh <j.harry.caufield@gmail.com>"]
+license = "BSD-3"
+readme = "README.md"
+packages = [{include = "knowledge_graph_hub"}]
+
+[tool.poetry.dependencies]
+python = "^3.9"
+boto3 = "^1.35.26"
+click = "^8.1.7"
+kgx = "^2.4.2"
+requests = "^2.32.3"
+sh = "^2.0.7"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"

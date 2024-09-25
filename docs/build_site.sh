@@ -18,9 +18,7 @@ sed -i '1s/^/manifest:\n /' $MANIFEST_FILE
 # Set up redirects as needed
 python make_redirect.py
 
-# Retrieve KG-OBO tracking file - this has some of its own metadata
+# Retrieve KG-OBO tracking file - this has its own metadata
+# But it needs to be processed to be included on the site
 wget -N $KGOBO_URL
-
-# Append projects list
-echo "Adding all lists to Jekyll config."
-cat $JEKYLL_CONFIG_HEADER_FILE $PROJECT_FILE $MANIFEST_FILE $KGOBO_FILE  > $JEKYLL_CONFIG_FILE
+python process_kgobo.py

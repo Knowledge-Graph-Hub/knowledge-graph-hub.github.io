@@ -27,8 +27,10 @@ KG-OBO takes care of this for you.
 
 The table below lists all graphs on KG-OBO, including both current and previous versions of ontologies.
 
+The source data for this table may be found here: <https://kghub.io/kg-obo/tracking.yaml>
+
 Click a heading to sort.
 
 Clicking the link for "Current KG Version" will take you directly to the compressed graph file.
 
-{{ read_yaml('tracking.yaml') }}
+{{ read_yaml('kg_obo_current.yaml') }}

@@ -24,5 +24,6 @@ plugins:
 nav:
   - Introduction: index.md
   - Code of Conduct: code_of_conduct.md
+  - Support: support.md
 site_url: https://kghub.org
 repo_url: https://github.com/Knowledge-Graph-Hub/knowledge-graph-hub.github.io

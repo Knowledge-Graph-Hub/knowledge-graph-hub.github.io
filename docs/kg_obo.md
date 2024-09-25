@@ -27,12 +27,8 @@ KG-OBO takes care of this for you.
 
 The table below lists all graphs on KG-OBO, including both current and previous versions of ontologies.
 
+Click a heading to sort.
+
 Clicking the link for "Current KG Version" will take you directly to the compressed graph file.
 
-<div class="col-md-12">
-  <div class="row">
-  <div class="col-md-12">
-    {% include kgobo_table.html %}
-  </div>
-  </div>
-</div>
+{{ read_yaml('tracking.yaml') }}

@@ -25,9 +25,11 @@ plugins:
   - table-reader
 nav:
   - Introduction: index.md
+  - Citing KG-Hub: citing.md
   - Code of Conduct: code_of_conduct.md
   - KG-OBO: kg_obo.md
   - Support: support.md
+  - Acknowledgements: acknowledgements.md
 site_url: https://kghub.org
 repo_url: https://github.com/Knowledge-Graph-Hub/knowledge-graph-hub.github.io
 markdown_extensions:

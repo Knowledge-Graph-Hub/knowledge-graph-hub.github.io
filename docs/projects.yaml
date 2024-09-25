@@ -1,4 +1,3 @@
-projects:
 - id: kg-obo
   description: "KG-OBO: OBO ontologies into KGX TSV format."
   url: "https://kghub.io/kg-obo/"

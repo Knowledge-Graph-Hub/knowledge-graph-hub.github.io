@@ -1,8 +1,4 @@
----
-layout: page
-title: Support
-permalink: /support/
----
+# Support
 
 Please visit our [support spot on GitHub](https://github.com/Knowledge-Graph-Hub/knowledge-graph-hub-support) for any questions about:
 

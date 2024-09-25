@@ -1,0 +1,49 @@
+---
+site_name: "Knowledge Graph Hub"
+theme:
+  name: material
+  palette:
+    - media: '(prefers-color-scheme: light)'
+      scheme: default
+      primary: deep orange
+      accent: light green
+      toggle:
+        icon: material/lightbulb
+        name: Switch to light mode
+    - media: '(prefers-color-scheme: dark)'
+      scheme: slate
+      primary: deep orange
+      accent: light green
+      toggle:
+        icon: material/lightbulb-outline
+        name: Switch to dark mode
+  icon:
+    logo: material/ship-wheel
+  font:
+    text: Fira Sans
+    code: Fira Mono
+  features:
+    - content.tabs.link
+    - navigation.footer
+plugins:
+  - search
+  - table-reader
+nav:
+  - Introduction: index.md
+  - Citing KG-Hub: citing.md
+  - Code of Conduct: code_of_conduct.md
+  - KG-OBO: kg_obo.md
+  - Support: support.md
+  - Acknowledgements: acknowledgements.md
+site_url: https://kghub.org
+repo_url: https://github.com/Knowledge-Graph-Hub/knowledge-graph-hub.github.io
+markdown_extensions:
+  - tables
+extra_javascript:
+  - https://unpkg.com/tablesort@5.3.0/dist/tablesort.min.js
+  - javascripts/tablesort.js
+extra:
+  social:
+    - icon: fontawesome/brands/github
+      link: https://github.com/Knowledge-Graph-Hub
+      name: KG-Hub on GitHub

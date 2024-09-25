@@ -5,9 +5,9 @@ pipeline {
             image 'justaddcoffee/ubuntu20-python-3-8-5-dev:8'
         }
     }
-    triggers{
-        cron('0 8 * * 2,5')
-    }
+    // triggers{
+    //     cron('0 8 * * 2,5')
+    // }
     environment {
         RUNSTARTDATE = sh(script: "echo `date +%Y%m%d`", returnStdout: true).trim()
     }

@@ -27,6 +27,8 @@ KG-Hub also maintains:
 - Code for building specific "core" KGs
   - For example, [KG-COVID-19](https://github.com/Knowledge-Graph-Hub/kg-covid-19)
 - The products of "core" KGs, in a convenient exchange format (KGX)
+- A set of OBO ontologies as graph nodes and edges
+  - See [KG-OBO](https://kghub.org/kg_obo/)
 - A registry of our own and community-developed KGs and related data sources
   - See [KG-Registry](https://kghub.org/kg-registry/)
 

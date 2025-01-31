@@ -25,11 +25,11 @@
 - id: apo
   OBO Foundry Page: <https://obofoundry.org/ontology/apo>
   All Graph Versions: <https://kg-hub.berkeleybop.io/kg-obo/apo/>
-  Current Version: '2024-09-18'
+  Current Version: '2024-10-23'
 - id: apollo_sv
   OBO Foundry Page: <https://obofoundry.org/ontology/apollo_sv>
   All Graph Versions: <https://kg-hub.berkeleybop.io/kg-obo/apollo_sv/>
-  Current Version: '2024-08-15'
+  Current Version: '2024-12-24'
 - id: aro
   OBO Foundry Page: <https://obofoundry.org/ontology/aro>
   All Graph Versions: <https://kg-hub.berkeleybop.io/kg-obo/aro/>
@@ -61,7 +61,7 @@
 - id: cdno
   OBO Foundry Page: <https://obofoundry.org/ontology/cdno>
   All Graph Versions: <https://kg-hub.berkeleybop.io/kg-obo/cdno/>
-  Current Version: '2024-08-13'
+  Current Version: '2024-11-12'
 - id: ceph
   OBO Foundry Page: <https://obofoundry.org/ontology/ceph>
   All Graph Versions: <https://kg-hub.berkeleybop.io/kg-obo/ceph/>
@@ -69,7 +69,7 @@
 - id: chebi
   OBO Foundry Page: <https://obofoundry.org/ontology/chebi>
   All Graph Versions: <https://kg-hub.berkeleybop.io/kg-obo/chebi/>
-  Current Version: '236'
+  Current Version: '239'
 - id: cheminf
   OBO Foundry Page: <https://obofoundry.org/ontology/cheminf>
   All Graph Versions: <https://kg-hub.berkeleybop.io/kg-obo/cheminf/>
@@ -93,7 +93,7 @@
 - id: cl
   OBO Foundry Page: <https://obofoundry.org/ontology/cl>
   All Graph Versions: <https://kg-hub.berkeleybop.io/kg-obo/cl/>
-  Current Version: '2024-08-16'
+  Current Version: '2025-01-07'
 - id: clao
   OBO Foundry Page: <https://obofoundry.org/ontology/clao>
   All Graph Versions: <https://kg-hub.berkeleybop.io/kg-obo/clao/>
@@ -109,11 +109,11 @@
 - id: cmo
   OBO Foundry Page: <https://obofoundry.org/ontology/cmo>
   All Graph Versions: <https://kg-hub.berkeleybop.io/kg-obo/cmo/>
-  Current Version: '2.225'
+  Current Version: '2.234'
 - id: cob
   OBO Foundry Page: <https://obofoundry.org/ontology/cob>
   All Graph Versions: <https://kg-hub.berkeleybop.io/kg-obo/cob/>
-  Current Version: '2024-09-20'
+  Current Version: '2025-01-23'
 - id: colao
   OBO Foundry Page: <https://obofoundry.org/ontology/colao>
   All Graph Versions: <https://kg-hub.berkeleybop.io/kg-obo/colao/>
@@ -153,15 +153,15 @@
 - id: doid
   OBO Foundry Page: <https://obofoundry.org/ontology/doid>
   All Graph Versions: <https://kg-hub.berkeleybop.io/kg-obo/doid/>
-  Current Version: '2024-08-29'
+  Current Version: '2024-12-18'
 - id: dpo
   OBO Foundry Page: <https://obofoundry.org/ontology/dpo>
   All Graph Versions: <https://kg-hub.berkeleybop.io/kg-obo/dpo/>
-  Current Version: '2024-08-08'
+  Current Version: '2024-12-05'
 - id: dron
   OBO Foundry Page: <https://obofoundry.org/ontology/dron>
   All Graph Versions: <https://kg-hub.berkeleybop.io/kg-obo/dron/>
-  Current Version: '2024-09-04'
+  Current Version: '2024-12-20'
 - id: duo
   OBO Foundry Page: <https://obofoundry.org/ontology/duo>
   All Graph Versions: <https://kg-hub.berkeleybop.io/kg-obo/duo/>
@@ -221,15 +221,15 @@
 - id: fbbt
   OBO Foundry Page: <https://obofoundry.org/ontology/fbbt>
   All Graph Versions: <https://kg-hub.berkeleybop.io/kg-obo/fbbt/>
-  Current Version: '2024-08-08'
+  Current Version: '2024-12-05'
 - id: fbcv
   OBO Foundry Page: <https://obofoundry.org/ontology/fbcv>
   All Graph Versions: <https://kg-hub.berkeleybop.io/kg-obo/fbcv/>
-  Current Version: '2024-08-08'
+  Current Version: '2024-12-05'
 - id: fbdv
   OBO Foundry Page: <https://obofoundry.org/ontology/fbdv>
   All Graph Versions: <https://kg-hub.berkeleybop.io/kg-obo/fbdv/>
-  Current Version: '2024-08-07'
+  Current Version: '2024-12-04'
 - id: fix
   OBO Foundry Page: <https://obofoundry.org/ontology/fix>
   All Graph Versions: <https://kg-hub.berkeleybop.io/kg-obo/fix/>
@@ -249,7 +249,7 @@
 - id: foodon
   OBO Foundry Page: <https://obofoundry.org/ontology/foodon>
   All Graph Versions: <https://kg-hub.berkeleybop.io/kg-obo/foodon/>
-  Current Version: v2024-07-12
+  Current Version: '2025-01-16'
 - id: fovt
   OBO Foundry Page: <https://obofoundry.org/ontology/fovt>
   All Graph Versions: <https://kg-hub.berkeleybop.io/kg-obo/fovt/>
@@ -257,7 +257,7 @@
 - id: fypo
   OBO Foundry Page: <https://obofoundry.org/ontology/fypo>
   All Graph Versions: <https://kg-hub.berkeleybop.io/kg-obo/fypo/>
-  Current Version: '2024-09-02'
+  Current Version: '2025-01-14'
 - id: gallont
   OBO Foundry Page: <https://obofoundry.org/ontology/gallont>
   All Graph Versions: <https://kg-hub.berkeleybop.io/kg-obo/gallont/>
@@ -273,7 +273,7 @@
 - id: genepio
   OBO Foundry Page: <https://obofoundry.org/ontology/genepio>
   All Graph Versions: <https://kg-hub.berkeleybop.io/kg-obo/genepio/>
-  Current Version: '2023-08-19'
+  Current Version: '2024-12-18'
 - id: geno
   OBO Foundry Page: <https://obofoundry.org/ontology/geno>
   All Graph Versions: <https://kg-hub.berkeleybop.io/kg-obo/geno/>
@@ -285,11 +285,11 @@
 - id: gno
   OBO Foundry Page: <https://obofoundry.org/ontology/gno>
   All Graph Versions: <https://kg-hub.berkeleybop.io/kg-obo/gno/>
-  Current Version: '2024-05-21'
+  Current Version: '2024-09-26'
 - id: go
   OBO Foundry Page: <https://obofoundry.org/ontology/go>
   All Graph Versions: <https://kg-hub.berkeleybop.io/kg-obo/go/>
-  Current Version: '2024-09-08'
+  Current Version: '2024-11-03'
 - id: gsso
   OBO Foundry Page: <https://obofoundry.org/ontology/gsso>
   All Graph Versions: <https://kg-hub.berkeleybop.io/kg-obo/gsso/>
@@ -309,11 +309,11 @@
 - id: hp
   OBO Foundry Page: <https://obofoundry.org/ontology/hp>
   All Graph Versions: <https://kg-hub.berkeleybop.io/kg-obo/hp/>
-  Current Version: '2024-08-13'
+  Current Version: '2025-01-16'
 - id: hsapdv
   OBO Foundry Page: <https://obofoundry.org/ontology/hsapdv>
   All Graph Versions: <https://kg-hub.berkeleybop.io/kg-obo/hsapdv/>
-  Current Version: 05-02-2021-13-48
+  Current Version: components
 - id: hso
   OBO Foundry Page: <https://obofoundry.org/ontology/hso>
   All Graph Versions: <https://kg-hub.berkeleybop.io/kg-obo/hso/>
@@ -389,7 +389,7 @@
 - id: mfoem
   OBO Foundry Page: <https://obofoundry.org/ontology/mfoem>
   All Graph Versions: <https://kg-hub.berkeleybop.io/kg-obo/mfoem/>
-  Current Version: '2022-07-19'
+  Current Version: '2025-01-06'
 - id: mfomd
   OBO Foundry Page: <https://obofoundry.org/ontology/mfomd>
   All Graph Versions: <https://kg-hub.berkeleybop.io/kg-obo/mfomd/>
@@ -413,11 +413,11 @@
 - id: mmo
   OBO Foundry Page: <https://obofoundry.org/ontology/mmo>
   All Graph Versions: <https://kg-hub.berkeleybop.io/kg-obo/mmo/>
-  Current Version: '2.139'
+  Current Version: '2.146'
 - id: mmusdv
   OBO Foundry Page: <https://obofoundry.org/ontology/mmusdv>
   All Graph Versions: <https://kg-hub.berkeleybop.io/kg-obo/mmusdv/>
-  Current Version: 05-02-2021-13-48
+  Current Version: components
 - id: mod
   OBO Foundry Page: <https://obofoundry.org/ontology/mod>
   All Graph Versions: <https://kg-hub.berkeleybop.io/kg-obo/mod/>
@@ -425,7 +425,7 @@
 - id: mondo
   OBO Foundry Page: <https://obofoundry.org/ontology/mondo>
   All Graph Versions: <https://kg-hub.berkeleybop.io/kg-obo/mondo/>
-  Current Version: '2024-09-03'
+  Current Version: '2025-01-07'
 - id: mop
   OBO Foundry Page: <https://obofoundry.org/ontology/mop>
   All Graph Versions: <https://kg-hub.berkeleybop.io/kg-obo/mop/>
@@ -433,7 +433,7 @@
 - id: mp
   OBO Foundry Page: <https://obofoundry.org/ontology/mp>
   All Graph Versions: <https://kg-hub.berkeleybop.io/kg-obo/mp/>
-  Current Version: '2024-09-11'
+  Current Version: '2024-12-18'
 - id: mpath
   OBO Foundry Page: <https://obofoundry.org/ontology/mpath>
   All Graph Versions: <https://kg-hub.berkeleybop.io/kg-obo/mpath/>
@@ -449,7 +449,7 @@
 - id: ms
   OBO Foundry Page: <https://obofoundry.org/ontology/ms>
   All Graph Versions: <https://kg-hub.berkeleybop.io/kg-obo/ms/>
-  Current Version: 4.1.174
+  Current Version: 4.1.187
 - id: nbo
   OBO Foundry Page: <https://obofoundry.org/ontology/nbo>
   All Graph Versions: <https://kg-hub.berkeleybop.io/kg-obo/nbo/>
@@ -457,7 +457,7 @@
 - id: ncbitaxon
   OBO Foundry Page: <https://obofoundry.org/ontology/ncbitaxon>
   All Graph Versions: <https://kg-hub.berkeleybop.io/kg-obo/ncbitaxon/>
-  Current Version: '2024-07-03'
+  Current Version: '2024-11-25'
 - id: ncit
   OBO Foundry Page: <https://obofoundry.org/ontology/ncit>
   All Graph Versions: <https://kg-hub.berkeleybop.io/kg-obo/ncit/>
@@ -485,7 +485,7 @@
 - id: oba
   OBO Foundry Page: <https://obofoundry.org/ontology/oba>
   All Graph Versions: <https://kg-hub.berkeleybop.io/kg-obo/oba/>
-  Current Version: '2024-09-12'
+  Current Version: '2025-01-14'
 - id: obcs
   OBO Foundry Page: <https://obofoundry.org/ontology/obcs>
   All Graph Versions: <https://kg-hub.berkeleybop.io/kg-obo/obcs/>
@@ -493,7 +493,7 @@
 - id: obi
   OBO Foundry Page: <https://obofoundry.org/ontology/obi>
   All Graph Versions: <https://kg-hub.berkeleybop.io/kg-obo/obi/>
-  Current Version: '2024-06-10'
+  Current Version: '2025-01-09'
 - id: obib
   OBO Foundry Page: <https://obofoundry.org/ontology/obib>
   All Graph Versions: <https://kg-hub.berkeleybop.io/kg-obo/obib/>
@@ -537,7 +537,7 @@
 - id: omo
   OBO Foundry Page: <https://obofoundry.org/ontology/omo>
   All Graph Versions: <https://kg-hub.berkeleybop.io/kg-obo/omo/>
-  Current Version: '2023-11-02'
+  Current Version: '2024-11-13'
 - id: omp
   OBO Foundry Page: <https://obofoundry.org/ontology/omp>
   All Graph Versions: <https://kg-hub.berkeleybop.io/kg-obo/omp/>
@@ -545,7 +545,7 @@
 - id: omrse
   OBO Foundry Page: <https://obofoundry.org/ontology/omrse>
   All Graph Versions: <https://kg-hub.berkeleybop.io/kg-obo/omrse/>
-  Current Version: '2024-08-14'
+  Current Version: '2024-11-25'
 - id: one
   OBO Foundry Page: <https://obofoundry.org/ontology/one>
   All Graph Versions: <https://kg-hub.berkeleybop.io/kg-obo/one/>
@@ -565,7 +565,7 @@
 - id: oostt
   OBO Foundry Page: <https://obofoundry.org/ontology/oostt>
   All Graph Versions: <https://kg-hub.berkeleybop.io/kg-obo/oostt/>
-  Current Version: '2024-01-25'
+  Current Version: '2025-01-24'
 - id: opl
   OBO Foundry Page: <https://obofoundry.org/ontology/opl>
   All Graph Versions: <https://kg-hub.berkeleybop.io/kg-obo/opl/>
@@ -585,11 +585,11 @@
 - id: pato
   OBO Foundry Page: <https://obofoundry.org/ontology/pato>
   All Graph Versions: <https://kg-hub.berkeleybop.io/kg-obo/pato/>
-  Current Version: '2024-09-04'
+  Current Version: '2024-11-11'
 - id: pcl
   OBO Foundry Page: <https://obofoundry.org/ontology/pcl>
   All Graph Versions: <https://kg-hub.berkeleybop.io/kg-obo/pcl/>
-  Current Version: '2024-07-11'
+  Current Version: '2025-01-08'
 - id: pco
   OBO Foundry Page: <https://obofoundry.org/ontology/pco>
   All Graph Versions: <https://kg-hub.berkeleybop.io/kg-obo/pco/>
@@ -629,7 +629,7 @@
 - id: ppo
   OBO Foundry Page: <https://obofoundry.org/ontology/ppo>
   All Graph Versions: <https://kg-hub.berkeleybop.io/kg-obo/ppo/>
-  Current Version: '2018-10-26'
+  Current Version: '2024-07-09'
 - id: pr
   OBO Foundry Page: <https://obofoundry.org/ontology/pr>
   All Graph Versions: <https://kg-hub.berkeleybop.io/kg-obo/pr/>
@@ -649,11 +649,11 @@
 - id: pw
   OBO Foundry Page: <https://obofoundry.org/ontology/pw>
   All Graph Versions: <https://kg-hub.berkeleybop.io/kg-obo/pw/>
-  Current Version: '7.85'
+  Current Version: '7.86'
 - id: rbo
   OBO Foundry Page: <https://obofoundry.org/ontology/rbo>
   All Graph Versions: <https://kg-hub.berkeleybop.io/kg-obo/rbo/>
-  Current Version: '2024-05-31'
+  Current Version: '2024-10-23'
 - id: rex
   OBO Foundry Page: <https://obofoundry.org/ontology/rex>
   All Graph Versions: <https://kg-hub.berkeleybop.io/kg-obo/rex/>
@@ -665,7 +665,7 @@
 - id: rs
   OBO Foundry Page: <https://obofoundry.org/ontology/rs>
   All Graph Versions: <https://kg-hub.berkeleybop.io/kg-obo/rs/>
-  Current Version: '6.232'
+  Current Version: '6.239'
 - id: rxno
   OBO Foundry Page: <https://obofoundry.org/ontology/rxno>
   All Graph Versions: <https://kg-hub.berkeleybop.io/kg-obo/rxno/>
@@ -685,15 +685,15 @@
 - id: sibo
   OBO Foundry Page: <https://obofoundry.org/ontology/sibo>
   All Graph Versions: <https://kg-hub.berkeleybop.io/kg-obo/sibo/>
-  Current Version: '2015-06-15'
+  Current Version: no_version
 - id: slso
   OBO Foundry Page: <https://obofoundry.org/ontology/slso>
   All Graph Versions: <https://kg-hub.berkeleybop.io/kg-obo/slso/>
-  Current Version: '2024-05-17'
+  Current Version: '2024-10-31'
 - id: so
   OBO Foundry Page: <https://obofoundry.org/ontology/so>
   All Graph Versions: <https://kg-hub.berkeleybop.io/kg-obo/so/>
-  Current Version: '2024-06-05'
+  Current Version: '2024-11-18'
 - id: spd
   OBO Foundry Page: <https://obofoundry.org/ontology/spd>
   All Graph Versions: <https://kg-hub.berkeleybop.io/kg-obo/spd/>
@@ -701,7 +701,7 @@
 - id: stato
   OBO Foundry Page: <https://obofoundry.org/ontology/stato>
   All Graph Versions: <https://kg-hub.berkeleybop.io/kg-obo/stato/>
-  Current Version: stato.owl
+  Current Version: '2025-01-07'
 - id: swo
   OBO Foundry Page: <https://obofoundry.org/ontology/swo>
   All Graph Versions: <https://kg-hub.berkeleybop.io/kg-obo/swo/>
@@ -721,7 +721,7 @@
 - id: taxrank
   OBO Foundry Page: <https://obofoundry.org/ontology/taxrank>
   All Graph Versions: <https://kg-hub.berkeleybop.io/kg-obo/taxrank/>
-  Current Version: '2016-04-15'
+  Current Version: '2024-11-28'
 - id: tgma
   OBO Foundry Page: <https://obofoundry.org/ontology/tgma>
   All Graph Versions: <https://kg-hub.berkeleybop.io/kg-obo/tgma/>
@@ -745,7 +745,7 @@
 - id: uberon
   OBO Foundry Page: <https://obofoundry.org/ontology/uberon>
   All Graph Versions: <https://kg-hub.berkeleybop.io/kg-obo/uberon/>
-  Current Version: '2024-09-03'
+  Current Version: '2025-01-15'
 - id: uo
   OBO Foundry Page: <https://obofoundry.org/ontology/uo>
   All Graph Versions: <https://kg-hub.berkeleybop.io/kg-obo/uo/>
@@ -757,7 +757,7 @@
 - id: upheno
   OBO Foundry Page: <https://obofoundry.org/ontology/upheno>
   All Graph Versions: <https://kg-hub.berkeleybop.io/kg-obo/upheno/>
-  Current Version: no_version
+  Current Version: '2025-01-11'
 - id: vario
   OBO Foundry Page: <https://obofoundry.org/ontology/vario>
   All Graph Versions: <https://kg-hub.berkeleybop.io/kg-obo/vario/>
@@ -765,15 +765,15 @@
 - id: vbo
   OBO Foundry Page: <https://obofoundry.org/ontology/vbo>
   All Graph Versions: <https://kg-hub.berkeleybop.io/kg-obo/vbo/>
-  Current Version: '2024-08-14'
+  Current Version: '2024-11-06'
 - id: vo
   OBO Foundry Page: <https://obofoundry.org/ontology/vo>
   All Graph Versions: <https://kg-hub.berkeleybop.io/kg-obo/vo/>
-  Current Version: '2024-08-11'
+  Current Version: '2024-12-29'
 - id: vt
   OBO Foundry Page: <https://obofoundry.org/ontology/vt>
   All Graph Versions: <https://kg-hub.berkeleybop.io/kg-obo/vt/>
-  Current Version: '2024-09-20'
+  Current Version: '2025-01-08'
 - id: vto
   OBO Foundry Page: <https://obofoundry.org/ontology/vto>
   All Graph Versions: <https://kg-hub.berkeleybop.io/kg-obo/vto/>
@@ -781,15 +781,15 @@
 - id: wbbt
   OBO Foundry Page: <https://obofoundry.org/ontology/wbbt>
   All Graph Versions: <https://kg-hub.berkeleybop.io/kg-obo/wbbt/>
-  Current Version: '2024-07-01'
+  Current Version: '2025-01-02'
 - id: wbls
   OBO Foundry Page: <https://obofoundry.org/ontology/wbls>
   All Graph Versions: <https://kg-hub.berkeleybop.io/kg-obo/wbls/>
-  Current Version: '2024-04-09'
+  Current Version: '2025-01-04'
 - id: wbphenotype
   OBO Foundry Page: <https://obofoundry.org/ontology/wbphenotype>
   All Graph Versions: <https://kg-hub.berkeleybop.io/kg-obo/wbphenotype/>
-  Current Version: '2024-06-05'
+  Current Version: '2025-01-02'
 - id: xao
   OBO Foundry Page: <https://obofoundry.org/ontology/xao>
   All Graph Versions: <https://kg-hub.berkeleybop.io/kg-obo/xao/>
@@ -797,7 +797,7 @@
 - id: xco
   OBO Foundry Page: <https://obofoundry.org/ontology/xco>
   All Graph Versions: <https://kg-hub.berkeleybop.io/kg-obo/xco/>
-  Current Version: '4.181'
+  Current Version: '4.192'
 - id: xlmod
   OBO Foundry Page: <https://obofoundry.org/ontology/xlmod>
   All Graph Versions: <https://kg-hub.berkeleybop.io/kg-obo/xlmod/>

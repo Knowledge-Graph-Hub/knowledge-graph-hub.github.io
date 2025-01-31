@@ -25,3 +25,9 @@ This project uses `poetry`. After cloning the repository, it may be installed by
 The `utils` directory contains utilities for tracking metadata on all graphs on KG-Hub, with the major KG projects listed in `projects.yaml`.
 
 Graph collections are modeled using [LinkML](https://github.com/linkml/linkml). See `utils/models/` for more details.
+
+## License
+
+Projects and resources mentioned on KG-Hub or the KG-Registry may vary in code and data licensing.
+
+Please consult documentation for each resource regarding reuse.

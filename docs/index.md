@@ -41,7 +41,7 @@ KG-Hub also maintains:
   - should make use of ontologies from the [OBO Foundry](http://www.obofoundry.org/), where possible.
   - should be responsible for the veracity of the datasets that they ingest and are responsible for keeping track of evidence and provenance for assertions in their KG.
   - should provide their KG for download and must follow [semantic versioning guidelines](https://semver.org/).
-  - should provide their KG in the [KGX interchange format](https://github.com/NCATS-Tangerine/kgx/blob/master/data-preparation.md) in addition to their format of choice.
+  - should provide their KG in the [KGX interchange format](https://github.com/biolink/kgx/blob/master/docs/data-preparation.md) in addition to their format of choice.
   - must have a License, Contributing guidelines, Code of Conduct, and be open to the community for contributions as well as consumption.
 
 Optionally, each instance of KG-Hub can also provide a Docker image such that their code can be run easily as a container.

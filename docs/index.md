@@ -48,6 +48,8 @@ Optionally, each instance of KG-Hub can also provide a Docker image such that th
 
 ## Core KG-Hub Projects
 
-The table below lists core KG projects. Click headings to sort.
+The table below lists core KG projects.
+
+We are currently transitioning the files for these projects to new locations. See below for details.
 
 {{ read_yaml('projects.yaml') }}
